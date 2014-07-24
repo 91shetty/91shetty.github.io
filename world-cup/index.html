@@ -6,7 +6,7 @@
 		<script type="text/javascript" src="d3/d3.js"></script>
 	</head>
 	<body>
-		<script type="text/javascript">
+		<!-- <script type="text/javascript">
 			var dataset = [];
 			for (var i = 0; i < 25; i++) {
  				var newNo = Math.round(Math.random() * 30);
@@ -22,13 +22,34 @@
 								var barHeight = d * 5;
 								return barHeight + "px";
 							});
-		</script>
-		<svg width = "500" height = "50">
+		</script> -->
+		<!-- <svg width = "500" height = "50">
 			<circle cx="25" cy="25" r="20" fill="rgba(128, 0, 128, 1.0)"/>
 			<circle cx="50" cy="25" r="20" fill="rgba(0, 0, 255, 0.75)"/>
 			<circle cx="75" cy="25" r="20" fill="rgba(0, 255, 0, 0.5)"/>
 			<circle cx="100" cy="25" r="20" fill="rgba(255, 255, 0, 0.25)"/>
 			<circle cx="125" cy="25" r="20" fill="rgba(255, 0, 0, 0.1)"/>
-		</svg>
+		</svg -->
+		<script type="text/javascript">
+			var dataset = [ 5, 10, 15, 20, 25 ];
+			var w = 500;
+			var h = 50;
+			var svg = d3.select("body")
+					.append("svg")
+					.attr("width", w)
+					.attr("height", h);
+			var circle = svg.selectAll("circle")
+						.data(dataset)
+						.enter()
+						.append("circle");
+			circles.attr("cx", function(d, i) {
+						return (i * 50) + 25;
+					})
+					.attr("cy", h/2)
+					.attr("r", function(d) {
+						return d;
+					});
+
+		</script>
 	</body>
 </html>
