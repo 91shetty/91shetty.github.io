@@ -30,7 +30,7 @@
 			<circle cx="100" cy="25" r="20" fill="rgba(255, 255, 0, 0.25)"/>
 			<circle cx="125" cy="25" r="20" fill="rgba(255, 0, 0, 0.1)"/>
 		</svg -->
-		<script type="text/javascript">
+		<!-- <script type="text/javascript">
 			var dataset = [ 5, 10, 15, 20, 25 ];
 			var w = 500;
 			var h = 50;
@@ -55,6 +55,22 @@
 						return d/2;
 					});
 
+		</script> -->
+		<script type="text/javascript">
+			var w = 500;
+			var h = 100;
+			var svg = d3.select("body")
+					.append("svg")
+					.attr("width", w)
+					.attr("height", h);
+			svg.selectAll("rect")
+			   .data(dataset)
+			   .enter()
+			   .append("rect")
+			   .attr("x", 0)
+			   .attr("y", 0)
+			   .attr("width", 20)
+			   .attr("height", 100);		
 		</script>
 	</body>
 </html>
