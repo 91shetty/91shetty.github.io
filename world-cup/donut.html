@@ -21,30 +21,47 @@
 							[533,44373,3.8],
 							[370,20435,1.8]
 						];
-			var myScale = d3.scale.linear().domain([0, 100]).range([0, 2 * Math.PI]); 
-			color = d3.scale.category20c();
-			var arc = d3.svg.arc()
-					  .innerRadius(50)
-					  .outerRadius(100)
-					  .startAngle(function(d){
-								  	return myScale(endangle);
-								  }
-					  )
-					  .endAngle((function(d){
-					  				endangle += d[2];
-								  	return myScale(endangle);
-								  }
-					  );
+			data = [[0,50,"#AA8888"], [50,75,"#88BB88"], [75,100,"#8888CC"]] 
+			var cScale = d3.scale.linear().domain([0, 100]).range([0, 2 * Math.PI]); 
 			var vis = d3.select("#svg_donut");
-			vis.selectAll("path")
-			.data(dataset)
-			.enter()
-			.append("path")
-			.attr("d",arc)
-			.attr("fill",function(d, i){
-				return color(i);
-			})
-			.attr("transform","translate(300,200)");		
+
+var arc = d3.svg.arc()
+.innerRadius(50)
+.outerRadius(100)
+.startAngle(function(d){return cScale(d[0]);})
+.endAngle(function(d){return cScale(d[1]);});
+
+vis.selectAll("path")
+.data(data)
+.enter()
+.append("path")
+.attr("d", arc)
+.style("fill", function(d){return d[2];})
+.attr("transform", "translate(300,200)");
+			// var myScale = d3.scale.linear().domain([0, 100]).range([0, 2 * Math.PI]); 
+			// color = d3.scale.category20c();
+			// var arc = d3.svg.arc()
+			// 		  .innerRadius(50)
+			// 		  .outerRadius(100)
+			// 		  .startAngle(function(d){
+			// 					  	return myScale(endangle);
+			// 					  }
+			// 		  )
+			// 		  .endAngle((function(d){
+			// 		  				endangle += d[2];
+			// 					  	return myScale(endangle);
+			// 					  }
+			// 		  );
+			// var vis = d3.select("#svg_donut");
+			// vis.selectAll("path")
+			// .data(dataset)
+			// .enter()
+			// .append("path")
+			// .attr("d",arc)
+			// .attr("fill",function(d, i){
+			// 	return color(i);
+			// })
+			// .attr("transform","translate(300,200)");		
 
 		</script>
 	</body>
