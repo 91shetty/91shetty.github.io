@@ -24,8 +24,8 @@
 			var myScale = d3.scale.linear().domain([0, 100]).range([0, 2 * Math.PI]); 
 			color = d3.scale.category20c();
 			var arc = d3.svg.arc()
-					  .innerRadius(50)
-					  .outerRadius(100)
+					  .innerRadius(80)
+					  .outerRadius(300)
 					  .startAngle(function(d){
 								  	return myScale(endangle);
 								  }
@@ -44,7 +44,7 @@
 			.attr("fill",function(d, i){
 				return color(i);
 			})
-			.attr("transform","translate(300,200)");		
+			.attr("transform","translate(600,400)");		
 
 		</script>
 	</body>
