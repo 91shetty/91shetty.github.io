@@ -8,11 +8,12 @@
 		<svg id="svg_donut" width = "600" height = "400">
 		</svg>
 		<script type="text/javascript">
+			var myScale = d3.scale.linear().domain([0, 100]).range([0, 2 * Math.PI]); 
 			var arc = d3.svg.arc()
 					  .innerRadius(50)
 					  .outerRadius(100)
-					  .startAngle(0)
-					  .endAngle(2 * Math.PI);
+					  .startAngle(myScale(0))
+					  .endAngle(myScale(75));
 			d3.select("#svg_donut")
 			.append("path")
 			.attr("d",arc)
