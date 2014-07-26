@@ -44,7 +44,10 @@
 			.data(dataset)
 			.enter()
 			.append("path")
-			.attr("class","slice" + count++)
+			.attr("class",funtion(d){
+				count++;
+				return "slice" + count;
+			})
 			.attr("d",arc)
 			.attr("fill",function(d, i){
 				return color(i);
