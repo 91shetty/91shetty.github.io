@@ -44,10 +44,7 @@
 			.data(dataset)
 			.enter()
 			.append("path")
-			.attr("class",funtion(d){
-				count++;
-				return "slice" + count;
-			})
+			.attr("class", "slice")
 			.attr("d",arc)
 			.attr("fill",function(d, i){
 				return color(i);
@@ -60,7 +57,7 @@
 				title : function(){
 					var buildNo = this.__data__[0];
 					var userCount = this.__data__[1];
-					return 'Build No:' + buildNo + ' User Count:' + userCount ;
+					return 'Build No:' + buildNo + '\n User Count:' + userCount ;
 				}
 			});
 		</script>
