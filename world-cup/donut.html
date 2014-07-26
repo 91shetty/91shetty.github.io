@@ -54,7 +54,7 @@
 			.attr("transform","translate(600,400)");		
 			
 			$('.slice').tipsy({
-				gravity : 'w',
+				gravity : $.fn.tipsy.autoNS,
 				html : true,
 				title : function(){
 					var buildNo = this.__data__[0];
