@@ -36,9 +36,11 @@
 								  }
 					  );
 			var vis = d3.select("#svg_donut");
-			vis.selectAll("path")
+			vis.selectAll("div")
+			.selectAll("path")
 			.data(dataset)
 			.enter()
+			.append("div")
 			.append("path")
 			.attr("d",arc)
 			.attr("fill",function(d, i){
