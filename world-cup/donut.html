@@ -12,6 +12,7 @@
 		</svg>
 		<script type="text/javascript">
 			var endangle = 0;
+			var count = 0; 
 			var dataset = [							
 							[1337,343408,29.6],
 							[943,125735,10.9],
@@ -43,7 +44,7 @@
 			.data(dataset)
 			.enter()
 			.append("path")
-			.attr("class","slice")
+			.attr("class","slice" + count++)
 			.attr("d",arc)
 			.attr("fill",function(d, i){
 				return color(i);
