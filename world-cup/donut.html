@@ -3,6 +3,9 @@
 	<head>
 		<title> Donut chart</title>
 		<script type="text/javascript" src="d3/d3.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script> 
+	    <script type="text/javascript" src="jquery.tipsy.js"></script>
+	    <link href="tipsy.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
 		<svg id="svg_donut" width = "1000" height = "750">
@@ -46,7 +49,16 @@
 				return color(i);
 			})
 			.attr("transform","translate(600,400)");		
-
+			
+			$('.slice').tipsy({
+				gravity : 'w',
+				html : true,
+				title : function(){
+					var buildNo = this.__data__[0];
+					var userCount = this.__data__[1];
+					return 'Build No:' + buildNo + ' User Count:' + userCount ;
+				}
+			});
 		</script>
 	</body>
 </html>
