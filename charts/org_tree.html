@@ -63,7 +63,7 @@
 			  // Enter any new nodes at the parent's previous position.
 			  var nodeEnter = node.enter().append("g")
 			      .attr("class", "node")
-			      .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
+			      .attr("transform", function(d) { return "translate(" + source.x0 + "," + source.y0 + ")"; })
 			      .on("click", click);
 
 			  nodeEnter.append("circle")
@@ -80,7 +80,7 @@
 			  // Transition nodes to their new position.
 			  var nodeUpdate = node.transition()
 			      .duration(duration)
-			      .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
+			      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 
 			  nodeUpdate.select("circle")
 			      .attr("r", 4.5)
@@ -92,7 +92,7 @@
 			  // Transition exiting nodes to the parent's new position.
 			  var nodeExit = node.exit().transition()
 			      .duration(duration)
-			      .attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
+			      .attr("transform", function(d) { return "translate(" + source.x + "," + source.y + ")"; })
 			      .remove();
 
 			  nodeExit.select("circle")
