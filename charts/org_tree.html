@@ -30,8 +30,8 @@
 
 			d3.json("data.json", function(error, treeData) {
 			  root = treeData;
-			  root.x0 = height / 2;
-			  root.y0 = 0;
+			  root.x0 = 0;
+			  root.y0 = width / 2 ;
 
 			  function collapse(d) {
 			    if (d.children) {
