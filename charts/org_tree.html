@@ -7,56 +7,6 @@
 	</head>	
 	<body>
 		<script>
-			var treeData = [
-							  {
-							    "name": "Top Level",
-							    "parent": "null",
-							    "children": [
-							      {
-							        "name": "Level 2: A",
-							        "parent": "Top Level",
-							        "children": [
-							          {
-							            "name": "Son of A",
-							            "parent": "Level 2: A"
-							          },
-							          {
-							            "name": "Daughter of A",
-							            "parent": "Level 2: A"
-							          }
-							        ]
-							      },
-							      {
-							        "name": "Level 2: B",
-							        "parent": "Top Level",
-							        "children": [
-							          {
-							            "name": "Son of B",
-							            "parent": "Level 2: B"
-							          },
-							          {
-							            "name": "Daughter of B",
-							            "parent": "Level 2: B"
-							          }
-							        ]
-							      },
-							      {
-							        "name": "Level 2: C",
-							        "parent": "Top Level",
-							        "children": [
-							          {
-							            "name": "Son of C",
-							            "parent": "Level 2: C"
-							          },
-							          {
-							            "name": "Daughter of C",
-							            "parent": "Level 2: C"
-							          }
-							        ]
-							      }
-							    ]
-							  }
-							];
 
 			var margin = {top: 20, right: 120, bottom: 20, left: 120},
 			    width = 960 - margin.right - margin.left,
@@ -78,12 +28,22 @@
 			  .append("g")
 			    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-			
-			  root = treeData[0];
+			d3.json("data.json", function(error, treeData) {
+			  root = treeData;
 			  root.x0 = height / 2;
 			  root.y0 = 0;
+
+			  function collapse(d) {
+			    if (d.children) {
+			      d._children = d.children;
+			      d._children.forEach(collapse);
+			      d.children = null;
+			    }
+			  }
+
+			  root.children.forEach(collapse);
 			  update(root);
-			
+			});	
 
 			d3.select(self.frameElement).style("height", "800px");
 
