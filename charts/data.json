@@ -8,11 +8,11 @@
 	    "children": [
 	      {
 	        "name": "A1:Son",
-	        "parent": "Level 2: A"
+	        "parent": "A"
 	      },
 	      {
 	        "name": "A2:Daughter",
-	        "parent": "Level 2: A"
+	        "parent": "A"
 	      }
 	    ]
 	  },
@@ -22,11 +22,11 @@
 	    "children": [
 	      {
 	        "name": "B1:Son",
-	        "parent": "Level 2: B"
+	        "parent": "B"
 	      },
 	      {
 	        "name": "B2:Daughter",
-	        "parent": "Level 2: B"
+	        "parent": "B"
 	      }
 	    ]
 	  },
@@ -36,16 +36,16 @@
 	    "children": [
 	      {
 	        "name": "C1:Son",
-	        "parent": "Level 2: C",
+	        "parent": "C",
 	        "children": [
 		      {
-		        "name": "B1:Son",
-		        "parent": "Level 2: B"
+		        "name": "C1:Son",
+		        "parent": "C"
 		      } ]
 	      },
 	      {
 	        "name": "C2:Daughter",
-	        "parent": "Level 2: C"
+	        "parent": "C"
 	      }
 	    ]
 	  },
@@ -55,11 +55,11 @@
 	    "children": [
 	      {
 	        "name": "D1:Son",
-	        "parent": "Level 2: D"
+	        "parent": "D"
 	      },
 	      {
 	        "name": "D2:Daughter",
-	        "parent": "Level 2: D"
+	        "parent": "D"
 	      }
 	    ]
 	  },
@@ -69,11 +69,11 @@
 	    "children": [
 	      {
 	        "name": "E1:Son",
-	        "parent": "Level 2: E"
+	        "parent": "E"
 	      },
 	      {
 	        "name": "E2:Daughter",
-	        "parent": "Level 2: E"
+	        "parent": "E"
 	      }
 	    ]
 	  }
