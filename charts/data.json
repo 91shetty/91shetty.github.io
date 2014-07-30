@@ -3,7 +3,7 @@
 	"parent": "null",
 	"children": [
 	  {
-	    "name": "Level 2: A",
+	    "name": "A",
 	    "parent": "Top Level",
 	    "children": [
 	      {
@@ -17,7 +17,7 @@
 	    ]
 	  },
 	  {
-	    "name": "Level 2: B",
+	    "name": "B",
 	    "parent": "Top Level",
 	    "children": [
 	      {
@@ -31,7 +31,7 @@
 	    ]
 	  },
 	  {
-	    "name": "Level 2: C",
+	    "name": "C",
 	    "parent": "Top Level",
 	    "children": [
 	      {
@@ -50,7 +50,7 @@
 	    ]
 	  },
 	  {
-	    "name": "Level 2: D",
+	    "name": "D",
 	    "parent": "Top Level",
 	    "children": [
 	      {
@@ -64,7 +64,7 @@
 	    ]
 	  },
 	  {
-	    "name": "Level 2: E",
+	    "name": "E",
 	    "parent": "Top Level",
 	    "children": [
 	      {
