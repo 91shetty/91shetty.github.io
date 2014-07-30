@@ -36,7 +36,12 @@
 	    "children": [
 	      {
 	        "name": "C1:Son",
-	        "parent": "Level 2: C"
+	        "parent": "Level 2: C",
+	        "children": [
+		      {
+		        "name": "B1:Son",
+		        "parent": "Level 2: B"
+		      } ]
 	      },
 	      {
 	        "name": "C2:Daughter",
