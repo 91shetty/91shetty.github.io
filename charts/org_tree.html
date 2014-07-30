@@ -150,6 +150,7 @@
 			}
 
 			function mouseover(d){ 
+				console.log("mouseover");
 				var selectionCircle = d3.select(this);
 				selectionCircle.select("text").text(function(d){
 					return d.parent;
@@ -157,6 +158,7 @@
 			}
 
 			function mouseout(){
+				console.log("mouseout");
 				var selectionCircle = d3.select(this);
 				selectionCircle.select("text").style("display","none");
 			}
