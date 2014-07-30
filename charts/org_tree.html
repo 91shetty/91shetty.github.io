@@ -71,7 +71,7 @@
 			      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; })
 			      .on("mouseover", function(d){
 			      	var nodeSelection = d3.select(this);
-			      	nodeSelection.select("text").text({return d.parent;})
+			      	nodeSelection.select("text").text(return d.parent;)
 			      });
 
 			  nodeEnter.append("text")
