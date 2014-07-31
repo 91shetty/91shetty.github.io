@@ -64,14 +64,14 @@
 			  var nodeEnter = node.enter().append("g")
 			      .attr("class", "node")
 			      .attr("transform", function(d) { return "translate(" + source.x0 + "," + source.y0 + ")"; })
-			      .on("click", click);
+			      .on("click", click)
+			      .on("mouseover", mouseover)
+      			  .on("mouseout", mouseout);
 
 			  nodeEnter.append("circle")
 			  	  .attr("class","crl")
 			      .attr("r", 1e-6)
-			      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; })
-			      .on("mouseover", mouseover)
-      			  .on("mouseout", mouseout);
+			      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
 
 			  nodeEnter.append("text")
 			      .attr("x", function(d) { return d.children || d._children ? -10 : 10; })
