@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title> Drag and Drop </title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+		<style>
+		  #draggable { width: 150px; height: 150px; padding: 0.5em; }
+		</style>
+		<script>
+		  $(function() {
+		    $( "#draggable" ).draggable();
+		  });
+		</script>
+	</head>
+	<body>
+		<div id="draggable" class="ui-widget-content">
+		  <p>Drag me around</p>
+		</div>
+	</body>
+</html>
