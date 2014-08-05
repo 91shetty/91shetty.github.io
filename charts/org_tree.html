@@ -71,9 +71,7 @@
 			  var nodeEnter = node.enter().append("g")
 			      .attr("class", "node")
 			      .attr("transform", function(d) { return "translate(" + source.x0 + "," + source.y0 + ")"; })
-			      .on("click", click)
-			      .on("mouseover", mouseover)
-      			  .on("mouseout", mouseout);
+			      .on("click", click);
 
 			  nodeEnter.append("circle")
 			  	  .attr("id","draggable")
