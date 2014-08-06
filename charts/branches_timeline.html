@@ -19,59 +19,6 @@
     			total = 1,
     			offset = height/2;
 
-    		var branchData = {
-	"name" : "main_new",
-	"date" : "26/11/2013",
-	"desc" : "main line",
-	"dev" : "mahesh",
-	"active" : "yes",
-	"branches" : [
-		
-		{
-			"name" : "ShareConnect_VS2012",
-			"date" : "26/5/2014",
-			"desc" : "VS2012 Migration",
-			"dev" : "sumit",
-			"active" : "no"
-		},
-		{
-			"name" : "ShareConnect_VPN",
-			"date" : "10/06/2014",
-			"desc" : "vpn",
-			"dev" : "sumit",
-			"active" : "yes"
-		},
-		{
-			"name" : "WorxDesktop",
-			"date" : "11/06/2014",
-			"desc" : "Exe name changes for Worx",
-			"dev" : "sumit",
-			"active" : "no"
-		},
-		{
-			"name" : "wd_enable_dc",
-			"date" : "8/07/2014",
-			"desc" : "Enable direct connection",
-			"dev" : "rakesh kumar",
-			"active" : "yes"
-		},
-		{
-			"name" : "worx_desktop_dc",
-			"date" : "14/07/2014",
-			"desc" : "Direct channel support",
-			"dev" : "rakesh kumar",
-			"active" : "yes"
-		},
-		{
-			"name" : "main_sc_ux",
-			"date" : "22/07/2014",
-			"desc" : "ux refresh",
-			"dev" : "mahesh",
-			"active" : "yes"
-		}
-	]
-};
-
     		var branchName = function(d){
     			console.log(d.name);
     			return d.name;
@@ -96,38 +43,38 @@
 				    .append("g")
 			    	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-			//d3.json("branch_data.json", function(error, branchData) {
+			d3.json("branch_data.json", function(error, branchData) {
 				for (k in branchData) {
         			var k_data = branchData[k];
 					drawMainBranch(k_data);
 				 	k_data.forEach(function(d){
 				 		console.log(d.active);
 				 		console.log(d.desc);
-				// 	svg.append("path")
-				// 	.attr("d",function(d){
-				//    		if(d.active == "yes"){
-				//    			console.log(branchStatus);
-				//    			i++;
-				//    			offset -= (margin.left * i);
-				//    		}
-				//    		else if(d.active == "no"){
-				//    			console.log(branchStatus);
-				//    			j++;
-				//    			offset += (margin.left * j);
-				//    		}
-				//    		console.log(branchStatus);
-				//    		total++;
-				//    		return "M" + (margin.left * total) + "," + (height/2) + "L" + (margin.left * total) + "," + offset + "L" + width + "," + offset;
+					// svg.append("path")
+					// .attr("d",function(d){
+				 //   		if(d.active == "yes"){
+				 //   			console.log(branchStatus);
+				 //   			i++;
+				 //   			offset -= (margin.left * i);
+				 //   		}
+				 //   		else if(d.active == "no"){
+				 //   			console.log(branchStatus);
+				 //   			j++;
+				 //   			offset += (margin.left * j);
+				 //   		}
+				 //   		console.log(branchStatus);
+				 //   		total++;
+				 //   		return "M" + (margin.left * total) + "," + (height/2) + "L" + (margin.left * total) + "," + offset + "L" + width + "," + offset;
 
-				//    })
-				//    .attr("stroke","green")
-				//    .attr("stroke-width","2")
-				//    .attr("fill","none")
-				//    .attr("stroke-dasharray","7.51 7.51")
-				//    .attr("marker-end","url(#triangle)");
-				 	});
+				 //   })
+				 //   .attr("stroke","green")
+				 //   .attr("stroke-width","2")
+				 //   .attr("fill","none")
+				 //   .attr("stroke-dasharray","7.51 7.51")
+				 //   .attr("marker-end","url(#triangle)");
+				  	});
 				}
-			//});
+			});
 
 			svg.append("marker")
 			   .attr("id","triangle")
