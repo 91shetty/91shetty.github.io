@@ -10,9 +10,15 @@
 				    width = 1400 - margin.right - margin.left,
 				    height = 800 - margin.top - margin.bottom;
 
+			var parseDate = d3.time.format("%x").parse;
+			var x = d3.time.scale()
+    				.range([0, width]);
+
 			var svg = d3.select("body").append("svg")
 				    .attr("width", width + margin.right + margin.left)
 				    .attr("height", height + margin.top + margin.bottom)
+				    .append("g")
+			    	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 			svg.append("marker")
 			   .attr("id","triangle")
@@ -30,9 +36,13 @@
 			   .attr("y1",height/2)
 			   .attr("x2",width)
 			   .attr("y2",height/2)
-			   .attr("stroke","red")
+			   .attr("stroke","green")
 			   .attr("stroke-width","2")
 			   .attr("marker-end","url(#triangle)");
+
+
+
+
 
 		</script>
 	</body>
