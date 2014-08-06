@@ -92,10 +92,12 @@
 				   // .attr("")
 				   .attr("d",function(d){
 				   		if(branchStatus == "yes"){
+				   			console.log(branchStatus);
 				   			i++;
 				   			offset -= (margin.left * i);
 				   		}
 				   		else if(branchStatus == "no"){
+				   			console.log(branchStatus);
 				   			j++;
 				   			offset += (margin.left * j);
 				   		}
