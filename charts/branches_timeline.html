@@ -13,7 +13,7 @@
 			var parseDate = d3.time.format("%x").parse;
 			var x = d3.time.scale()
     				.range([0, width]);
-    		var root, i = 1, j = 1, total = 1;
+    		var root;
     		var branchName = function(d){
     			return d.name;
     		}
@@ -55,20 +55,17 @@
 
 			function drawMainBranch(d){
 				svg.append("path")
-				   .attr("d","M" + margin.left + "," + (height/2) + "L" + width + "," + (height/2))
-			       .attr("stroke","green")
-			       .attr("stroke-width","2")
-			       .attr("stroke-dasharray","7.51 7.51")
-			       .attr("marker-end","url(#triangle)");	
+				   .attr("x1",margin.left)
+				   .attr("y1",height/2)
+				   .attr("x2",width)
+				   .attr("y2",height/2)
+				   .attr("stroke","green")
+				   .attr("stroke-width","2")
+				   .attr("stroke-dasharray","7.51 7.51")
+				   .attr("marker-end","url(#triangle)");	
 			}
 
 			function drawBranch(d){
-				svg.append("path")
-				   .attr("d","M" + (margin.left * ++total) + "," + (height/2) + "V" + (margin.left * i++) + "H" + (height/2))
-				   .attr("stroke-width","2")
-			       .attr("stroke-dasharray","7.51 7.51")
-			       .attr("fill","none")
-			       .attr("marker-end","url(#triangle)");
 
 			}
 
