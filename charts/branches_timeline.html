@@ -9,16 +9,31 @@
 			var margin = {top: 20, right: 100, bottom: 20, left: 100},
 				    width = 1400 - margin.right - margin.left,
 				    height = 800 - margin.top - margin.bottom;
+
 			var svg = d3.select("body").append("svg")
 				    .attr("width", width + margin.right + margin.left)
 				    .attr("height", height + margin.top + margin.bottom)
+
+			svg.append("marker")
+			   .attr("id","triangle")
+			   .attr("viewBox","0 0 10 10")
+			   .attr("refX","0")
+			   .attr("refY","5")
+			   .attr("markerWidth","4")
+			   .attr("markerHeight","3")
+			   .attr("orient","auto")
+			   .append("path")
+			   .attr("d","M0,0L10,5L0,10")
+
 			svg.append("line")
 			   .attr("x1",margin.left)
 			   .attr("y1",height/2)
 			   .attr("x2",width)
 			   .attr("y2",height/2)
 			   .attr("stroke","red")
-			   .attr("stroke-width","2");
+			   .attr("stroke-width","2")
+			   .attr("marker-end","url(#triangle)");
+
 		</script>
 	</body>
 </html>
