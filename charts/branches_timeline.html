@@ -43,21 +43,38 @@
 				    .append("g")
 			    	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+			svg.append("marker")
+			   .attr("id","triangle")
+			   .attr("viewBox","0 0 10 10")
+			   .attr("refX","0")
+			   .attr("refY","5")
+			   .attr("markerWidth","4")
+			   .attr("markerHeight","3")
+			   .attr("orient","auto")
+			   .append("path")
+			   .attr("d","M0,0L10,5L0,10");
+
 			d3.json("branch_data.json", function(error, branchData) {
 				for (k in branchData) {
         			var k_data = branchData[k];
 				 	k_data.forEach(function(d){
-				 		console.log(d.types);
-				 		console.log(d.desc);
-				 		console.log(d.dev);
-				 		console.log(d.dateC);
 				 		if(d.types == "main"){
 				 			console.log("Drawing main branch");
 				 			drawMainBranch(d);
 				 		}
 				 		else if(d.types == "branch"){
+				 			if(d.active == "yes"){
+				 				console.log("Active");
+				 				i++;
+				 				offset -= (margin.left * i);
+				 			}
+				 			else if(d.active == "no"){
+				 				console.log("Not Active");
+				 				j++;
+				 				offset += (margin.left * j);
+				 			}
 				 			console.log("Drawing sub branches");
-				 			
+
 				 		}
 						// svg.append("path")
 						// .attr("d",function(d){
@@ -88,16 +105,7 @@
 				}
 			});
 
-			svg.append("marker")
-			   .attr("id","triangle")
-			   .attr("viewBox","0 0 10 10")
-			   .attr("refX","0")
-			   .attr("refY","5")
-			   .attr("markerWidth","4")
-			   .attr("markerHeight","3")
-			   .attr("orient","auto")
-			   .append("path")
-			   .attr("d","M0,0L10,5L0,10");
+			
 
 			function drawMainBranch(d){
 				svg.append("line")
