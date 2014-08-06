@@ -86,16 +86,18 @@
 				 				console.log("Active");
 				 				++i;
 				 				active_offset -= (50 * i);	
-				 				path.attr("stroke","blue");				 						 				
+				 				path.attr("stroke","blue");	
+				 				path.attr("d","M" + (50 * total) + "," + (height/2) + "L" + (50 * total) + "," + active_offset + "L" + width + "," + active_offset);			 						 				
 				 			}
 				 			else if(d.active == "no"){
 				 				console.log("Not Active");
 				 				++j;
 				 				nonactive_offset += (50 * j);
 				 				path.attr("stroke","red");
+				 				path.attr("d","M" + (50 * total) + "," + (height/2) + "L" + (50 * total) + "," + nonactive_offset + "L" + width + "," + nonactive_offset);
 				 			}
 				 			
-							path.attr("d","M" + (50 * total) + "," + (height/2) + "L" + (50 * total) + "," + offset + "L" + width + "," + offset);
+							
 				 			console.log("Drawing sub branches");
 
 				 		}
