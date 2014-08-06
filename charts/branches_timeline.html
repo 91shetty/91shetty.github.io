@@ -17,7 +17,8 @@
     		var i = 0,
     			j = 0,
     			total = 1,
-    			offset = height/2;
+    			active_offset = 300,
+    			nonactive_offset = 300;;
 
     		var branchName = function(d){
     			console.log(d.name);
@@ -83,14 +84,14 @@
 										   .attr("marker-end","url(#triangle)")
 				 			if(d.active == "yes"){
 				 				console.log("Active");
-				 				i++;
-				 				offset -= (margin.left * i);	
+				 				++i;
+				 				active_offset -= (50 * i);	
 				 				path.attr("stroke","blue");				 						 				
 				 			}
 				 			else if(d.active == "no"){
 				 				console.log("Not Active");
-				 				j++;
-				 				offset += (margin.left * j);
+				 				++j;
+				 				nonactive_offset += (50 * j);
 				 				path.attr("stroke","red");
 				 			}
 				 			
