@@ -91,11 +91,11 @@
 				   // })
 				   // .attr("")
 				   .attr("d",function(d){
-				   		if(d.active == "yes"){
+				   		if(branchStatus == "yes"){
 				   			i++;
 				   			offset -= (margin.left * i);
 				   		}
-				   		else if(d.active == "no"){
+				   		else if(branchStatus == "no"){
 				   			j++;
 				   			offset += (margin.left * j);
 				   		}
