@@ -1,12 +1,11 @@
 {
+	"name" : "main_new",
+	"date" : "26/11/2013",
+	"desc" : "main line",
+	"dev" : "mahesh",
+	"active" : "yes",
 	"branches" : [
-		{
-			"name" : "main_new",
-			"date" : "26/11/2013",
-			"desc" : "main line",
-			"dev" : "mahesh",
-			"active" : "yes"
-		},
+		
 		{
 			"name" : "ShareConnect_VS2012",
 			"date" : "26/5/2014",
