@@ -23,7 +23,7 @@
     			return d.name;
     		}
     		var date = function(d){
-    			return parseDate(d.parseDate);
+    			return parseDate(d.date);
     		}
     		var devsWorking = function(d){
     			return d.dev;
@@ -101,6 +101,7 @@
 				   			j++;
 				   			offset += (margin.left * j);
 				   		}
+				   		console.log(branchStatus);
 				   		total++;
 				   		return "M" + (margin.left * total) + "," + (height/2) + "L" + (margin.left * total) + "," + offset + "L" + width + "," + offset;
 
