@@ -51,6 +51,14 @@
 				 		console.log(d.desc);
 				 		console.log(d.dev);
 				 		console.log(d.dateC);
+				 		if(d.types == "main"){
+				 			console.log("Drawing main branch");
+				 			drawMainBranch(d);
+				 		}
+				 		else if(d.types == "branch"){
+				 			console.log("Drawing sub branches");
+				 			
+				 		}
 						// svg.append("path")
 						// .attr("d",function(d){
 						// 	if(d.types == "main"){
