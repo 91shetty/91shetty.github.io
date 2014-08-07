@@ -37,6 +37,8 @@
     		}
 
     		var currentDate = new Date();
+    		var locale ="en-us";
+    		currentDate = currentDate.getDate() + "-" + (currentDate.toLocaleString(locale, { month: "short" }) + 1) + "-" + (currentDate.getYear() - 100);
     		console.log(currentDate);
 
 			var svg = d3.select("body").append("svg")
