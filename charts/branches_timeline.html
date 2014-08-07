@@ -53,8 +53,7 @@
 				 			startDate = d.dateC;
 				 			console.log(startDate);
 				 			xScale.domain([startDate,currentDate]);
-				 			xAxis.scale(xScale)
-				 				.attr("marker-end","url(#triangle)");
+				 			xAxis.scale(xScale);
 				 			console.log("Drawing main branch");
 				 			svg.append("g")
 					 			.attr("class","xaxis")
