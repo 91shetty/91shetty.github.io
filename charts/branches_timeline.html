@@ -18,29 +18,11 @@
     			j = 0,
     			total = 1;
 
-    		var branchName = function(d){
-    			console.log(d.name);
-    			return d.name;
-    		}
-    		var date = function(d){
-    			return parseDate(d.date);
-    		}
-    		var devsWorking = function(d){
-    			return d.dev;
-    		}
-    		var branchDesc = function(d){
-    			return d.desc;
-    		}
-    		var branchStatus = function(d){
-    			console.log(d.active);
-    			return d.active;
-    		}
-
     		var currentDate = new Date();
     		var locale ="en-us";
     		currentDate = currentDate.getDate() + "-" + currentDate.toLocaleString(locale, { month: "short" }) + "-" + (currentDate.getYear() - 100);
     		console.log(currentDate);
-
+    		var startDate;
 			var svg = d3.select("body").append("svg")
 				    .attr("width", width + margin.right + margin.left)
 				    .attr("height", height + margin.top + margin.bottom)
@@ -63,6 +45,8 @@
         			var k_data = branchData[k];
 				 	k_data.forEach(function(d){
 				 		if(d.types == "main"){
+				 			startDate = d.date;
+				 			console(startDate);
 				 			console.log("Drawing main branch");
 				 			svg.append("line")
 					   		   .attr("x1",margin.left)
