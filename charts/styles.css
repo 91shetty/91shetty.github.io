@@ -6,3 +6,8 @@
 	stroke-dasharray: 7.51, 7.51;
 	marker-end: url(#triangle);
 }
+
+body {
+  font: 10px sans-serif;
+  margin: 0;
+}
