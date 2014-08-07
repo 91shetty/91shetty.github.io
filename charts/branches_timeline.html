@@ -10,7 +10,7 @@
 				    width = 1400 - margin.right - margin.left,
 				    height = 800 - margin.top - margin.bottom;
 
-			var parseDate = d3.time.format("%x").parse;
+			var parseDate = d3.time.format("%b %Y").parse;
 			var x = d3.time.scale()
     				.range([0, width]);
     		var root;
@@ -35,6 +35,9 @@
     			console.log(d.active);
     			return d.active;
     		}
+
+    		var currentDate = parseDate(new Date());
+    		console.log(currentDate);
 
 			var svg = d3.select("body").append("svg")
 				    .attr("width", width + margin.right + margin.left)
