@@ -28,8 +28,8 @@
 				    		.range([margin.left,width]);
 			var xAxis = d3.svg.axis()
 							.orient("bottom")
-							.ticks(d3.time.days, 1)
-						    .tickFormat(d3.time.format('%a %d'))
+							.ticks(d3.time.months, 1)
+						    .tickFormat(d3.time.format('%b %y'))
 						    .tickSize(0)
 						    .tickPadding(8);
 			var svg = d3.select("body").append("svg")
