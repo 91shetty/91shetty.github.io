@@ -23,6 +23,10 @@
     		currentDate = currentDate.getDate() + "-" + currentDate.toLocaleString(locale, { month: "short" }) + "-" + (currentDate.getYear() - 100);
     		console.log(currentDate);
     		var startDate;
+    		var xScale = d3.time.scale()
+				    		.range([margin.left,width]);
+			var xAxis = d3.svg.axis()
+							.orient("bottom");
 			var svg = d3.select("body").append("svg")
 				    .attr("width", width + margin.right + margin.left)
 				    .attr("height", height + margin.top + margin.bottom)
@@ -47,20 +51,26 @@
 				 		if(d.types == "main"){
 				 			startDate = d.dateC;
 				 			console.log(startDate);
+				 			xScale.domain([startDate,currentDate]);
+				 			xAxis.scale(xScale);
 				 			console.log("Drawing main branch");
-				 			svg.append("line")
-					   		   .attr("x1",margin.left)
-							   .attr("y1",height/2)
-							   .attr("x2",width)
-							   .attr("y2",height/2)
-							   .attr("stroke","green")
-							   .attr("stroke-width","2")
-							   .attr("stroke-dasharray","7.51 7.51")
-							   .attr("marker-end","url(#triangle)")
-							   .append("text")
-							   .attr("x","9")
-							   .attr("dy",".35em")
-							   .text(d.desc);
+				 			svg.append("g")
+					 			.attr("class","xaxis")
+					 			.attr("transform","translate(" + margin.left + "," + height/2 + ")")
+					 			.call(xAxis);
+				 			// svg.append("line")
+					   // 		   .attr("x1",margin.left)
+							 //   .attr("y1",height/2)
+							 //   .attr("x2",width)
+							 //   .attr("y2",height/2)
+							 //   .attr("stroke","green")
+							 //   .attr("stroke-width","2")
+							 //   .attr("stroke-dasharray","7.51 7.51")
+							 //   .attr("marker-end","url(#triangle)")
+							 //   .append("text")
+							 //   .attr("x","9")
+							 //   .attr("dy",".35em")
+							 //   .text(d.desc);
 				 		}
 				 		else if(d.types == "branch"){
 				 			total++;
