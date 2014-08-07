@@ -2,4 +2,5 @@
 	fill : none;
 	stroke-width : 2;
 	stroke : green;
+	shape-rendering: crispEdges;
 }
