@@ -3,6 +3,7 @@
 	<head>
 		<title> Branch History for Main_new</title>
 		<script type="text/javascript" src="d3/d3.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
 	<body>
 		<script type="text/javascript">
@@ -27,6 +28,7 @@
 				    		.range([margin.left,width]);
 			var xAxis = d3.svg.axis()
 							.orient("bottom");
+							.tick
 			var svg = d3.select("body").append("svg")
 				    .attr("width", width + margin.right + margin.left)
 				    .attr("height", height + margin.top + margin.bottom)
@@ -56,7 +58,7 @@
 				 			console.log("Drawing main branch");
 				 			svg.append("g")
 					 			.attr("class","xaxis")
-					 			.attr("transform","translate(" + margin.left + "," + height/2 + ")")
+					 			.attr("transform","translate(" + 0 + "," + height/2 + ")")
 					 			.call(xAxis);
 				 			// svg.append("line")
 					   // 		   .attr("x1",margin.left)
