@@ -27,11 +27,8 @@
     		var xScale = d3.time.scale()
 				    		.range([margin.left,width]);
 			var xAxis = d3.svg.axis()
-							.orient("bottom")
-							.ticks(10)
-						    .tickFormat(d3.time.format('%b %y'))
-						    .tickSize(1)
-						    .tickPadding(8);
+							.orient("bottom");
+							
 			var svg = d3.select("body").append("svg")
 				    .attr("width", width + margin.right + margin.left)
 				    .attr("height", height + margin.top + margin.bottom)
@@ -58,6 +55,10 @@
 				 			console.log(startDate);
 				 			xScale.domain([startDate,currentDate]);
 				 			xAxis.scale(xScale);
+				 				.ticks(10)
+							    .tickFormat(d3.time.format('%b %y'))
+							    .tickSize(1)
+							    .tickPadding(8);
 				 			console.log("Drawing main branch");
 				 			svg.append("g")
 					 			.attr("class","xaxis")
