@@ -84,7 +84,7 @@
     		var startDate;
     		var currentDate = new Date();
     		var locale ="en-us";
-    		currentDate = currentDate.getFullYear() + "-" + (currentDate.getMonth() + 1) + "-" + currentDate.getDate());
+    		currentDate = currentDate.getFullYear() + "-" + (currentDate.getMonth() + 1) + "-" + currentDate.getDate();
     		var xScale = d3.time.scale()
 				    			.range([margin.left,width])
 								.domain([parseDate(branchData1[0].dateC),parseDate(currentDate)]);
