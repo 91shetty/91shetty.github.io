@@ -115,7 +115,7 @@
 				 			//console.log(startDate);
 				 			d.dateC = parseDate(d.dateC);
 				 			console.log(d.dateC);
-				 			xScale.domain(d.dateC),parseDate(currentDate)]);
+				 			xScale.domain([d.dateC,parseDate(currentDate)]);
 				 			var xAxis = d3.svg.axis()
 												.orient("bottom")
 												.scale(xScale)
