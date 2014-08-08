@@ -16,7 +16,6 @@ line{
 }
 text{
 	stroke-dasharray : none;
-	fill : none;
-	stroke : black;
-	y : 8px;
+	fill : black;
+	stroke-width : 0;
 }
