@@ -14,5 +14,6 @@ body {
 
 text{
 	stroke-dasharray : none;
-	fill : black;
+	fill : none;
+	stroke : black;
 }
