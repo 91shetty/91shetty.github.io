@@ -132,6 +132,7 @@
 				 				console.log("Active");
 				 				++i;
 				 				path.attr("stroke","blue");	
+				 				console.log(xAxis(d.dateC));
 				 				path.attr("d","M" + xAxis(d.dateC) + "," + (height/2) + "L" + xAxis(d.dateC) + "," + ((height/2) - (i*50))  + "L" + width + "," + ((height/2) - (i*50)));			 						 				
 				 			}
 				 			else if(d.active == "no"){
