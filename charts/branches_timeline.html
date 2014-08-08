@@ -56,9 +56,8 @@
 				 			var xAxis = d3.svg.axis()
 											.orient("bottom")
 											.scale(xScale)
-							 				.ticks(10)
-										    .tickFormat(d3.time.format('%b %y'))
-										    .tickSize(1)
+										    .tickFormat(d3.time.format('%b-%y'))
+										    .tickSize(4)
 										    .tickPadding(8);
 				 			console.log("Drawing main branch");
 				 			svg.append("g")
