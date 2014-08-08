@@ -11,7 +11,9 @@ body {
   font: 15px sans-serif;
   margin: 0;
 }
-
+line{
+	marker-end: none;
+}
 text{
 	stroke-dasharray : none;
 	fill : none;
