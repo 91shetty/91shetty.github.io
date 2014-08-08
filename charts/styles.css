@@ -2,21 +2,21 @@
 	fill : none;
 	stroke-width : 2;
 	stroke : green;
-	shape-rendering: crispEdges;
-	stroke-dasharray: 7.51, 7.51;
-	marker-end: url(#triangle);
+	shape-rendering : crispEdges;
+	stroke-dasharray : 7.51, 7.51;
+	marker-end : url(#triangle);
 }
 
 body {
-  font: 15px sans-serif;
-  margin: 0;
+  font : 15px sans-serif;
+  margin : 0;
 }
 line{
-	marker-end: none;
+	marker-end : none;
 }
 text{
 	stroke-dasharray : none;
 	fill : none;
 	stroke : black;
-	x: 8;
+	y : 8px;
 }

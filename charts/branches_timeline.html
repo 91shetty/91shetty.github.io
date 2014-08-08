@@ -135,6 +135,8 @@
 										   .attr("fill","none")
 										   .attr("stroke-dasharray","7.51 7.51")
 										   .attr("marker-end","url(#triangle)")
+										   .selectAll("text")
+										   .attr("transform","translate(0,8)");
 				 			if(d.active == "yes"){
 				 				console.log("Active");
 				 				++i;
