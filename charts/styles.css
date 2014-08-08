@@ -3,7 +3,7 @@
 	stroke-width : 2;
 	stroke : green;
 	shape-rendering : crispEdges;
-	stroke-dasharray : 7.51, 7.51;
+	/*stroke-dasharray : 7.51, 7.51;*/
 	marker-end : url(#triangle);
 }
 
