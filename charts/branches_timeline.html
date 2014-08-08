@@ -11,7 +11,7 @@
 				    width = 1400 - margin.right - margin.left,
 				    height = 800 - margin.top - margin.bottom;
 
-			var parseDate = d3.time.format("%b %Y").parse;
+			var parseDate = d3.time.format("%m %Y").parse;
 			var x = d3.time.scale()
     				.range([0, width]);
     		var root;
@@ -108,8 +108,7 @@
         			var k_data = branchData[k];
 				 	k_data.forEach(function(d){
 				 		if(d.types == "main"){
-				 			//startDate = d.dateC;
-				 			d.dateC = parseDate(d.dateC);
+				 			startDate = d.dateC;
 				 			console.log(startDate);
 				 			
 				 			var xAxis = d3.svg.axis()
@@ -124,7 +123,6 @@
 				 		}
 				 		else if(d.types == "branch"){
 				 			total++;
-				 			d.dateC = parseDate(d.dateC);
 				 			var path = svg.append("path")					 		   
 										   .attr("stroke-width","2")
 										   .attr("fill","none")
