@@ -11,3 +11,8 @@ body {
   font: 10px sans-serif;
   margin: 0;
 }
+
+text{
+	stroke-dasharray: none;
+	color: black;
+}
