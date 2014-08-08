@@ -87,7 +87,7 @@
     		currentDate = currentDate.getFullYear() + "-" + (currentDate.getMonth() + 1) + "-" + currentDate.getDate();
     		var xScale = d3.time.scale()
 				    			.range([margin.left,width])
-								.domain([parseDate(branchData1[0].dateC),parseDate(currentDate)]);
+								
 							
 			var svg = d3.select("body").append("svg")
 				    .attr("width", width + margin.right + margin.left)
@@ -115,6 +115,7 @@
 				 			//console.log(startDate);
 				 			d.dateC = parseDate(d.dateC);
 				 			console.log(d.dateC);
+				 			xScale..domain(d.dateC),parseDate(currentDate)]);
 				 			var xAxis = d3.svg.axis()
 												.orient("bottom")
 												.scale(xScale)
