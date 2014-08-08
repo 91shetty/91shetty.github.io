@@ -113,8 +113,8 @@
 				 			xScale.domain([startDate,currentDate]);
 				 			var xAxis = d3.svg.axis()
 												.orient("bottom")
-												.scale(xScale)
-											    .tickFormat(d3.time.format("%b-%y"));
+												.scale(xScale);
+											    //.tickFormat(d3.time.format("%b-%y"));
 				 			console.log("Drawing main branch");
 				 			svg.append("g")
 					 			.attr("class","xaxis")
