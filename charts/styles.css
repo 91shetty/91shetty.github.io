@@ -5,6 +5,7 @@
 	shape-rendering : crispEdges;
 	/*stroke-dasharray : 7.51, 7.51;*/
 	marker-end : url(#triangle);
+	marker-start : url(#circle);
 }
 
 body {

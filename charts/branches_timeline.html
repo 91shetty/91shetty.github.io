@@ -106,6 +106,24 @@
 			   .append("path")
 			   .attr("d","M0,0L10,5L0,10");
 
+			svg.append("marker")
+				.attr("id","circle")
+				.attr("markerWidth","8")
+				.attr("markerHeight","8")
+				.attr("refx","5")
+				.attr("refy","5")
+				.attr("orient","auto")
+				.append("circle")
+				.attr("cx","5")
+				.attr("cy","5")
+				.attr("r","3")
+				.attr("stroke","none")
+				.attr("fill","green");
+
+			<marker id="markerCircle" markerWidth="8" markerHeight="8" refx="5" refy="5">
+        <circle cx="5" cy="5" r="3" style="stroke: none; fill:#000000;"/>
+    </marker>
+
 			d3.json("branch_data.json", function(error, branchData) {
 				for (k in branchData) {
         			var k_data = branchData[k];
