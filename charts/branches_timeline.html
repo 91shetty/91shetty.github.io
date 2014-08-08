@@ -84,7 +84,7 @@
     		var startDate;
     		var xScale = d3.time.scale()
 				    			.range([margin.left,width])
-								.domain([branchData1[0].dateC,branchData1[branchData1.length - 1].dateC]);
+								.domain([branchData1[0].parseDate(dateC),branchData1[branchData1.length - 1].parseDate(dateC)]);
 							
 			var svg = d3.select("body").append("svg")
 				    .attr("width", width + margin.right + margin.left)
