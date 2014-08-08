@@ -83,8 +83,8 @@
     		console.log(currentDate);
     		var startDate;
     		var xScale = d3.time.scale()
-				    			.range([margin.left,width]);
-			
+				    			.range([margin.left,width])
+								.domain([branchData1[0].dateC,branchData1[branchData1.length - 1].dateC]);
 							
 			var svg = d3.select("body").append("svg")
 				    .attr("width", width + margin.right + margin.left)
@@ -110,7 +110,7 @@
 				 		if(d.types == "main"){
 				 			startDate = d.dateC;
 				 			console.log(startDate);
-				 			xScale.domain([startDate,currentDate]);
+				 			
 				 			var xAxis = d3.svg.axis()
 												.orient("bottom")
 												.scale(xScale);
