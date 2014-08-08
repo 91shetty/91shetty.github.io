@@ -132,14 +132,17 @@
 				 				console.log("Active");
 				 				++i;
 				 				path.attr("stroke","blue");	
+				 				console.log(d.dateC);
 				 				console.log(xAxis(d.dateC));
-				 				path.attr("d","M" + xAxis(d.dateC) + "," + (height/2) + "L" + xAxis(d.dateC) + "," + ((height/2) - (i*50))  + "L" + width + "," + ((height/2) - (i*50)));			 						 				
+				 				//path.attr("d","M" + xAxis(d.dateC) + "," + (height/2) + "L" + xAxis(d.dateC) + "," + ((height/2) - (i*50))  + "L" + width + "," + ((height/2) - (i*50)));			 						 				
 				 			}
 				 			else if(d.active == "no"){
 				 				console.log("Not Active");
 				 				++j;
 				 				path.attr("stroke","red");
-				 				path.attr("d","M" + xAxis(d.dateC) + "," + (height/2) + "L" + xAxis(d.dateC) + "," + ((height/2) + (j*50)) + "L" + width + "," + ((height/2) + (j*50)));
+				 				console.log(d.dateC);
+				 				console.log(xAxis(d.dateC));
+				 				//path.attr("d","M" + xAxis(d.dateC) + "," + (height/2) + "L" + xAxis(d.dateC) + "," + ((height/2) + (j*50)) + "L" + width + "," + ((height/2) + (j*50)));
 				 			}				 										
 				 			console.log("Drawing sub branches");
 
