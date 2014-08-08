@@ -79,11 +79,11 @@
 
     		var currentDate = new Date();
     		var locale ="en-us";
-    		currentDate = currentDate.getDate() + "-" + currentDate.toLocaleString(locale, { month: "short" }) + "-" + (currentDate.getYear() - 100);
+    		currentDate = currentDate.getFullYear() + "-" + currentDate.getMonth() + "-" + currentDate.getDate(); 
     		console.log(currentDate);
     		var startDate;
     		var xScale = d3.time.scale()
-				    		.range([margin.left,width]);
+				    			.range([margin.left,width]);
 			
 							
 			var svg = d3.select("body").append("svg")
@@ -112,9 +112,9 @@
 				 			console.log(startDate);
 				 			xScale.domain([startDate,currentDate]);
 				 			var xAxis = d3.svg.axis()
-											.orient("bottom")
-											.scale(xScale)
-										    .tickFormat(d3.time.format('%b-%y'));
+												.orient("bottom")
+												.scale(xScale)
+											    .tickFormat(d3.time.format("%b-%y"));
 				 			console.log("Drawing main branch");
 				 			svg.append("g")
 					 			.attr("class","xaxis")
