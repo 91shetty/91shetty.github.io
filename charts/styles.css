@@ -13,6 +13,6 @@ body {
 }
 
 text{
-	stroke-dasharray: none;
-	color: black;
+	stroke-dasharray : none;
+	fill : black;
 }
