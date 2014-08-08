@@ -106,20 +106,6 @@
 			   .append("path")
 			   .attr("d","M0,0L10,5L0,10");
 
-			svg.append("marker")
-				.attr("id","circle")
-				.attr("markerWidth","8")
-				.attr("markerHeight","8")
-				.attr("refx","5")
-				.attr("refy","5")
-				.attr("orient","auto")
-				.append("circle")
-				.attr("cx","5")
-				.attr("cy","5")
-				.attr("r","3")
-				.attr("stroke","none")
-				.attr("fill","green");
-
 			d3.json("branch_data.json", function(error, branchData) {
 				for (k in branchData) {
         			var k_data = branchData[k];
@@ -149,8 +135,6 @@
 										   .attr("fill","none")
 										   .attr("stroke-dasharray","7.51 7.51")
 										   .attr("marker-end","url(#triangle)")
-										   .selectAll("text")
-										   .attr("transform","translate(0,8)");
 				 			if(d.active == "yes"){
 				 				console.log("Active");
 				 				++i;
