@@ -115,10 +115,13 @@
 				 				if(d.merged == "yes"){
 					 				d.dateM = parseDate(d.dateM);
 					 				mergeNotMerge = xScale(new Date(d.dateM)) + "," + ((height/2) + (j*50)) + "L" + xScale(new Date(d.dateM)) + "," + (height/2);
+					 				path.attr("marker-start","url(#circle)")
+						 				.attr("marker-end","url(#circle)");
 					 			}		
 					 			else{
 					 				mergeNotMerge = width + "," + ((height/2) + (j*50));
-					 				path.attr("marker-end","url(#triangle)");
+					 				path.attr("marker-start","url(#circle)")
+						 				.attr("marker-end","url(#triangle)");
 					 			}
 				 				path.attr("stroke","red");
 				 				console.log(d.dateC);
