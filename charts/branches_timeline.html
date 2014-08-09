@@ -106,7 +106,7 @@
 				 					.text(function (d){
 				 						return branchName;
 				 					})
-				 					.attr("x",xScale(new Date(d.dateC)) - (length(branchName) + 1))
+				 					.attr("x",xScale(new Date(d.dateC)))
 				 					.attr("y",((height/2) - (i*50)));
 				 					//.attr("transform","translate(" + xScale(new Date(d.dateC)) + "," + ((height/2) - (i*50))")");
 				 			}
@@ -133,7 +133,7 @@
 				 					.text(function (d){
 				 						return branchName;
 				 					})
-				 					.attr("x",xScale(new Date(d.dateC)) - (length(branchName) + 1))
+				 					.attr("x",xScale(new Date(d.dateC)))
 				 					.attr("y",((height/2) + (j*50)));
 				 					//.attr("transform","translate(" + xScale(new Date(d.dateC)) + "," + ((height/2) + (j*50))")");
 				 			}				 										
