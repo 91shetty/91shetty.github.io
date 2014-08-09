@@ -4,7 +4,6 @@
 	stroke : green;
 	shape-rendering : crispEdges;
 	/*stroke-dasharray : 7.51, 7.51;*/
-	marker-start : url(#circle);
 	marker-end : url(#triangle);
 }
 
