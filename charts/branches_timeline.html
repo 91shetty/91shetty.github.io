@@ -101,7 +101,9 @@
 				 				//console.log(xScale(d.dateC));
 				 				path.attr("d","M" + xScale(new Date(d.dateC)) + "," + (height/2) + "L" + xScale(new Date(d.dateC)) + "," + ((height/2) - (i*50))  + "L" + mergeNotMerge);
 				 				path.append("text")
-				 					.text(d.nameB);
+				 					.text(function (d){
+				 						console.log(d.nameB);
+				 					});
 				 					//.attr("transform","translate(" + xScale(new Date(d.dateC)) + "," + ((height/2) - (i*50))")");
 				 			}
 				 			else if(d.active == "no"){
@@ -123,7 +125,9 @@
 				 				//console.log(xScale(d.dateC));
 				 				path.attr("d","M" + xScale(new Date(d.dateC)) + "," + (height/2) + "L" + xScale(new Date(d.dateC)) + "," + ((height/2) + (j*50)) + "L" + mergeNotMerge);
 				 				path.append("text")
-				 					.text(d.nameB);
+				 					.text(function (d){
+				 						console.log(d.nameB);
+				 					});
 				 					//.attr("transform","translate(" + xScale(new Date(d.dateC)) + "," + ((height/2) + (j*50))")");
 				 			}				 										
 				 			//console.log("Drawing sub branches");
