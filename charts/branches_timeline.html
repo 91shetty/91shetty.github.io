@@ -75,6 +75,7 @@
 				 		}
 				 		else if(d.types == "branch"){
 				 			var mergeNotMerge;
+					 		var	branchName = d.nameB;;
 				 			d.dateC = parseDate(d.dateC);
 				 			// console.log(d.dateC);
 				 			var path = svg.append("path")					 		   
@@ -84,6 +85,7 @@
 										   
 				 			if(d.active == "yes"){
 				 				//console.log("Active");
+				 				console.log(branchName);
 				 				++i;
 				 				if(d.merged == "yes"){
 					 				d.dateM = parseDate(d.dateM);
@@ -102,12 +104,13 @@
 				 				path.attr("d","M" + xScale(new Date(d.dateC)) + "," + (height/2) + "L" + xScale(new Date(d.dateC)) + "," + ((height/2) - (i*50))  + "L" + mergeNotMerge);
 				 				path.append("text")
 				 					.text(function (d){
-				 						console.log(d.nameB);
+				 						return branchName;
 				 					});
 				 					//.attr("transform","translate(" + xScale(new Date(d.dateC)) + "," + ((height/2) - (i*50))")");
 				 			}
 				 			else if(d.active == "no"){
 				 				//console.log("Not Active");
+				 				console.log(branchName);
 				 				++j;
 				 				if(d.merged == "yes"){
 					 				d.dateM = parseDate(d.dateM);
@@ -126,7 +129,7 @@
 				 				path.attr("d","M" + xScale(new Date(d.dateC)) + "," + (height/2) + "L" + xScale(new Date(d.dateC)) + "," + ((height/2) + (j*50)) + "L" + mergeNotMerge);
 				 				path.append("text")
 				 					.text(function (d){
-				 						console.log(d.nameB);
+				 						return branchName;
 				 					});
 				 					//.attr("transform","translate(" + xScale(new Date(d.dateC)) + "," + ((height/2) + (j*50))")");
 				 			}				 										
