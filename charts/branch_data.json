@@ -1,7 +1,7 @@
 {	
 	"branches" : [
 		{
-			"name" : "main_new",
+			"nameB" : "main_new",
 			"dateC" : "2013-11-26",
 			"desc" : "main line",
 			"dev" : "mahesh",
@@ -9,7 +9,7 @@
 			"types" : "main"
 		},		
 		{
-			"name" : "ShareConnect_VS2012",
+			"nameB" : "ShareConnect_VS2012",
 			"dateC" : "2014-05-26",
 			"desc" : "VS2012 Migration",
 			"dev" : "sumit",
@@ -19,7 +19,7 @@
 			"dateM" : "2014-06-15"
 		},
 		{
-			"name" : "ShareConnect_VPN",
+			"nameB" : "ShareConnect_VPN",
 			"dateC" : "2014-06-10",
 			"desc" : "vpn",
 			"dev" : "sumit",
@@ -28,7 +28,7 @@
 			"merged" : "no"
 		},
 		{
-			"name" : "WorxDesktop",
+			"nameB" : "WorxDesktop",
 			"dateC" : "2014-06-11",
 			"desc" : "Exe name changes for Worx",
 			"dev" : "sumit",
@@ -37,7 +37,7 @@
 			"merged" : "no"
 		},
 		{
-			"name" : "wd_enable_dc",
+			"nameB" : "wd_enable_dc",
 			"dateC" : "2014-07-08",
 			"desc" : "Enable direct connection",
 			"dev" : "rakesh kumar",
@@ -46,7 +46,7 @@
 			"merged" : "no"
 		},
 		{
-			"name" : "worx_desktop_dc",
+			"nameB" : "worx_desktop_dc",
 			"dateC" : "2014-07-14",
 			"desc" : "Direct channel support",
 			"dev" : "rakesh kumar",
@@ -55,7 +55,7 @@
 			"merged" : "no"
 		},
 		{
-			"name" : "main_sc_ux",
+			"nameB" : "main_sc_ux",
 			"dateC" : "2014-07-22",
 			"desc" : "ux refresh",
 			"dev" : "mahesh",
