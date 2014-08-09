@@ -150,14 +150,21 @@
 										   .attr("stroke-dasharray","7.51 7.51")
 										   .attr("marker-start","url(#circle)")
 										   .attr("marker-end","url(#triangle)");
-
+							if(d.merged == "yes"){
+				 				d.dateM = parseDate(d.dateM);
+				 			}		
 				 			if(d.active == "yes"){
 				 				console.log("Active");
 				 				++i;
 				 				path.attr("stroke","blue");	
 				 				console.log(d.dateC);
 				 				console.log(xScale(d.dateC));
-				 				path.attr("d","M" + xScale(new Date(d.dateC)) + "," + (height/2) + "L" + xScale(new Date(d.dateC)) + "," + ((height/2) - (i*50))  + "L" + width + "," + ((height/2) - (i*50)));			 						 				
+				 				path.attr("d","M" + xScale(new Date(d.dateC)) + "," + (height/2) + "L" + xScale(new Date(d.dateC)) + "," + ((height/2) - (i*50))  + "L" +     if(d.merged == "yes"){
+				 						xScale(new Date(d.dateM)) + "," + ((height/2) - (i*50)) + "L" + xScale(new Date(d.dateM)) + "," + (height/2));
+				 					}
+				 					else{
+				 						width + "," + ((height/2) - (i*50)));
+				 					}
 				 			}
 				 			else if(d.active == "no"){
 				 				console.log("Not Active");
