@@ -8,7 +8,8 @@
 }
 
 body {
-  font : 15px sans-serif;
+  font-family : 'Roboto Slab', serif ;
+  font-size : 12px;
   margin : 0;
 }
 line{
