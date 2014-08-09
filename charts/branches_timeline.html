@@ -105,7 +105,9 @@
 				 				path.append("text")
 				 					.text(function (d){
 				 						return branchName;
-				 					});
+				 					})
+				 					.attr("x",xScale(new Date(d.dateC)))
+				 					.attr("y",((height/2) - (i*50)));
 				 					//.attr("transform","translate(" + xScale(new Date(d.dateC)) + "," + ((height/2) - (i*50))")");
 				 			}
 				 			else if(d.active == "no"){
@@ -130,7 +132,9 @@
 				 				path.append("text")
 				 					.text(function (d){
 				 						return branchName;
-				 					});
+				 					})
+				 					.attr("x",xScale(new Date(d.dateC)))
+				 					.attr("y",((height/2) + (j*50)));
 				 					//.attr("transform","translate(" + xScale(new Date(d.dateC)) + "," + ((height/2) + (j*50))")");
 				 			}				 										
 				 			//console.log("Drawing sub branches");
