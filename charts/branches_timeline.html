@@ -168,10 +168,17 @@
 				 			else if(d.active == "no"){
 				 				console.log("Not Active");
 				 				++j;
+				 				if(d.merged == "yes"){
+					 				d.dateM = parseDate(d.dateM);
+					 				mergeNotMerge = xScale(new Date(d.dateM)) + "," + ((height/2) + (j*50)) + "L" + xScale(new Date(d.dateM)) + "," + (height/2);
+					 			}		
+					 			else{
+					 				mergeNotMerge = width + "," + ((height/2) + (j*50));
+					 			}
 				 				path.attr("stroke","red");
 				 				console.log(d.dateC);
 				 				console.log(xScale(d.dateC));
-				 				path.attr("d","M" + xScale(new Date(d.dateC)) + "," + (height/2) + "L" + xScale(new Date(d.dateC)) + "," + ((height/2) + (j*50)) + "L" + width + "," + ((height/2) + (j*50)));
+				 				path.attr("d","M" + xScale(new Date(d.dateC)) + "," + (height/2) + "L" + xScale(new Date(d.dateC)) + "," + ((height/2) + (j*50)) + "L" + mergeNotMerge);
 				 			}				 										
 				 			console.log("Drawing sub branches");
 
