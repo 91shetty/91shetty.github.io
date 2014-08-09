@@ -85,7 +85,7 @@
 										   
 				 			if(d.active == "yes"){
 				 				//console.log("Active");
-				 				console.log(branchName);
+				 				//console.log(branchName);
 				 				++i;
 				 				if(d.merged == "yes"){
 					 				d.dateM = parseDate(d.dateM);
@@ -103,16 +103,16 @@
 				 				//console.log(xScale(d.dateC));
 				 				path.attr("d","M" + xScale(new Date(d.dateC)) + "," + (height/2) + "L" + xScale(new Date(d.dateC)) + "," + ((height/2) - (i*50))  + "L" + mergeNotMerge);
 				 				path.append("text")
+				 					.attr("x",xScale(new Date(d.dateC)))
+				 					.attr("y",((height/2) - (i*50)))
 				 					.text(function (d){
 				 						return branchName;
-				 					})
-				 					.attr("x",xScale(new Date(d.dateC)))
-				 					.attr("y",((height/2) - (i*50)));
+				 					});
 				 					//.attr("transform","translate(" + xScale(new Date(d.dateC)) + "," + ((height/2) - (i*50))")");
 				 			}
 				 			else if(d.active == "no"){
 				 				//console.log("Not Active");
-				 				console.log(branchName);
+				 				//console.log(branchName);
 				 				++j;
 				 				if(d.merged == "yes"){
 					 				d.dateM = parseDate(d.dateM);
@@ -130,11 +130,11 @@
 				 				//console.log(xScale(d.dateC));
 				 				path.attr("d","M" + xScale(new Date(d.dateC)) + "," + (height/2) + "L" + xScale(new Date(d.dateC)) + "," + ((height/2) + (j*50)) + "L" + mergeNotMerge);
 				 				path.append("text")
+				 					.attr("x",xScale(new Date(d.dateC)))
+				 					.attr("y",((height/2) + (j*50)))
 				 					.text(function (d){
 				 						return branchName;
-				 					})
-				 					.attr("x",xScale(new Date(d.dateC)))
-				 					.attr("y",((height/2) + (j*50)));
+				 					});
 				 					//.attr("transform","translate(" + xScale(new Date(d.dateC)) + "," + ((height/2) + (j*50))")");
 				 			}				 										
 				 			//console.log("Drawing sub branches");
