@@ -16,8 +16,7 @@
     				.range([0, width]);
     		var root;
     		var i = 0,
-    			j = 0,
-    			total = 1;
+    			j = 0;
     		var branchData1 = [
 		{
 			"name" : "main_new",
@@ -141,7 +140,7 @@
 					 			.call(xAxis);
 				 		}
 				 		else if(d.types == "branch"){
-				 			total++;
+				 			var mergeNotMerge;
 				 			d.dateC = parseDate(d.dateC);
 				 			console.log(d.dateC);
 				 			var path = svg.append("path")					 		   
@@ -150,21 +149,21 @@
 										   .attr("stroke-dasharray","7.51 7.51")
 										   .attr("marker-start","url(#circle)")
 										   .attr("marker-end","url(#triangle)");
-							if(d.merged == "yes"){
-				 				d.dateM = parseDate(d.dateM);
-				 			}		
+
 				 			if(d.active == "yes"){
 				 				console.log("Active");
 				 				++i;
+				 				if(d.merged == "yes"){
+					 				d.dateM = parseDate(d.dateM);
+					 				mergeNotMerge = xScale(new Date(d.dateM)) + "," + ((height/2) - (i*50)) + "L" + xScale(new Date(d.dateM)) + "," + (height/2));
+					 			}		
+					 			else{
+					 				mergeNotMerge = width + "," + ((height/2) - (i*50)));
+					 			}
 				 				path.attr("stroke","blue");	
 				 				console.log(d.dateC);
 				 				console.log(xScale(d.dateC));
-				 				path.attr("d","M" + xScale(new Date(d.dateC)) + "," + (height/2) + "L" + xScale(new Date(d.dateC)) + "," + ((height/2) - (i*50))  + "L" +     if(d.merged == "yes"){
-				 						xScale(new Date(d.dateM)) + "," + ((height/2) - (i*50)) + "L" + xScale(new Date(d.dateM)) + "," + (height/2));
-				 					}
-				 					else{
-				 						width + "," + ((height/2) - (i*50)));
-				 					}
+				 				path.attr("d","M" + xScale(new Date(d.dateC)) + "," + (height/2) + "L" + xScale(new Date(d.dateC)) + "," + ((height/2) - (i*50))  + "L" + mergeNotMerge);
 				 			}
 				 			else if(d.active == "no"){
 				 				console.log("Not Active");
