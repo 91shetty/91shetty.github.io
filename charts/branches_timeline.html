@@ -56,7 +56,7 @@
 				.append("circle")
 				.attr("cx","5")
 				.attr("cy","5")
-				.attr("r","1")
+				.attr("r","1.5")
 				.attr("stroke","none")
 				.attr("fill","#000000");
 
@@ -96,10 +96,13 @@
 				 				if(d.merged == "yes"){
 					 				d.dateM = parseDate(d.dateM);
 					 				mergeNotMerge = xScale(new Date(d.dateM)) + "," + ((height/2) - (i*50)) + "L" + xScale(new Date(d.dateM)) + "," + (height/2);
+					 				path.attr("marker-start","url(#circle)")
+						 				.attr("marker-end","url(#circle)");
 					 			}		
 					 			else{
 					 				mergeNotMerge = width + "," + ((height/2) - (i*50));
-					 				path.attr("marker-end","url(#triangle)");
+					 				path.attr("marker-start","url(#circle)")
+						 				.attr("marker-end","url(#triangle)");
 					 			}
 				 				path.attr("stroke","blue");	
 				 				console.log(d.dateC);
