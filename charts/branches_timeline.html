@@ -155,10 +155,10 @@
 				 				++i;
 				 				if(d.merged == "yes"){
 					 				d.dateM = parseDate(d.dateM);
-					 				mergeNotMerge = xScale(new Date(d.dateM)) + "," + ((height/2) - (i*50)) + "L" + xScale(new Date(d.dateM)) + "," + (height/2));
+					 				mergeNotMerge = xScale(new Date(d.dateM)) + "," + ((height/2) - (i*50)) + "L" + xScale(new Date(d.dateM)) + "," + (height/2);
 					 			}		
 					 			else{
-					 				mergeNotMerge = width + "," + ((height/2) - (i*50)));
+					 				mergeNotMerge = width + "," + ((height/2) - (i*50));
 					 			}
 				 				path.attr("stroke","blue");	
 				 				console.log(d.dateC);
