@@ -18,19 +18,12 @@
     		var root;
     		var i = 0,
     			j = 0;
-
-    		var currentDate = new Date();
-    		var locale ="en-us";
-    		currentDate = currentDate.getFullYear() + "-" + currentDate.getMonth() + "-" + currentDate.getDate(); 
-    		console.log(currentDate);
-    		var startDate;
     		var currentDate = new Date();
     		var locale ="en-us";
     		currentDate = currentDate.getFullYear() + "-" + (currentDate.getMonth() + 1) + "-" + currentDate.getDate();
     		var xScale = d3.time.scale()
 				    			.range([margin.left,width])
-								
-							
+															
 			var svg = d3.select("body").append("svg")
 				    .attr("width", width + margin.right + margin.left)
 				    .attr("height", height + margin.top + margin.bottom)
@@ -66,17 +59,15 @@
         			var k_data = branchData[k];
 				 	k_data.forEach(function(d){
 				 		if(d.types == "main"){
-				 			startDate = d.dateC;
-				 			//console.log(startDate);
 				 			d.dateC = parseDate(d.dateC);
-				 			console.log(d.dateC);
+				 			//console.log(d.dateC);
 				 			xScale.domain([d.dateC,parseDate(currentDate)]);
 				 			var xAxis = d3.svg.axis()
 												.orient("bottom")
 												.scale(xScale)
 												.tickSize(0)
 											    .tickFormat(d3.time.format("%b-%y"));
-				 			console.log("Drawing main branch");
+				 			// console.log("Drawing main branch");
 				 			svg.append("g")
 					 			.attr("class","xaxis")
 					 			.attr("transform","translate(" + 0 + "," + height/2 + ")")
@@ -85,14 +76,14 @@
 				 		else if(d.types == "branch"){
 				 			var mergeNotMerge;
 				 			d.dateC = parseDate(d.dateC);
-				 			console.log(d.dateC);
+				 			// console.log(d.dateC);
 				 			var path = svg.append("path")					 		   
 										   .attr("stroke-width","2")
 										   .attr("fill","none")
 										   .attr("stroke-dasharray","7.51 7.51");
 										   
 				 			if(d.active == "yes"){
-				 				console.log("Active");
+				 				//console.log("Active");
 				 				++i;
 				 				if(d.merged == "yes"){
 					 				d.dateM = parseDate(d.dateM);
@@ -106,12 +97,12 @@
 						 				.attr("marker-end","url(#triangle)");
 					 			}
 				 				path.attr("stroke","blue");	
-				 				console.log(d.dateC);
-				 				console.log(xScale(d.dateC));
+				 				//console.log(d.dateC);
+				 				//console.log(xScale(d.dateC));
 				 				path.attr("d","M" + xScale(new Date(d.dateC)) + "," + (height/2) + "L" + xScale(new Date(d.dateC)) + "," + ((height/2) - (i*50))  + "L" + mergeNotMerge);
 				 			}
 				 			else if(d.active == "no"){
-				 				console.log("Not Active");
+				 				//console.log("Not Active");
 				 				++j;
 				 				if(d.merged == "yes"){
 					 				d.dateM = parseDate(d.dateM);
@@ -125,17 +116,15 @@
 						 				.attr("marker-end","url(#triangle)");
 					 			}
 				 				path.attr("stroke","red");
-				 				console.log(d.dateC);
-				 				console.log(xScale(d.dateC));
+				 				//console.log(d.dateC);
+				 				//console.log(xScale(d.dateC));
 				 				path.attr("d","M" + xScale(new Date(d.dateC)) + "," + (height/2) + "L" + xScale(new Date(d.dateC)) + "," + ((height/2) + (j*50)) + "L" + mergeNotMerge);
 				 			}				 										
-				 			console.log("Drawing sub branches");
-
+				 			//console.log("Drawing sub branches");
 				 		}
 				   	});
 				}
 			});
-
 		</script>
 	</body>
 </html>
