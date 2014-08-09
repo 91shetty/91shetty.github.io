@@ -49,8 +49,8 @@
 
 			svg.append("marker")
 				.attr("id","circle")
-				.attr("markerWidth","4")
-				.attr("markerHeight","3")
+				.attr("markerWidth","8")
+				.attr("markerHeight","8")
 				.attr("refX","5")
 				.attr("refY","5")
 				.append("circle")
@@ -58,7 +58,7 @@
 				.attr("cy","5")
 				.attr("r","3")
 				.attr("stroke","none")
-				.attr("fill","black");
+				.attr("fill","#000000");
 
 			d3.json("branch_data.json", function(error, branchData) {
 				for (k in branchData) {
