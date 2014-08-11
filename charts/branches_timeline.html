@@ -145,15 +145,17 @@
 				}
 			});
 			function mouseover() {
-			  d3.select(this).select("#circle").transition()
+			  	d3.select(this).select("#circle").transition()
 			      .duration(750)
 			      .attr("r", 16);
+			    console.log("Mouse Over");
 			}
 
 			function mouseout() {
-			  d3.select(this).select("#circle").transition()
+			  	d3.select(this).select("#circle").transition()
 			      .duration(750)
 			      .attr("r", 1.2);
+			    console.log("Mouse Out");
 			}
 
 		</script>
