@@ -147,8 +147,9 @@
 			var textRect = svg.append("text")
 							  .attr("x",margin.left)
 							  .attr("y",height - 210)
-							  .attr("text-anchor","middle");
+							  .attr("text-anchor","middle")
 							  .text("Branch Details");
+
 			var rect = svg.append("rect")
 						  .attr("x",0)
 						  .attr("y",height - 200)
@@ -157,6 +158,7 @@
 						  .attr("fill","none")
 						  .attr("stroke-width", "2")
 						  .attr("stroke","black");
+						  
 			function mouseover() {
 			  	d3.select(this).selectAll("#circle").transition()
 			      .duration(750)
