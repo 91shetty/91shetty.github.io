@@ -54,6 +54,25 @@
 				.attr("stroke","none")
 				.attr("fill","#000000");
 
+			var textRect = svg.append("text")
+							  .attr("id","textRect")
+							  .attr("x",margin.left)
+							  .attr("y",height - 360)
+							  .attr("text-anchor","middle")
+							  .text("Branch Details");
+
+			var rect = svg.append("rect")
+						  .attr("id","rectText")
+						  .attr("x",0)
+						  .attr("y",height - 350)
+						  .attr("width",400)
+						  .attr("height",200)
+						  .attr("fill","none")
+						  .attr("stroke-width", "2")
+						  .attr("stroke","black");
+			// var rectBranchName = rect.append("text")
+			// 						 .attr("")
+
 			d3.json("branch_data.json", function(error, branchData) {
 				for (k in branchData) {
         			var k_data = branchData[k];
@@ -144,21 +163,7 @@
 				   	});
 				}
 			});
-			var textRect = svg.append("text")
-							  .attr("id","rectText")
-							  .attr("x",margin.left)
-							  .attr("y",height - 210)
-							  .attr("text-anchor","middle")
-							  .text("Branch Details");
 
-			var rect = svg.append("rect")
-						  .attr("x",0)
-						  .attr("y",height - 200)
-						  .attr("width",400)
-						  .attr("height",200)
-						  .attr("fill","none")
-						  .attr("stroke-width", "2")
-						  .attr("stroke","black");
 
 			function mouseover() {
 			  	d3.select(this).selectAll("#circle").transition()
