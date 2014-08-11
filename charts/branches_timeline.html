@@ -144,6 +144,11 @@
 				   	});
 				}
 			});
+			var textRect = svg.append("text")
+							  .attr("x",margin.left)
+							  .attr("y",height - 210)
+							  .attr("text-anchor","middle");
+							  .text("Branch Details");
 			var rect = svg.append("rect")
 						  .attr("x",0)
 						  .attr("y",height - 200)
