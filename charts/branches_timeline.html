@@ -145,6 +145,7 @@
 				}
 			});
 			var textRect = svg.append("text")
+							  .attr("id","rectText")
 							  .attr("x",margin.left)
 							  .attr("y",height - 210)
 							  .attr("text-anchor","middle")
@@ -158,7 +159,7 @@
 						  .attr("fill","none")
 						  .attr("stroke-width", "2")
 						  .attr("stroke","black");
-						  
+
 			function mouseover() {
 			  	d3.select(this).selectAll("#circle").transition()
 			      .duration(750)
