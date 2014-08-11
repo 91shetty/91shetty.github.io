@@ -52,22 +52,7 @@
 				.attr("cy","5")
 				.attr("r","1.2")
 				.attr("stroke","none")
-				.attr("fill","#000000")
-				.on("mouseover", mouseover)
-			    .on("mouseout", mouseout);
-
-			function mouseover() {
-			  d3.select(this).select("#circle").transition()
-			      .duration(750)
-			      .attr("r", 16);
-			}
-
-			function mouseout() {
-			  d3.select(this).select("#circle").transition()
-			      .duration(750)
-			      .attr("r", 8);
-			}
-
+				.attr("fill","#000000");
 
 			d3.json("branch_data.json", function(error, branchData) {
 				for (k in branchData) {
@@ -153,10 +138,24 @@
 				 					//.attr("transform","translate(" + xScale(new Date(d.dateC)) + "," + ((height/2) + (j*50))")");
 				 			}				 										
 				 			//console.log("Drawing sub branches");
+				 			path.on("mouseover", mouseover)
+							    .on("mouseout", mouseout);
 				 		}
 				   	});
 				}
 			});
+			function mouseover() {
+			  d3.select(this).select("#circle").transition()
+			      .duration(750)
+			      .attr("r", 16);
+			}
+
+			function mouseout() {
+			  d3.select(this).select("#circle").transition()
+			      .duration(750)
+			      .attr("r", 1.2);
+			}
+
 		</script>
 	</body>
 </html>
