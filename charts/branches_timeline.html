@@ -144,15 +144,22 @@
 				   	});
 				}
 			});
+			var rect = svg.append("rect")
+						  .attr("x",margin.left)
+						  .attr("y",height - 100)
+						  .attr("width",200)
+						  .attr("height",100)
+						  .attr("fill","none")
+						  .attr("stroke-width", "2");
 			function mouseover() {
-			  	d3.select(this).select("#circle").transition()
+			  	d3.select(this).selectAll("#circle").transition()
 			      .duration(750)
 			      .attr("r", 16);
 			    console.log("Mouse Over");
 			}
 
 			function mouseout() {
-			  	d3.select(this).select("#circle").transition()
+			  	d3.select(this).selectAll("#circle").transition()
 			      .duration(750)
 			      .attr("r", 1.2);
 			    console.log("Mouse Out");
