@@ -70,8 +70,15 @@
 						  .attr("fill","none")
 						  .attr("stroke-width", "2")
 						  .attr("stroke","black");
-			// var rectBranchName = rect.append("text")
-			// 						 .attr("")
+			var rectBranchName = rect.append("text")
+									 .attr("x", 0)
+									 .attr("y", 0)
+									 .text("Name:");
+			var rectDevsName = rect.append("text")
+									 .attr("x", 0)
+									 .attr("y", 14)
+									 .text("Devs:");
+
 
 			d3.json("branch_data.json", function(error, branchData) {
 				for (k in branchData) {
