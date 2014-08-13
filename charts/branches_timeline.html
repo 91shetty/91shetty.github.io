@@ -54,30 +54,30 @@
 				.attr("stroke","none")
 				.attr("fill","#000000");
 
-			var textRect = svg.append("text")
-							  .attr("id","textRect")
-							  .attr("x",margin.left)
-							  .attr("y",height - 330)
-							  .attr("text-anchor","middle")
-							  .text("Branch Details");
+			// var textRect = svg.append("text")
+			// 				  .attr("id","textRect")
+			// 				  .attr("x",margin.left)
+			// 				  .attr("y",height - 330)
+			// 				  .attr("text-anchor","middle")
+			// 				  .text("Branch Details");
 
-			var rect = svg.append("rect")
-						  .attr("id","rectText")
-						  .attr("x",0)
-						  .attr("y",height - 320)
-						  .attr("width",400)
-						  .attr("height",200)
-						  .attr("fill","none")
-						  .attr("stroke-width", "2")
-						  .attr("stroke","black");
-			var rectBranchName = rect.append("text")
-									 .attr("x", 0)
-									 .attr("y", 0)
-									 .text("Name:");
-			var rectDevsName = rect.append("text")
-									 .attr("x", 0)
-									 .attr("y", 14)
-									 .text("Devs:");
+			// var rect = svg.append("rect")
+			// 			  .attr("id","rectText")
+			// 			  .attr("x",0)
+			// 			  .attr("y",height - 320)
+			// 			  .attr("width",400)
+			// 			  .attr("height",200)
+			// 			  .attr("fill","none")
+			// 			  .attr("stroke-width", "2")
+			// 			  .attr("stroke","black");
+			// var rectBranchName = rect.append("text")
+			// 						 .attr("x", 0)
+			// 						 .attr("y", 0)
+			// 						 .text("Name:");
+			// var rectDevsName = rect.append("text")
+			// 						 .attr("x", 0)
+			// 						 .attr("y", 14)
+			// 						 .text("Devs:");
 
 
 			d3.json("branch_data.json", function(error, branchData) {
