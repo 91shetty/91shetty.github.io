@@ -132,7 +132,7 @@
 				 				path.attr("d","M" + xScaleDateC + "," + (height/2) + "L" + xScaleDateC + "," + ((height/2) - (i*50))  + "L" + mergeNotMerge);
 				 				svg.append("text")
 				 					.classed("branches",true)
-				 					.attr("x",xScaleDateC - branchName.length - 1)
+				 					.attr("x",xScaleDateC - (branchName.length * 10))
 				 					.attr("y",((height/2) - (i*50) - 4))
 				 					.text(function (d){
 				 						return branchName;
