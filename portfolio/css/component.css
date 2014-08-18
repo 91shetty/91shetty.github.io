@@ -105,7 +105,7 @@ html, body { height: 100%; }
 	z-index: 999999;
 	top: 12%;
 	left: 50%;
-	margin-top: 130px;
+	/*margin-top: 130px;*/
 	-webkit-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);
 	-ms-transform: translateX(-50%); 
@@ -129,7 +129,7 @@ html, body { height: 100%; }
 	letter-spacing: 1px;
 	width: 100%;
 	cursor: pointer;
-	display: inline-block;
+	
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	box-shadow: 0 3px 0 rgba(0,0,0,0.1);
 	-webkit-touch-callout: none;
@@ -143,7 +143,7 @@ html, body { height: 100%; }
 .pt-touch-button {
 	background: #fff;
 	color: #aaa;
-	float: left;
+	display: inline-block;
 }
 
 .pt-triggers .dl-menuwrapper button {
