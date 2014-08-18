@@ -51,7 +51,7 @@ var PageTransitions = (function() {
 	}
 
 	function nextPage(options ) {
-		var animation = (options.animation) ? options.animation : options;
+		var animation = 66;
 
 		if( isAnimating ) {
 			return false;
