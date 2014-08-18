@@ -143,6 +143,7 @@ html, body { height: 100%; }
 .pt-touch-button {
 	background: #fff;
 	color: #aaa;
+	float: left;
 }
 
 .pt-triggers .dl-menuwrapper button {
