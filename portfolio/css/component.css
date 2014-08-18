@@ -129,7 +129,7 @@ html, body { height: 100%; }
 	letter-spacing: 1px;
 	width: 100%;
 	cursor: pointer;
-	display: block;
+	display: inline-block;
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	box-shadow: 0 3px 0 rgba(0,0,0,0.1);
 	-webkit-touch-callout: none;
