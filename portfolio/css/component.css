@@ -101,7 +101,7 @@ html, body { height: 100%; }
 
 .pt-triggers {
 	position: absolute;
-	width: 300px;
+	width: 150px;
 	z-index: 999999;
 	top: 12%;
 	left: 50%;
