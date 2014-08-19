@@ -44,8 +44,10 @@ var PageTransitions = (function() {
 			if( animcursor > 67 ) {
 				animcursor = 1;
 			}
+			$iterate.css('background','#4554a4');
 			nextPage( animcursor );
 			++animcursor;
+
 		} );
 
 	}
