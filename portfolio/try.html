@@ -5,24 +5,26 @@
 		<style type="text/css">
 			.menu{
 				left: 50%;
+				position: relative;
 			}
-			#circle{
-				position: absolute;
-				width: 10%;
-				height: 25%;
-				z-index: 1;
+
+			.circle {
+			    width: 50%;
+			    height:0;
+			    padding-bottom: 50%;
+			    -moz-border-radius: 50%; 
+			    -webkit-border-radius: 50%; 
+			    border-radius: 50%;
+			    background: #e5af60; 
 			}
-			#add{
-				position: absolute;
-				width: 10%;
-				height: 25%;
-				z-index: 3;
+
+			.circle:hover{
+				background: #5f5f5f;
 			}
 		</style>
 	</head>
 	<body>
 		<div class="menu">
-			<img id="circle" src="images/circle.png">
 			<img id="add" src="images/add.png">
 		</div>
 	</body>	
