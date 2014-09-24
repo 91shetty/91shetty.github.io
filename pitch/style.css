@@ -28,12 +28,12 @@ body{
   	float: left;
 }
 .bball-title{
-	left: 5%;
+	top: 50%;
 	font-size: 30px;
 	font-weight: 700;
 }
 .footb-title{
-	right: 5%;
+	top: 50%;
 	font-size: 30px;
 	font-weight: 700;
 }
