@@ -11,12 +11,18 @@ body{
 	width: 50%;
 	height: 100%;
 	background: #75cde5;
+	display: inline;
+  	position: relative;
+  	float: left;
 }
 .right-pane{
 	left: 50%;
 	width: 50%;
 	height: 100%;
 	background: #b258a3;
+	display: inline;
+  	position: relative;
+  	float: left;
 }
 .bball-title{
 	left: 5%;
