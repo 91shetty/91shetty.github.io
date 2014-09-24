@@ -1,3 +1,17 @@
 body{
-	background: #f15a29;
+	
+}
+.container{
+	width: 100%;
+	height: 100%;
+}
+.left-pane{
+	width: 50%;
+	height: 50%;
+	background: #75cde5;
+}
+.left-pane{
+	width: 50%;
+	height: 50%;
+	background: #b258a3;
 }
