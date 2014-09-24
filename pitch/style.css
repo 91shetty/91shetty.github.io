@@ -1,5 +1,8 @@
 body{
 	font-family: 'Droid Serif', serif;
+	margin: 0;
+	padding: 0;
+	border: 0;
 }
 .container{
 	top : 0px;
