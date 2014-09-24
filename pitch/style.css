@@ -31,9 +31,9 @@ body{
 	position: absolute;
 	top: 50%;
 	font-size: 30px;
-	font-weight: 700;
 }
 .footb-title{
+	position: absolute;
+	top: 50%;
 	font-size: 30px;
-	font-weight: 700;
 }
