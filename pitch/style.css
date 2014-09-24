@@ -31,9 +31,13 @@ body{
 	position: absolute;
 	top: 50%;
 	font-size: 30px;
+	margin-top: -.5em;
+	left:30px;
 }
 .footb-title{
 	position: absolute;
 	top: 50%;
 	font-size: 30px;
+	margin-top: -.5em;
+	right: 30px;
 }
