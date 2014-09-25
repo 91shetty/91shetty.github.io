@@ -147,12 +147,14 @@ body {
 }
 
 .back-left {
+	color: #b61924;
 	left: 12.5%;
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
 }
 
 .back-right {
+	color: #f5f5f3;
 	right: 12.5%;
 	-webkit-transform: translateX(50%);
 	transform: translateX(50%);
