@@ -68,7 +68,7 @@ body {
 
 .menu{
 	display: none;
-	position: relative;
+	position: absolute;
 	text-align: left;
 }
 
