@@ -67,8 +67,11 @@ body {
 }
 
 .menu{
-	list-style-type: none;
 	text-align: left;
+}
+
+.menu ul{
+	list-style-type: none;
 }
 
 /* Intro content, profile image and name, back button */
