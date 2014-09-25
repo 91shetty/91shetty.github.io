@@ -186,18 +186,18 @@ body {
 
 .page-right {
 	left: 25%;
-	outline: 5px solid #ecf0f1; /* avoid rounding gaps */
-	background: #ecf0f1;
-	color: #97a8b2;
+	outline: 5px solid #b61924; /* avoid rounding gaps */
+	background: #b61924;
+	color: #f5f5f3;
 	-webkit-transform: translateX(100%);
 	transform: translateX(100%);
 }
 
 .page-left {
 	left: 0;
-	outline: 5px solid #34495e; /* avoid rounding gaps */
-	background: #34495e;
-	color: #fff;
+	outline: 5px solid #f5f5f3; /* avoid rounding gaps */
+	background: #f5f5f3;
+	color: #b61924;
 	text-align: right;
 	-webkit-transform: translateX(-100%);
 	transform: translateX(-100%);
