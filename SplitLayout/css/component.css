@@ -68,12 +68,18 @@ body {
 
 .menu{
 	display: none;
-	position: absolute;
-	text-align: left;
 }
 
 .menu ul{
 	list-style-type: none;
+}
+
+.side-left .menu{
+	text-align: left;
+}
+
+.side-right .menu{
+	text-align: right;
 }
 
 /* Intro content, profile image and name, back button */

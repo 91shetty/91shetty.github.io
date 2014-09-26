@@ -38,6 +38,14 @@
 							<div class="profile"><img src="img/profile2.jpg" alt="football"></div>
 							<h1><span>Football</span></h1>
 						</div>
+						<div class="menu">
+							<ul>
+								<li> <a href="#bAbout"> About </a></li>
+								<li> <a href="#bTrainingBang"> Training in Bangalore </a></li>
+								<li> <a href="#bCoaches"> Coaches </a></li>
+								<li> <a href="#bGallery"> Gallery </a></li>
+							</ul>	
+						</div>
 						<div class="overlay"></div>
 					</div>
 				</div><!-- /intro -->
@@ -104,10 +112,16 @@
 		</div><!-- /container -->
 		<script type="text/javascript">
 			$(".side-left .intro-content").click(function(){
-			    $(".menu").toggle();
+			    $(".side-left .menu").toggle();
 			});
 			$(".back-right").click(function(){
-			    $(".menu").hide();
+			    $(".side-left .menu").hide();
+			});
+			$(".side-right .intro-content").click(function(){
+			    $(".side-right .menu").toggle();
+			});
+			$(".back-left").click(function(){
+			    $(".side-right .menu").hide();
 			});
 		</script>
 		<script src="js/classie.js"></script>
