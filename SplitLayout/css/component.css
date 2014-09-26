@@ -76,10 +76,12 @@ body {
 
 .side-left .menu{
 	text-align: left;
+	color: #f5f5f3;
 }
 
 .side-right .menu{
 	text-align: right;
+	color: #b61924;
 }
 
 /* Intro content, profile image and name, back button */
