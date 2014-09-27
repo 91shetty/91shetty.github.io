@@ -116,15 +116,19 @@
 		<script type="text/javascript">
 			$(".side-left .intro-content").click(function(){
 			    $(".side-left .menu").toggle();
+			    $("side-left .intro-content").css("cursor","none");
 			});
 			$(".back-right").click(function(){
 			    $(".side-left .menu").hide();
+			    $("side-left .intro-content").css("cursor","pointer");
 			});
 			$(".side-right .intro-content").click(function(){
 			    $(".side-right .menu").toggle();
+			    $("side-left .intro-content").css("cursor","none");
 			});
 			$(".back-left").click(function(){
 			    $(".side-right .menu").hide();
+			    $("side-left .intro-content").css("cursor","pointer");
 			});
 		</script>
 		<script src="js/classie.js"></script>
