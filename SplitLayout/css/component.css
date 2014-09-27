@@ -69,6 +69,7 @@ body {
 .menu{
 	position: absolute;
 	margin-top: 1.5em;
+	padding: 0 1em;
 	top: 55%;
 	font-family: bebasNeue;
 	display: none;
