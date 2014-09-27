@@ -67,6 +67,9 @@ body {
 }
 
 .menu{
+	position: absolute;
+	left: 50%;
+	top: 55%;
 	font-family: bebasNeue;
 	display: none;
 }
