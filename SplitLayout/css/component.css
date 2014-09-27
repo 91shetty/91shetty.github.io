@@ -68,7 +68,6 @@ body {
 
 .menu{
 	position: absolute;
-	left: 50%;
 	top: 55%;
 	font-family: bebasNeue;
 	display: none;
@@ -80,11 +79,13 @@ body {
 }
 
 .side-left .menu{
-	text-align: left;
+	right: 50%;
+	text-align: center;
 }
 
-.side-right .menu{
-	text-align: right;
+.side-right .menu{	
+	left: 50%;
+	text-align: center;
 }
 
 .side-left .menu a {
