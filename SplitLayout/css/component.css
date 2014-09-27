@@ -108,9 +108,12 @@ body {
 	left: 50%;
 	padding: 0 1em;
 	width: 50%;
-	cursor: pointer;
 	-webkit-transform: translateY(-50%) translateX(-50%);
 	transform: translateY(-50%) translateX(-50%);
+}
+
+.clickable{
+	cursor: pointer;
 }
 
 .intro-content h1{
@@ -285,8 +288,7 @@ body {
 }
 
 .intro-content h1,
-.back,
-.menu {
+.back {
 	-webkit-transition: opacity 0.3s ease-in-out;
 	transition: opacity 0.3s ease-in-out;
 }

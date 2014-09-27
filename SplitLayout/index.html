@@ -20,7 +20,7 @@
 			<div id="splitlayout" class="splitlayout">
 				<div class="intro">
 					<div class="side side-left">
-						<div class="intro-content">
+						<div class="intro-content clickable">
 							<div class="profile"><img src="img/profile1.jpg" alt="basketball"></div>
 							<h1><span>Basketball</span></h1>						
 						</div>
@@ -35,7 +35,7 @@
 						<div class="overlay"></div>
 					</div>
 					<div class="side side-right">
-						<div class="intro-content">
+						<div class="intro-content clickable">
 							<div class="profile"><img src="img/profile2.jpg" alt="football"></div>
 							<h1><span>Football</span></h1>
 						</div>
@@ -115,20 +115,20 @@
 		</div><!-- /container -->
 		<script type="text/javascript">
 			$(".side-left .intro-content").click(function(){
-			    $(".side-left .menu").toggle(300);
-			    $("side-left .intro-content").css("cursor","none");
+				$(this).toggleClass("clickable");
+			    $(".side-left .menu").toggle(500);
 			});
 			$(".back-right").click(function(){
+				$(".side-left .intro-content").toggleClass("clickable");
 			    $(".side-left .menu").hide();
-			    $("side-left .intro-content").css("cursor","pointer");
 			});
 			$(".side-right .intro-content").click(function(){
-			    $(".side-right .menu").toggle(300);
-			    $("side-left .intro-content").css("cursor","none");
+				$(this).toggleClass("clickable");
+			    $(".side-right .menu").toggle(500);
 			});
 			$(".back-left").click(function(){
+				$(".side-right .intro-content").toggleClass("clickable");
 			    $(".side-right .menu").hide();
-			    $("side-left .intro-content").css("cursor","pointer");
 			});
 		</script>
 		<script src="js/classie.js"></script>
