@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: bebasNeue;
-    src: url(font/BebasNeue.woff);
+    src: url(../font/BebasNeue.woff);
 }
 
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }

@@ -104,6 +104,10 @@ body {
 	transform: translateY(-50%) translateX(-50%);
 }
 
+.intro-content h1{
+	font-family: bebasNeue;
+}
+
 .profile {
 	margin: 0 auto;
 	width: 140px;
@@ -117,6 +121,8 @@ body {
 	border-radius: 50%;
 	opacity: 0.6;
 }
+
+.profile 
 
 .intro-content h1 > span {
 	display: block;
@@ -242,13 +248,13 @@ body {
 }
 
 .page-inner h2 {
+	font-family: bebasNeue;
 	margin: 0 0 1em 0;
 	font-weight: 300;
 	font-size: 2.4em;
 }
 
 .page-inner p {
-	font-family: bebasNeue;
 	font-size: 1.2em;
 }
 
