@@ -81,13 +81,13 @@ body {
 
 .side-left .menu{
 	right: 50%;
-	padding-left: 3em;
+	padding: 0 6em;
 	text-align: center;
 }
 
 .side-right .menu{	
 	left: 50%;
-	padding-right: 3em;
+	padding: 0 3em;
 	text-align: center;
 }
 
