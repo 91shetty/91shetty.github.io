@@ -285,7 +285,8 @@ body {
 }
 
 .intro-content h1,
-.back {
+.back,
+.menu {
 	-webkit-transition: opacity 0.3s ease-in-out;
 	transition: opacity 0.3s ease-in-out;
 }
