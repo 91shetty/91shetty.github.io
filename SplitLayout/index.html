@@ -115,19 +115,22 @@
 		</div><!-- /container -->
 		<script type="text/javascript">
 			$(".side-left .intro-content").click(function(){
-				$(this).toggleClass("clickable");
-			    $(".side-left .menu").toggle(500);
+				//$(this).toggleClass("clickable");
+				$(this).unbind("click");
+			    $(".side-left .menu").show(500);
 			});
 			$(".back-right").click(function(){
-				$(".side-left .intro-content").toggleClass("clickable");
+				//$(".side-left .intro-content").toggleClass("clickable");
+				$(".side-left .intro-content").bind("click");
 			    $(".side-left .menu").hide();
 			});
 			$(".side-right .intro-content").click(function(){
-				$(this).toggleClass("clickable");
-			    $(".side-right .menu").toggle(500);
+				//$(this).toggleClass("clickable");
+			    $(".side-right .menu").show(500);
+			    $(this).unbind("click");
 			});
 			$(".back-left").click(function(){
-				$(".side-right .intro-content").toggleClass("clickable");
+				$(".side-right .intro-content").bind("click");
 			    $(".side-right .menu").hide();
 			});
 		</script>
