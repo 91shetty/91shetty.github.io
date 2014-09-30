@@ -1,72 +1,40 @@
-@import "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";
-
-body {
-  background: #39D;
+html,body{height:100%;padding:0;margin:0;overflow:hidden;}
+.menu li:first-child {
+    background:#f00;
+    font-weight:bold;
+    font-family:arial black;
+    font-size:200%;
+    background:url(http://i.imgur.com/3QGAU.png);
+    border-color: #fff;
+    border-width: 2px;
+    border-style: solid;
+    box-shadow: 0 0 2px 1px #aaa;
+}
+.menu li {
+    background:#000;
+    color:#fff;
+    font-size:25px;
+}
+.menu a{
+    text-decoration: none;
+    color:#fff;
+}
+#examples {
+    margin-left:200px;
 }
 
-.circular-menu {
-  width: 250px;
-  height: 250px;
-  margin: 0 auto;
-  position: relative;
+#examples > div {
+    display:none;
+    width:300px;
+    height:300px;
+    border:1px solid black;
+    position:relative;
+    overflow:hidden;
 }
 
-.circle {
-  width: 250px;
-  height: 250px;
-  opacity: 0;
-  
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  transform: scale(0);
+.menu{position:absolute;}
 
-  -webkit-transition: all 0.4s ease-out;
-  -moz-transition: all 0.4s ease-out;
-  transition: all 0.4s ease-out;
-}
-
-.open.circle {
-  opacity: 1;
-
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  transform: scale(1);
-}
-
-.circle a {
-  text-decoration: none;
-  color: white;
-  display: block;
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
-  margin-left: -20px;
-  margin-top: -20px;
-  position: absolute;
-  text-align: center;
-
-}
-
-.circle a:hover {
-  color: #eef;
-}
-
-.menu-button {
-  position: absolute;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  text-decoration: none;
-  text-align: center;
-  color: #444;
-  border-radius: 50%;
-  display: block;
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
-  padding: 10px;
-  background: #dde;
-}
-
-.menu-button:hover {
-  background-color: #eef;
+#menu14{
+    left:135px;
+    top:135px;
 }
