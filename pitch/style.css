@@ -12,9 +12,9 @@ html,body{
 }
 
 .container section{
-	height: 100%;
+	position: relative;
+	float: left;
 	width: calc(100% / 3);
-	display: inline-block;
 }
 
 .bball{
