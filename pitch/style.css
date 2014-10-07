@@ -2,6 +2,7 @@ html,body{
 	height:100%;
 	padding:0;
 	margin:0;
+	border: 0;
 	overflow:hidden;
 }
 
@@ -10,25 +11,25 @@ html,body{
 	height: 100%;	
 }
 
+.container section{
+	height: 100%;
+	width: calc(100% / 3);
+	display: inline-block;
+}
+
 .bball{
-	left: 0;
 	background: #102A4C;
 	outline: 1px solid #102A4C;
-	width: 33%;
 }
 
 .coaches{
-	left: 33%;
 	background: #F0E295;
 	outline: 1px solid #F0E295;
-	width: 33%;
 }
 
 .players{
-	right: 0;
 	background: #0C6585;
 	outline: 1px solid #0C6585;
-	width: 33%;
 }
 
 section p{
