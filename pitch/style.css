@@ -30,3 +30,9 @@ html,body{
 	outline: 1px solid #0C6585;
 	width: 33%;
 }
+
+section p{
+	text-align: center;
+	color: #D16A27;
+	font-family: "PT Serif";
+}
