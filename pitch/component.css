@@ -230,10 +230,10 @@ div.bl-panel-items > div > div {
 	border: 8px solid rgba(0,0,0,0.1);
 }
 
-.bl-content > ul li a img {
+/*.bl-content > ul li a img {
 	display: block;
 	max-width: 100%;
-}
+}*/
 
 /* Transition classes and properties */
 /* Separated for a better overview and control */
