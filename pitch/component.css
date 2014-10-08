@@ -54,26 +54,20 @@ a:hover {
 
 .bl-main > section {
 	position: relative;
-	float: left
+	float: left;
 	width: calc(100% / 3);
 	height: 100%;
 }
 
 .bl-main > section:first-child {
-	top: 0;
-	left: 0;
 	background: #F06060;
 }
 
 .bl-main > section:nth-child(2) {
-	top: 0;
-	left: 50%;
 	background: #FA987D;
 }
 
 .bl-main > section:nth-child(3) {
-	top: 50%;
-	left: 0;
 	background: #72CCA7;
 }
 
