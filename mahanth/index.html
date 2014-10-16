@@ -139,7 +139,8 @@
 			    	var node = svg.selectAll("node")
 			    	   .data(data)
 				       .enter()
-				       .append("g").attr("class", "node")
+				       .append("g")
+				       .attr("class", "node")
 				       .attr('transform',function(d){
 					       	return "translate(" + x(d.price) + "," + y(d.rating) + ")";
 				       });		   
@@ -228,7 +229,10 @@
 				    var bar = svg.selectAll("bar")
 				       .data(data)
 				       .enter()
-				       .append("rect")
+				       .append("g")
+				       .attr("class", "bar");
+				       
+				    bar.append("rect")
 				       .style("fill",function(d){
 				       		return colors(d.manufacturer);
 				       })
@@ -248,7 +252,7 @@
 			}
 
 			function showDonutChart(){
-				
+
 			}
 		</script>
 	</body>
