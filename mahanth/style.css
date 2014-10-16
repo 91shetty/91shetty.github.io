@@ -9,6 +9,8 @@ body {
 }
 
 #barchart-load{
+    position: relative;
+    float: left;
     width: 500px;
     height: 80%;
 }
