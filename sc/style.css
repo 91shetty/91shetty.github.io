@@ -4,6 +4,7 @@ html,body{
 	border: 0;
 	margin: 0;
 	padding: 0;
+	background: #e2d881;
 }
 
 #container{
@@ -31,7 +32,7 @@ html,body{
 #data{
 	position:relative;
 	float: left;
-	left: 25%;
+	width: 75%;
 	background: #fcfcfc;
 	height: 100%
 }
