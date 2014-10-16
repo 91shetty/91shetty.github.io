@@ -162,21 +162,25 @@
 			    // this sets the scale that we're using for the X axis. 
 			    // the domain define the min and max variables to show. In this case, it's the min and max prices of items.
 			    // this is made a compact piece of code due to d3.extent which gives back the max and min of the price variable within the dataset
-			    var x = d3.scale.linear()
-			        .domain(d3.extent(data, function (d) {
-			        return d.price;
-			    }))
+			    var x = d3.scale.ordinal()
+    					.rangeRoundBands([0, width], .1);
+    					.domain(data.map(function(d){
+    						return d.name;
+    					}));
 			    // the range maps the domain to values from 0 to the width minus the left and right margins (used to space out the visualization)
-			        .range([0, width - margins.left - margins.right]);
 
 			    // this does the same as for the y axis but maps from the rating variable to the height to 0. 
-			    var y = d3.scale.linear()
-			        .domain(d3.extent(data, function (d) {
+			    var y = d3.scale.linear()     
+			    // Note that height goes first due to the weird SVG coordinate system
+			    		.range([height - margins.top - margins.bottom, 0]);
+			    		.domain([0,d3.max(data,function(d){
+			    			return d.rating;
+			    		})]);
+
+
+			    .domain(d3.extent(data, function (d) {
 			        return d.rating;
 			    }))
-			    // Note that height goes first due to the weird SVG coordinate system
-			    .range([height - margins.top - margins.bottom, 0]);
-
 			    // we add the axes SVG component. At this point, this is just a placeholder. The actual axis will be added in a bit
 			    svg.append("g").attr("class", "x axis").attr("transform", "translate(0," + y.range()[0] + ")");
 			    svg.append("g").attr("class", "y axis");
@@ -187,7 +191,7 @@
 			        .attr("text-anchor", "end")
 			        .attr("x", width / 2)
 			        .attr("y", height - 35)
-			        .text("Price in pence (£)");
+			        .text("Name of chocolate");
 
 
 			    // this is the actual definition of our x and y axes. The orientation refers to where the labels appear - for the x axis, below or above the line, and for the y axis, left or right of the line. Tick padding refers to how much space between the tick and the label. There are other parameters too - see https://github.com/mbostock/d3/wiki/SVG-Axes for more information
@@ -208,9 +212,9 @@
 			    var chocolateGroup = chocolate.enter().append("g").attr("class", "bar")
 			    // this is how we set the position of the items. Translate is an incredibly useful function for rotating and positioning items 
 			    .attr("x",function(d){
-			    	return x(d.price);
+			    	return x(d.name);
 			    })
-			    .attr("width", 3)
+			    .attr("width", x.rangeBand())
 			    .attr("y",function(d){
 			    	return y(d.rating);
 			    })
