@@ -53,6 +53,7 @@ a{
 	color: #22ac82;
 }
 #data div{
+	margin-left: 10px;
 	background: #fcfcfc;
 }
 #data p{
@@ -63,6 +64,5 @@ a{
 	display:inline !important;
 }
 #new_users,#members,#licenses{
-	line-height: 4em;
-	width: 30%
+	width: 40%;
 }
