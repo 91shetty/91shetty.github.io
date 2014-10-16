@@ -226,6 +226,7 @@
 				    svg.selectAll("bar")
 				       .data(data)
 				       .enter()
+				       .attr("class","bar")
 				       .append("rect")
 				       .style("fill",function(d){
 				       		return colors(d.manufacturer);
