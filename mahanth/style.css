@@ -16,7 +16,12 @@ body {
     width: 50%;
     height: 100%;
 }
-
+#histogram-load{
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 100%;
+}
 .axis {
     fill: none;
     stroke: #AAA;
