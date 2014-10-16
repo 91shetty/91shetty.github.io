@@ -198,28 +198,38 @@
 			    svg.selectAll("g.y.axis").call(yAxis);
 			    svg.selectAll("g.x.axis").call(xAxis);
 
-			    // now, we can get down to the data part, and drawing stuff. We are telling D3 that all nodes (g elements with class node) will have data attached to them. The 'key' we use (to let D3 know the uniqueness of items) will be the name. Not usually a great key, but fine for this example.
-			    var chocolate = svg.selectAll("g.node").data(data, function (d) {
+			    // now, we can get down to the data part, and drawing stuff. We are telling D3 that all bars (g elements with class bar) will have data attached to them. The 'key' we use (to let D3 know the uniqueness of items) will be the name. Not usually a great key, but fine for this example.
+			    var chocolate = svg.selectAll("g.bar").data(data, function (d) {
 			        return d.name;
 			    });
 
 			    // we 'enter' the data, making the SVG group (to contain a circle and text) with a class node. This corresponds with what we told the data it should be above.
 			    
-			    var chocolateGroup = chocolate.enter().append("g").attr("class", "node")
+			    var chocolateGroup = chocolate.enter().append("g").attr("class", "bar")
 			    // this is how we set the position of the items. Translate is an incredibly useful function for rotating and positioning items 
-			    .attr('transform', function (d) {
-			        return "translate(" + x(d.price) + "," + y(d.rating) + ")";
-			    });
+			    .attr("x",function(d){
+			    	return x(d.price);
+			    })
+			    .attr("width", 3)
+			    .attr("y",function(d){
+			    	return y(d.rating);
+			    })
+			    .attr("height",function(d){
+			    	return height - y(d.)
+			    })
+			    .style("fill",function(d){
+			    	return colors(d.manufacturer);
+			    })
 
 			    // we add our first graphics element! A circle! 
-			    chocolateGroup.append("circle")
-			        .attr("r", 5)
-			        .attr("class", "dot")
-			        .style("fill", function (d) {
-			            // remember the ordinal scales? We use the colors scale to get a colour for our manufacturer. Now each node will be coloured
-			            // by who makes the chocolate. 
-			            return colors(d.manufacturer);
-			    });
+			    // chocolateGroup.append("circle")
+			    //     .attr("r", 5)
+			    //     .attr("class", "dot")
+			    //     .style("fill", function (d) {
+			    //         // remember the ordinal scales? We use the colors scale to get a colour for our manufacturer. Now each node will be coloured
+			    //         // by who makes the chocolate. 
+			    //         return colors(d.manufacturer);
+			    // });
 
 			    // now we add some text, so we can see what each item is.
 			    chocolateGroup.append("text")
