@@ -134,15 +134,15 @@
 			    	svg.selectAll("g.y.axis").call(yAxis);
 			    	svg.selectAll("g.x.axis").call(xAxis);
 
-			    	svg.selectAll("node")
+			    	var chocoloate = svg.selectAll("node")
 			    	   .data(data)
 				       .enter()
 				       .append("g").attr("class", "node")
 				       .attr('transform',function(d){
 					       	return "translate(" + x(d.price) + "," + y(d.rating) + ")";
-				       })				   
+				       });		   
 			    	   // we add our first graphics element! A circle! 
-			    	   .append("circle")
+			    	   chocoloate.append("circle")
 			           .attr("r", 5)
 			           .attr("class", "dot")
 			           .style("fill", function (d) {
@@ -151,7 +151,7 @@
 				            return colors(d.manufacturer);
 					    })
 				        // now we add some text, so we can see what each item is.
-					    .append("text")
+					    chocolate.append("text")
 				        .style("text-anchor", "middle")
 				        .attr("dy", -10)
 				        .text(function (d) {
