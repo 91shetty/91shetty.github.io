@@ -53,8 +53,9 @@ a{
 	color: #22ac82;
 }
 #data div{
-	margin-left: 10px;
+	margin-left: 5%;
 	background: #fcfcfc;
+	width: 40%;
 }
 #data p{
 	color: #adadad;
@@ -63,6 +64,9 @@ a{
 #data h3{
 	display:inline !important;
 }
-#new_users,#members,#licenses{
-	width: 40%;
+#new_users{
+	margin-top: 5%;
+}
+#members,#licenses{
+	margin-top: 3%
 }
