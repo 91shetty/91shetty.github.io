@@ -18,8 +18,17 @@ html,body{
 }
 #content{
 	padding-left: 20px;
+	width: 70%;
+	height: 80%;
+	background: #81b718;
 }
-#nav{
-
-
+#left-nav{
+	position:relative;
+	float: left;
+	width: 25%; 
+}
+#data{
+	position: relative;
+	float: left;
+	background: #fcfcfc;
 }
