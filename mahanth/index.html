@@ -178,9 +178,9 @@
 			    		})]);
 
 
-			    .domain(d3.extent(data, function (d) {
-			        return d.rating;
-			    }))
+			    // .domain(d3.extent(data, function (d) {
+			    //     return d.rating;
+			    // }))
 			    // we add the axes SVG component. At this point, this is just a placeholder. The actual axis will be added in a bit
 			    svg.append("g").attr("class", "x axis").attr("transform", "translate(0," + y.range()[0] + ")");
 			    svg.append("g").attr("class", "y axis");
