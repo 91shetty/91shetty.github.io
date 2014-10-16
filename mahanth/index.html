@@ -137,7 +137,6 @@
 			    	svg.selectAll("node")
 			    	   .data(data)
 				       .enter()
-				       .attr("class","node")
 				       .attr("transform",function(d){
 					       	return "translate(" + x(d.price) + "," + y(d.rating) + ")";
 				       })				   
@@ -226,7 +225,6 @@
 				    svg.selectAll("bar")
 				       .data(data)
 				       .enter()
-				       .attr("class","bar")
 				       .append("rect")
 				       .style("fill",function(d){
 				       		return colors(d.manufacturer);
