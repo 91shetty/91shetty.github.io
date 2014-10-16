@@ -17,7 +17,7 @@ html,body{
 	height: 15%;
 }
 #content{
-	padding-left: 20px;
+	margin: 0 auto;
 	width: 70%;
 	height: 80%;
 	background: #81b718;
@@ -30,5 +30,6 @@ html,body{
 #data{
 	position: relative;
 	float: left;
+	left: 25%;
 	background: #fcfcfc;
 }
