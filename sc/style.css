@@ -52,3 +52,10 @@ a{
 #menu a:hover{
 	color: #22ac82;
 }
+#data div{
+	backgroundcolor: #fcfcfc;
+}
+#data p{
+	color: #adadad;
+	font-size: 11px;
+}
