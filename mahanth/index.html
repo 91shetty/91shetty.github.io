@@ -48,6 +48,8 @@
 			// call the method below
 			showScatterPlot();
 			showBarChart();
+			showDonutChart();
+
 
 			function showScatterPlot() {
 			    // just to have some space around items. 
@@ -134,7 +136,7 @@
 			    	svg.selectAll("g.y.axis").call(yAxis);
 			    	svg.selectAll("g.x.axis").call(xAxis);
 
-			    	var chocolate = svg.selectAll("node")
+			    	var node = svg.selectAll("node")
 			    	   .data(data)
 				       .enter()
 				       .append("g").attr("class", "node")
@@ -142,7 +144,7 @@
 					       	return "translate(" + x(d.price) + "," + y(d.rating) + ")";
 				       });		   
 			    	   // we add our first graphics element! A circle! 
-			    	chocolate.append("circle")
+			    	node.append("circle")
 			           .attr("r", 5)
 			           .attr("class", "dot")
 			           .style("fill", function (d) {
@@ -151,7 +153,7 @@
 				            return colors(d.manufacturer);
 					    });
 				        // now we add some text, so we can see what each item is.
-					chocolate.append("text")
+					node.append("text")
 				        .style("text-anchor", "middle")
 				        .attr("dy", -10)
 				        .text(function (d) {
@@ -223,7 +225,7 @@
 				    svg.selectAll("g.y.axis").call(yAxis);
 				    svg.selectAll("g.x.axis").call(xAxis);
 
-				    svg.selectAll("bar")
+				    var bar = svg.selectAll("bar")
 				       .data(data)
 				       .enter()
 				       .append("rect")
@@ -234,6 +236,14 @@
 				       .attr("width", 40)
 				       .attr("y", function(d) { return y(d.rating); })
 				       .attr("height", function(d) { return height - margins.top - margins.bottom - y(d.rating); });
+
+				   	bar.append("text")
+				        .style("text-anchor", "middle")
+				        .attr("dy", -10)
+				        .text(function (d) {
+				            // this shouldn't be a surprising statement.
+				            return d.price + "£";
+					    });
 				});
 			}
 		</script>
