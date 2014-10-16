@@ -72,15 +72,15 @@
 			    // the domain define the min and max variables to show. In this case, it's the min and max prices of items.
 			    // this is made a compact piece of code due to d3.extent which gives back the max and min of the price variable within the dataset
 			    var x = d3.scale.linear()
-			        .domain(d3.extent(data, function (d) {
+			        .domain(0,d3.max(data, function (d) {
 			        return d.price;
 			    }))
 			    // the range maps the domain to values from 0 to the width minus the left and right margins (used to space out the visualization)
-			        .range([0, width - margins.left - margins.right]);
+			    .range([0, width - margins.left - margins.right]);
 
 			    // this does the same as for the y axis but maps from the rating variable to the height to 0. 
 			    var y = d3.scale.linear()
-			        .domain(d3.extent(data, function (d) {
+			        .domain(0,d3.max(data, function (d) {
 			        return d.rating;
 			    }))
 			    // Note that height goes first due to the weird SVG coordinate system
