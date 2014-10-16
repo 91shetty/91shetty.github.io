@@ -219,7 +219,7 @@
 				       .attr("x", function(d) { return x(d.name); })
 				       .attr("width", x.rangeBand())
 				       .attr("y", function(d) { return y(d.rating); })
-				       .attr("height", function(d) { return height - y(d.rating); });
+				       .attr("height", function(d) { return height - margins.top - margins.bottom - y(d.rating); });
 
 				    // now we add some text, so we can see what each item is.
 				    // chocolateGroup.append("text")
