@@ -64,4 +64,5 @@ a{
 }
 #new_users,#members,#licenses{
 	line-height: 4em;
+	width: 30%
 }
