@@ -208,7 +208,7 @@
 				       .enter()
 				       .append("rect")
 				       .style("fill",function(d){
-				       		return d.manufacturer;
+				       		return colors(d.manufacturer);
 				       })
 				       .attr("x", function(d) { return x(d.name); })
 				       .attr("width", 40)
