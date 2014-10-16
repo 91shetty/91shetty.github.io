@@ -3,6 +3,16 @@ body {
     color: #686765;
 }
 
+#scatter-load{
+    width: 500px;
+    height: 80%;
+}
+
+#barchart-load{
+    width: 500px;
+    height: 80%;
+}
+
 .axis {
     fill: none;
     stroke: #AAA;
