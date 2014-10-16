@@ -166,20 +166,6 @@ a:hover {
 	content: "\e005";
 }
 
-.bl-content, 
-div.bl-panel-items > div > div {
-	opacity: 0;
-	pointer-events: none;
-	position: absolute;
-	top: 60px;
-	left: 30px;
-	right: 30px;
-	bottom: 30px;
-	padding: 0 20px;
-	overflow: hidden;
-	overflow-y: auto;
-}
-
 /* Custom content */
 
 .bl-content p {
