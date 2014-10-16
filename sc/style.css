@@ -43,7 +43,8 @@ body{
 }
 #menu{
 	font-weight: bold;
-	color: #b3b3b3
+	color: #b3b3b3;
+	line-height: 3.5em;
 }
 #menu:hover{
 	color: #22ac82;
