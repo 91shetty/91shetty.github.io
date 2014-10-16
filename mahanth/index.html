@@ -134,7 +134,7 @@
 			    	svg.selectAll("g.y.axis").call(yAxis);
 			    	svg.selectAll("g.x.axis").call(xAxis);
 
-			    	var chocoloate = svg.selectAll("node")
+			    	var chocolate = svg.selectAll("node")
 			    	   .data(data)
 				       .enter()
 				       .append("g").attr("class", "node")
@@ -142,7 +142,7 @@
 					       	return "translate(" + x(d.price) + "," + y(d.rating) + ")";
 				       });		   
 			    	   // we add our first graphics element! A circle! 
-			    	   chocoloate.append("circle")
+			    	   chocolate.append("circle")
 			           .attr("r", 5)
 			           .attr("class", "dot")
 			           .style("fill", function (d) {
