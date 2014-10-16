@@ -59,3 +59,6 @@ a{
 	color: #adadad;
 	font-size: 11px;
 }
+#data h3{
+	display:inline !important;
+}
