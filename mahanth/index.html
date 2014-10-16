@@ -137,7 +137,7 @@
 			    	svg.selectAll("node")
 			    	   .data(data)
 				       .enter()
-				       //.attr("class","node")
+				       .attr("class","node")
 				       .attr("transform",function(d){
 					       	return "translate(" + x(d.price) + "," + y(d.rating) + ")";
 				       })				   
