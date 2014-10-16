@@ -53,7 +53,7 @@ a{
 	color: #22ac82;
 }
 #data div{
-	backgroundcolor: #fcfcfc;
+	background: #fcfcfc;
 }
 #data p{
 	color: #adadad;
@@ -61,4 +61,7 @@ a{
 }
 #data h3{
 	display:inline !important;
+}
+#new_users,#members,#licenses{
+	line-height: 4em;
 }
