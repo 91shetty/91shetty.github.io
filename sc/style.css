@@ -26,10 +26,12 @@ html,body{
 	position:relative;
 	float: left;
 	width: 25%; 
+	height: 100%;
 }
 #data{
-	position: relative;
+	position:relative;
 	float: left;
 	left: 25%;
 	background: #fcfcfc;
+	height: 100%
 }
