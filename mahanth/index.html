@@ -214,13 +214,16 @@
 			    var chocolateGroup = chocolate.enter().append("g").attr("class", "bar")
 			    // this is how we set the position of the items. Translate is an incredibly useful function for rotating and positioning items 
 			    .attr("x",function(d){
+			    	console.log(x(d.name));
 			    	return x(d.name);
 			    })
 			    .attr("width", x.rangeBand())
 			    .attr("y",function(d){
+			    	console.log(y(d.rating));
 			    	return y(d.rating);
 			    })
 			    .attr("height",function(d){
+			    	console.log(height - y(d.rating));
 			    	return height - y(d.rating);
 
 			    })
