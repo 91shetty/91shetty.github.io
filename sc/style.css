@@ -48,3 +48,6 @@ body{
 #menu:hover{
 	color: #22ac82;
 }
+a{
+	text-decoration: none;
+}
