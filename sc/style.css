@@ -52,3 +52,6 @@ body{
 a{
 	text-decoration: none;
 }
+#menu a{
+	padding-left: 15%;
+}
