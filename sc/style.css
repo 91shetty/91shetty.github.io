@@ -67,18 +67,15 @@ a{
 	color: #22ac82;
 }
 #new_users{
-	margin-top: 5%;
-	margin-left: 5%;
-	background: #fcfcfc;
-	width: 40%;
+	margin-top: 5%;	
 }
 #members,#licenses{
 	margin-top: 3%;
+}
+.panel{
 	margin-left: 5%;
 	background: #fcfcfc;
 	width: 40%;
-}
-.panel{
 	margin-bottom: 20px;
 	border: 1px solid transparent;
 	border-radius: 4px;
