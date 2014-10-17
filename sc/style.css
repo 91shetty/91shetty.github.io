@@ -13,7 +13,7 @@ html,body{
 
 body{
 	font-family: citrixFont,"Helvetica Neue";
-	font-size: 12px;
+	font-size: 14px;
 }
 
 #container{
@@ -89,7 +89,6 @@ a{
 }
 #data_content{
 	color: #adadad;
-	font-size: 11px;
 	position: relative;
 	float: left;
 	margin-top: 2%;
