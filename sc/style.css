@@ -76,8 +76,12 @@ a{
 #image{
 	position: relative;
 	float: left;
+	margin-top: 2%;
+	margin-bottom: 2%;
 }
 #data_content{
 	position: relative;
 	float: left;
+	margin-top: 2%;
+	margin-bottom: 2%;
 }
