@@ -1,3 +1,8 @@
+@font-face {
+    font-family: citrixFont;
+    src: url(citrixsans-regular.woff);
+}
+
 html,body{
 	height: 100%;
 	width: 100%;
@@ -7,7 +12,7 @@ html,body{
 }
 
 body{
-	font-family: "Helvetica Neue";
+	font-family: citrixFont,"Helvetica Neue";
 	font-size: 12px;
 }
 
@@ -70,8 +75,10 @@ a{
 #members,#licenses{
 	margin-top: 3%
 }
-#getLicenses{
-
+.panel{
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
 }
 #image{
 	position: relative;
