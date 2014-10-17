@@ -71,10 +71,6 @@ a{
 	background: #fcfcfc;
 	width: 40%;
 }
-#data p{
-	color: #adadad;
-	font-size: 11px;
-}
 #new_users{
 	margin-top: 5%;
 }
@@ -94,6 +90,8 @@ a{
 	margin-bottom: 2%;
 }
 #data_content{
+	color: #adadad;
+	font-size: 11px;
 	position: relative;
 	float: left;
 	margin-top: 2%;
