@@ -70,3 +70,14 @@ a{
 #members,#licenses{
 	margin-top: 3%
 }
+#getLicenses{
+
+}
+#image{
+	position: relative;
+	float: left;
+}
+#data_content{
+	position: relative;
+	float: left;
+}
