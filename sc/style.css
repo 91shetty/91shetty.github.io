@@ -92,3 +92,7 @@ a{
 	margin-top: 2%;
 	margin-bottom: 2%;
 }
+#huge{
+	font-size: 40px;
+	font-weight: bold;
+}
