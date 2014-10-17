@@ -26,6 +26,9 @@ body{
 	width: 100%;
 	height: 15%;
 }
+.logo{
+	margin-top:20px;
+}
 #content{
 	margin: 0 auto;
 	width: 70%;
