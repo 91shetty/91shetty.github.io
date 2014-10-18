@@ -134,6 +134,10 @@ a{
 	height: 100%
 }
 
+#users #data p,input{
+	margin-left: 5%;
+}
+
 /* Settings */
 #settings{
 	position:relative;
