@@ -66,10 +66,10 @@ a{
 #menu a:hover{
 	color: #22ac82;
 }
-#new_users{
+#new_users,#members{
 	margin-top: 5%;	
 }
-#members,#licenses{
+#licenses{
 	margin-top: 3%;
 }
 /*#new_users,#members,#licenses{
