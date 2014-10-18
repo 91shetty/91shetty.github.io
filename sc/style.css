@@ -160,6 +160,7 @@ a{
 
 tr{
 	border-bottom: 1px solid #888;
+	height: 5em;
 }
 
 tr:hover{
@@ -170,13 +171,16 @@ tr:hover{
 	width: 4%;
 }
 
-#name,#type,#number,#lastLogin{
-	width: 25%;
+#name,#lastLogin{
+	width: 31%;
+}
+#type,#number{
+	width: 15%;
 }
 
 #userAction{
 	background: white;
-	margin: 10px 10px 0 0;
+	margin: 10px 0 10px 0;
 	width: 100%;
 	height: 20%;
 	display: inline-flex;
