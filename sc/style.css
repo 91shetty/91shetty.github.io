@@ -40,7 +40,7 @@ body{
 #content{
 	margin: 0 auto;
 	width: 80%;
-	height: 80%;
+	height: 100%;
 }
 #left-nav{
 	position:relative;
