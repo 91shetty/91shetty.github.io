@@ -17,6 +17,10 @@ body{
 	color: #888;
 }
 
+table{
+	border-collapse: collapse;
+}
+
 #container{
 	width:100%;
 	height:100%;
@@ -155,7 +159,7 @@ a{
 }
 
 tr{
-
+	border-bottom: 1px solid #888;
 }
 
 #check,#admin{
@@ -167,9 +171,11 @@ tr{
 }
 
 #userAction{
+	background: white;
+	margin: 10px 10px 0 0;
 	width: 100%;
 	height: 20%;
-	display: inline-block;
+	display: inline-flex;
 }
 
 #userAction p{
