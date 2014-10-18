@@ -116,7 +116,6 @@ a:hover {
 }
 
 .bl-box h2 {
-	font-family: BebasNeue;
 	text-align: center;
 	margin: 0;
 	padding: 20px;
@@ -125,6 +124,10 @@ a:hover {
 	letter-spacing: 2px;
 	font-weight: 700;
 	text-transform: uppercase;
+}
+
+.bl-box h2 span{
+	font-family: BebasNeue;
 }
 
 .bl-icon {
