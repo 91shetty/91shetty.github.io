@@ -37,7 +37,7 @@ body{
 
 #content{
 	margin: 0 auto;
-	width: 70%;
+	width: 80%;
 	height: 80%;
 }
 #left-nav{
@@ -61,7 +61,7 @@ a{
 	text-decoration: none;
 }
 #menu a{
-	color: #b3b3b3;
+	/*color: #b3b3b3;*/
 }
 #menu a:hover{
 	color: #22ac82;
