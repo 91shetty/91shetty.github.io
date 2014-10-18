@@ -31,8 +31,9 @@ body{
 #header img{
 	position: absolute;
 	margin: 0;
-	top: 50%;
-	transform: translate(0,-50%);
+	bottom: 20%;
+	left: 9%;
+	/*transform: translate(0,-50%);*/
 }
 
 #content{
