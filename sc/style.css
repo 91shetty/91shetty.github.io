@@ -37,6 +37,10 @@ body{
 	/*transform: translate(0,-50%);*/
 }
 
+#header p{
+	color: #fff;
+}
+
 #content{
 	margin: 0 auto;
 	width: 80%;
