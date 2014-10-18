@@ -49,44 +49,48 @@ body{
 #content{
 	margin: 0 auto;
 	width: 80%;
-	height: 100%;
+	height: 80%;
 }
+
+/* left-nav*/
 #left-nav{
 	position:relative;
 	float: left;
 	width: 25%; 
 	height: 100%;
 }
+
 .active{
 	color: #22ac82;
 }
+
 #menu{
 	font-weight: bold;
 	line-height: 3.5em;
 }
+
 a{
 	text-decoration: none;
 }
+
 #menu a{
 	color: inherit;
 	/*color: #b3b3b3;*/
 }
+
 #menu a:hover{
 	color: #22ac82;
 }
+
+/* Dashboard*/
 #new_users,#members{
 	margin-top: 5%;	
 }
+
 #licenses{
 	margin-top: -5%;
 }
-/*#new_users,#members,#licenses{
-	margin-left: 5%;
-	background: #fcfcfc;
-	width: 40%;
-}*/
 
-/* Dashboard*/
 #dashboard{
 	position:relative;
 	float: left;
@@ -94,10 +98,12 @@ a{
 	background: #f4f4f4;
 	height: 100%
 }
+
 #image{
 	margin-left: 5%;
 	margin-right: 5%;
 }
+
 .panel{
 	position: relative;
 	float: left;
@@ -105,22 +111,27 @@ a{
 	background: #fcfcfc;
 	width: 40%;
 }
+
 .panel hr{
 	margin-top: -3%;
 	margin-left: 5%;
 	margin-right: 5%;
 }
+
 .panel p{
 	margin-left: 5%;
 	margin-right: 5%;
 }
+
 #big{
 	font-size: 30px;
 }
+
 #huge{
 	font-size: 40px;
 	font-weight: bold;
 }
+
 #green{
 	color: #22ac82;
 }
@@ -142,9 +153,11 @@ a{
 	width: 100%
 
 }
+
 tr{
 
 }
+
 #check,#admin{
 	width: 4%;
 }
