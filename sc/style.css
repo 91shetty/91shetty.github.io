@@ -162,6 +162,10 @@ tr{
 	border-bottom: 1px solid #888;
 }
 
+tr:hover{
+	background: #22ac82;
+}
+
 #check,#admin{
 	width: 4%;
 }
