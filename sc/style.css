@@ -81,11 +81,11 @@ a{
 	margin-left: 5%;
 	margin-right: 5%;
 }
-hr{
+.panel hr{
 	margin-left: 5%;
 	margin-right: 5%;
 }
-#image p{
+.panel p{
 	margin-left: 5%;
 	margin-right: 5%;
 }
