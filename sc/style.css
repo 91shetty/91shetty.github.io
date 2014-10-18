@@ -72,14 +72,21 @@ a{
 #members,#licenses{
 	margin-top: 3%;
 }
-#new_users,#members,#licenses{
+/*#new_users,#members,#licenses{
 	margin-left: 5%;
 	background: #fcfcfc;
 	width: 40%;
-}
+}*/
 #image{
 	margin-left: 5%;
 	margin-right: 5%;
+}
+.panel{
+	position: relative;
+	float: left;
+	margin-left: 5%;
+	background: #fcfcfc;
+	width: 40%;
 }
 .panel hr{
 	margin-top: -3%;
