@@ -63,6 +63,7 @@ a{
 	text-decoration: none;
 }
 #menu a{
+	color: inherit;
 	/*color: #b3b3b3;*/
 }
 #menu a:hover{
