@@ -60,13 +60,6 @@ body{
 .active{
 	color: #22ac82;
 }
-#dashboard{
-	position:relative;
-	float: left;
-	width: 75%;
-	background: #f4f4f4;
-	height: 100%
-}
 #menu{
 	font-weight: bold;
 	line-height: 3.5em;
@@ -94,6 +87,13 @@ a{
 }*/
 
 /* Dashboard*/
+#dashboard{
+	position:relative;
+	float: left;
+	width: 75%;
+	background: #f4f4f4;
+	height: 100%
+}
 #image{
 	margin-left: 5%;
 	margin-right: 5%;
@@ -127,10 +127,18 @@ a{
 
 /* Users */
 #users{
-	display: none;
+	position:relative;
+	float: left;
+	width: 75%;
+	background: #f4f4f4;
+	height: 100%
 }
 
 /* Settings */
 #settings{
-	display: none;
+	position:relative;
+	float: left;
+	width: 75%;
+	background: #f4f4f4;
+	height: 100%
 }
