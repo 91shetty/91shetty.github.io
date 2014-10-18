@@ -25,7 +25,7 @@ body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
 }
 
 body {
-    font-family: BebasNeue, Calibri, Arial, sans-serif;
+    font-family: "PT Serif", Calibri, Arial, sans-serif;
     color: #f2ede3;
     background: #333;
     font-size: 0.9em;
@@ -116,6 +116,7 @@ a:hover {
 }
 
 .bl-box h2 {
+	font-family: BebasNeue;
 	text-align: center;
 	margin: 0;
 	padding: 20px;
@@ -198,6 +199,7 @@ div.bl-panel-items > div > div {
 }
 
 .bl-content h2 {
+	font-family: BebasNeue;
 	font-size: 3em;
 	font-weight: 300;
 	margin: 0 0 20px 0;
@@ -208,6 +210,7 @@ div.bl-panel-items > div > div {
 }
 
 .bl-content article h3 {
+	font-family: BebasNeue;
 	font-weight: 700;
 	letter-spacing: 2px;
 	text-transform: uppercase;
@@ -264,6 +267,7 @@ div.bl-panel-items > div > div {
 }
 
 div.bl-panel-items > div > div h3 {
+	font-family: BebasNeue;
 	font-size: 2.4em;
 	font-weight: 300;
 	margin: 0 0 20px 0;
