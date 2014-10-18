@@ -1,4 +1,7 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@font-face {
+    font-family: BebasNeue;
+    src: url(font/BebasNeue.otf);
+}
 
 @font-face {
 	font-family: 'icomoon';
@@ -22,7 +25,7 @@ body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
 }
 
 body {
-    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-family: BebasNeue, Calibri, Arial, sans-serif;
     color: #f2ede3;
     background: #333;
     font-size: 0.9em;

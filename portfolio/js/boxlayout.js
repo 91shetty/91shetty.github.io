@@ -24,7 +24,7 @@ var Boxlayout = (function() {
 		$nextWorkItem = $workPanelsContainer.find( 'nav > span.bl-next-work' ),
 		// if currently navigating the work items
 		isAnimating = false,
-		// close work panel trigger
+		// close work panel triggerl
 		$closeWorkItem = $workPanelsContainer.find( 'nav > span.bl-icon-close' ),
 		transEndEventNames = {
 			'WebkitTransition' : 'webkitTransitionEnd',
