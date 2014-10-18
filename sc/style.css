@@ -138,6 +138,16 @@ a{
 	margin-left: 5%;
 }
 
+#users #data table{
+	width: 100%
+
+}
+#check,#admin{
+	width: 4%;
+}
+#name,#type,#number,#lastLogin{
+	width: 25%;
+}
 /* Settings */
 #settings{
 	position:relative;
