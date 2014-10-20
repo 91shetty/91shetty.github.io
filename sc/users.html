@@ -45,7 +45,7 @@
 						<table>
 							<thead>
 								<tr>
-									<th id="check"><input type="checkbox"></th>
+									<th id="check"><input type="checkbox" onclick="toggle(this)"></th>
 									<th id="admin"></th>
 									<th id="name">Name</th>
 									<th id="type">Licence</th>
@@ -55,7 +55,7 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td id="check"><input type="checkbox"></td>
+									<td id="check"><input id="chkbox" type="checkbox"></td>
 									<td id="admin">#</td>
 									<td id="name">Sujan Abraham</td>
 									<td id="type">Free</td>
@@ -63,7 +63,7 @@
 									<td id="lastLogin">5 mins ago</td>
 								</tr>
 								<tr>
-									<td id="check"><input type="checkbox"></td>
+									<td id="check"><input id="chkbox" type="checkbox"></td>
 									<td id="admin">#</td>
 									<td id="name">Sujan Abraham</td>
 									<td id="type">Free</td>
@@ -71,7 +71,7 @@
 									<td id="lastLogin">5 mins ago</td>
 								</tr>
 								<tr>
-									<td id="check"><input type="checkbox"></td>
+									<td id="check"><input id="chkbox" type="checkbox"></td>
 									<td id="admin">#</td>
 									<td id="name">Sujan Abraham</td>
 									<td id="type">Free</td>
@@ -79,7 +79,7 @@
 									<td id="lastLogin">5 mins ago</td>
 								</tr>
 								<tr>
-									<td id="check"><input type="checkbox"></td>
+									<td id="check"><input id="chkbox" type="checkbox"></td>
 									<td id="admin">#</td>
 									<td id="name">Sujan Abraham</td>
 									<td id="type">Free</td>
@@ -87,7 +87,7 @@
 									<td id="lastLogin">5 mins ago</td>
 								</tr>
 								<tr>
-									<td id="check"><input type="checkbox"></td>
+									<td id="check"><input id="chkbox" type="checkbox"></td>
 									<td id="admin">#</td>
 									<td id="name">Sujan Abraham</td>
 									<td id="type">Free</td>
@@ -95,7 +95,7 @@
 									<td id="lastLogin">5 mins ago</td>
 								</tr>
 								<tr>
-									<td id="check"><input type="checkbox"></td>
+									<td id="check"><input id="chkbox" type="checkbox"></td>
 									<td id="admin">#</td>
 									<td id="name">Sujan Abraham</td>
 									<td id="type">Free</td>
@@ -103,7 +103,7 @@
 									<td id="lastLogin">5 mins ago</td>
 								</tr>
 								<tr>
-									<td id="check"><input type="checkbox"></td>
+									<td id="check"><input id="chkbox" type="checkbox"></td>
 									<td id="admin">#</td>
 									<td id="name">Sujan Abraham</td>
 									<td id="type">Free</td>
@@ -116,6 +116,13 @@
 				</div>
 			</div>
 		</div>
-
+		<script type="text/javascript">
+			function toggle (source) {
+				checkboxes = document.getElementById("chkbox");
+				for(var i=0, n=checkboxes.length;i<n;i++){
+					checkboxes[i].checked = source.checked;
+				}
+			}
+		</script>
 	</body>
 </html>
