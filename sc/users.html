@@ -65,13 +65,15 @@
 									<script type="text/javascript">
 										function toggleAllCellColor(source) {
 											var checkboxes = document.getElementsByName("chkbox");
-											for(var i=0, n=checkboxes.length;i<n;i++) {
+											var n = checkboxes.length;
+											for(var i=0; i<n; i++) {
 												checkboxes[i].checked = source.checked;
+												var cell = document.getElementById("cell" + (i+1)); 
 												if(source.checked){
-													checkboxes[i].className = "selected"; 
+													cell.className = "selected"; 
 												}
 												else{
-													checkboxes[i].className = "unSelected";
+													cell.className = "unSelected";
 												}
 											}
 										}
