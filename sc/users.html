@@ -83,7 +83,7 @@
 									$(document).ready(function(){
 										$("#chkbox").click(function(){
 											if($(this).prop("checked")==true){
-												$(this).parent('td').css("background","#def9ee");
+												$(this).parent('td').parent('tr').css("background","#def9ee");
 												console.log("Checkbox is clicked");
 											}
 										});
