@@ -108,12 +108,16 @@ table{
 	height: 100%;
 }
 
+#left-nav table{
+	width: 100%;
+}
+
 .active{
 	background: #22ac82;
 }
 
 #menu{
-	line-height: 3.5em;
+	line-height: 2.5em;
 }
 
 a{
