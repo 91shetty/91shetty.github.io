@@ -177,13 +177,16 @@ tr:hover{
 }
 
 #check,#admin{
+	text-align: center;
 	width: 4%;
 }
 
 #name,#lastLogin{
+	text-align: left;
 	width: 31%;
 }
 #type,#number{
+	text-align: left;
 	width: 15%;
 }
 
