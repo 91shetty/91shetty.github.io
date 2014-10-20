@@ -84,12 +84,12 @@
 										var cell = document.getElementById(cellId);
 										if(box.checked){
 											//$(this).parent('td').parent('tr').css("background","#def9ee");
-											cell.background = "#def9ee";
+											cell.className = "selected";
 											console.log("Checkbox is clicked");
 										}
 										else{
 											//$(this).parent('td').parent('tr').css("background","none");
-											cell.background = "none";
+											cell.className = "unSelected";
 											console.log("Checkbox is unclicked");
 										}
 										

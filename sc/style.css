@@ -43,7 +43,8 @@ table{
 #header-content img{
 	position: absolute;
 	margin: 0;
-	/*transform: translate(0,-50%);*/
+	top:50%;
+	transform: translate(0,-50%);
 }
 
 #header-content a{
@@ -53,7 +54,7 @@ table{
 }
 
 .dropdown{
-	position: relative;
+	position: ab;
 	float: right!important;
 }
 
@@ -217,6 +218,14 @@ tr{
 
 tr:hover{
 	background: #def9ee;
+}
+
+.selected{
+	background: #def9ee;
+}
+
+.unSelected{
+	background: none;
 }
 
 #check,#admin{
