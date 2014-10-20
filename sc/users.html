@@ -5,6 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="shortcut icon" href="favicon.ico">
 		<script type="text/javascript" src="action.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	</head>
 	<body>
 		<div id="container">
@@ -12,6 +13,13 @@
 				<div id="header-content">
 					<img src="logo.png">
 					<div class"dropdown">
+						<script type="text/javascript">
+							$(document).ready(function(){
+								$('#userName').click(function(){
+									$('.dropdown-menu').toggle;
+								});
+							});
+						</script>
 						<a href="#" id="userName"> Tej Kalianda <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li>
