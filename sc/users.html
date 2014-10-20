@@ -63,10 +63,16 @@
 							<thead>
 								<tr>
 									<script type="text/javascript">
-										function toggle(source) {
-											checkboxes = document.getElementsByName("chkbox");
+										function toggleColor(source) {
+											var checkboxes = document.getElementsByName("chkbox");
 											for(var i=0, n=checkboxes.length;i<n;i++) {
 												checkboxes[i].checked = source.checked;
+												if(source.checked){
+													checkboxes[i].className = "selected"; 
+												}
+												else{
+													checkboxes[i].className = "unSelected";
+												}
 											}
 										}
 									</script>
