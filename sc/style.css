@@ -109,11 +109,10 @@ table{
 }
 
 .active{
-	color: #22ac82;
+	background: #22ac82;
 }
 
 #menu{
-	font-weight: bold;
 	line-height: 3.5em;
 }
 
@@ -208,7 +207,7 @@ a{
 }
 
 thead{
-	background: white;
+	background: white; 
 }
 
 tr{
