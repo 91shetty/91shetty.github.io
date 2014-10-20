@@ -45,6 +45,14 @@
 						<table>
 							<thead>
 								<tr>
+									<script type="text/javascript">
+										function toggle(source) {
+											checkboxes = document.getElementsByName("chkbox");
+											for(var i=0, n=checkboxes.length;i<n;i++) {
+												checkboxes[i].checked = source.checked;
+											}
+										}
+									</script>
 									<th id="check"><input type="checkbox" onclick="toggle(this)"></th>
 									<th id="admin"></th>
 									<th id="name">Name</th>
@@ -116,13 +124,5 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript">
-			function toggle (source) {
-				checkboxes = document.getElementsByName("chkbox");
-				for(i in checkboxes){
-					i.checked = source.checked;
-				}
-			}
-		</script>
 	</body>
 </html>
