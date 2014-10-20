@@ -29,19 +29,24 @@ table{
 /* Header */
 #header{
 	background: #22ac82;
-	margin: 0 auto;
-	width: 80%;
+	width: 100%;
 	height: 15%;
 	position: relative;
 }
 
-#header img{
+#header-content{
+	width: 80%;
+	margin: 0 auto;
+	height: 100%;
+}
+
+#header-content img{
 	position: absolute;
 	margin: 0;
 	/*transform: translate(0,-50%);*/
 }
 
-#header a{
+#header-content a{
 	position: relative;	
 	float: right;
 	color: #fff;
