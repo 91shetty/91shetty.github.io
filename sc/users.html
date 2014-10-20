@@ -63,7 +63,7 @@
 							<thead>
 								<tr>
 									<script type="text/javascript">
-										function toggleColor(source) {
+										function toggleAllCellColor(source) {
 											var checkboxes = document.getElementsByName("chkbox");
 											for(var i=0, n=checkboxes.length;i<n;i++) {
 												checkboxes[i].checked = source.checked;
@@ -76,7 +76,7 @@
 											}
 										}
 									</script>
-									<th id="check"><input type="checkbox" onclick="toggleColor(this)"></th>
+									<th id="check"><input type="checkbox" onclick="toggleAllCellColor(this)"></th>
 									<th id="admin"></th>
 									<th id="name">Name</th>
 									<th id="type">Licence</th>
