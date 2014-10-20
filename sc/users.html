@@ -86,6 +86,10 @@
 												$(this).parent('td').parent('tr').css("background","#def9ee");
 												console.log("Checkbox is clicked");
 											}
+											if($(this).prop("checked")==false){
+												$(this).parent('td').parent('tr').css("background","none");
+												console.log("Checkbox is unclicked");
+											}
 										});
 									});
 								</script>
