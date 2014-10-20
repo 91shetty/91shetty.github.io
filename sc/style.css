@@ -254,6 +254,10 @@ tr:hover{
 	margin-left: 5%;
 }
 
+#email{
+	font-size: 12px;
+}
+
 /* Settings */
 #settings{
 	position:relative;
