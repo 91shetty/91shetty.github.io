@@ -27,6 +27,7 @@ input[type=search]{
 	width: 40%;
 	border: 1px solid #dbdbdb;
 	height: 34px;
+	font-size: 14px;
 }
 
 #container{
@@ -207,6 +208,10 @@ a{
 	width: 75%;
 	background: #f4f4f4;
 	height: 100%;
+}
+
+#users #data{
+
 }
 
 #users #data p,input{
