@@ -105,7 +105,7 @@ input[type=search]{
 #content{
 	margin: 0 auto;
 	width: 80%;
-	height: 85%;
+	height: 100%;
 }
 
 /* left-nav*/
@@ -216,7 +216,6 @@ a{
 #users #data table{
 	width: 100%;
 	margin-top: 2%;
-
 }
 
 thead{
