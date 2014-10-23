@@ -67,7 +67,6 @@
 			// Generate our SVG object
 			//************************************************************	
 			var svg = d3.select("body").append("svg")
-				.call(zoom)
 			    .attr("width", width + margin.left + margin.right)
 			    .attr("height", height + margin.top + margin.bottom)
 				.append("g")
@@ -93,6 +92,8 @@
 				y.domain([0, d3.max(data, function(d){ 
 					return d.rating; 
 				})]);
+
+				svg.call(zoom)
 
 				svg.append("g")
 				    .attr("class", "x axis")
