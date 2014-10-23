@@ -127,10 +127,10 @@
 					    })
 			           .on("mouseover", function (d) {
 			           		d3.select("this").attr("r",10);
-			           }
+			           })
 			           .on("mouseout", function (d) {
 			           		d3.select("this").attr("r",5);
-			           };
+			           });
 				        // now we add some text, so we can see what each item is.
 					node.append("text")
 				        .style("text-anchor", "middle")
