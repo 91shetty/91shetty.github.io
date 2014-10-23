@@ -48,6 +48,10 @@ text{
     cursor: pointer;
 }
 
+.dot:hover{
+    stroke: rgba(68, 127, 255, 0.3);
+}
+
 .d3-tip {
   line-height: 1;
   font-weight: bold;

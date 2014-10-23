@@ -120,13 +120,13 @@
 				            // remember the ordinal scales? We use the colors scale to get a colour for our manufacturer. Now each node will be coloured
 				            // by who makes the chocolate. 
 				            return colors(d.manufacturer);
-					    })
-			           .on("mouseover", function() {
-			           		d3.select(this).attr("r",10);
-			           })
-			           .on("mouseout", function() {
-			           		d3.select(this).attr("r",5);
-			           });
+					    });
+			           // .on("mouseover", function() {
+			           // 		d3.select(this).attr("r",10);
+			           // })
+			           // .on("mouseout", function() {
+			           // 		d3.select(this).attr("r",5);
+			           // });
 				        // now we add some text, so we can see what each item is.
 					node.append("text")
 				        .style("text-anchor", "middle")
