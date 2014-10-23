@@ -85,7 +85,7 @@
 					  .attr('class', 'd3-tip')
 					  .offset([-10, 0])
 					  .html(function(d) {
-					    return "<strong>xy</strong> <span style='color:red'>" + d.x + d.y "</span>";
+					    return "<strong>xy</strong> <span style='color:red'>" + d.x + ",</span><span style='color:red'>" + d.y + "</span>";
 					  });
 
 			svg.call(tip);
