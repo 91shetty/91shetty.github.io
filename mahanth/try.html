@@ -62,9 +62,7 @@
 			var colorsRange = d3.scale.category10();	
 			 
 			var zoom = d3.behavior.zoom()
-					    .x(x)
-					    .y(y)
-					    .scaleExtent([5, 10]);	
+					    .scaleExtent([1, 10]);	
 				
 			//************************************************************
 			// Generate our SVG object
@@ -97,9 +95,11 @@
 					return d.rating + 5; 
 				})]);
 
-				zoom.xExtent([0,d3.max(data, function(d){ 
+				zoom.x(x)
+					.xExtent([0,d3.max(data, function(d){ 
 						return d.price; 
 					})])
+					.y(y)
 				    .yExtent([0,d3.max(data, function(d){ 
 						return d.rating; 
 					})])
