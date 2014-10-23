@@ -57,13 +57,11 @@
 				
 			var zoom = d3.behavior.zoom()
 			    .x(x)
+			    .xExtent([0,12])
 			    .y(y)
+			    .yExtent([0,16])
 			    .scaleExtent([1, 10])
-			    .on("zoom", zoomed);	
-				
-				
-			 
-				
+			    .on("zoom", zoomed);					
 				
 			//************************************************************
 			// Generate our SVG object
