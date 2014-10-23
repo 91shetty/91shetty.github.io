@@ -176,12 +176,11 @@
 				    	   .data(data)
 					       .enter()
 					       .append("g")
-					       .attr("class", "dots")
-					       .attr('transform',function(d){
-						       	return "translate(" + x(d.price) + "," + y(d.rating) + ")";
-					       });		   
+					       .attr("class", "dots");
+					       		   
 				    	   // we add our first graphics element! A circle! 
-		    	points.append("circle")
+		    	points.selectAll("dot")
+			       .append("circle")
 		           .attr("r", 2.5)
 		           .attr("class", "dot")
 		           .style("fill", function(d) {
@@ -189,6 +188,9 @@
 			            // by who makes the chocolate. 
 			            return colorsRange(d.manufacturer);
 				    })
+		           .attr('transform',function(d){
+				       	return "translate(" + x(d.price) + "," + y(d.rating) + ")";
+					})
 		           .on('mouseover', tip.show)
 				   .on('mouseout', tip.hide);
 
