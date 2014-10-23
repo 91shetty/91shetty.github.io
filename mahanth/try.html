@@ -83,8 +83,12 @@
 			svg.append("g")
 			    .attr("class", "x axis")
 			    .attr("transform", "translate(0," + height + ")")
-			    .call(xAxis)
-			    .attr("class", "axis-label-x")
+			    .call(xAxis);
+
+			svg.append("g")
+				.attr("class", "y axis")
+				.append("text")
+				.attr("class", "axis-label-x")
 				.attr("x", width / 2)
 			    .attr("y", height - 35)
 				.text('Axis X');
