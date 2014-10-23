@@ -59,14 +59,18 @@
 			    .orient("left");	
 			
 			//Colors	
-			 var colorsRange = d3.scale.category10();	
+			var colorsRange = d3.scale.category10();	
 			 
-				
+			var zoom = d3.behavior.zoom()
+					    .x(x)
+					    .y(y)
+					    .scaleExtent([1, 10]);	
 				
 			//************************************************************
 			// Generate our SVG object
 			//************************************************************	
 			var svg = d3.select("body").append("svg")
+				.call(zoom)
 			    .attr("width", width + margin.left + margin.right)
 			    .attr("height", height + margin.top + margin.bottom)
 				.append("g")
@@ -93,7 +97,13 @@
 					return d.rating; 
 				})]);
 
-				//svg.call(zoom);
+				zoom.xExtent([0,d3.max(data, function(d){ 
+						return d.price; 
+					})])
+				    .yExtent([0,d3.max(data, function(d){ 
+						return d.rating; 
+					})])
+				    .on("zoom", zoomed);
 
 				svg.append("g")
 				    .attr("class", "x axis")
@@ -128,17 +138,7 @@
 					.attr("width", width)
 					.attr("height", height);
 				
-				var zoom = d3.behavior.zoom()
-						    .x(x)
-						    .xExtent([0,d3.max(data, function(d){ 
-								return d.price; 
-							})])
-						    .y(y)
-						    .yExtent([0,d3.max(data, function(d){ 
-								return d.rating; 
-							})])
-						    .scaleExtent([1, 10])
-						    .on("zoom", zoomed);
+				
 				
 				
 			//************************************************************
