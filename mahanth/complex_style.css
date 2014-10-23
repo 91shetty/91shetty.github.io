@@ -29,7 +29,11 @@ body {
 	shape-rendering: crispEdges;
 }
  
-.axis .axis-label {
+.axis .axis-label-x {
+	font-size: 14px;
+}
+
+.axis .axis-label-y {
 	font-size: 14px;
 }
  
