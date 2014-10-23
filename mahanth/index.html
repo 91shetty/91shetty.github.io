@@ -16,37 +16,6 @@
 			<h3>Histogram</h3>
 		</div>
 		<script type="text/javascript">
-			var chocolates = [{
-			    "name": "Dairy Milk",
-			        "manufacturer": "cadbury",
-			        "price": 45,
-			        "rating": 2
-			}, {
-			    "name": "Galaxy",
-			        "manufacturer": "Nestle",
-			        "price": 42,
-			        "rating": 3
-			}, {
-			    "name": "Lindt",
-			        "manufacturer": "Lindt",
-			        "price": 80,
-			        "rating": 4
-			}, {
-			    "name": "Hershey",
-			        "manufacturer": "Hershey",
-			        "price": 40,
-			        "rating": 1
-			}, {
-			    "name": "Dolfin",
-			        "manufacturer": "Lindt",
-			        "price": 90,
-			        "rating": 5
-			}, {
-			    "name": "Bournville",
-			        "manufacturer": "cadbury",
-			        "price": 70,
-			        "rating": 2
-			}];
 
 			// call the method below
 			showScatterPlot();
@@ -155,7 +124,13 @@
 				            // remember the ordinal scales? We use the colors scale to get a colour for our manufacturer. Now each node will be coloured
 				            // by who makes the chocolate. 
 				            return colors(d.manufacturer);
-					    });
+					    })
+			           .on("mouseover", function (d) {
+			           		d3.select("this").attr("r",10)
+			           }
+			           .on("mouseout", function (d) {
+			           		d3.select("this").attr("r",5)
+			           };
 				        // now we add some text, so we can see what each item is.
 					node.append("text")
 				        .style("text-anchor", "middle")
