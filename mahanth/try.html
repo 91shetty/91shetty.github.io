@@ -18,11 +18,9 @@
 			    height = 500 - margin.top - margin.bottom;
 				
 			var x = d3.scale.linear()
-			    //.domain([0, 12])
 			    .range([0, width]);
 			 
 			var y = d3.scale.linear()
-			    //.domain([-1, 16])
 			    .range([height, 0]);
 				
 			var xAxis = d3.svg.axis()
@@ -41,7 +39,8 @@
 			
 			//Colors	
 			var colorsRange = d3.scale.category10();	
-			 
+			
+			//Zoom 
 			var zoom = d3.behavior.zoom()
 					    .scaleExtent([1, 10]);	
 
@@ -71,29 +70,23 @@
 			        d.price = +d.price;
 			        d.rating = +d.rating;
 			    });
+
 			    maxPrice = d3.max(data, function(d){ 
 					return d.price + 10; 
 				});
-				console.log(maxPrice);
+
 				maxRating = d3.max(data, function(d){ 
 					return d.rating + 5; 
 				});
-				console.log(maxRating);
-				x.domain([0,d3.max(data, function(d){ 
-					return d.price + 10; 
-				})]);
-				y.domain([0, d3.max(data, function(d){ 
-					return d.rating + 5; 
-				})]);
+
+				x.domain([0,maxPrice]);
+
+				y.domain([0, maxRating]);
 
 				zoom.x(x)
-					.xExtent([0,d3.max(data, function(d){ 
-						return d.price; 
-					})])
+					.xExtent([0,maxPrice])
 					.y(y)
-				    .yExtent([0,d3.max(data, function(d){ 
-						return d.rating; 
-					})])
+				    .yExtent([0,maxRating])
 				    .on("zoom", zoomed);
 
 				svg.append("g")
@@ -134,13 +127,10 @@
 					       .append("g")
 					       .attr("class", "dots");
 					       		   
-				    	   // we add our first graphics element! A circle! 
 		    	points.append("circle")
 		           .attr("r", 2.5)
 		           .attr("class","dot")
 		           .style("fill", function(d) {
-			            // remember the ordinal scales? We use the colors scale to get a colour for our manufacturer. Now each node will be coloured
-			            // by who makes the chocolate. 
 			            return colorsRange(d.manufacturer);
 				    })
 		           .attr('transform',function(d){
@@ -155,32 +145,35 @@
 
 				function zoomed() {
 					svg.select(".x.axis").call(xAxis);
-					svg.select(".y.axis").call(yAxis);   
-					//svg.selectAll('path.line').attr('d', line);  
+					svg.select(".y.axis").call(yAxis); 
 				 
 					points.selectAll('circle').attr("transform", function(d) { 
 						return "translate(" + x(d.price) + "," + y(d.rating) + ")"; }
 					);  
 				}
+
+				//RESET
+				function reset() {
+				    d3.transition().duration(750).tween("zoom", function() {
+				        var ix = d3.interpolate(x.domain(), [0, maxPrice]),
+				        iy = d3.interpolate(y.domain(), [0, maxRating]);
+				        return function(t) {
+				        	zoom.x(x.domain(ix(t))).y(y.domain(iy(t)));
+				      		zoomed();
+				    	};
+					});
+				}
+
+				//Click on reset button
+				d3.select("button").on("click", reset); 
 			});
-			//Click on reset button
-			d3.select("button").on("click", reset); 
+			
 				
 			
 			
 
 
-			//RESET
-			function reset() {
-			    d3.transition().duration(750).tween("zoom", function() {
-			        var ix = d3.interpolate(x.domain(), [0, 12]),
-			        iy = d3.interpolate(y.domain(), [-1, 16]);
-			        return function(t) {
-			        	zoom.x(x.domain(ix(t))).y(y.domain(iy(t)));
-			      		zoomed();
-			    	};
-				});
-			}
+			
 
 		</script>
 	</body>
