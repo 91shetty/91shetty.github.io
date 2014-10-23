@@ -11,7 +11,7 @@
 		<script type="text/javascript">
 			 
 			//************************************************************
-			// Create Margins and Axis and hook our zoom function
+			// 
 			//************************************************************
 			var margin = {top: 20, right: 30, bottom: 30, left: 50},
 			    width = 960 - margin.left - margin.right,
@@ -56,6 +56,7 @@
 				.append("g")
 			    .attr("transform", "translate(" + (2 * margin.right) + "," + margin.top + ")");
 			
+			//Tool Tip
 			var tip = d3.tip()
 					  .attr('class', 'd3-tip')
 					  .offset([-10, 0])
@@ -65,6 +66,7 @@
 
 			svg.call(tip);
 
+			//Parsing data from external .csv file
 			d3.csv("data.csv", function(error, data) {
 		    	data.forEach(function(d) {
 			        d.price = +d.price;
@@ -128,7 +130,7 @@
 					       .attr("class", "dots");
 					       		   
 		    	points.append("circle")
-		           .attr("r", 2.5)
+		           .attr("r", 4)
 		           .attr("class","dot")
 		           .style("fill", function(d) {
 			            return colorsRange(d.manufacturer);
@@ -152,7 +154,9 @@
 					);  
 				}
 
-				//RESET
+				//************************************************************
+				// Reset
+				//************************************************************
 				function reset() {
 				    d3.transition().duration(750).tween("zoom", function() {
 				        var ix = d3.interpolate(x.domain(), [0, maxPrice]),
