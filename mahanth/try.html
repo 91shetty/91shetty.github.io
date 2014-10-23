@@ -56,15 +56,7 @@
 				.tickPadding(10)
 				.tickSize(-width)
 				.tickSubdivide(true)	
-			    .orient("left");
-				
-			var zoom = d3.behavior.zoom()
-			    .x(x)
-			    .xExtent([0,12])
-			    .y(y)
-			    .yExtent([0,16])
-			    .scaleExtent([1, 10])
-			    .on("zoom", zoomed);	
+			    .orient("left");	
 			
 			//Colors	
 			 var colorsRange = d3.scale.category10();	
@@ -135,30 +127,13 @@
 					.attr("width", width)
 					.attr("height", height);
 				
-				
-				
-				
-				
-			//************************************************************
-			// Create D3 line object and draw data on our SVG object
-			//************************************************************
-			// var line = d3.svg.line()
-			//     .interpolate("linear")	
-			//     .x(function(d) { return x(d.x); })
-			//     .y(function(d) { return y(d.y); });		
-				
-			// svg.selectAll('.line')
-			// 	.data(data)
-			// 	.enter()
-			// 	.append("path")
-			//     .attr("class", "line")
-			// 	.attr("clip-path", "url(#clip)")
-			// 	.attr('stroke', function(d,i){ 			
-			// 		return colors[i%colors.length];
-			// 	})
-			//     .attr("d", line);		
-				
-				
+				var zoom = d3.behavior.zoom()
+						    .x(x)
+						    .xExtent([0,12])
+						    .y(y)
+						    .yExtent([0,16])
+						    .scaleExtent([1, 10])
+						    .on("zoom", zoomed);
 				
 				
 			//************************************************************
@@ -211,6 +186,16 @@
 				    })
 		           .on('mouseover', tip.show)
 				   .on('mouseout', tip.hide);
+
+				function zoomed() {
+					svg.select(".x.axis").call(xAxis);
+					svg.select(".y.axis").call(yAxis);   
+					//svg.selectAll('path.line').attr('d', line);  
+				 
+					svg.selectAll('circle').attr("transform", function(d) { 
+						return "translate(" + x(d.price) + "," + y(d.rating) + ")"; }
+					);  
+				}
 			});
 			//Click on reset button
 			d3.select("button").on("click", reset); 
@@ -218,15 +203,7 @@
 			//************************************************************
 			// Zoom specific updates
 			//************************************************************
-			function zoomed() {
-				svg.select(".x.axis").call(xAxis);
-				svg.select(".y.axis").call(yAxis);   
-				//svg.selectAll('path.line').attr('d', line);  
-			 
-				svg.selectAll('circle').attr("transform", function(d) { 
-					return "translate(" + x(d.price) + "," + y(d.rating) + ")"; }
-				);  
-			}
+			
 
 
 			//RESET
