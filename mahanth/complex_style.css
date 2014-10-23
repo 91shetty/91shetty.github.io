@@ -49,3 +49,8 @@ body {
 	stroke: rgba(68, 127, 255, 0.3);
 }
  
+button {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
