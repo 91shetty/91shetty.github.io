@@ -4,6 +4,7 @@
 		<title>Visualisation</title>
 		<script type="text/javascript" src="d3-zoom-pan-extent.js"></script>
 		<link rel="stylesheet" type="text/css" href="complex_style.css">
+		<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 	</head>
 	<body>
 		<button>Reset</button>
@@ -79,7 +80,16 @@
 			    .attr("height", height + margin.top + margin.bottom)
 				.append("g")
 			    .attr("transform", "translate(" + (2 * margin.left) + "," + margin.top + ")");
-			 
+			
+			var tip = d3.tip()
+					  .attr('class', 'd3-tip')
+					  .offset([-10, 0])
+					  .html(function(d) {
+					    return "<strong>x,y:</strong> <span style='color:red'>" + d.x + "," + d.y "</span>";
+					  });
+
+			svg.call(tip);
+
 			svg.append("g")
 			    .attr("class", "x axis")
 			    .attr("transform", "translate(0," + height + ")")
@@ -166,7 +176,9 @@
 				})	
 				.attr("transform", function(d) { 
 					return "translate(" + x(d.point.x) + "," + y(d.point.y) + ")"; }
-				);
+				)
+				.on('mouseover', tip.show)
+				.on('mouseout', tip.hide);
 				
 			
 			//Click on reset button
