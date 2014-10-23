@@ -66,7 +66,7 @@
 			    .on("zoom", zoomed);	
 			
 			//Colors	
-			 //var colors = d3.scale.category10();	
+			 var colorsRange = d3.scale.category10();	
 			 
 				
 				
@@ -120,21 +120,21 @@
 			//************************************************************
 			// Create D3 line object and draw data on our SVG object
 			//************************************************************
-			var line = d3.svg.line()
-			    .interpolate("linear")	
-			    .x(function(d) { return x(d.x); })
-			    .y(function(d) { return y(d.y); });		
+			// var line = d3.svg.line()
+			//     .interpolate("linear")	
+			//     .x(function(d) { return x(d.x); })
+			//     .y(function(d) { return y(d.y); });		
 				
-			svg.selectAll('.line')
-				.data(data)
-				.enter()
-				.append("path")
-			    .attr("class", "line")
-				.attr("clip-path", "url(#clip)")
-				.attr('stroke', function(d,i){ 			
-					return colors[i%colors.length];
-				})
-			    .attr("d", line);		
+			// svg.selectAll('.line')
+			// 	.data(data)
+			// 	.enter()
+			// 	.append("path")
+			//     .attr("class", "line")
+			// 	.attr("clip-path", "url(#clip)")
+			// 	.attr('stroke', function(d,i){ 			
+			// 		return colors[i%colors.length];
+			// 	})
+			//     .attr("d", line);		
 				
 				
 				
