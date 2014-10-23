@@ -207,62 +207,13 @@
 		           .style("fill", function(d) {
 			            // remember the ordinal scales? We use the colors scale to get a colour for our manufacturer. Now each node will be coloured
 			            // by who makes the chocolate. 
-			            return colors(d.manufacturer);
+			            return colorsRange(d.manufacturer);
 				    })
 		           .on('mouseover', tip.show)
 				   .on('mouseout', tip.hide);
 			});
 			//Click on reset button
 			d3.select("button").on("click", reset); 
-				
-			// d3.csv("data.csv", function(error, data) {
-			//     	data.forEach(function(d) {
-			// 	        d.price = +d.price;
-			// 	        d.rating = +d.rating;
-			// 	    });
-  	// 				x.domain([0,d3.max(data, function(d){ 
-  	// 					return d.price; 
-  	// 				})]);
-  	// 				y.domain([0, d3.max(data, function(d){ 
-  	// 					return d.rating; 
-  	// 				})]);
-  	// 				// this is where we select the axis we created a few lines earlier. See how we select the axis item. in our svg we appended a g element with a x/y and axis class. To pull that back up, we do this svg select, then 'call' the appropriate axis object for rendering.    
-			//     	svg.selectAll("g.y.axis").call(yAxis);
-			//     	svg.selectAll("g.x.axis").call(xAxis);
-
-			//     	var node = svg.selectAll("node")
-			//     	   .data(data)
-			// 	       .enter()
-			// 	       .append("g")
-			// 	       .attr("class", "node")
-			// 	       .attr('transform',function(d){
-			// 		       	return "translate(" + x(d.price) + "," + y(d.rating) + ")";
-			// 	       });		   
-			//     	   // we add our first graphics element! A circle! 
-			//     	node.append("circle")
-			//            .attr("r", 5)
-			//            .attr("class", "dot")
-			//            .style("fill", function(d) {
-			// 	            // remember the ordinal scales? We use the colors scale to get a colour for our manufacturer. Now each node will be coloured
-			// 	            // by who makes the chocolate. 
-			// 	            return colors(d.manufacturer);
-			// 		    })
-			//            .on("mouseover", function() {
-			//            		d3.select(this).attr("r",10);
-			//            })
-			//            .on("mouseout", function() {
-			//            		d3.select(this).attr("r",5);
-			//            });
-			// 	        // now we add some text, so we can see what each item is.
-			// 		node.append("text")
-			// 	        .style("text-anchor", "middle")
-			// 	        .attr("dy", -10)
-			// 	        .text(function (d) {
-			// 	            // this shouldn't be a surprising statement.
-			// 	            return d.name;
-			// 		    });
-			// 	});
-				
 				
 			//************************************************************
 			// Zoom specific updates
@@ -273,7 +224,7 @@
 				//svg.selectAll('path.line').attr('d', line);  
 			 
 				points.selectAll('circle').attr("transform", function(d) { 
-					return "translate(" + x(d.point.x) + "," + y(d.point.y) + ")"; }
+					return "translate(" + x(d.price) + "," + y(d.rating) + ")"; }
 				);  
 			}
 
