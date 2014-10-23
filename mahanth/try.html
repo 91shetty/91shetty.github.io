@@ -106,7 +106,7 @@
 					.attr("class", "axis-label-x")
 					.attr("x", width / 2)
 				    .attr("y", height + margin.top)
-					.text('Axis X');
+					.text('Price(£)');
 
 				 
 				svg.append("g")
@@ -120,7 +120,7 @@
 					.attr("transform", "rotate(-90)")
 					.attr("y", (-margin.left) + 10)
 					.attr("x", -height/2)
-					.text('Axis Y');	
+					.text('Rating');	
 				 
 				svg.append("clipPath")
 					.attr("id", "clip")
@@ -130,9 +130,13 @@
 				
 				var zoom = d3.behavior.zoom()
 						    .x(x)
-						    .xExtent([0,12])
+						    .xExtent([0,d3.max(data, function(d){ 
+								return d.price; 
+							})])
 						    .y(y)
-						    .yExtent([0,16])
+						    .yExtent([0,d3.max(data, function(d){ 
+								return d.rating; 
+							})])
 						    .scaleExtent([1, 10])
 						    .on("zoom", zoomed);
 				
