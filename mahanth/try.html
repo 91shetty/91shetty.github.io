@@ -179,10 +179,9 @@
 					       .attr("class", "dots");
 					       		   
 				    	   // we add our first graphics element! A circle! 
-		    	points.selectAll("dot")
-			       .append("circle")
+		    	points.append("circle")
 		           .attr("r", 2.5)
-		           .attr("class", "dot")
+		           .attr("class","dot")
 		           .style("fill", function(d) {
 			            // remember the ordinal scales? We use the colors scale to get a colour for our manufacturer. Now each node will be coloured
 			            // by who makes the chocolate. 

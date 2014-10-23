@@ -52,6 +52,17 @@ body {
 .dot:hover {
 	stroke: rgba(68, 127, 255, 0.3);
 }
+
+circle {
+	/* consider the stroke-with the mouse detect radius? */
+	stroke: transparent;
+	stroke-width: 10px;  
+	cursor: pointer;
+}
+ 
+circle {
+	stroke: rgba(68, 127, 255, 0.3);
+}
  
 button {
 	position: absolute;
