@@ -13,9 +13,6 @@
 		<div id="barchart-load">
 			<h3>Bar Chart</h3>
 		</div>
-		<div id="histogram-load">
-			<h3>Histogram</h3>
-		</div>
 		<script type="text/javascript">
 
 			// call the method below
@@ -119,16 +116,16 @@
 			    	node.append("circle")
 			           .attr("r", 5)
 			           .attr("class", "dot")
-			           .style("fill", function (d) {
+			           .style("fill", function(d) {
 				            // remember the ordinal scales? We use the colors scale to get a colour for our manufacturer. Now each node will be coloured
 				            // by who makes the chocolate. 
 				            return colors(d.manufacturer);
 					    })
-			           .on("mouseover", function (d) {
-			           		d3.select("this").attr("r",10);
+			           .on("mouseover", function() {
+			           		d3.select(this).attr("r",10);
 			           })
-			           .on("mouseout", function (d) {
-			           		d3.select("this").attr("r",5);
+			           .on("mouseout", function() {
+			           		d3.select(this).attr("r",5);
 			           });
 				        // now we add some text, so we can see what each item is.
 					node.append("text")
