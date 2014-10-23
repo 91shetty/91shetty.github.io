@@ -198,11 +198,11 @@
 					svg.select(".y.axis").call(yAxis);   
 					//svg.selectAll('path.line').attr('d', line);  
 				 
-					points.selectAll('circle').attr("transform", function(d) {
-						console.log("Price:"+d.price+" " +x(d.price));
-						console.log("Rating:"+d.rating+" " +x(d.rating)) 
-						return "translate(" + x(d.price) + "," + y(d.rating) + ")"; }
-					);  
+					// points.selectAll('circle').attr("transform", function(d) {
+					// 	console.log("Price:"+d.price+" " +x(d.price));
+					// 	console.log("Rating:"+d.rating+" " +y(d.rating)) 
+					// 	return "translate(" + x(d.price) + "," + y(d.rating) + ")"; }
+					// );  
 				}
 			});
 			//Click on reset button
