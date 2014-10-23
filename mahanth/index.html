@@ -230,7 +230,7 @@
 				       .attr("x", function(d) { return x(d.name); })
 				       .attr("width", 40)
 				       .attr("y", function(d) { return y(d.rating); })
-				       .attr("height", function(d) { return height - margins.top - margins.bottom - y(d.rating); });
+				       .attr("height", function(d) { return height - margins.top - margins.bottom - y(d.rating); })
 				       .on('mouseover', tip.show)
 				       .on('mouseout', tip.hide);
 				   	// bar.append("text")
