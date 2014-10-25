@@ -131,7 +131,7 @@
 				       
 				    bar.append("rect")
 				       .style("fill",function(d){
-				       		return colors(d.manufacturer);
+				       		return colorsRange(d.manufacturer);
 				       })
 				       .attr("x", function(d) { return x(d.price); })
 				       .attr("width", 40)
