@@ -134,9 +134,9 @@
 				       		return colorsRange(d.manufacturer);
 				       })
 				       .attr("x", function(d) { return x(d.price); })
-				       .attr("width", 40)
+				       .attr("width", 10)
 				       .attr("y", function(d) { return y(d.rating); })
-				       .attr("height", function(d) { return height - margin.top - margin.bottom - y(d.rating); })
+				       .attr("height", function(d) { return height - y(d.rating); })
 				       .on('mouseover', tip.show)
 				       .on('mouseout', tip.hide);
 
