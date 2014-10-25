@@ -70,15 +70,15 @@
 			d3.csv("dataset.csv", function(error, data) {
 		    	data.forEach(function(d) {
 			        d.totalPopulation = +d.totalPopulation;
-			        d.eligibleForFreeLunch = +d.eligibleForFreeLunch;
+			        d.townWealth = +d.townWealth;
 			    });
 
 			    maxPrice = d3.max(data, function(d){ 
-					return d.totalPopulation + 10; 
+					return d.totalPopulation + 1000; 
 				});
 
 				maxRating = d3.max(data, function(d){ 
-					return d.eligibleForFreeLunch + 1; 
+					return d.townWealth + 1000; 
 				});
 
 				x.domain([0,maxPrice]);
@@ -115,7 +115,7 @@
 					.attr("transform", "rotate(-90)")
 					.attr("y", (-margin.left) + 10)
 					.attr("x", -height/2)
-					.text('Eligible For Free Lunch');	
+					.text('Town Wealth');	
 				 
 				svg.append("clipPath")
 					.attr("id", "clip")
@@ -136,7 +136,7 @@
 			            return colorsRange(d.townName);
 				    })
 		           .attr('transform',function(d){
-				       	return "translate(" + x(d.totalPopulation) + "," + y(d.eligibleForFreeLunch) + ")";
+				       	return "translate(" + x(d.totalPopulation) + "," + y(d.townWealth) + ")";
 					})
 		           .on('mouseover', tip.show)
 				   .on('mouseout', tip.hide);
@@ -150,7 +150,7 @@
 					svg.select(".y.axis").call(yAxis); 
 				 
 					points.selectAll('circle').attr("transform", function(d) { 
-						return "translate(" + x(d.totalPopulation) + "," + y(d.eligibleForFreeLunch) + ")"; }
+						return "translate(" + x(d.totalPopulation) + "," + y(d.townWealth) + ")"; }
 					);  
 				}
 
