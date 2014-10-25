@@ -86,9 +86,9 @@
 				y.domain([0, maxRating]);
 
 				zoom.x(x)
-					.xExtent([0,maxPrice])
+					//.xExtent([0,maxPrice])
 					.y(y)
-				    .yExtent([0,maxRating])
+				    //.yExtent([0,maxRating])
 				    .on("zoom", zoomed);
 
 				svg.append("g")
