@@ -148,7 +148,7 @@
 					svg.select(".x.axis").call(xAxis);
 					svg.select(".y.axis").call(yAxis); 
 				 
-					points.selectAll('rect').attr("transform", function(d) { 
+					bar.selectAll('rect').attr("transform", function(d) { 
 						return "translate(" + x(d.price) + "," + y(d.rating) + ")"; }
 					);  
 				}
