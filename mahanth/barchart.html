@@ -2,8 +2,7 @@
 <html>
 	<head>
 		<title>Visualisation-Barchart</title>
-		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-		<!--<script type="text/javascript" src="d3-zoom-pan-extent.js"></script>-->
+		<script type="text/javascript" src="d3-zoom-pan-extent.js"></script>
 		<link rel="stylesheet" type="text/css" href="complex_style.css">
 		<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 	</head>
@@ -62,7 +61,7 @@
 					  .attr('class', 'd3-tip')
 					  .offset([-10, 0])
 					  .html(function(d) {
-					    return "<strong>Name: </strong> <span style='color:red'>" + d.name +"</span> <br/> <strong>Price(£): </strong> <span style='color:red'>" + d.price +"</span>";
+					    return "<strong>Name: </strong> <span style='color:red'>" + d.name +"</span> <br/> <strong>Price: </strong> <span style='color:red'>" + d.price +"</span>";
 					  });
 
 			svg.call(tip);
