@@ -123,23 +123,22 @@
 					.attr("width", width)
 					.attr("height", height);
 				
-				var points = svg.selectAll("dots")
-				    	   .data(data)
-					       .enter()
-					       .append("g")
-					       .attr("class", "dots");
-					       		   
-		    	points.append("circle")
-		           .attr("r", 4)
-		           .attr("class","dot")
-		           .style("fill", function(d) {
-			            return colorsRange(d.manufacturer);
-				    })
-		           .attr('transform',function(d){
-				       	return "translate(" + x(d.price) + "," + y(d.rating) + ")";
-					})
-		           .on('mouseover', tip.show)
-				   .on('mouseout', tip.hide);
+				var bar = svg.selectAll("bar")
+				       .data(data)
+				       .enter()
+				       .append("g")
+				       .attr("class", "bar");
+				       
+				    bar.append("rect")
+				       .style("fill",function(d){
+				       		return colors(d.manufacturer);
+				       })
+				       .attr("x", function(d) { return x(d.price); })
+				       .attr("width", 40)
+				       .attr("y", function(d) { return y(d.rating); })
+				       .attr("height", function(d) { return height - margins.top - margins.bottom - y(d.rating); })
+				       .on('mouseover', tip.show)
+				       .on('mouseout', tip.hide);
 
 				//************************************************************
 				// Zoom specific updates
@@ -149,7 +148,7 @@
 					svg.select(".x.axis").call(xAxis);
 					svg.select(".y.axis").call(yAxis); 
 				 
-					points.selectAll('circle').attr("transform", function(d) { 
+					points.selectAll('rect').attr("transform", function(d) { 
 						return "translate(" + x(d.price) + "," + y(d.rating) + ")"; }
 					);  
 				}
