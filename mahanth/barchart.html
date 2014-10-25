@@ -148,9 +148,10 @@
 					svg.select(".x.axis").call(xAxis);
 					svg.select(".y.axis").call(yAxis); 
 				 
-					bar.selectAll('rect').attr("transform", function(d) { 
-						return "translate(" + x(d.price) + "," + y(d.rating) + ")"; }
-					);  
+					bar.selectAll('rect').attr("x", function(d) { return x(d.price); })
+				       .attr("width", 10)
+				       .attr("y", function(d) { return y(d.rating); })
+				       .attr("height", function(d) { return height - y(d.rating); });
 				}
 
 				//************************************************************
