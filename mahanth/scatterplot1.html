@@ -44,7 +44,7 @@
 			var zoom = d3.behavior.zoom()
 					    .scaleExtent([1, 10]);	
 
-			var maxPrice, maxRating;
+			var totalPopulation, townWealth;
 				
 			//************************************************************
 			// Generate our SVG object
@@ -73,17 +73,17 @@
 			        d.townWealth = +d.townWealth;
 			    });
 
-			    maxPrice = d3.max(data, function(d){ 
+			    totalPopulation = d3.max(data, function(d){ 
 					return d.totalPopulation + 1000; 
 				});
 
-				maxRating = d3.max(data, function(d){ 
+				townWealth = d3.max(data, function(d){ 
 					return d.townWealth + 1000; 
 				});
 
-				x.domain([0,maxPrice]);
+				x.domain([0,totalPopulation]);
 
-				y.domain([0, maxRating]);
+				y.domain([0, townWealth]);
 
 				zoom.x(x)
 					//.xExtent([0,maxPrice])
@@ -159,8 +159,8 @@
 				//************************************************************
 				function reset() {
 				    d3.transition().duration(750).tween("zoom", function() {
-				        var ix = d3.interpolate(x.domain(), [0, maxPrice]),
-				        iy = d3.interpolate(y.domain(), [0, maxRating]);
+				        var ix = d3.interpolate(x.domain(), [0, totalPopulation]),
+				        iy = d3.interpolate(y.domain(), [0, townWealth]);
 				        return function(t) {
 				        	zoom.x(x.domain(ix(t))).y(y.domain(iy(t)));
 				      		zoomed();
