@@ -29,7 +29,12 @@
 				.tickPadding(10)	
 				.tickSubdivide(true)	
 			    .orient("bottom")
-			    .tickFormat(d3.format("3d"));	
+			    .tickFormat(function (d) {
+				    if ((d / 1000) >= 1) {
+				        d = d / 1000 + "K";
+				    }
+					return d;
+				});	
 				
 			var yAxis = d3.svg.axis()
 			    .scale(y)
