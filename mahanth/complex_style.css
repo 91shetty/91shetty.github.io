@@ -13,6 +13,10 @@ body {
 .grid path {
 	stroke-width: 0;
 }
+
+.axis{
+	cursor: move;
+}
  
 .axis path {
 	fill: none;
