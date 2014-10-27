@@ -128,12 +128,12 @@
 				       
 				    bar.append("rect")
 				       .style("fill",function(d){
-				       		return colorsRange(d.manufacturer);
+				       		return colorsRange(d.townName);
 				       })
 				       .attr("x", function(d) { return x(d.townName); })
 				       .attr("width", 10)
-				       .attr("y", function(d) { return y(d.rating); })
-				       .attr("height", function(d) { return height - y(d.rating); })
+				       .attr("y", function(d) { return y(d.totalPopulation); })
+				       .attr("height", function(d) { return height - y(d.totalPopulation); })
 				       .on('mouseover', tip.show)
 				       .on('mouseout', tip.hide);
 
@@ -147,8 +147,8 @@
 				 
 					bar.selectAll('rect').attr("x", function(d) { return x(d.townName); })
 				       .attr("width", 10)
-				       .attr("y", function(d) { return y(d.rating); })
-				       .attr("height", function(d) { return height - y(d.rating); });
+				       .attr("y", function(d) { return y(d.totalPopulation); })
+				       .attr("height", function(d) { return height - y(d.totalPopulation); });
 				}
 
 				//************************************************************
