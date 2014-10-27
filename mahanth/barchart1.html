@@ -150,7 +150,7 @@
 					svg.select(".x.axis").call(xAxis);
 					svg.select(".y.axis").call(yAxis); 
 				 
-					bar.selectAll('rect').attr("x", function(d) { return x(d.townWealthRank); })
+					bar.selectAll('rect').attr("x", function(d) { return console.log(x(d.townWealthRank));x(d.townWealthRank); })
 				       .attr("width", 1)
 				       .attr("y", function(d) { return y(d.totalPopulation); })
 				       .attr("height", function(d) { return height - y(d.totalPopulation); });
