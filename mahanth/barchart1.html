@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Visualisation-Barchart</title>
-		<script type="text/javascript" src="d3/d3.js"></script>
+		<script type="text/javascript" src="d3-zoom-pan-extent.js"></script>
 		<link rel="stylesheet" type="text/css" href="complex_style.css">
 		<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 	</head>
@@ -90,7 +90,7 @@
 				zoom.x(x)
 					//.xExtent([0,maxPrice])
 					.y(y)
-				    //.yExtent([0,maxRating])
+				    .yExtent([0,totalPopulation])
 				    .on("zoom", zoomed);
 
 				svg.append("g")
