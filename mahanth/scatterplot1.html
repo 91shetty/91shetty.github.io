@@ -35,7 +35,14 @@
 				.tickPadding(10)
 				.tickSize(-width)
 				.tickSubdivide(true)	
-			    .orient("left");	
+			    .orient("left")
+			    .tickFormat(function (d) {
+			    	
+				    if ((d / 1000) >= 1) {
+				        d = d / 1000 + "K";
+				    }
+					return d;
+				});	
 			
 			//Colors	
 			var colorsRange = d3.scale.category10();	
