@@ -13,9 +13,9 @@
 			//************************************************************
 			// 
 			//************************************************************
-			var margin = {top: 20, right: 30, bottom: 30, left: 50},
+			var margin = {top: 30, right: 30, bottom: 30, left: 50},
 			    width = 960 - margin.left - margin.right,
-			    height = 500 - margin.top - margin.bottom;
+			    height = 600 - margin.top - margin.bottom;
 				
 			var x = d3.scale.linear()
 			    .range([0, width]);
@@ -122,7 +122,21 @@
 					.attr("transform", "rotate(-90)")
 					.attr("y", (-margin.left) + 10)
 					.attr("x", -height/2)
-					.text('Town Wealth');	
+					.text('Town Wealth');
+
+				svg.append("text")
+					.attr("class", "title")
+					.attr("text-anchor","middle")
+					.attr("x", width/2)
+					.attr("y", -margin.top/2)
+					.text("Scatterplot - Town Population to Town Wealth");
+
+				svg.append("text")
+					.attr("class", "subtitle")
+					.attr("text-anchor","middle")
+					.attr("x", width/2)
+					.attr("y", -margin.top/2 + 15)
+					.text("Scroll and drag to zoom/pan, hover for details.");	
 				 
 				svg.append("clipPath")
 					.attr("id", "clip")
