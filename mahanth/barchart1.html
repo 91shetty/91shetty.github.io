@@ -70,7 +70,7 @@
 			d3.csv("dataset.csv", function(error, data) {
 		    	data.forEach(function(d) {
 			        d.totalPopulation = +d.totalPopulation;
-			        d.townWealthRank = +d.townWealthRank;
+			        //d.townWealthRank = +d.townWealthRank;
 			    });
 
 			    townWealthRank = d3.max(data, function(d){
