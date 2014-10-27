@@ -17,8 +17,8 @@
 			    width = 960 - margin.left - margin.right,
 			    height = 500 - margin.top - margin.bottom;
 				
-			var x = d3.scale.ordinal()
-    				.rangeRoundBands([0, width], .1);
+			var x = d3.scale.linear()
+			    .range([0, width]);
 			 
 			var y = d3.scale.linear()
 			    .range([height, 0]);
@@ -158,7 +158,7 @@
 				//************************************************************
 				function reset() {
 				    d3.transition().duration(750).tween("zoom", function() {
-				        var ix = d3.interpolate(x.domain(), [0, maxPrice]),
+				        var ix = d3.interpolate(x.domain(), [0, townWealthRank]),
 				        iy = d3.interpolate(y.domain(), [0, totalPopulation]);
 				        return function(t) {
 				        	zoom.x(x.domain(ix(t))).y(y.domain(iy(t)));
