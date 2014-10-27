@@ -61,7 +61,7 @@
 					  .attr('class', 'd3-tip')
 					  .offset([-10, 0])
 					  .html(function(d) {
-					    return "<strong>Name: </strong> <span style='color:red'>" + d.name +"</span> <br/> <strong>Price: </strong> <span style='color:red'>" + d.price +"</span>";
+					    return "<strong>Name: </strong> <span style='color:red'>" + d.townName +"</span>";
 					  });
 
 			svg.call(tip);
@@ -72,7 +72,7 @@
 			        d.totalPopulation = +d.totalPopulation;
 			    });
 
-				maxRating = d3.max(data, function(d){ 
+				totalPopulation = d3.max(data, function(d){ 
 					return d.totalPopulation + 10000; 
 				});
 
