@@ -28,20 +28,21 @@
 				.tickSize(-height)
 				.tickPadding(10)	
 				.tickSubdivide(true)	
-			    .orient("bottom")
-			    .tickFormat(function (d) {
-				    if ((d / 1000) >= 1) {
-				        d = d / 1000 + "K";
-				    }
-					return d;
-				});	
+			    .orient("bottom");
 				
 			var yAxis = d3.svg.axis()
 			    .scale(y)
 				.tickPadding(10)
 				.tickSize(-width)
 				.tickSubdivide(true)	
-			    .orient("left");	
+			    .orient("left")
+			    .tickFormat(function (d) {
+			    	
+				    if ((d / 1000) >= 1) {
+				        d = d / 1000 + "K";
+				    }
+					return d;
+				});	
 			
 			//Zoom 
 			var zoom = d3.behavior.zoom()
