@@ -69,13 +69,13 @@
 			//Parsing data from external .csv file
 			d3.csv("dataset.csv", function(error, data) {
 		    	data.forEach(function(d) {
-			        //d.totalPopulation = +d.totalPopulation;
+			        d.totalPopulation = +d.totalPopulation;
 			        //d.townWealthRank = +d.townWealthRank;
 			    });
 
 			    townWealthRank = d3.max(data, function(d){
 			    	return d.townWealthRank + 5;
-			    })
+			    });
 
 				totalPopulation = d3.max(data, function(d){ 
 					return d.totalPopulation + 10000; 
