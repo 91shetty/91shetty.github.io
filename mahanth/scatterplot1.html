@@ -44,9 +44,6 @@
 					return d;
 				});	
 			
-			//Colors	
-			var colorsRange = d3.scale.category10();	
-			
 			//Zoom 
 			var zoom = d3.behavior.zoom()
 					    .scaleExtent([1, 10]);	
@@ -153,9 +150,7 @@
 		    	points.append("circle")
 		           .attr("r", 2)
 		           .attr("class","dot")
-		           .style("fill", function(d) {
-			            return colorsRange(d.townName);
-				    })
+		           .style("fill", "red")
 		           .attr('transform',function(d){
 				       	return "translate(" + x(d.totalPopulation) + "," + y(d.townWealth) + ")";
 					})
