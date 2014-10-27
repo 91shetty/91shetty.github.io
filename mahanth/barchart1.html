@@ -44,7 +44,7 @@
 			var zoom = d3.behavior.zoom()
 					    .scaleExtent([1, 10]);	
 
-			var totalPopulation;
+			var totalPopulation,townWealthRank;
 				
 			//************************************************************
 			// Generate our SVG object
@@ -72,13 +72,15 @@
 			        d.totalPopulation = +d.totalPopulation;
 			    });
 
+			    townWealthRank = d3.max(data, function(d){
+			    	return d.townWealthRank + 5;
+			    })
+
 				totalPopulation = d3.max(data, function(d){ 
 					return d.totalPopulation + 10000; 
 				});
 
-				x.domain([0,data.map(function(d){ 
-  						return d.townName; 
-  				})]);
+				x.domain([0, townWealthRank]);
 
 				y.domain([0, totalPopulation]);
 
@@ -99,7 +101,7 @@
 					.attr("class", "axis-label-x")
 					.attr("x", width / 2)
 				    .attr("y", height + margin.bottom)
-					.text('City Name');
+					.text('Town Wealth Rank');
 				 
 				svg.append("g")
 				    .attr("class", "y axis")
@@ -130,7 +132,7 @@
 				       .style("fill",function(d){
 				       		return colorsRange(d.townName);
 				       })
-				       .attr("x", function(d) { return x(d.townName); })
+				       .attr("x", function(d) { return x(d.townWealthRank); })
 				       .attr("width", 10)
 				       .attr("y", function(d) { return y(d.totalPopulation); })
 				       .attr("height", function(d) { return height - y(d.totalPopulation); })
@@ -145,7 +147,7 @@
 					svg.select(".x.axis").call(xAxis);
 					svg.select(".y.axis").call(yAxis); 
 				 
-					bar.selectAll('rect').attr("x", function(d) { return x(d.townName); })
+					bar.selectAll('rect').attr("x", function(d) { return x(d.townWealthRank); })
 				       .attr("width", 10)
 				       .attr("y", function(d) { return y(d.totalPopulation); })
 				       .attr("height", function(d) { return height - y(d.totalPopulation); });
