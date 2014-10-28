@@ -3,7 +3,20 @@
 	<head>
 		<title>Visualisation-Pan & Zoom</title>
 		<script type="text/javascript" src="d3-zoom-pan-extent.js"></script>
-		<link rel="stylesheet" type="text/css" href="complex_style.css">
+		<style type="text/css">
+			.background path {
+			  fill: none;
+			  stroke: #ddd;
+			  shape-rendering: crispEdges;
+			}
+
+			.axis line,.axis path {
+			  fill: none;
+			  stroke: #000;
+			  shape-rendering: crispEdges;
+			}
+
+		</style>
 	</head>
 	<body>
 		<script type="text/javascript">
