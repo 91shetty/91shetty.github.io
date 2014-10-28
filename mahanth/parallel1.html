@@ -45,7 +45,8 @@
 			    height = 600 - margin.top - margin.bottom;
 				
 			var x = d3.scale.ordinal().rangePoints([0, width], 1),
-			    y = {};
+			    y = {},
+			    background,foreground;
 
 			var line = d3.svg.line(),
 			    axis = d3.svg.axis().orient("left");
@@ -66,20 +67,20 @@
 				}));
 
 				// Add lines for context.
-			    var background = svg.append("g")
-							        .attr("class", "background")
-								    .selectAll("path")
-								    .data(data)
-								    .enter().append("path")
-							        .attr("d", path);
+			    background = svg.append("g")
+						        .attr("class", "background")
+							    .selectAll("path")
+							    .data(data)
+							    .enter().append("path")
+						        .attr("d", path);
 
 				// Add blue lines for focus.
-			    var foreground = svg.append("g")
-							        .attr("class", "foreground")
-								    .selectAll("path")
-								    .data(cars)
-									.enter().append("path")
-								    .attr("d", path);
+			    foreground = svg.append("g")
+						        .attr("class", "foreground")
+							    .selectAll("path")
+							    .data(data)
+								.enter().append("path")
+							    .attr("d", path);
 
 
 				// Add a group element for each dimension.
@@ -123,7 +124,7 @@
 			    	}) ? null : "none";
 			  	});
 			}
-			
+
 		</script>
 	</body>
 </html>
