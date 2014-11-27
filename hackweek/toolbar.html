@@ -1,0 +1,148 @@
+<html>
+<head>
+	<title></title>
+	<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+    <script src="js/vendor/modernizr.js"></script>
+	<script src="js-custom/external/jquery/jquery.js"></script>
+	<script src="js-custom/jquery-ui.js"></script>
+	<script src="js/vendor/fastclick.js"></script>	
+    <!--<link rel="stylesheet" type="text/css" href="css/foundation.css">-->
+
+    <script type="text/javascript">
+    	function init()
+    	{
+
+    		register_colored_icons()
+
+    		toggle = 0; //0 means hidden
+			$(function() {
+			    $( "#outer_holder" ).draggable();
+			  });
+
+
+    		outer_div = document.getElementById("outer_holder");
+    		flex_buttons = document.getElementById("flex_buttons");
+    		$("#flex_buttons").slideToggle(1000);
+    		$("#image_div").click(hide_unhide);
+			set_win_keys_in_correct_position();
+
+    		$("#win_keys").click(hide_unhide_win_keys);
+    		$("#outer_holder").drag("haha");
+			
+
+    	}
+
+    	function set_win_keys_in_correct_position()
+    	{
+    		var w_k = $("#win_keys");
+    		$("#win-shortcut").offset({top : w_k.offset().top - (w_k.height()/2) , left : w_k.offset().left + $("#outer_holder").innerWidth() });
+    	}
+
+    	function register_colored_icons()
+    	{
+    		$("#full_screen > img").on({"mouseout" : function() {this.src = "Assets/Web toolbar-06.png";},"mouseover" : function() {this.src='Assets/Web toolbar-16.png';}});
+
+		$("#plus > img").on({"mouseout" : function() {this.src = "Assets/Web toolbar-08.png";},"mouseover" : function() {this.src='Assets/Web toolbar-18.png';}});
+		$("#minus > img").on({"mouseout" : function() {this.src = "Assets/Web toolbar-12.png";},"mouseover" : function() {this.src='Assets/Web toolbar-19.png';}});
+		$("#win_keys > img").on({"mouseout" : function() {this.src = "Assets/Web toolbar-09.png";},"mouseover" : function() {this.src='Assets/Web toolbar-20.png';}});
+		$("#help > img").on({"mouseout" : function() {this.src = "Assets/Web toolbar-10.png";},"mouseover" : function() {this.src='Assets/Web toolbar-21.png';}});
+		$("#end > img").on({"mouseout" : function() {this.src = "Assets/Web toolbar-15.png";},"mouseover" : function() {this.src='Assets/Web toolbar-23.png';}});
+		$("#mail > img").on({"mouseout" : function() {this.src = "Assets/Web toolbar-11.png";},"mouseover" : function() {this.src='Assets/Web toolbar-22.png';}});
+
+
+    	}
+
+    	function hide_unhide()
+    	{
+    		$("#flex_buttons").slideToggle(1000);
+    	}
+
+    	var win_toggle = 0; //hidden
+    	function hide_unhide_win_keys()
+    	{
+    		if(win_toggle)
+    		{
+    			set_win_keys_in_correct_position();
+	    		$("#win-shortcut").hide("slide" , {direction: 'left' },200);
+	    		win_toggle = 0;
+	    	}
+	    	else
+	    	{
+	    		$("#win-shortcut").show("slide" , {direction: 'left' },200);
+    			//set_win_keys_in_correct_position();
+	
+	    		win_toggle = 1;	    		
+	    	}
+    	}
+
+
+    </script>
+
+
+    <style type="text/css">
+    	div#outer_holder
+    	{
+    		
+    		width: 70px;
+            background-color: #EAEAEA;
+            -moz-box-shadow: 0 0 2px #888;
+            -webkit-box-shadow: 0 0 2px#888;
+            box-shadow: 0 0 2px #888;
+            border-radius: 2px;
+            border: 2px solid #EAEAEA;
+
+    	}
+        div img 
+        { 
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin: 0 auto;
+            background-size: 50%;  
+            display: block;
+        } 
+
+
+        img#plus
+        {
+            display : inline;
+
+        }
+        img#minus
+        {
+            display : inline;
+        }
+
+    </style> 
+
+  </head>
+<body onload="init()">
+	<div  id="outer_holder">
+		<div id="image_div" ><img src="/Users/pallavisreerama/Downloads/Assets/Logo.png" width="70px" height="70px" style="padding-top:0px ; padding-bottom:0px"></div>
+		<div id="flex_buttons" >
+			<div id="full_screen"><img src="Assets\Web toolbar-06.png" width="26px" height="26px"></div>
+			<div>
+				<span id="plus"><img src="Assets\Web toolbar-08.png" style="width:10px;"></span>
+				<span id="minus"><img src="Assets\Web toolbar-12.png" style="width:10px"></span>
+			</div>
+			<div class="row" id="win_keys"><img src="Assets\Web toolbar-09.png " width="16px" height="16px"></div>
+
+			<div id="help"><img src="Assets\Web toolbar-10.png" ></div>
+			<div id="mail"><img src="Assets\Web toolbar-11.png" ></div>
+			<div id="end"><img src="Assets\Web toolbar-15.png" ></div>
+		</div>
+	</div>	
+
+	<div id="win-shortcut">
+		<span id="c_a_d" height = "34">ctrl+alt+del</span>
+        <span id = "Win" class="small round button">Windows</span> 
+		<span id = "Lock" class="small round button">Lock</span>
+        <span id = "Search" class="small round button">Search</span>
+        <span id = "Run" class="small round button">Run</span>
+        <button id = "Desktop">Desktop</button>
+	</div>
+
+</body>
+</html>
