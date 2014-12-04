@@ -49,6 +49,7 @@
 
 #side-nav nav a{
 	border-left: 2px solid transparent;
+	display: block;
 	font-weight: 400;
 	letter-spacing: 0.1px;
 	padding: 10px 24px 10px 46px;
