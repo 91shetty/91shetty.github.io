@@ -45,7 +45,7 @@
 
 /* Side nav */
 #side-nav {
-	visibility: hidden;
+	display: none;
 	background: #fff;
 	left: 0;
 	position: fixed;
