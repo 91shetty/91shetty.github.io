@@ -43,5 +43,6 @@ footer{
 
 }
 button{
+	outline: none;
 	cursor: pointer;
 }

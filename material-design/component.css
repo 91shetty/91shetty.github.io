@@ -28,7 +28,7 @@
 .hamburger-button{
 	background-image: url("http://material-design.storage.googleapis.com/images/hamburger.svg");
 	left: 12px;
-	background-color: #2f3e9e;
+	background-color: transparent;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 24px 24px;
@@ -45,6 +45,7 @@
 
 /* Side nav */
 #side-nav {
+	visibility: hidden;
 	background: #fff;
 	left: 0;
 	position: fixed;
