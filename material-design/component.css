@@ -47,6 +47,17 @@
 	padding: 15px 0 15px 22px;
 }
 
+#side-nav nav a{
+	border-left: 2px solid transparent;
+	font-weight: 400;
+	letter-spacing: 0.1px;
+	padding: 10px 24px 10px 46px;
+}
+
+#side-nav nav a.nav_selected {
+	color: #03a9f4;
+}
+
 .side-nav-wrapper {
 	min-height: 100%;
 	padding-bottom: 96px;
