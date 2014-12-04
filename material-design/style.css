@@ -22,3 +22,10 @@ dl {
 dl dd {
 	margin: 0;
 }
+
+footer{
+	clear: left;
+	height: 10%;
+	position: relative;
+	width: 100%;
+}
