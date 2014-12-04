@@ -24,7 +24,22 @@
 	margin: 0 auto;
 }
 
-
+/* Nav - Hamburger */
+.hamburger-button{
+	background-image: url("http://material-design.storage.googleapis.com/images/hamburger.svg");
+	left: 12px;
+	background: transparent center center no-repeat;
+	background-size: 24px 24px;
+	border: 0;
+	display: block;
+	height: 48px;
+	/* overflow: hidden; */
+	text-indent: -9999px;
+	top: 8px;
+	width: 48px;
+	z-index: 2;
+	position: fixed;
+}
 
 /* Side nav */
 #side-nav {
