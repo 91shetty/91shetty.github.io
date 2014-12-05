@@ -33,6 +33,7 @@ header{
 	position: fixed;
 	top: -192px;
 }
+
 footer{
 	clear: left;
 	height: 20px;
@@ -42,7 +43,14 @@ footer{
 	background: #2f3e9e;
 
 }
+
 button{
 	outline: none;
 	cursor: pointer;
+}
+
+section{
+	margin: auto;
+	width: 1160px;
+	padding-top: 80px;
 }
