@@ -58,7 +58,7 @@
 #side-nav #logo {
 	border-bottom: 1px solid #e0e0e0;
 	display: block;
-	height: 64px;
+	height: 41px;
 	margin: auto;
 	padding: 12px 24px 10px 24px;
 	position: relative;
@@ -104,6 +104,7 @@
 	line-height: 24px;
 	padding: 24px;
 	position: relative;
+	bottom: -50px;
 }
 
 .side-nav-wrapper .copyright {
