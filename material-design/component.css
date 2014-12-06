@@ -101,9 +101,10 @@
 	font-size: 13px;
 	height: 96px;
 	line-height: 24px;
-	padding: 24px;
-	position: relative;
-	bottom: -50px;
+	padding: 24px 0 24px 24px;
+	position: fixed;
+	bottom: 0px;
+	width: 216px;
 }
 
 .side-nav-wrapper .copyright {
