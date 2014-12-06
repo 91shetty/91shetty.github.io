@@ -24,18 +24,18 @@
 					</span>
 					<nav>
 						<dl>
-							<dt>
+							<dt onclick="toggleDD('heading-1');" >
 								Heading 1
 							</dt>
-							<div style="overflow:hidden;">
+							<div id="heading-1" style="overflow:hidden;">
 								<dd>
 									<a href="#">Sub heading</a> 
 								</dd>
 							</div>
-							<dt>
+							<dt onclick="toggleDD('heading-2');" >
 								Heading 2
 							</dt>
-							<div style="overflow:hidden;">
+							<div id="heading-2" style="overflow:hidden;">
 								<dd>
 									<a href="#">Sub heading 1</a>
 								</dd>
@@ -45,10 +45,11 @@
 								<dd>
 									<a href="#">Sub heading 3</a>
 								</dd>
-							</div><dt>
+							</div>
+							<dt onclick="toggleDD('heading-3');" >
 								Heading 3
 							</dt>
-							<div style="overflow:hidden;">
+							<div id="heading-3" style="overflow:hidden;">
 								<dd>
 									<a href="#">Sub heading 1</a>
 								</dd>
@@ -58,10 +59,11 @@
 								<dd>
 									<a href="#">Sub heading 3</a>
 								</dd>
-							</div><dt>
+							</div>
+							<dt onclick="toggleDD('heading-4');" >
 								Heading 4
 							</dt>
-							<div style="overflow:hidden;">
+							<div id="heading-4" style="overflow:hidden;">
 								<dd>
 									<a href="#">Sub heading 1</a>
 								</dd>
@@ -70,7 +72,6 @@
 								</dd>
 							</div>
 						</dl>
-
 					</nav>
 					<div class="legal">
 						<p class="copyright">Vishwas Shetty &copy;</p>
@@ -127,6 +128,9 @@
 			  	$("#side-nav").hide(500);
 			  });
 			});
+			function toggleDD(divDD){
+				$(divDD).toggle(500);
+			}
 		</script>
 	</body>
 </html>

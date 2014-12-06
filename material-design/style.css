@@ -18,10 +18,13 @@ a {
 
 dl {
 	line-height: 1em;
+	cursor: pointer;
 }
 
 dl dd {
 	margin: 0;
+	cursor: pointer;
+	display: none;
 }
 
 header{
@@ -41,7 +44,6 @@ footer{
 	width: 100%;
 	bottom: 0px;
 	background: #2f3e9e;
-
 }
 
 button{
