@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Material Design</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="component.css">
+		<link href='http://fonts.googleapis.com/css?family=Fira+Sans:400,500,700,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="container"> <!-- Class container -->
+			<header> <!-- Class header -->
+				<div class="header-wrapper">
+					<span class="header-title">First try on Material Design</span>
+				</div>
+			</header> <!-- Class header -->
+			<nav>
+				<button class="hamburger-button">Show Navigation</button>
+			</nav>
+			<div id="side-nav">
+				<div class="side-nav-wrapper">
+					<span id="logo">
+
+					</span>
+					<nav>
+						<dl>
+							<dt>
+								Heading 1
+							</dt>
+							<div style="overflow:hidden;">
+								<dd>
+									<a href="#">Sub heading</a> 
+								</dd>
+							</div>
+							<dt>
+								Heading 2
+							</dt>
+							<div style="overflow:hidden;">
+								<dd>
+									<a href="#">Sub heading 1</a>
+								</dd>
+								<dd>
+									<a href="#">Sub heading 2</a>
+								</dd>
+								<dd>
+									<a href="#">Sub heading 3</a>
+								</dd>
+							</div><dt>
+								Heading 3
+							</dt>
+							<div style="overflow:hidden;">
+								<dd>
+									<a href="#">Sub heading 1</a>
+								</dd>
+								<dd>
+									<a href="#">Sub heading 2</a>
+								</dd>
+								<dd>
+									<a href="#">Sub heading 3</a>
+								</dd>
+							</div><dt>
+								Heading 4
+							</dt>
+							<div style="overflow:hidden;">
+								<dd>
+									<a href="#">Sub heading 1</a>
+								</dd>
+								<dd>
+									<a href="#">Sub heading 2</a>
+								</dd>
+							</div>
+						</dl>
+
+					</nav>
+					<div class="legal">
+						<p class="copyright">Vishwas Shetty &copy;</p>
+						<a href="#">Privacy </a>
+						&
+						<a href="#"> Terms</a>
+					</div>
+				</div>
+			</div>
+			<div class="content-main"> <!-- Class content -->
+				<section class="resources">
+					<div class="row">
+						<div class="resource-tile span-50">
+							<a href="#" id="heading-1">
+								<span class="resource-title">Heading-1</span>
+							</a>
+						</div>
+						<div class="resource-tile span-25">
+							<a href="#" id="heading-2">
+								<span class="resource-title">Heading-2</span>
+							</a>
+						</div>
+						<div class="resource-tile span-25">
+							<a href="#" id="heading-3">
+								<span class="resource-title">Heading-3</span>
+							</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="resource-tile span-25">
+							<a href="#" id="heading-4">
+								<span class="resource-title">Heading-</span>
+							</a>
+						</div>
+						<div class="resource-tile span-50">
+							<a href="#" id="heading-5">
+								<span class="resource-title">Heading-</span>
+							</a>
+						</div>
+						<div class="resource-tile span-25">
+							<a href="#" id="heading-6">
+								<span class="resource-title">Heading-</span>
+							</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="resource-tile span-25">
+							<a href="#" id="heading-7">
+								<span class="resource-title">Heading-</span>
+							</a>
+						</div>
+						<div class="resource-tile span-25">
+							<a href="#" id="heading-8">
+								<span class="resource-title">Heading-</span>
+							</a>
+						</div>
+						<div class="resource-tile span-50">
+							<a href="#" id="heading-9">
+								<span class="resource-title">Heading-</span>
+							</a>
+						</div>
+					</div>
+				</section>
+			</div> <!-- Class content -->
+			<footer>
+
+			</footer>
+		</div> <!-- Class container -->
+		<script type="text/javascript">
+			$(document).ready(function(){
+			  $(".hamburger-button").click(function(){
+			    $("#side-nav").toggle(500);
+			  });
+			});
+		</script>
+	</body>
+</html>
