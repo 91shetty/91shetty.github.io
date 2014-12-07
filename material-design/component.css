@@ -1,12 +1,12 @@
 /*Container */
-.container{
+.container {
 	width: 100%;
 	height: 100%;
 	background: #f9f9f9;
 }
 
 /* Header */
-.header-wrapper{
+.header-wrapper {
 	height: 64px;
 	left: 250px;
 	right: 72px;
@@ -15,7 +15,7 @@
 	position: fixed;
 }
 
-.header-title{
+.header-title {
 	font-size: 24px;
 	line-height: 64px;
 	width: 100%;
@@ -25,7 +25,7 @@
 }
 
 /* Nav - Hamburger */
-.hamburger-button{
+.hamburger-button {
 	background-image: url("http://material-design.storage.googleapis.com/images/hamburger.svg");
 	left: 12px;
 	background-color: transparent;
@@ -77,7 +77,7 @@
 	padding: 15px 0 15px 22px;
 }
 
-#side-nav nav a{
+#side-nav nav a {
 	border-left: 2px solid transparent;
 	display: block;
 	font-weight: 400;
@@ -111,7 +111,7 @@
 }
 
 /* Content */
-.content{
+.content {
 	background: #f9f9f9;
 	float: left;
 	padding-bottom: 100px;
@@ -127,7 +127,7 @@
 	margin-bottom: 30px;
 }
 
-.chapter-content{
+.chapter-content {
 	font-size: 15px;
 	line-height: 32px;
 	margin-bottom: 0;
@@ -174,7 +174,7 @@ body .chapter a {
 }
 
 /* Resources */
-.content-main{
+.content-main {
 	background: #f9f9f9;
 	float: left;
 	padding-bottom: 100px;
@@ -182,11 +182,11 @@ body .chapter a {
 	width: 100%;
 }
 
-.resources{
+.resources {
 	max-width: 1260px;
 }
 
-.resource-tile-wrapper{
+.resource-tile-wrapper {
 	box-sizing: border-box;
 	border: 2px solid #fff;
 	display: block;
@@ -194,15 +194,19 @@ body .chapter a {
 	height: 100px;
 }
 
-.span-50{
+.span-50 {
 	width: 50%;
 }
 
-.span-25{
+.span-25 {
 	width: 25%;
 }
 
-.resource-tile  a{
+.span-3 .resource-tile>a {
+	padding-bottom: 100%;
+}
+
+.resource-tile>a {
 	color: #fff;
 	display: block;
 	overflow: hidden;
@@ -210,43 +214,43 @@ body .chapter a {
 	position: relative;
 }
 
-.resource-tile-wrapper .heading-1 a{
+.resource-tile-wrapper .heading-1 a {
 	background-color: #ff4081;
 }
 
-.resource-tile-wrapper .heading-2 a{
+.resource-tile-wrapper .heading-2 a {
 	background-color: #ab47bc;
 }
 
-.resource-tile-wrapper .heading-3 a{
+.resource-tile-wrapper .heading-3 a {
 	background-color: #1b39a8;
 }
 
-.resource-tile-wrapper .heading-4 a{
+.resource-tile-wrapper .heading-4 a {
 	background-color: #ffcd40;
 }
 
-.resource-tile-wrapper .heading-5 a{
+.resource-tile-wrapper .heading-5 a {
 	background-color: #36C3FF;
 }
 
-.resource-tile-wrapper .heading-6 a{
+.resource-tile-wrapper .heading-6 a {
 	background-color: #ff5252;
 }
 
-.resource-tile-wrapper .heading-7 a{
+.resource-tile-wrapper .heading-7 a {
 	background-color: #4527a0;
 }
 
-.resource-tile-wrapper .heading-8 a{
+.resource-tile-wrapper .heading-8 a {
 	background-color: #ffab91;
 }
 
-.resource-tile-wrapper .heading-9 a{
+.resource-tile-wrapper .heading-9 a {
 	background-color: #8bc34a;
 }
 
-.resource-title{
+.resource-title {
 	bottom: 1em;
 	color: #fff;
 	display: block;
@@ -256,9 +260,8 @@ body .chapter a {
 	line-height: 1.3em;
 	margin: 0 auto;
 	padding: 0 1.5em;
-	/*position: absolute;
-	z-index: 10;*/
+	position: absolute;
+	/*z-index: 10;*/
 	right: 0;
-	text-align: left;
-	
+	text-align: left;	
 }
