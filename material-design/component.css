@@ -186,6 +186,12 @@ body .chapter a {
 	max-width: 1260px;
 }
 
+row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
 .resource-tile-wrapper {
 	box-sizing: border-box;
 	border: 2px solid #fff;
