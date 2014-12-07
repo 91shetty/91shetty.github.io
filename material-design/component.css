@@ -190,6 +190,7 @@ body .chapter a {
 	border: 2px solid #fff;
 	display: block;
 	float: left;
+	height: 100px;
 }
 
 .span-50{
