@@ -185,7 +185,7 @@ body .chapter a {
 	padding-top: 30px;
 }
 
-.resource-tile{
+.resource-tile-wrapper{
 	box-sizing: border-box;
 	border: 2px solid #fff;
 	display: block;
@@ -200,43 +200,43 @@ body .chapter a {
 	width: 25%;
 }
 
-.resource-tile a{
+.resource-tile  a{
 	display: block;
 }
 
-.resource-tile a #heading-1{
+.resource-tile-wrapper .heading-1 a{
 	background-color: #ff4081;
 }
 
-.resource-tile a #heading-2{
+.resource-tile-wrapper .heading-2 a{
 	background-color: #ab47bc;
 }
 
-.resource-tile a #heading-3{
+.resource-tile-wrapper .heading-3 a{
 	background-color: #1b39a8;
 }
 
-.resource-tile a #heading-4{
+.resource-tile-wrapper .heading-4 a{
 	background-color: #ffcd40;
 }
 
-.resource-tile a #heading-5{
+.resource-tile-wrapper .heading-5 a{
 	background-color: #36C3FF;
 }
 
-.resource-tile a #heading-6{
+.resource-tile-wrapper .heading-6 a{
 	background-color: #ff5252;
 }
 
-.resource-tile a #heading-4{
+.resource-tile-wrapper .heading-7 a{
 	background-color: #4527a0;
 }
 
-.resource-tile a #heading-5{
+.resource-tile-wrapper .heading-8 a{
 	background-color: #ffab91;
 }
 
-.resource-tile a #heading-6{
+.resource-tile-wrapper .heading-9 a{
 	background-color: #8bc34a;
 }
 
