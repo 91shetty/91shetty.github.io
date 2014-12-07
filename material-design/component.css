@@ -186,7 +186,7 @@ body .chapter a {
 	max-width: 1260px;
 }
 
-row:after {
+.row:after {
 	content: "";
 	display: table;
 	clear: both;
