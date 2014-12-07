@@ -206,6 +206,8 @@ body .chapter a {
 
 .resource-tile  a{
 	display: block;
+	width: 100%;
+	height: 100%;
 }
 
 .resource-tile-wrapper .heading-1 a{
