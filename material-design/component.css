@@ -177,8 +177,7 @@ body .chapter a {
 .content-main {
 	background: #f9f9f9;
 	float: left;
-	padding-top: 50px;
-	padding-left: 0px;
+	padding: 50px 0 50px;
 	width: 100%;
 }
 
@@ -197,6 +196,10 @@ body .chapter a {
 	border: 2px solid #fff;
 	display: block;
 	float: left;
+}
+
+.resource-tile-wrapper:hover {
+	box-shadow: 0px 2px 5px rgba(0,0,0,0.26);
 }
 
 .span-50 {
