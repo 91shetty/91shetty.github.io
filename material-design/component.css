@@ -254,8 +254,9 @@ body .chapter a {
 	line-height: 1.3em;
 	margin: 0 auto;
 	padding: 0 1.5em;
-	position: absolute;
+	/*position: absolute;
+	z-index: 10;*/
 	right: 0;
 	text-align: left;
-	z-index: 10;
+	
 }
