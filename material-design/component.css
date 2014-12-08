@@ -198,11 +198,6 @@ body .chapter a {
 	float: left;
 }
 
-.resource-tile-wrapper:hover {
-	box-shadow: 0 10px 30px -10px black;
-	border: none;
-}
-
 .span-50 {
 	width: 50%;
 }
@@ -213,6 +208,12 @@ body .chapter a {
 
 .span-25 .resource-tile>a {
 	padding-bottom: 100%;
+}
+
+.resource-tile:hover{
+	box-shadow: 0 17px 50px 0 rgba(0,0,0,.19);
+	position: relative;
+	z-index: 100;
 }
 
 .resource-tile>a {
