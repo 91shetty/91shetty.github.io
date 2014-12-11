@@ -28,6 +28,7 @@ header {
 	width: 100%;
 	z-index: 100;
 	top: 0px;
+	text-align: center;
 	-webkit-transition: top 0.3s ease;
 	-moz-transition: top 0.3s ease;
 	-ms-transition: top 0.3s ease;
@@ -37,8 +38,8 @@ header {
 
 .user {
 	width: 100%;
-	line-height: 2em;
-	text-align: center;
+	line-height: 4em;
+	color: #e6e6e6;
 }
 
 .user img {
@@ -46,11 +47,6 @@ header {
 	border-radius: 50%;
 	margin-right: 0.5em;
 	background: #e6e6e6;
-}
-
-.user p {
-	text-align: left;
-	display: inline-block;
 }
 
 .main-content {
