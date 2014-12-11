@@ -12,7 +12,7 @@ body {
 }
 
 header{
-	position: fixed;
+	position: relative;
 	background: #000;
 	font-weight: normal;
 	color: #fff;
