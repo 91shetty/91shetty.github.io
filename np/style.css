@@ -29,7 +29,7 @@ header{
 
 .user{
 	width: 100%;
-	line-height: 3em;
+	line-height: 2em;
 }
 
 .user img{
@@ -41,4 +41,5 @@ header{
 
 .user p{
 	text-align: left;
+	display: inline-block;
 }
