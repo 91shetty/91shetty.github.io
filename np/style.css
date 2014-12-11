@@ -59,14 +59,18 @@ header{
 	position: relative;
 	width: 100%;
 	min-height: 600px;
+	padding: 50px 0 50px 0;
+	text-align: center;
 }
 
 .section-block h2{
 	position: absolute;
+	font-size: 1.4em;
 }
 
 .section-block h3{
 	position: absolute;
+	font-size: 1.2em;
 }
 
 #landing{
