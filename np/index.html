@@ -69,7 +69,7 @@
 				        {
 				            $('#header_nav').data('size','small');
 				            $('#header_nav').stop().animate({
-				                line-height:'2em'
+				                $(this).css("line-height","2em");
 				            },300);
 				        }
 				    }
@@ -79,7 +79,7 @@
 				        {
 				            $('#header_nav').data('size','big');
 				            $('#header_nav').stop().animate({
-				                line-height:'4em'
+				                $(this).css("line-height","4em");
 				            },300);
 				        }  
 				    }
