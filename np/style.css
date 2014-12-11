@@ -16,9 +16,9 @@ body {
 }
 
 header{
-	position: relative;
+	position: fixed;
 	background: #000;
-	font-weight: normal;
+	font-weight: bold;
 	color: #fff;
 	overflow: visible;
 	width: 100%;
@@ -51,6 +51,7 @@ header{
 .main-content{
 	position: relative;
 	min-height: 15em;
+	padding-top: 4em;
 }
 
 .section-block{
@@ -190,6 +191,12 @@ header{
 footer{
 	background: #000;
 	color: #939393;
-	padding: 2em 0;
+	font-weight: normal;
 	position: relative;
+	width: 100%;
+}
+
+.footer-content{
+	line-height: 2em;
+	width: 100%;
 }
