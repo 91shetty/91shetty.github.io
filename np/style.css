@@ -6,8 +6,8 @@ html, body {
 	border: 0;
 }
 
-*:after{
-	box-sizing:border-box;
+*:after {
+	box-sizing: border-box;
 }
 
 body {
@@ -15,7 +15,7 @@ body {
 	font-family: 'Fira Sans', sans-serif;
 }
 
-header{
+header {
 	position: fixed;
 	background: #000;
 	font-weight: bold;
@@ -31,31 +31,31 @@ header{
 	transition: top 0.3s ease;
 }
 
-.user{
+.user {
 	width: 100%;
 	line-height: 2em;
 	text-align: center;
 }
 
-.user img{
+.user img {
 	vertical-align: middle;
 	border-radius: 50%;
 	margin-right: 0.5em;
 	background: #e6e6e6;
 }
 
-.user p{
+.user p {
 	text-align: left;
 	display: inline-block;
 }
 
-.main-content{
+.main-content {
 	position: relative;
 	min-height: 15em;
 	padding-top: 4em;
 }
 
-.section-block{
+.section-block {
 	position: relative;
 	width: 100%;
 	min-height: 600px;
@@ -63,20 +63,20 @@ header{
 	text-align: center;
 }
 
-.section-block h2{
+.section-block h2 {
 	font-size: 1.4em;
 }
 
-.section-block h3{
+.section-block h3 {
 	font-size: 1.2em;
 }
 
-#landing{
+#landing {
 	background-color: #f2f2f2;
 	color: #333;
 }
 
-#landing:after{
+#landing:after {
 	content: "";
 	position: absolute;
 	display: block;
@@ -90,12 +90,12 @@ header{
 	z-index: 1;
 }
 
-#about{
+#about {
 	background-color: #bababa;
 	color: #f2f2f2;
 }
 
-#about:after{
+#about:after {
 	content: "";
 	position: absolute;
 	display: block;
@@ -109,12 +109,12 @@ header{
 	z-index: 1;	
 }
 
-#principle{
+#principle {
 	background-color: #333;
 	color: #f2f2f2;
 }
 
-#principle:after{
+#principle:after {
 	content: "";
 	position: absolute;
 	display: block;
@@ -128,16 +128,16 @@ header{
 	z-index: 1;	
 }
 
-#work{
+#work {
 	padding: 0;
 	color: #f2f2f2;
 }
 
-#work #freelance{
+#work #freelance {
 	background-color: #939393;	
 }
 
-#work #freelance:after{
+#work #freelance:after {
 	content: "";
 	position: absolute;
 	display: block;
@@ -150,11 +150,11 @@ header{
 	z-index: 1;
 }
 
-#work #projects{
+#work #projects {
 	background-color: #bababa;
 }
 
-#work #projects:after{
+#work #projects:after {
 	content: "";
 	position: absolute;
 	display: block;
@@ -167,7 +167,7 @@ header{
 	z-index: 1;
 }
 
-.half{
+.half {
 	height: 100%;
 	min-height: 600px;
 	position: relative;
@@ -175,12 +175,12 @@ header{
 	width: 50%;
 }
 
-#experience{
+#experience {
 	background-color: #f2f2f2;
 	color: #333;
 }
 
-#experience:after{
+#experience:after {
 	content: "";
 	position: absolute;
 	display: block;
@@ -194,12 +194,12 @@ header{
 	z-index: 1;	
 }
 
-#contact{
+#contact {
 	background-color: #fff;
 	color: #333;
 }
 
-footer{
+footer {
 	background: #000;
 	color: #939393;
 	font-weight: normal;
@@ -207,7 +207,7 @@ footer{
 	width: 100%;
 }
 
-.footer-content{
+.footer-content {
 	line-height: 2em;
 	width: 100%;
 }
