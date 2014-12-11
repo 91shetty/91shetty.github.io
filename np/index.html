@@ -3,6 +3,7 @@
 	<head>
 		<title>Portfolio</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	</head>
 	<body>
 		<header>
@@ -55,5 +56,35 @@
 		<footer>
 			<span class="footer-content">&copy; 2014 Vishwas Shetty </span>
 		</footer>
+		<script type="text/javascript"> 
+			$(window).load(function(){
+				$(function(){
+				    $('.sticky-wrapper').data('size','big');
+				});
+
+				$(window).scroll(function(){
+				    if($(document).scrollTop() > 0)
+				    {
+				        if($('#header_nav').data('size') == 'big')
+				        {
+				            $('#header_nav').data('size','small');
+				            $('#header_nav').stop().animate({
+				                line-height:'2em'
+				            },300);
+				        }
+				    }
+				    else
+				    {
+				        if($('#header_nav').data('size') == 'small')
+				        {
+				            $('#header_nav').data('size','big');
+				            $('#header_nav').stop().animate({
+				                line-height:'4em'
+				            },300);
+				        }  
+				    }
+				});
+			});
+		</script>
 	</body>
 </html>
