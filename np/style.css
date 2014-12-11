@@ -34,6 +34,7 @@ header{
 .user{
 	width: 100%;
 	line-height: 2em;
+	text-align: center;
 }
 
 .user img{
@@ -57,7 +58,7 @@ header{
 .section-block{
 	position: relative;
 	width: 100%;
-	min-height: 500px;
+	min-height: 600px;
 }
 
 #landing{
