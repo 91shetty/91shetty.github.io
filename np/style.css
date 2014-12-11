@@ -6,6 +6,10 @@ html, body {
 	border: 0;
 }
 
+*:after{
+	box-sizing:border-box;
+}
+
 body {
 	font-size: 1em;
 	font-family: 'Fira Sans', sans-serif;
