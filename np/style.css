@@ -56,6 +56,20 @@ header{
 	padding: 50px;
 }
 
+.section-block:after{
+	content: "";
+	position: absolute;
+	display: block;
+	bottom: -48px;
+	border: 24px solid transparent;
+	border-top-color: #f2f2f2;
+	width: 24px;
+	height: 24px;
+	left: 50%;
+	margin-left: -24px;
+	z-index: 1;
+}
+
 #landing{
 	background-color: #f2f2f2;
 	color: #333;
