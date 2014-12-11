@@ -56,7 +56,12 @@ header{
 	padding: 50px;
 }
 
-.section-block:after{
+#landing{
+	background-color: #f2f2f2;
+	color: #333;
+}
+
+#landing:after{
 	content: "";
 	position: absolute;
 	display: block;
@@ -70,19 +75,42 @@ header{
 	z-index: 1;
 }
 
-#landing{
-	background-color: #f2f2f2;
-	color: #333;
-}
-
 #about{
 	background-color: #bababa;
 	color: #f2f2f2;
 }
 
+#about:after{
+	content: "";
+	position: absolute;
+	display: block;
+	bottom: -48px;
+	border: 24px solid transparent;
+	border-top-color: #bababa;
+	width: 24px;
+	height: 24px;
+	left: 50%;
+	margin-left: -24px;
+	z-index: 1;	
+}
+
 #principle{
 	background-color: #333;
 	color: #f2f2f2;
+}
+
+#principle:after{
+	content: "";
+	position: absolute;
+	display: block;
+	bottom: -48px;
+	border: 24px solid transparent;
+	border-top-color: #333;
+	width: 24px;
+	height: 24px;
+	left: 50%;
+	margin-left: -24px;
+	z-index: 1;	
 }
 
 #work{
@@ -94,8 +122,34 @@ header{
 	background-color: #939393;	
 }
 
+#work #freelance:after{
+	content: "";
+	position: absolute;
+	display: block;
+	bottom: -24px;
+	border: 24px solid transparent;
+	border-right-color: #939393;
+	right: 0;
+	width: 24px;
+	height: 24px;
+	z-index: 1;
+}
+
 #work #projects{
 	background-color: #bababa;
+}
+
+#work #projects:after{
+	content: "";
+	position: absolute;
+	display: block;
+	bottom: -24px;
+	border: 24px solid transparent;
+	border-left-color: #bababa;
+	left: 0;
+	width: 24px;
+	height: 24px;
+	z-index: 1;
 }
 
 .half{
@@ -105,12 +159,41 @@ header{
 	float: left;
 	width: 50%;
 }
+
 #experience{
 	background-color: #f2f2f2;
 	color: #333;
 }
 
+#experience:after{
+	content: "";
+	position: absolute;
+	display: block;
+	bottom: -48px;
+	border: 24px solid transparent;
+	border-top-color: #f2f2f2;
+	width: 24px;
+	height: 24px;
+	left: 50%;
+	margin-left: -24px;
+	z-index: 1;	
+}
+
 #contact{
 	background-color: #fff;
 	color: #333;
+}
+
+#contact:after{
+	content: "";
+	position: absolute;
+	display: block;
+	bottom: -48px;
+	border: 24px solid transparent;
+	border-top-color: #fff;
+	width: 24px;
+	height: 24px;
+	left: 50%;
+	margin-left: -24px;
+	z-index: 1;	
 }
