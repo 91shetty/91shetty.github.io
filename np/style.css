@@ -40,10 +40,10 @@ header {
 	width: 100%;
 	line-height: 4em;
 	color: #e6e6e6;
-	transition: height 500ms, background 500ms;
+	transition: top 0.3s ease;
 }
 
-.user-tiny{
+.user-tiny {
 	line-height: 2em;
 }
 
