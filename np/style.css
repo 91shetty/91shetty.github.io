@@ -42,6 +42,10 @@ header {
 	color: #e6e6e6;
 }
 
+.user-tiny{
+	line-height: 2em;
+}
+
 .user img {
 	vertical-align: middle;
 	border-radius: 50%;
