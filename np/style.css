@@ -73,10 +73,6 @@ header {
 	margin-top: -25px;
 }
 
-.section-block h3 {
-	font-size: 1.2em;
-}
-
 #landing {
 	background-color: #f2f2f2;
 	color: #333;
@@ -153,6 +149,10 @@ header {
 #work {
 	padding: 0;
 	color: #f2f2f2;
+}
+
+#work h2 {
+	font-size: 1.4em;
 }
 
 #work #freelance {
