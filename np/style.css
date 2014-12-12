@@ -116,6 +116,10 @@ header {
 	padding: 20px 0 20px 0;
 }
 
+#about p .bold{
+	font-weight: 500;
+}
+
 #about .circle-container {
 	width: 900px;
 	margin: auto;
