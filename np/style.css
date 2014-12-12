@@ -228,7 +228,7 @@ header {
 
 #work .circle h2 {
 	color: #333;
-	top: 50%;
+	margin-top: 50%;
 	transform: translate(0,-50%);
 }
 
