@@ -109,6 +109,12 @@ header {
 	border-radius: 50%;
 }
 
+#about p {
+	margin: auto;
+	width: 900px;
+	font-size: 15px;
+}
+
 #about:after {
 	content: "";
 	position: absolute;
