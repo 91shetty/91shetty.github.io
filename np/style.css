@@ -101,6 +101,17 @@ header {
 	color: #f2f2f2;
 }
 
+#about figure {
+	margin: auto;
+	display: block;
+	position: relative;
+	width: 150px;
+}
+
+#about figure img {
+	border-radius: 50%;
+}
+
 #about:after {
 	content: "";
 	position: absolute;
