@@ -132,6 +132,10 @@ header {
 	color: #f2f2f2;
 }
 
+#principle figure {
+	padding-top: 20px;
+}
+
 #principle:after {
 	content: "";
 	position: absolute;
