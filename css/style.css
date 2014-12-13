@@ -283,7 +283,6 @@ footer {
 
 footer .color-scheme {
 	float: right;
-	transform: translate(0, 20%);
 }
 
 .color-scheme .circle{
