@@ -192,15 +192,15 @@ header {
 	z-index: 50;
 }
 
-#principle figure #topLeft {
+#principle figure #topRight {
 	display: none;	
 }
 
-#principle figure #topLeft {
+#principle figure #bottomLeft {
 	display: none;	
 }
 
-#principle figure #topLeft {
+#principle figure #bottomRight {
 	display: none;	
 }
 
