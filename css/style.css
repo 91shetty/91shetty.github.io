@@ -36,6 +36,14 @@ header {
 	transition: top 0.3s ease;
 }
 
+.italics {
+	font-style: italic;
+}
+
+.bold {
+	font-weight: 700;
+}
+
 .user {
 	width: 100%;
 	line-height: 4em;
@@ -116,10 +124,6 @@ header {
 	padding: 20px 0 20px 0;
 }
 
-#about p .bold{
-	font-weight: 500;
-}
-
 #about .circle-container {
 	width: 900px;
 	margin: auto;
@@ -174,6 +178,30 @@ header {
 #principle figure h2 {
 	margin-top: 50%;
 	transform: translate(0,-50%);
+}
+
+#principle figure p {
+	font-size: 1.2em;
+}
+
+#principle figure #topLeft {
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	transform: translate(-20%, -20%);
+	z-index: 50;
+}
+
+#principle figure #topLeft {
+	display: none;	
+}
+
+#principle figure #topLeft {
+	display: none;	
+}
+
+#principle figure #topLeft {
+	display: none;	
 }
 
 #principle:after {
