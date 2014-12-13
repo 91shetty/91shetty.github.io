@@ -159,6 +159,19 @@ header {
 	padding-top: 20px;
 }
 
+#principle figure .circle {
+	width: 150px;
+	height: 150px;
+	background: #f2f2f2;
+	z-index: 50;
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+}
+
 #principle:after {
 	content: "";
 	position: absolute;
