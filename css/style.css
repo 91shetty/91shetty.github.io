@@ -187,21 +187,33 @@ header {
 #principle figure #topLeft {
 	position: absolute;
 	top: 20%;
-	left: 20%;
-	transform: translate(-20%, -20%);
+	left: 30%;
+	transform: translate(-30%, -20%);
 	z-index: 50;
 }
 
 #principle figure #topRight {
-	display: none;	
+	position: absolute;
+	top: 20%;
+	right: 30%;
+	transform: translate(70%, -20%);
+	z-index: 50;	
 }
 
 #principle figure #bottomLeft {
-	display: none;	
+	position: absolute;
+	bottom: 20%;
+	left: 30%;
+	transform: translate(-30%, 80%);
+	z-index: 50;	
 }
 
 #principle figure #bottomRight {
-	display: none;	
+	position: absolute;
+	bottom: 20%;
+	right: 30%;
+	transform: translate(70%, 80%);
+	z-index: 50;	
 }
 
 #principle:after {
