@@ -279,3 +279,37 @@ footer {
 	line-height: 2em;
 	width: 100%;
 }
+
+footer .color-scheme {
+	width: 300px;
+	float: right;
+}
+
+.color-scheme .circle{
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	display: inline-block;
+	margin: 0 20px 0 20px;
+}
+
+.color-scheme #circle1 {
+	background: #f2f2f2;
+}
+
+.color-scheme #circle2 {
+	background: #bababa;
+}
+
+.color-scheme #circle3 {
+	background: #333;
+}
+
+.color-scheme #circle4 {
+	background: #939393;
+}
+
+.color-scheme #circle5 {
+	background: #fff;
+}
+
