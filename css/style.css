@@ -10,7 +10,7 @@ html, body {
 	box-sizing: border-box;
 }
 
-a{
+a {
 	text-decoration: none;
 }
 
@@ -162,7 +162,6 @@ header {
 #principle figure .circle {
 	width: 150px;
 	height: 150px;
-	background: #f2f2f2;
 	z-index: 50;
 	border-radius: 50%;
 	position: absolute;
@@ -170,6 +169,11 @@ header {
 	top: 50%;
 	transform: translate(-50%,-50%);
 	box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+}
+
+#principle figure h2 {
+	margin-top: 50%;
+	transform: translate(0,-50%);
 }
 
 #principle:after {
@@ -299,7 +303,7 @@ footer .color-scheme {
 	float: right;
 }
 
-.color-scheme .circle{
+.color-scheme .circle {
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
