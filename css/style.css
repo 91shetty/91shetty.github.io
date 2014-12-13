@@ -178,10 +178,6 @@ header {
 	color: #f2f2f2;
 }
 
-#work h2 {
-	margin: 0 auto;
-}
-
 #work #freelance {
 	background-color: #939393;	
 }
@@ -234,6 +230,13 @@ header {
 	margin-top: 50%;
 	transform: translate(0,-50%);
 }
+
+#work h2 {
+	position: absolute;
+	margin-top: 50%;
+	transform: translate(0,-50%);
+}
+
 
 .half {
 	height: 100%;
