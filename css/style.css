@@ -234,6 +234,7 @@ header {
 #work h2 {
 	position: absolute;
 	margin-top: 50%;
+	z-index: 50;
 	transform: translate(0,-50%);
 }
 
