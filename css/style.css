@@ -176,6 +176,34 @@ header {
 	box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
 }
 
+#principle .circle #topLeftTraingle {
+	width: 0;
+	height: 0;
+	border-top: 24px solid red;
+	border-right: 24px solid transparent;
+}
+
+#principle .circle #topRightTraingle {
+	width: 0;
+	height: 0;
+	border-top: 24px solid red;
+	border-left: 24px solid transparent;
+}
+
+#principle .circle #bottomLeftTraingle {
+	width: 0;
+	height: 0;
+	border-bottom: 24px solid red;
+	border-right: 24px solid transparent;
+}
+
+#principle .circle #bottomRightTraingle {
+	width: 0;
+	height: 0;
+	border-top: 24px solid red;
+	border-left: 24px solid transparent;
+}
+
 #principle figure h2 {
 	margin-top: 50%;
 	transform: translate(0,-50%);
