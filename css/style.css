@@ -188,19 +188,19 @@ header {
 
 #principle figure #topLeft {
 	position: absolute;
-	top: 25%;
+	top: 20%;
 	left: 35%;
-	transform: translate(-35%, -25%);
-	-webkit-transform: translate(-35%, -25%);
+	transform: translate(-35%, -20%);
+	-webkit-transform: translate(-35%, -20%);
 	z-index: 50; 
 }
 
 #principle figure #topRight {
 	position: absolute;
-	top: 25%;
+	top: 20%;
 	right: 35%;
-	transform: translate(65%, -25%);
-	-webkit-transform: translate(65%, -25%);
+	transform: translate(65%, -20%);
+	-webkit-transform: translate(65%, -20%);
 	z-index: 50;	
 }
 
