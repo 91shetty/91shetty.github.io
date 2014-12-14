@@ -213,7 +213,7 @@ header {
 	border-left: 24px solid transparent;
 }
 
-#principle .circle #bottomRightTraingle {
+#principle .circle #bottomCenterTraingle {
 	position: absolute;
 	width: 0;
 	height: 0;
