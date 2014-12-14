@@ -53,6 +53,7 @@ header {
 
 .user-tiny {
 	line-height: 2em;
+	transition: top 0.5s ease;
 }
 
 .user img {
@@ -177,6 +178,7 @@ header {
 }
 
 #principle .circle #topLeftTraingle {
+	position: absolute;
 	width: 0;
 	height: 0;
 	border-top: 24px solid red;
@@ -184,6 +186,7 @@ header {
 }
 
 #principle .circle #topRightTraingle {
+	position: absolute;
 	width: 0;
 	height: 0;
 	border-top: 24px solid red;
@@ -191,6 +194,7 @@ header {
 }
 
 #principle .circle #bottomLeftTraingle {
+	position: absolute;
 	width: 0;
 	height: 0;
 	border-bottom: 24px solid red;
@@ -198,6 +202,7 @@ header {
 }
 
 #principle .circle #bottomRightTraingle {
+	position: absolute;
 	width: 0;
 	height: 0;
 	border-top: 24px solid red;
