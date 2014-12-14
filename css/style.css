@@ -216,6 +216,14 @@ header {
 	z-index: 50;	
 }
 
+#principle figure #bottomCenter {
+	position: absolute;
+	bottom: 20%;
+	left: 50%;
+	transform: translate(-50%, 80%);
+	z-index: 50;	
+}
+
 #principle:after {
 	content: "";
 	position: absolute;
