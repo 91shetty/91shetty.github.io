@@ -172,12 +172,14 @@ header {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
 	box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
 }
 
 #principle figure h2 {
 	margin-top: 50%;
 	transform: translate(0,-50%);
+	-webkit-transform: translate(0,-50%);
 }
 
 #principle figure p {
@@ -189,7 +191,8 @@ header {
 	top: 25%;
 	left: 35%;
 	transform: translate(-35%, -25%);
-	z-index: 50;
+	-webkit-transform: translate(-35%, -25%);
+	z-index: 50; 
 }
 
 #principle figure #topRight {
@@ -197,6 +200,7 @@ header {
 	top: 25%;
 	right: 35%;
 	transform: translate(65%, -25%);
+	-webkit-transform: translate(65%, -25%);
 	z-index: 50;	
 }
 
@@ -205,6 +209,7 @@ header {
 	bottom: 25%;
 	left: 35%;
 	transform: translate(-35%, 75%);
+	-webkit-transform: translate(-35%, 75%);
 	z-index: 50;	
 }
 
@@ -213,6 +218,7 @@ header {
 	bottom: 25%;
 	right: 35%;
 	transform: translate(65%, 75%);
+	-webkit-transform: translate(65%, 75%);
 	z-index: 50;	
 }
 
@@ -221,6 +227,7 @@ header {
 	bottom: 20%;
 	left: 50%;
 	transform: translate(-50%, 80%);
+	-webkit-transform: translate(-50%, 80%);
 	z-index: 50;	
 }
 
@@ -291,6 +298,7 @@ header {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
 	box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
 }
 
@@ -298,6 +306,7 @@ header {
 	color: #333;
 	margin-top: 50%;
 	transform: translate(0,-50%);
+	-webkit-transform: translate(0,-50%);
 }
 
 .half {
