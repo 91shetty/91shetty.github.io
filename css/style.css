@@ -72,7 +72,7 @@ header {
 .section-block {
 	position: relative;
 	width: 100%;
-	min-height: 500px;
+	/*min-height: 500px;*/
 	padding: 50px 0 50px 0;
 	text-align: center;
 }
@@ -158,6 +158,7 @@ header {
 #principle {
 	background-color: #333;
 	color: #f2f2f2;
+	height: 400px;
 }
 
 #principle figure {
@@ -296,6 +297,7 @@ header {
 #work {
 	padding: 0;
 	color: #f2f2f2;
+	height: 600px;
 }
 
 #work h2 {
