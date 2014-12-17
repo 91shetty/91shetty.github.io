@@ -3,7 +3,9 @@
 	<head>
 		<title>Visualisation-Parallel Coordinates</title>
 		<script type="text/javascript" src="d3-zoom-pan-extent.js"></script>
+		<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 		<style type="text/css">
+			
 			body {
 			  font: 10px sans-serif;
 			  margin: 50px;
@@ -32,6 +34,35 @@
 			  shape-rendering: crispEdges;
 			}
 
+			.d3-tip {
+			  line-height: 1;
+			  font-weight: bold;
+			  padding: 12px;
+			  background: rgba(0, 0, 0, 0.8);
+			  color: #fff;
+			  border-radius: 2px;
+			}
+
+			/* Creates a small triangle extender for the tooltip */
+			.d3-tip:after {
+			  box-sizing: border-box;
+			  display: inline;
+			  font-size: 10px;
+			  width: 100%;
+			  line-height: 1;
+			  color: rgba(0, 0, 0, 0.8);
+			  content: "\25BC";
+			  position: absolute;
+			  text-align: center;
+			}
+
+			/* Style northward tooltips differently */
+			.d3-tip.n:after {
+			  margin: -1px 0 0 0;
+			  top: 100%;
+			  left: 0;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -56,6 +87,17 @@
 					    .attr("height", height + margin.top + margin.bottom)
 						.append("g")
 					    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+			//Tool Tip
+			var tip = d3.tip()
+					  .attr('class', 'd3-tip')
+					  .offset([-10, 0])
+					  .html(function(d) {
+					    return "<strong>Name: </strong> <span style='color:red'>" + d.townName +"</span>";
+					  });
+
+			svg.call(tip);
+					    
 			d3.csv("datasetnew.csv", function(error, data) {
 
 				  // Extract the list of dimensions and create a scale for each.
@@ -73,6 +115,8 @@
 							    .data(data)
 							    .enter().append("path")
 						        .attr("d", path);
+						        .on('mouseover', tip.show)
+						        .on('mouseout', tip.hide);
 
 				// Add blue lines for focus.
 			    foreground = svg.append("g")
@@ -81,7 +125,8 @@
 							    .data(data)
 								.enter().append("path")
 							    .attr("d", path);
-
+							    .on('mouseover', tip.show)
+						        .on('mouseout', tip.hide);
 
 				// Add a group element for each dimension.
 				var g = svg.selectAll(".dimension")
