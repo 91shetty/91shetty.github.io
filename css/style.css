@@ -400,14 +400,17 @@ footer {
 }
 
 .footer-content {
-	line-height: 2em;
+	line-height: 3em;
 	width: 100%;
 	font-size: 13px;
 	padding-left: 5px;
 }
 
 footer .color-scheme {
-	float: right;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	-webkit-transform: translate(0,-50%);
 }
 
 .color-scheme .circle {
