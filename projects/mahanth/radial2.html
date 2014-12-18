@@ -44,6 +44,8 @@
 
     d3.json("heirarchy.json", function(error, treeData) {
       root = treeData;
+      root.x0 = diameter / 2;
+      root.yo = diameter / 2;
 
       function collapse(d) {
         if (d.children) {
@@ -63,7 +65,7 @@
       var nodes = tree.nodes(root).reverse(),
           links = tree.links(nodes);
 
-      nodes.forEach(function(d) { d.y = d.depth * 50; });
+      //nodes.forEach(function(d) { d.y = d.depth * 50; });
 
       // var link = svg.selectAll(".link")
       //     .data(links)
@@ -72,11 +74,11 @@
       //     .attr("d", diagonal);
 
       var node = svg.selectAll("g.node")
-            .data(nodes, function(d) { return d.id || (d.id = ++i); });
+            .data(nodes, function(d) { return d.size});
 
       var nodeEnter = node.enter().append("g")
           .attr("class", "node")
-          .attr("transform", function(d) { return "rotate(" + (source.x - 90) + ")translate(" + source.y + ")"; })
+          .attr("transform", function(d) { return "rotate(" + (source.x0 - 90) + ")translate(" + source.y0 + ")"; })
           .on("click", click);
 
       node.append("circle")
@@ -115,7 +117,7 @@
 
         // Update the links…
         var link = svg.selectAll("path.link")
-            .data(links, function(d) { return d.target.id; });
+            .data(links, function(d) { return d.target.size; });
 
         // Enter any new links at the parent's previous position.
         link.enter().insert("path", "g")
