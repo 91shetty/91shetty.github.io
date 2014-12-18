@@ -66,7 +66,7 @@
 					  .attr('class', 'd3-tip')
 					  .offset([-10, 0])
 					  .html(function(d) {
-					    return "<strong>Build No: </strong> <span style='color:red'>" + d.buildNo + "</span> <br/> <strong>No of customers: </strong> <span style='color:red'>" + d.totalCount + "</span> <br/> <strong>Percentage:</strong> <span style='color:red'>" + d.percentage + "</span>" ;
+					    return "<strong>Build No: </strong> <span style='color:red'>" + d.data.buildNo + "</span> <br/> <strong>No of customers: </strong> <span style='color:red'>" + d.data.totalCount + "</span> <br/> <strong>Percentage:</strong> <span style='color:red'>" + d.data.percentage + "</span>" ;
 					  });
 
 			svg.call(tip);
@@ -84,7 +84,7 @@
 
 			  g.append("path")
 			      .attr("d", arc)
-			      .style("fill", function(d) { return color(d.percentage); })
+			      .style("fill", function(d) { return color(d.data.percentage); })
 			      .on('mouseover', tip.show)
 				  .on('mouseout', tip.hide);
 			      
@@ -92,7 +92,7 @@
 			      .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
 			      .attr("dy", ".35em")
 			      .style("text-anchor", "middle")
-			      .text(function(d) { return d.percentage; });
+			      .text(function(d) { return d.data.percentage; });
 
 			});
 		</script>
