@@ -87,8 +87,8 @@
 
       nodeEnter.append("text")
           .attr("dy", ".31em")
-          .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
-          .attr("transform", function(d) { return d.x < 180 ? "translate(8)" : "rotate(0)translate(-8)"; })
+          .attr("text-anchor", "start")
+          .attr("transform", function(d) { return d.x < 180 ? "rotatetranslate(8)" : "rotate(0)translate(-8)"; })
           .text(function(d) { return d.name; });
 
       // Transition nodes to their new position.
