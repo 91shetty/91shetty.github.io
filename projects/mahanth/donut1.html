@@ -43,7 +43,8 @@
 	<body>
 		<script type="text/javascript">
 			var width = 960,
-			    height = 750,
+			    height = 500,
+			    heightSVG = 750,
 			    radius = Math.min(width, height) / 2;
 
 			var color = color = d3.scale.category20c();
@@ -58,9 +59,9 @@
 
 			var svg = d3.select("body").append("svg")
 			    .attr("width", width)
-			    .attr("height", height)
+			    .attr("height", heightSVG)
 			  .append("g")
-			    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+			    .attr("transform", "translate(" + width / 2 + "," + heightSVG / 2 + ")");
 
 			var tip = d3.tip()
 					  .attr('class', 'd3-tip')
