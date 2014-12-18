@@ -44,8 +44,8 @@
 
     d3.json("heirarchy.json", function(error, treeData) {
       root = treeData;
-      root.x = diameter / 2;
-      root.y = diameter / 2;
+      root.x0 = diameter / 2;
+      root.y0 = diameter / 2;
 
       function collapse(d) {
         if (d.children) {
@@ -78,7 +78,7 @@
 
       var nodeEnter = node.enter().append("g")
           .attr("class", "node")
-          .attr("transform", function(d) { return "rotate(" + (source.x - 90) + ")translate(" + source.y + ")"; })
+          .attr("transform", function(d) { return "rotate(" + (source.x0 - 90) + ")translate(" + source.y0 + ")"; })
           .on("click", click);
 
       node.append("circle")
