@@ -35,9 +35,9 @@
 			  left: 0;
 			}
 
-	    	path:hover{
+	    	/*path:hover{
 	    	opacity: .8;
-	    	}
+	    	}*/
 	    </style>
 	</head>
 	<body>
@@ -84,7 +84,7 @@
 
 			  g.append("path")
 			      .attr("d", arc)
-			      .style("fill", function(d) { return color(d.data.percentage); })
+			      .style("fill", function(d) { return color(d.percentage); })
 			      .on('mouseover', tip.show)
 				  .on('mouseout', tip.hide);
 			      
@@ -92,7 +92,7 @@
 			      .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
 			      .attr("dy", ".35em")
 			      .style("text-anchor", "middle")
-			      .text(function(d) { return d.data.percentage; });
+			      .text(function(d) { return d.percentage; });
 
 			});
 		</script>
