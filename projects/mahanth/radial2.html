@@ -42,7 +42,7 @@
       .append("g")
         .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
 
-    d3.json("heirarchy.json", function(error, root) {
+    d3.json("heirarchy.json", function(error, treeData) {
       root = treeData;
 
       function collapse(d) {
