@@ -45,7 +45,7 @@
     d3.json("heirarchy.json", function(error, treeData) {
       root = treeData;
       root.x0 = diameter / 2;
-      root.yo = diameter / 2;
+      root.y0 = diameter / 2;
 
       function collapse(d) {
         if (d.children) {
