@@ -85,7 +85,12 @@
 			  var g = svg.selectAll(".arc")
 			      .data(pie(data))
 			      .enter().append("g")
-			      .attr("class", "arc")
+			      .attr("class", "arc");
+			      
+
+			  g.append("path")
+			      .attr("d", arc)
+			      .style("fill", function(d) { return color(d.data.percentage); })
 			      .on("mouseover", function(d) {
 		            	d3.select(this).transition()
 			               .duration(1000)
@@ -95,11 +100,7 @@
 		            	d3.select(this).transition()
 			               .duration(1000)
 			               .attr("d", arc);
-		             });
-
-			  g.append("path")
-			      .attr("d", arc)
-			      .style("fill", function(d) { return color(d.data.percentage); });
+		             });;
 			      
 			  g.append("text")
 			      .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
