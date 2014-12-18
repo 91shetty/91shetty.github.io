@@ -83,7 +83,7 @@
 
       nodeEnter.append("circle")
           .attr("r", 1e-6)
-          .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+          .style("fill", function(d) { return d._children ? "brown" : "#fff"; });
 
       nodeEnter.append("text")
           .attr("dy", ".31em")
@@ -98,7 +98,7 @@
 
         nodeUpdate.select("circle")
             .attr("r", 4.5)
-            .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+            .style("fill", function(d) { return d._children ? "brown" : "#fff"; });
 
         nodeUpdate.select("text")
             .style("fill-opacity", 1);
