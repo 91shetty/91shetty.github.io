@@ -80,7 +80,7 @@
           .on("click", click);
 
       node.append("circle")
-          .attr("r", 1e-6);
+          .attr("r", 1e-6)
           .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
 
       node.append("text")
