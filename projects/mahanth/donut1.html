@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Donut chart</title>
+		<script type="text/javascript" src="d3/d3.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script> 
+		<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+	    <style type="text/css">
+	    	.d3-tip {
+			  line-height: 1;
+			  font-weight: bold;
+			  padding: 12px;
+			  background: rgba(0, 0, 0, 0.8);
+			  color: #fff;
+			  border-radius: 2px;
+			}
+
+			/* Creates a small triangle extender for the tooltip */
+			.d3-tip:after {
+			  box-sizing: border-box;
+			  display: inline;
+			  font-size: 10px;
+			  width: 100%;
+			  line-height: 1;
+			  color: rgba(0, 0, 0, 0.8);
+			  content: "\25BC";
+			  position: absolute;
+			  text-align: center;
+			}
+
+			/* Style northward tooltips differently */
+			.d3-tip.n:after {
+			  margin: -1px 0 0 0;
+			  top: 100%;
+			  left: 0;
+			}
+
+	    	path:hover{
+	    	opacity: .8;
+	    	}
+	    </style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var width = 960,
+			    height = 500,
+			    radius = Math.min(width, height) / 2;
+
+			var color = color = d3.scale.category20c();
+
+			var arc = d3.svg.arc()
+			    .outerRadius(radius - 10)
+			    .innerRadius(radius - 70);
+
+			var pie = d3.layout.pie()
+			    .sort(null)
+			    .value(function(d) { return d.population; });
+
+			var svg = d3.select("body").append("svg")
+			    .attr("width", width)
+			    .attr("height", height)
+			  .append("g")
+			    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+			var tip = d3.tip()
+					  .attr('class', 'd3-tip')
+					  .offset([-10, 0])
+					  .html(function(d) {
+					    return "<strong>Build No: </strong> <span style='color:red'>" + d.buildNo + "</span> <br/> <strong>No of customers: </strong> <span style='color:red'>" + d.totalCount + "</span> <br/> <strong>Percentage:</strong> <span style='color:red'>" + d.percentage + "</span>" ;
+					  });
+
+			svg.call(tip);
+
+			d3.csv("donutChart.csv", function(error, data) {
+
+			  data.forEach(function(d) {
+			    d.totalCount = +d.totalCount;
+			  });
+
+			  var g = svg.selectAll(".arc")
+			      .data(pie(data))
+			    .enter().append("g")
+			      .attr("class", "arc");
+
+			  g.append("path")
+			      .attr("d", arc)
+			      .style("fill", function(d) { return color(d.data.percentage); })
+			      .on('mouseover', tip.show)
+				  .on('mouseout', tip.hide);
+			      
+			  g.append("text")
+			      .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+			      .attr("dy", ".35em")
+			      .style("text-anchor", "middle")
+			      .text(function(d) { return d.data.percentage; });
+
+			});
+		</script>
+	</body>
+</html>
