@@ -30,7 +30,7 @@
         root; 
 
     var tree = d3.layout.tree()
-        .size([360, diameter / 2])
+        .size([360, diameter / 2 - 120])
         .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
 
     var diagonal = d3.svg.diagonal.radial()
@@ -38,14 +38,14 @@
 
     var svg = d3.select("body").append("svg")
         .attr("width", diameter)
-        .attr("height", diameter)
+        .attr("height", diameter - 150)
       .append("g")
-        .attr("transform", "translate(10,10)");
+        .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
 
     d3.json("heirarchy.json", function(error, treeData) {
       root = treeData;
-      // root.x0 = diameter / 2;
-      // root.yo = diameter / 2;
+      root.x0 = diameter / 2;
+      root.yo = diameter / 2;
 
       function collapse(d) {
         if (d.children) {
@@ -59,13 +59,13 @@
       update(root);
     });
 
-    d3.select(self.frameElement).style("height", diameter  + "px");
+    d3.select(self.frameElement).style("height", diameter - 150 + "px");
 
     function update(source){
       var nodes = tree.nodes(root).reverse(),
           links = tree.links(nodes);
 
-      //nodes.forEach(function(d) { d.y = d.depth * 50; });
+      nodes.forEach(function(d) { d.y = d.depth * 50; });
 
       // var link = svg.selectAll(".link")
       //     .data(links)
@@ -74,7 +74,7 @@
       //     .attr("d", diagonal);
 
       var node = svg.selectAll("g.node")
-            .data(nodes, function(d) { return d.size});
+            .data(nodes, function(d) { return d.id || (d.id = ++i); });
 
       var nodeEnter = node.enter().append("g")
           .attr("class", "node")
@@ -117,7 +117,7 @@
 
         // Update the links…
         var link = svg.selectAll("path.link")
-            .data(links, function(d) { return d.target.size; });
+            .data(links, function(d) { return d.target.id; });
 
         // Enter any new links at the parent's previous position.
         link.enter().insert("path", "g")
