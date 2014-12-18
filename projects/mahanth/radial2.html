@@ -40,7 +40,7 @@
         .attr("width", diameter)
         .attr("height", diameter - 150)
       .append("g")
-        .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
+        .attr("transform", "translate(10,10)");
 
     d3.json("heirarchy.json", function(error, treeData) {
       root = treeData;
@@ -59,7 +59,7 @@
       update(root);
     });
 
-    d3.select(self.frameElement).style("height", diameter - 150 + "px");
+    d3.select(self.frameElement).style("height", diameter  + "px");
 
     function update(source){
       var nodes = tree.nodes(root).reverse(),
