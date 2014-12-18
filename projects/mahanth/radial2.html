@@ -81,11 +81,11 @@
           .attr("transform", function(d) { return "rotate(" + (source.x0 - 90) + ")translate(" + source.y0 + ")"; })
           .on("click", click);
 
-      node.append("circle")
+      nodeEnter.append("circle")
           .attr("r", 1e-6)
           .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
 
-      node.append("text")
+      nodeEnter.append("text")
           .attr("dy", ".31em")
           .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
           .attr("transform", function(d) { return d.x < 180 ? "translate(8)" : "rotate(180)translate(-8)"; })
