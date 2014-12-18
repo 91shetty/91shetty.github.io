@@ -48,12 +48,14 @@ header {
 	width: 100%;
 	line-height: 4em;
 	color: #e6e6e6;
-	transition: top 0.3s ease;
+	-moz-transition: top 0.3s ease;
+	-webkit-transition: top 0.3s ease;
 }
 
 .user-tiny {
 	line-height: 2em;
 	transition: top 0.5s ease;
+	-webkit-transition: top 0.5s ease;
 }
 
 .user img {
@@ -175,6 +177,7 @@ header {
 	top: 45%;
 	transform: translate(-50%,-50%);
 	-webkit-transform: translate(-50%,-45%);
+	-moz-transform: translate(-50%,-45%);
 	box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
 }
 

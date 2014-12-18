@@ -78,7 +78,7 @@
 
       var nodeEnter = node.enter().append("g")
           .attr("class", "node")
-          .attr("transform", function(d) { return "rotate(" + (source.x0 - 90) + ")translate(" + source.y0 + ")"; })
+          .attr("transform", function(d) { return "rotate(" + (source.x - 90) + ")translate(" + source.y + ")"; })
           .on("click", click);
 
       node.append("circle")
