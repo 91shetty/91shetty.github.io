@@ -9,6 +9,11 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link href='http://fonts.googleapis.com/css?family=Fira+Sans:400,500,700,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<style type="text/css">
+			.section-block {
+				cursor: pointer;
+			}
+		</style>
 	</head>
 	<body>
 		<header>
@@ -26,7 +31,7 @@
 				</div>
 			</section>
 			<section id="about" class="section-block">
-				<h2 style="cursor:pointer;">About Me</h2>
+				<h2>About Me</h2>
 				<div class="section-content" style="display:none;">					
 					<figure>
 						<img src="images/me_profile.png" alt="me_profile" width="150" height="150">
@@ -140,9 +145,31 @@
 				if($(document).scrollTop()>0){
 					$('.user').toggleClass('user-tiny');
 				}
+
 				$('#about h2').click( function () {
 					$('#about .section-content').toggle();
 				});
+
+				$('#landing h2').click( function () {
+					$('#landing .section-content').toggle();
+				});
+
+				$('#freelance h2').click( function () {
+					$('#freelance .section-content').toggle();
+				});
+
+				$('#projects h2').click( function () {
+					$('#projects .section-content').toggle();
+				});
+
+				$('#experience h2').click( function () {
+					$('#experience .section-content').toggle();
+				});
+
+				$('#contact h2').click( function () {
+					$('#contact .section-content').toggle();
+				});
+				
 				$(window).on("scroll touchmove", function () {
 				    $('.user').toggleClass('user-tiny', $(document).scrollTop() > 0);
 				});
