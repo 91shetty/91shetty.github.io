@@ -311,6 +311,14 @@ header {
 	background-color: #939393;	
 }
 
+#work .sub-section-content p {
+	font-size: 1.2em;
+}
+
+#work .sub-section-content #what {
+	font-size: 1em;
+}
+
 #work #freelance:after {
 	content: "";
 	position: absolute;
