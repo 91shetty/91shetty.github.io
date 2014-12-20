@@ -422,6 +422,10 @@ header {
 	box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
 }
 
+#experience .row-content p {
+	margin: 0 auto;
+}
+
 #experience .circle-container {
 	width: 900px;
 	margin: auto;
