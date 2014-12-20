@@ -10,7 +10,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Fira+Sans:400,500,700,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<style type="text/css">
-			.section-block {
+			.section-block h2 {
 				cursor: pointer;
 			}
 		</style>
@@ -169,7 +169,7 @@
 				$('#contact h2').click( function () {
 					$('#contact .section-content').toggle();
 				});
-				
+
 				$(window).on("scroll touchmove", function () {
 				    $('.user').toggleClass('user-tiny', $(document).scrollTop() > 0);
 				});
