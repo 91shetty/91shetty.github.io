@@ -414,8 +414,8 @@ header {
 }
 
 #experience .row-content .circle {
-	width: 100px;
-	height: 100px;
+	width: 80px;
+	height: 80px;
 	background: #f2f2f2;
 	border-radius: 50%;
 	margin: 0 50px 0px 50px;
