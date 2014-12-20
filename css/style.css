@@ -325,10 +325,6 @@ header {
 	background-color: #939393;	
 }
 
-#work .sub-section-content {
-	-webkit-transform: translate(0,50%);
-}
-
 #work .sub-section-content p {
 	font-size: 1.2em;
 }
