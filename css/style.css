@@ -326,6 +326,7 @@ header {
 }
 
 #work .sub-section-content p {
+	margin: 0 auto;
 	font-size: 1.2em;
 }
 
