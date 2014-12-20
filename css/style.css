@@ -388,11 +388,11 @@ header {
 	color: #333;
 }
 
-.#experience .circle-container .row {
+#experience .circle-container .row {
 	padding-bottom: 20px;
 }
 
-.#experience .circle-container .row .circle {
+#experience .circle-container .row .circle {
 	width: 100px;
 	height: 100px;
 	background: #f2f2f2;
