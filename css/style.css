@@ -1,3 +1,5 @@
+/* Comman CSS */
+
 html, body {
 	height: 100%;
 	width: 100%;
@@ -44,6 +46,8 @@ header {
 	font-weight: 700;
 }
 
+/* Header */
+
 .user {
 	width: 100%;
 	line-height: 4em;
@@ -65,6 +69,8 @@ header {
 	background: #e6e6e6;
 }
 
+/* Content */
+
 .main-content {
 	position: relative;
 	min-height: 15em;
@@ -82,6 +88,8 @@ header {
 .section-block h2 {
 	margin-top: -25px;
 }
+
+/* Landing section */
 
 #landing {
 	background-color: #f2f2f2;
@@ -101,6 +109,8 @@ header {
 	margin-left: -24px;
 	z-index: 1;
 }
+
+/* About section */
 
 #about {
 	background-color: #bababa;
@@ -156,6 +166,8 @@ header {
 	margin-left: -24px;
 	z-index: 1;	
 }
+
+/* Principle section */
 
 #principle {
 	background-color: #333;
@@ -297,6 +309,8 @@ header {
 	z-index: 1;	
 }
 
+/* Work Section */
+
 #work {
 	padding: 0;
 	color: #f2f2f2;
@@ -383,6 +397,8 @@ header {
 	width: 50%;
 }
 
+/* Experience */
+
 #experience {
 	background-color: #f2f2f2;
 	color: #333;
@@ -418,10 +434,14 @@ header {
 	z-index: 1;	
 }
 
+/* Contact  */
+
 #contact {
 	background-color: #fff;
 	color: #333;
 }
+
+/* Footer */
 
 footer {
 	background: #000;
@@ -473,3 +493,4 @@ footer .color-scheme {
 	background: #fff;
 }
 
+/* End of css */
