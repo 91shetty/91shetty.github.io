@@ -458,6 +458,10 @@ header {
 	box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
 }
 
+#content .row {
+	padding-bottom: 20px;
+}
+
 #contact .row-content p {
 	margin: 0 auto;
 }
