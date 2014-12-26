@@ -324,7 +324,10 @@ header {
 }
 
 #work .sub-section-content {
-	
+	display: table-cell;
+	width: 720px;
+	vertical-align: middle;
+	height: 569px;
 }
 
 #work .sub-section-content p {
