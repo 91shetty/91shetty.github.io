@@ -324,10 +324,7 @@ header {
 }
 
 #work .sub-section-content {
-	content: '';
-	display: inline-block;
-	height: 100%;
-	vertical-align: middle;
+	
 }
 
 #work .sub-section-content p {
