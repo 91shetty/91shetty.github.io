@@ -323,6 +323,13 @@ header {
 	background-color: #939393;	
 }
 
+#work .sub-section-content {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
 #work .sub-section-content p {
 	margin: 0 auto;
 	font-size: 1.2em;
