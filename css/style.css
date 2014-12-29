@@ -412,7 +412,7 @@ header {
 }
 
 #experience .circle-container .row-content {
-	display: inline-block;
+	display: inline-table;
 }
 
 #experience .row-content .circle {
@@ -464,8 +464,8 @@ header {
 	box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
 }
 
-#contact .row {
-	padding-bottom: 20px;
+#contact .circle-container .row-content {
+	display: inline-table;
 }
 
 #contact .row-content p {
