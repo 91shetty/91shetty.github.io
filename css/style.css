@@ -337,6 +337,10 @@ header {
 	padding-bottom: 20px;
 }
 
+#work .sub-section-links .link .link-title {
+	cursor: pointer;
+}
+
 #work .sub-section-links .link .link-domain {
 	font-size: 0.9em;
 	font-style: italic;
