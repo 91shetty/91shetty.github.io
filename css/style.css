@@ -351,6 +351,7 @@ header {
 	left: 50%;
 	border-radius: 5px;
 	-webkit-transform: translate(-50%,-50%);
+	display: none;
 }
 
 #work .sub-section-content .cross {

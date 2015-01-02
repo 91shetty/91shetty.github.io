@@ -229,7 +229,10 @@
 					$('.user').toggleClass('user-tiny');
 				}
 				$('#freelance .cross').click(function() {
-					$('#freelance .sub-section-content').hide(500);
+					$('#freelance .sub-section-content').fadeOut("slow");
+				});
+				$('#freelance .sub-section-links p').click(function() {
+					$('#freelance .sub-section-content').fadeIn("slow");
 				});
 				$(window).on("scroll touchmove", function () {
 				    $('.user').toggleClass('user-tiny', $(document).scrollTop() > 0);
