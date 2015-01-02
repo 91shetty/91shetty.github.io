@@ -79,25 +79,29 @@
 					<div class="sub-section-links">
 						<div class="link">
 							<p id="link-title"> Decibel Geeks Entertainment </p>
-							<p id="link-domain"> Logo, Print Design </p>
+							<p id="link-domain"> Logo &amp; Print Design </p>
 							<p id="link-content"> Morbi at sapien id auctor vitae sollicitudin lorem. Vivamus sed rutrum odio. Donec varius justo sed odio consectetur maximus. In cursus accumsan consequat. Curabitur non luctus ex, sed vehicula risus. In sit amet lorem quam. Donec placerat leo eu turpis interdum volutpat. </p>
 						</div>
-						<p>
-							Indian Paintball Marshals <br/>
-							<span id="what">Logo, Print Design</span>
-						</p>
-						<p>
-							Kumaran Ganesh Jewellery <br/>
-							<span id="what">Logo</span>
-						</p>
-						<p>
-							Surakshith Constructions <br/>
-							<span id="what">Logo</span>
-						</p>
+						<div class="link">
+							<p id="link-title"> Indian Paintball Marshals </p>
+							<p id="link-domain"> Logo &amp; Print Design </p>
+							<p id="link-content"> Morbi at sapien id auctor vitae sollicitudin lorem. Vivamus sed rutrum odio. Donec varius justo sed odio consectetur maximus. In cursus accumsan consequat. Curabitur non luctus ex, sed vehicula risus. In sit amet lorem quam. Donec placerat leo eu turpis interdum volutpat. </p>
+						</div>
+						<div class="link">
+							<p id="link-title"> Surakshith Constructions </p>
+							<p id="link-domain"> Logo Design </p>
+							<p id="link-content"> Morbi at sapien id auctor vitae sollicitudin lorem. Vivamus sed rutrum odio. Donec varius justo sed odio consectetur maximus. In cursus accumsan consequat. Curabitur non luctus ex, sed vehicula risus. In sit amet lorem quam. Donec placerat leo eu turpis interdum volutpat. </p>
+						</div>
+						<div class="link">
+							<p id="link-title"> Decibel Geeks Entertainment </p>
+							<p id="link-domain"> Logo Design </p>
+							<p id="link-content"> Morbi at sapien id auctor vitae sollicitudin lorem. Vivamus sed rutrum odio. Donec varius justo sed odio consectetur maximus. In cursus accumsan consequat. Curabitur non luctus ex, sed vehicula risus. In sit amet lorem quam. Donec placerat leo eu turpis interdum volutpat. </p>
+						</div>
 						<div class="sub-section-content">
 							<div class="cross">&#10006;</div>
-							<h2></h2>
-							<p></p>
+							<p id="link-title"></p>
+							<p id="link-domain"></p>
+							<p id="link-content"></p>
 						</div>
 					</div>
  				</div>
@@ -234,12 +238,14 @@
 				$('#freelance .cross').click(function() {
 					$('#freelance .sub-section-content').fadeOut("slow");
 				});
-				$('#freelance .sub-section-links p').click(function() {
+				$('#freelance .sub-section-links .link').click(function() {
 					$('#freelance .sub-section-content').fadeIn("slow");
-					var str = $(this).text();
-					console.log(str);
-					var $subSectionContentH2 = $('#freelance .sub-section-content h2');
-					$subSectionContentH2.html(str);
+					var strTitle = $(this).(".link-title").text();
+					var strDomain = $(this).(".link-domain").text();
+					var strContent = $(this).(".link-content").text();
+					console.log(strTitle);
+					var $linkTitle = $('#freelance .sub-section-content .link .link-title');
+					$linkTitle.html(strTitle);
 				});
 				$(window).on("scroll touchmove", function () {
 				    $('.user').toggleClass('user-tiny', $(document).scrollTop() > 0);
