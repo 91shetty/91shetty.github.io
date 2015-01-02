@@ -330,16 +330,20 @@ header {
 	height: 569px;
 }
 
-#work .sub-section-links p {
+#work .sub-section-links .link p {
 	margin: 0 auto;
 	font-size: 1.2em;
 	line-height: 1.8em;
 	padding-bottom: 20px;
 }
 
-#work .sub-section-links #what {
+#work .sub-section-links .link #link-domain {
 	font-size: 0.9em;
 	font-style: italic;
+}
+
+#work .sub-section-links .link #link-content {
+	display: none;
 }
 
 #work .sub-section-content {
