@@ -240,9 +240,9 @@
 				});
 				$('#freelance .sub-section-links .link').click(function() {
 					$('#freelance .sub-section-content').fadeIn("slow");
-					var strTitle = $(this).(".link-title").text();
-					var strDomain = $(this).(".link-domain").text();
-					var strContent = $(this).(".link-content").text();
+					var strTitle = $(this).children(".link-title").text();
+					var strDomain = $(this).children(".link-domain").text();
+					var strContent = $(this).children(".link-content").text();
 					console.log(strTitle);
 					var $linkTitle = $('#freelance .sub-section-content .link .link-title');
 					$linkTitle.html(strTitle);
