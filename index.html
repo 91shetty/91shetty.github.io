@@ -243,9 +243,13 @@
 					var strTitle = $(this).children(".link-title").text();
 					var strDomain = $(this).children(".link-domain").text();
 					var strContent = $(this).children(".link-content").text();
-					console.log(strTitle);
-					var $linkTitle = $('#freelance .sub-section-content .link .link-title');
+					//console.log(strTitle);
+					var $linkTitle = $('#freelance .sub-section-content .link-title');
 					$linkTitle.html(strTitle);
+					var $linkDomain = $('#freelance .sub-section-content .link-domain');
+					$linkTitle.html(strDomain);
+					var $linkContent = $('#freelance .sub-section-content .link-content');
+					$linkTitle.html(strContent);
 				});
 				$(window).on("scroll touchmove", function () {
 				    $('.user').toggleClass('user-tiny', $(document).scrollTop() > 0);
