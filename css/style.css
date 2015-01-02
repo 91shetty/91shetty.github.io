@@ -342,6 +342,16 @@ header {
 	font-style: italic;
 }
 
+#work .sub-section-content {
+	position: absolute;
+	height: 400px;
+	width: 400px;
+	background: #f2f2f2;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+}
+
 #work #freelance:after {
 	content: "";
 	position: absolute;
