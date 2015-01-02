@@ -238,7 +238,7 @@
 					var str = $(this).text();
 					console.log(str);
 					var $subSectionContentH2 = $('#freelance .sub-section-content h2');
-					$subSectionContentH2.html("Sample");
+					$subSectionContentH2.html(str);
 				});
 				$(window).on("scroll touchmove", function () {
 				    $('.user').toggleClass('user-tiny', $(document).scrollTop() > 0);
