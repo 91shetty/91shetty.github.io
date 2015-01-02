@@ -337,12 +337,12 @@ header {
 	padding-bottom: 20px;
 }
 
-#work .sub-section-links .link #link-domain {
+#work .sub-section-links .link .link-domain {
 	font-size: 0.9em;
 	font-style: italic;
 }
 
-#work .sub-section-links .link #link-content {
+#work .sub-section-links .link .link-content {
 	display: none;
 }
 
