@@ -358,6 +358,10 @@ header {
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
+	font-size: 1.3em;
+	float: right;
+	margin: 10px 10px;
+	cursor: pointer;
 }
 
 #work #freelance:after {
