@@ -366,6 +366,7 @@ header {
 	border-radius: 5px;
 	-webkit-transform: translate(-50%,-50%);
 	display: none;
+	overflow-y: scroll;
 }
 
 #work .sub-section-content .link-domain, #work .sub-section-content .link-title, #work .sub-section-content .link-content {
