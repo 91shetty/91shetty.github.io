@@ -368,6 +368,11 @@ header {
 	display: none;
 }
 
+#work .sub-section-content .link-domain, #work .sub-section-content .link-title, #work .sub-section-content .link-content {
+	width: 300px;
+	margin: 10px auto;
+}
+
 #work .sub-section-content .cross {
 	background: #939393;
 	color: #f2f2f2;
