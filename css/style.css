@@ -21,6 +21,22 @@ body {
 	font-family: 'Fira Sans', sans-serif;
 }
 
+ul {
+	list-style-type: none;
+	margin: 0 auto;
+	padding-left: 0px;
+}
+
+.italics {
+	font-style: italic;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+/* Header */
+
 header {
 	position: fixed;
 	background: #000;
@@ -37,16 +53,6 @@ header {
 	-o-transition: top 0.3s ease;
 	transition: top 0.3s ease;
 }
-
-.italics {
-	font-style: italic;
-}
-
-.bold {
-	font-weight: 700;
-}
-
-/* Header */
 
 .user {
 	width: 100%;
@@ -536,27 +542,29 @@ footer {
 	font-weight: normal;
 	position: relative;
 	width: 100%;
+	line-height: 3em;
+	display: inline-block;
 }
 
 .footer-content {
-	line-height: 3em;
 	width: 100%;
 	font-size: 13px;
 	padding-left: 5px;
 }
 
 footer .color-scheme {
-	position: absolute;
-	right: 10px;
-	top: 50%;
-	-webkit-transform: translate(0,-50%);
+	float: right;
+	padding-right: 10px;
 }
 
-.color-scheme .circle {
+footer .color-scheme li {
+	display: inline-block;
+}
+
+footer .color-scheme .circle {
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	display: inline-block;
 	margin: 0 5px 0 5px;
 }
 
