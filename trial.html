@@ -26,6 +26,36 @@
 				margin: 0 20px 0px 20px;
 				box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
 			}
+
+			footer ul li {
+				display: inline-block;
+			}
+
+			footer .circle {
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+			}
+
+			#circle1 {
+				background: #f2f2f2;
+			}
+
+			#circle2 {
+				background: #bababa;
+			}
+
+			#circle3 {
+				background: #333;
+			}
+
+			#circle4 {
+				background: #939393;
+			}
+
+			#circle5 {
+				background: #fff;
+			}
 		</style>
 	</head>
 	<body>
@@ -265,7 +295,7 @@
 		</div>
 		<footer>
 			<span class="footer-content">&copy; 2014 | Vishwas Shetty | All Rights Reserved</span>
-			<div class="color-scheme">
+			<!-- <div class="color-scheme">
 				<div id="circle1" class="circle">
 				</div>
 				<div id="circle2" class="circle">
@@ -276,7 +306,14 @@
 				</div>
 				<div id="circle5" class="circle">
 				</div>
-			</div>
+			</div> -->
+			<ul>
+				<li id="circle1" class="circle"></li>
+				<li id="circle2" class="circle"></li>
+				<li id="circle3" class="circle"></li>
+				<li id="circle4" class="circle"></li>
+				<li id="circle5" class="circle"></li>
+			</ul>
 		</footer>
 		<script type="text/javascript"> 
 			$(window).load(function(){
