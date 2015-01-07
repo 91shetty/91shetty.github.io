@@ -42,6 +42,7 @@
 				background: #f2f2f2;
 				color: #939393;
 				box-shadow: 0 2px 1px rgba(170, 170, 170, 0.25);
+				cursor: pointer;
 			}
 			#freelance li .link-title {
 				font-size: 1em;
@@ -317,7 +318,7 @@
 				$('#freelance .cross').click(function() {
 					$('#freelance .sub-section-content').fadeOut("slow");
 				});
-				$('#freelance .sub-section-links .link').click(function() {
+				$('#freelance .sub-section-links li').click(function() {
 					$('#freelance .sub-section-content').fadeIn("slow");
 					var strTitle = $(this).children(".link-title").text();
 					var strDomain = $(this).children(".link-domain").text();
