@@ -350,6 +350,19 @@
 					var $linkContent = $('#freelance .sub-section-content .link-content');
 					$linkContent.html(strContent);
 				});
+				$('#projects .sub-section-links li').click(function() {
+					$('#projects .sub-section-content').fadeIn("slow");
+					var strTitle = $(this).children(".link-title").text();
+					var strDomain = $(this).children(".link-domain").text();
+					var strContent = $(this).children(".link-content").text();
+					//console.log(strTitle);
+					var $linkTitle = $('#projects .sub-section-content .link-title');
+					$linkTitle.html(strTitle);
+					var $linkDomain = $('#projects .sub-section-content .link-domain');
+					$linkDomain.html(strDomain);
+					var $linkContent = $('#projects .sub-section-content .link-content');
+					$linkContent.html(strContent);
+				});
 				$(window).on("scroll touchmove", function () {
 				    $('.user').toggleClass('user-tiny', $(document).scrollTop() > 0);
 				});
