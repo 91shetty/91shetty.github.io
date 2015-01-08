@@ -67,18 +67,20 @@
 				display: none;
 			}
 
-			@media only screen and (min-device-width: 320px) {
+			@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
 				#freelance ul li {
-					display: block;
+					display: inline-block;
 					padding: 0;
-					width: 90%;
 					height: 40px;
 					font-size: 14px;
 					line-height: 40px;
 					margin: 10px;
-					height: 0px;
 				}
-				
+
+				#freelance li .link-title {
+					text-align: center;
+				}
+
 				#freelance li .link-domain {
 					display: none;
 				}
