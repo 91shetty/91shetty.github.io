@@ -397,7 +397,7 @@ header {
 	cursor: pointer;
 }
 
-#work #freelance:after {
+/*#work #freelance:after {
 	content: "";
 	position: absolute;
 	display: block;
@@ -408,13 +408,13 @@ header {
 	width: 24px;
 	height: 24px;
 	z-index: 1;
-}
+}*/
 
 #work #projects {
 	background-color: #bababa;
 }
 
-#work #projects:after {
+/*#work #projects:after {
 	content: "";
 	position: absolute;
 	display: block;
@@ -425,7 +425,7 @@ header {
 	width: 24px;
 	height: 24px;
 	z-index: 1;
-}
+}*/
 
 #work .circle {
 	width: 150px;
