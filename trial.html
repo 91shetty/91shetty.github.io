@@ -350,6 +350,9 @@
 					var $linkContent = $('#freelance .sub-section-content .link-content');
 					$linkContent.html(strContent);
 				});
+				$('#projects .cross').click(function() {
+					$('#projects .sub-section-content').fadeOut("slow");
+				});
 				$('#projects .sub-section-links li').click(function() {
 					$('#projects .sub-section-content').fadeIn("slow");
 					var strTitle = $(this).children(".link-title").text();
