@@ -110,6 +110,10 @@
 				-moz-transform: translate(0%,-50%);
 			}
 
+			#experience li .exp-year {
+				display: none;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -254,95 +258,54 @@
 			<section id="experience" class="section-block">
 				<h2>Experience</h2>
 				<div class="section-content">
-					<!-- <div class="circle-container">
-						<div class="row" id="row1">
-							<div class="row-content">
-								<span class="circle"></span>
-								<p>Intern</p>
-							</div>
-							<div class="row-content">
-								<span class="circle"></span>
-								<p>Intern</p>
-							</div>
-							<div class="row-content">
-								<span class="circle"></span>
-								<p>Intern</p>
-							</div>
-							<div class="row-content">
-								<span class="circle"></span>
-								<p>Intern</p>
-							</div>
-						</div>
-						<div class="row" id="row2">
-							<div class="row-content">
-								<span class="circle"></span>
-								<p>Intern</p>
-							</div>
-							<div class="row-content">
-								<span class="circle"></span>
-								<p>Intern</p>
-							</div>
-							<div class="row-content">
-								<span class="circle"></span>
-								<p>Intern</p>
-							</div>
-						</div>
-						<div class="row" id="row3">
-							<div class="row-content">
-								<span class="circle"></span>
-								<p>Intern</p>
-							</div>
-							<div class="row-content">
-								<span class="circle"></span>
-								<p>Intern</p>
-							</div>
-							<div class="row-content">
-								<span class="circle"></span>
-								<p>Intern</p>
-							</div>
-							<div class="row-content">
-								<span class="circle"></span>
-								<p>Paintball<br/>World Cup</p>
-							</div>
-						</div>
-					</div> -->
 					<ul>
 						<li>
-							<p>Intern</p>
+							<p class="exp-title">Intern</p>
+							<p class="exp-year">2010</p>
 						</li>
 						<li>
-							<p>Intern</p>
+							<p class="exp-title">Intern</p>
+							<p class="exp-year">2010</p>
 						</li>
 						<li>
-							<p>Intern</p>
+							<p class="exp-title">Intern</p>
+							<p class="exp-year">2010</p>
 						</li>
 						<li>
-							<p>Intern</p>
+							<p class="exp-title">Intern</p>
+							<p class="exp-year">2010</p>
 						</li>
 					</ul>
 					<ul>
 						<li>
-							<p>Intern</p>
+							<p class="exp-title">Intern</p>
+							<p class="exp-year">2010</p>
 						</li>
 						<li>
-							<p>Intern</p>
+							<p class="exp-title">Intern</p>
+							<p class="exp-year">2010</p>
 						</li>
 						<li>
-							<p>Intern</p>
+							<p class="exp-title">Intern</p>
+							<p class="exp-year">2010</p>
 						</li>
 					</ul>
 					<ul>
 						<li>
-							<p>Intern</p>
+							<p class="exp-title">Intern</p>
+							<p class="exp-year">2010</p>
 						</li>
 						<li>
-							<p>Intern</p>
+							<p class="exp-title">Intern</p>
+							<p class="exp-year">2010</p>
 						</li>
 						<li>
-							<p>Intern</p>
+							<p class="exp-title">Intern</p>
+							<p class="exp-year">2010</p>
 						</li>
 						<li>
-							<p>Intern</p>
+							<p class="exp-title">Intern</p>
+							<p class="exp-year">2010</p>
 						</li>
 					</ul>
 				</div>
@@ -387,9 +350,14 @@
 		</footer>
 		<script type="text/javascript"> 
 			$(window).load(function(){
+				//Event for header 
 				if($(document).scrollTop()>0){
 					$('.user').toggleClass('user-tiny');
 				}
+				$(window).on("scroll touchmove", function () {
+				    $('.user').toggleClass('user-tiny', $(document).scrollTop() > 0);
+				});
+				//Event for #work - click
 				$('#freelance .cross').click(function() {
 					$('#freelance .sub-section-content').fadeOut("slow");
 				});
@@ -398,7 +366,6 @@
 					var strTitle = $(this).children(".link-title").text();
 					var strDomain = $(this).children(".link-domain").text();
 					var strContent = $(this).children(".link-content").text();
-					//console.log(strTitle);
 					var $linkTitle = $('#freelance .sub-section-content .link-title');
 					$linkTitle.html(strTitle);
 					var $linkDomain = $('#freelance .sub-section-content .link-domain');
@@ -414,7 +381,6 @@
 					var strTitle = $(this).children(".link-title").text();
 					var strDomain = $(this).children(".link-domain").text();
 					var strContent = $(this).children(".link-content").text();
-					//console.log(strTitle);
 					var $linkTitle = $('#projects .sub-section-content .link-title');
 					$linkTitle.html(strTitle);
 					var $linkDomain = $('#projects .sub-section-content .link-domain');
@@ -422,8 +388,10 @@
 					var $linkContent = $('#projects .sub-section-content .link-content');
 					$linkContent.html(strContent);
 				});
-				$(window).on("scroll touchmove", function () {
-				    $('.user').toggleClass('user-tiny', $(document).scrollTop() > 0);
+				//Event for #experience - hover
+				$('#experience .section-content li').hover(function() {
+					$(this).children('.exp-title').fadeOut(100);
+					$(this).children('exp-year').fadeIn(200);
 				});
 			}); 
 		</script>
