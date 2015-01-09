@@ -389,10 +389,15 @@
 					$linkContent.html(strContent);
 				});
 				//Event for #experience - hover
-				$('#experience .section-content li').hover(function() {
-					$(this).children('.exp-title').fadeOut(100);
-					$(this).children('exp-year').fadeIn(200);
-				});
+				$('#experience .section-content li').hover(
+					function() {
+						$(this).children('.exp-title').fadeOut("fast");
+						$(this).children('exp-year').fadeIn("slow");
+					}, 
+					function() {
+						$(this).children('.exp-title').fadeIn("slow");
+						$(this).children('exp-year').fadeIn("fast");
+					});
 			}); 
 		</script>
 	</body>
