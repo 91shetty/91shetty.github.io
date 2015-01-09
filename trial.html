@@ -104,7 +104,7 @@
 				box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
 			}
 
-			#experience li .exp-title {
+			#experience li p {
 				margin-top: 50%;
 				transform: translate(0,-50%);
 				-webkit-transform: translate(0,-50%);
@@ -393,14 +393,15 @@
 				$('#experience .section-content li').hover(
 					function() {
 						$(this).css("background","#fff");
-						$(this).children('.exp-title').fadeOut("fast");
-						$(this).children('.exp-year').fadeIn("fast");
+						$(this).children('.exp-title').toggle();
+						$(this).children('.exp-year').toggle();
 					}, 
 					function() {
 						$(this).css("background","#f2f2f2");
-						$(this).children('.exp-title').fadeIn("fast");
-						$(this).children('.exp-year').fadeOut("fast");
-					});
+						// $(this).children('.exp-title').fadeIn("fast");
+						// $(this).children('.exp-year').fadeOut("fast");
+					}
+				);
 			}); 
 		</script>
 	</body>
