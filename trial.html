@@ -393,13 +393,13 @@
 				$('#experience .section-content li').hover(
 					function() {
 						$(this).css("background","#fff");
-						$(this).children('.exp-title').toggle();
-						$(this).children('.exp-year').toggle();
+						$(this).children('.exp-title').hide();
+						$(this).children('.exp-year').show();
 					}, 
 					function() {
 						$(this).css("background","#f2f2f2");
-						$(this).children('.exp-title').toggle();
-						$(this).children('.exp-year').toggle();
+						$(this).children('.exp-title').show();
+						$(this).children('.exp-year').hide();
 				);
 			}); 
 		</script>
