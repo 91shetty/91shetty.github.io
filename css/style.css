@@ -337,7 +337,7 @@ header {
 
 #work .sub-section-links {
 	display: table-cell;
-	width: 720px;
+	/*width: 720px;*/
 	vertical-align: middle;
 	height: 569px;
 }
