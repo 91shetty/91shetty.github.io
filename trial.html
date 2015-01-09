@@ -398,9 +398,8 @@
 					}, 
 					function() {
 						$(this).css("background","#f2f2f2");
-						// $(this).children('.exp-title').fadeIn("fast");
-						// $(this).children('.exp-year').fadeOut("fast");
-					}
+						$(this).children('.exp-title').toggle();
+						$(this).children('.exp-year').toggle();
 				);
 			}); 
 		</script>
