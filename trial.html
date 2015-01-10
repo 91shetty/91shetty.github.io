@@ -423,10 +423,10 @@
 			$(window).load(function(){
 				//Event for header 
 				if($(document).scrollTop()>0){
-					$('.user').toggleClass('user-tiny');
+					$('header').toggleClass('user-tiny');
 				}
 				$(window).on("scroll touchmove", function () {
-				    $('.user').toggleClass('user-tiny', $(document).scrollTop() > 0);
+				    $('header').toggleClass('user-tiny', $(document).scrollTop() > 0);
 				});
 				//Event for #work - click
 				$('#freelance .cross').click(function() {
