@@ -35,7 +35,7 @@
 				margin: 10px;
 				padding: 20px;
 				background: #f2f2f2;
-				border: 10px solid #fff;
+				border: 2px solid #fff;
 				color: #939393;
 				border-radius: 2px;
 				box-shadow: 0 2px 1px rgba(170, 170, 170, 0.25);
@@ -111,7 +111,7 @@
 				-moz-transform: translate(0%,-50%);
 			}
 
-			#experience li .exp-year {
+			#experience li .exp-year, #experience li .exp-desc {
 				display: none;
 			}
 
@@ -263,50 +263,61 @@
 						<li>
 							<p class="exp-title">Intern</p>
 							<p class="exp-year">2010</p>
+							<p class="exp-desc">Somethhing</p>
 						</li>
 						<li>
 							<p class="exp-title">Intern</p>
 							<p class="exp-year">2010</p>
+							<p class="exp-desc">Somethhing</p>
 						</li>
 						<li>
 							<p class="exp-title">Intern</p>
 							<p class="exp-year">2010</p>
+							<p class="exp-desc">Somethhing</p>
 						</li>
 						<li>
 							<p class="exp-title">Intern</p>
 							<p class="exp-year">2010</p>
-						</li>
-					</ul>
-					<ul>
-						<li>
-							<p class="exp-title">Intern</p>
-							<p class="exp-year">2010</p>
-						</li>
-						<li>
-							<p class="exp-title">Intern</p>
-							<p class="exp-year">2010</p>
-						</li>
-						<li>
-							<p class="exp-title">Intern</p>
-							<p class="exp-year">2010</p>
+							<p class="exp-desc">Somethhing</p>
 						</li>
 					</ul>
 					<ul>
 						<li>
 							<p class="exp-title">Intern</p>
 							<p class="exp-year">2010</p>
+							<p class="exp-desc">Somethhing</p>
 						</li>
 						<li>
 							<p class="exp-title">Intern</p>
 							<p class="exp-year">2010</p>
+							<p class="exp-desc">Somethhing</p>
 						</li>
 						<li>
 							<p class="exp-title">Intern</p>
 							<p class="exp-year">2010</p>
+							<p class="exp-desc">Somethhing</p>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<p class="exp-title">Intern</p>
+							<p class="exp-year">2010</p>
+							<p class="exp-desc">Somethhing</p>
 						</li>
 						<li>
 							<p class="exp-title">Intern</p>
 							<p class="exp-year">2010</p>
+							<p class="exp-desc">Somethhing</p>
+						</li>
+						<li>
+							<p class="exp-title">Intern</p>
+							<p class="exp-year">2010</p>
+							<p class="exp-desc">Somethhing</p>
+						</li>
+						<li>
+							<p class="exp-title">Intern</p>
+							<p class="exp-year">2010</p>
+							<p class="exp-desc">Somethhing</p>
 						</li>
 					</ul>
 				</div>
@@ -395,11 +406,13 @@
 						$(this).css("background","#fff");
 						$(this).children('.exp-title').hide();
 						$(this).children('.exp-year').show();
+						$(this).children('.exp-desc').show();
 					}, 
 					function() {
 						$(this).css("background","#f2f2f2");
 						$(this).children('.exp-title').show();
 						$(this).children('.exp-year').hide();
+						$(this).children('.exp-desc').hide();
 					}
 				);
 			}); 
