@@ -115,6 +115,9 @@
 				display: none;
 			}
 
+			#experience li .exp-desc {
+				opacity: 0;
+			}
 		</style>
 	</head>
 	<body>
@@ -406,13 +409,13 @@
 						$(this).css("background","#fff");
 						$(this).children('.exp-title').hide();
 						$(this).children('.exp-year').show();
-						//$(this).children('.exp-desc').show();
+						$(this).children('.exp-desc').css("opacity","1");
 					}, 
 					function() {
 						$(this).css("background","#f2f2f2");
 						$(this).children('.exp-title').show();
 						$(this).children('.exp-year').hide();
-						//$(this).children('.exp-desc').hide();
+						$(this).children('.exp-desc').css("opacity","0");
 					}
 				);
 			}); 
