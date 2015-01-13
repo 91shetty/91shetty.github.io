@@ -357,7 +357,7 @@ header {
 	cursor: pointer;
 }
 
-#work .sub-section-links li .link-domain {
+#work .sub-section-links li .link-domain,  #work .sub-section-content .link-domain{
 	font-size: 0.8em;
 	line-height: 16px;
 	text-align: left;
