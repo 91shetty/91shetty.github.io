@@ -392,7 +392,7 @@ header {
 }
 
 #work .sub-section-content .link-domain{
-	/*font-size: 0.8em;*/
+	font-size: 0.8em;
 	font-style: italic;
 	opacity: 0.7;
 }
@@ -632,6 +632,10 @@ footer .color-scheme .circle {
 
 	#work .sub-section-links li .link-domain {
 		display: none;
+	}
+
+	#work .sub-section-content .link-domain {
+		font-size: 1em;
 	}
 }
 
