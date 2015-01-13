@@ -357,22 +357,13 @@ header {
 	cursor: pointer;
 }
 
-#work .sub-section-links li .link-domain,  #work .sub-section-content .link-domain{
+#work .sub-section-links li .link-domain {
 	font-size: 0.8em;
 	line-height: 16px;
 	text-align: left;
 	margin: 10px 0 0 0;
 	font-style: italic;
 	opacity: 0.7;
-}
-
-#work .sub-section-links li .link-content {
-	display: none;
-}
-
-#work .sub-section-content .link-title, #work .sub-section-content .link-domain, #work .sub-section-content .link-content {
-	width: 85%;
-	margin: 10px auto;
 }
 
 #work .sub-section-content {
@@ -389,6 +380,21 @@ header {
 	-moz-transform: translate(-50%,-50%);
 	display: none;
 	overflow-y: auto;
+}
+
+#work .sub-section-links li .link-content {
+	display: none;
+}
+
+#work .sub-section-content .link-title, #work .sub-section-content .link-domain, #work .sub-section-content .link-content {
+	width: 85%;
+	margin: 10px auto;
+}
+
+#work .sub-section-content .link-domain{
+	font-size: 0.8em;
+	font-style: italic;
+	opacity: 0.7;
 }
 
 #work .sub-section-content .cross {
