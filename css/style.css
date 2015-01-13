@@ -27,6 +27,14 @@ ul {
 	padding-left: 0px;
 }
 
+figure {
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
+
 .italics {
 	font-style: italic;
 }
@@ -38,6 +46,7 @@ ul {
 /* Header */
 
 header {
+	display: none;
 	position: fixed;
 	background: #000;
 	font-weight: bold;
@@ -54,33 +63,19 @@ header {
 	transition: top 0.3s ease;
 }
 
-.user {
-	width: 100%;
-	line-height: 4em;
-	color: #e6e6e6;
-	-moz-transition: top 0.3s ease;
-	-webkit-transition: top 0.3s ease;
-}
-
 .user-tiny {
-	line-height: 2em;
-	transition: top 0.5s ease;
-	-webkit-transition: top 0.5s ease;
-	-moz-transition: top 0.5s ease;
+	display: block;
 }
 
-.user img {
-	vertical-align: middle;
-	border-radius: 50%;
-	margin-right: 0.5em;
-	background: #e6e6e6;
+.user-tiny a {
+	color: #e6e6e6;
 }
 
 /* Content */
 
 .main-content {
 	position: relative;
-	padding-top: 4em;
+	padding: 0;
 }
 
 .section-block {
@@ -337,41 +332,54 @@ header {
 
 #work .sub-section-links {
 	display: table-cell;
-	/*width: 720px;*/
 	vertical-align: middle;
 	height: 569px;
 }
 
-#work .sub-section-links .link p {
-	margin: 0 auto;
-	font-size: 1.2em;
-	line-height: 1.4em;
-	padding-bottom: 10px;
-}
-
-#work .sub-section-links .link .link-title {
+#work .sub-section-links ul li {
+	display: inline-block;
+	height: 100px;
+	width: 220px;
+	margin: 10px;
+	padding: 20px;
+	background: #f2f2f2;
+	border: 2px solid #fff;
+	color: #939393;
+	box-shadow: 0 2px 1px rgba(170, 170, 170, 0.25);
 	cursor: pointer;
 }
 
-#work .sub-section-content .link-domain {
-	font-size: 0.9em;
+#work .sub-section-links li .link-title {
+	font-size: 1em;
+	line-height: 20px;
+	text-align: left;
+	margin: 10px 0 0 0;
+	cursor: pointer;
+}
+
+#work .sub-section-content li .link-domain {
+	font-size: 0.8em;
+	line-height: 16px;
+	text-align: left;
+	margin: 10px 0 0 0;
 	font-style: italic;
 	opacity: 0.7;
 }
 
-#work .sub-section-links .link .link-content {
+#work .sub-section-links li .link-content {
 	display: none;
 }
 
-#work .sub-section-links hr {
-	border-style: dashed;
-	width: 300px;
+#work .sub-section-content .link-title, #work .sub-section-content .link-domain, #work .sub-section-content .link-content {
+	width: 85%;
+	margin: 10px auto;
 }
 
 #work .sub-section-content {
 	position: absolute;
-	height: 400px;
-	width: 400px;
+	width: 85%;
+	height: 85%;
+	z-index: 60;
 	background: #f2f2f2;
 	color: #939393;
 	top: 50%;
@@ -381,16 +389,6 @@ header {
 	-moz-transform: translate(-50%,-50%);
 	display: none;
 	overflow-y: auto;
-}
-
-#work .sub-section-content .link-domain, #work .sub-section-content .link-title, #work .sub-section-content .link-content {
-	width: 300px;
-	margin: 10px auto;
-}
-
-#work .sub-section-content .link-content {
-	width: 350px;
-	margin: 10px auto;
 }
 
 #work .sub-section-content .cross {
@@ -472,31 +470,41 @@ header {
 	color: #333;
 }
 
-#experience .circle-container .row {
-	padding-bottom: 20px;
+#experience ul {
+	padding-bottom: 40px;
 }
 
-#experience .circle-container .row-content {
-	display: inline-table;
-}
-
-#experience .row-content .circle {
+#experience ul li{
+	display: inline-block;
 	width: 80px;
 	height: 80px;
 	background: #f2f2f2;
 	border-radius: 50%;
-	margin: 0 50px 0px 50px;
+	margin: 0 20px 0px 20px;
 	box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
 }
 
-#experience .row-content p {
-	margin: 0 auto;
+#experience ul figure {
+	display: inline-block;
+	vertical-align: top;
+	transform: translate(0,100%);
+	-webkit-transform: translate(0,100%);
+	-moz-transform: translate(0%,100%);
 }
 
-#experience .circle-container {
-	width: 900px;
-	margin: auto;
-	padding-top: 20px;
+#experience li p {
+	margin-top: 50%;
+	transform: translate(0,-50%);
+	-webkit-transform: translate(0,-50%);
+	-moz-transform: translate(0%,-50%);
+}
+
+#experience li .exp-year {
+	display: none;
+}
+
+#experience li .exp-desc {
+	opacity: 0;
 }
 
 #experience:after {
@@ -597,6 +605,28 @@ footer .color-scheme .circle {
 
 .color-scheme #circle5 {
 	background: #fff;
+}
+
+/* Media Queries */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+	#work .sub-section-links ul li {
+		display: inline-block;
+		padding: 0;
+		height: 40px;
+		font-size: 1.2em;
+		line-height: 40px;
+		margin: 10px;
+		width: 60%;
+	}
+
+	#work .sub-section-links li .link-title {
+		text-align: center;
+	}
+
+	#work .sub-section-links li .link-domain {
+		display: none;
+	}
 }
 
 /* End of css */
