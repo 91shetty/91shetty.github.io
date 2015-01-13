@@ -274,8 +274,9 @@
 				<li id="circle5" class="circle"></li>
 			</ul>
 		</footer>
-		<script type="text/javascript"> 
-			//Event for header 
+		<script type="text/javascript">
+			$(window).load(function(){
+				//Event for header 
 				if($(document).scrollTop()>0){
 					$('header').toggleClass('user-tiny');
 				}
@@ -328,7 +329,7 @@
 						$(this).children('.exp-desc').css("opacity","0");
 					}
 				);
-			}); 
+			});
 		</script>
 	</body>
 </html>
