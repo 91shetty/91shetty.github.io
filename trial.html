@@ -320,13 +320,13 @@
 				});
 				//Event for #about - hover 
 				$('#about .resume').hover(
-					{
+					function(){
 						$(this).children('a').show();
 					},
-					{
+					function(){
 						$(this).children('a').hide();
 					}
-				)
+				);
 				//Event for #work - click
 				$('#freelance .cross').click(function() {
 					$('#freelance .sub-section-content').fadeOut("slow");
