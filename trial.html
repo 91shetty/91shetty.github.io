@@ -10,6 +10,21 @@
 		<link href='http://fonts.googleapis.com/css?family=Fira+Sans:400,500,700,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<style type="text/css">
+			#about .resume {
+				padding-top: 20px;
+			}
+
+			#about .resume p {
+				padding: 0;
+			}
+
+			#about .resume a {
+				display: none;
+				color: #f2f2f2;
+				opacity: 0.7;
+				font-size: 1em;
+				font-style: italic;
+			}
 
 			#contact ul li {
 				display: inline-block;
@@ -303,6 +318,15 @@
 				$(window).on("scroll touchmove", function () {
 				    $('header').toggleClass('user-tiny', $(document).scrollTop() > 0);
 				});
+				//Event for #about - hover 
+				$('#about .resume').hover(
+					{
+						$(this).children('a').show();
+					},
+					{
+						$(this).children('a').hide();
+					}
+				)
 				//Event for #work - click
 				$('#freelance .cross').click(function() {
 					$('#freelance .sub-section-content').fadeOut("slow");
