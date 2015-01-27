@@ -62,7 +62,13 @@
 		<script type="text/javascript">
 			$(window).load(function() {
 				$("#draggable").draggable({
-					containment: ".container"
+					containment: ".container",
+					start: function(){
+						$("#draggable .subcontent").addClass("hide");
+					},
+					end: function(){
+
+					}
 				});
 				$("#draggable .header").click(function(){
 					$("#draggable .subcontent").toggleClass("hide");
