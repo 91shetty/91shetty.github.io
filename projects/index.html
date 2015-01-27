@@ -23,9 +23,19 @@
 				width: 200px;
 				height: 120px;
 				margin: 10px 10px 10px 10px;
-				padding: 20px 0 0 10px;
-				background: #bababa;
+				padding: 2em;
+				/*background: #bababa;*/
 				border: 2px solid #f2f2f2;
+				background: linear-gradient(
+				    white, white 50%, #333 50%, #333
+				);
+				background-size: 100% 202%;
+				transition: all 0.2s ease;
+				animation: down-bump 0.4s ease;
+			}
+			li:hover {
+				background-position: 100% 100%;
+				animation: up-bump 0.4s ease;
 			}
 			li a{
 				color: #000;
@@ -37,7 +47,16 @@
 				font-size: 0.8em;
 				opacity: 0.7;
 				font-style: italic;
-
+			}
+			@keyframes up-bump {
+			  0% { padding-top: 2em; }
+			  50% { padding-top: 1.5em; }
+			  100% { padding-top: 2em; }
+			}
+			@keyframes down-bump {
+			  0% { padding-top: 2em; }
+			  50% { padding-top: 2.5em; }
+			  100% { padding-top: 2em; }
 			}
 		</style>
 	</head>
