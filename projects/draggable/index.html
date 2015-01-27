@@ -61,10 +61,19 @@
 		</div>
 		<script type="text/javascript">
 			$(window).load(function() {
+				var flag = 0;
 				$("#draggable").draggable({
 					containment: ".container",
 					drag: function(){
+						if($("#draggable>ul>[class=subcontent"){
+							flag = 1;
+						}
 						$("#draggable .subcontent").addClass("hide");
+					},
+					stop: function(){
+						if(flag == 1){
+							$("#draggable .subcontent").removeClass("hide");
+						}
 					}
 				});
 				$("#draggable .header").click(function(){
