@@ -42,17 +42,20 @@
 				height: 40px;
 				width: 100%;
 			}
+			#draggable ul .hide{
+				display: none;
+			}
 		</style>
 	</head>
 	<body>
 		<div class="container">
 			<div id="draggable">
 				<ul>
-					<li style="background:#fff;"></li>
-					<li style="background:#f2f2f2;"></li>
-					<li style="background:#bababa;"></li>
-					<li style="background:#333;"></li>
-					<li style="background:#939393;"></li>
+					<li class="header" style="background:#fff;"></li>
+					<li class="subcontent hide" style="background:#f2f2f2;"></li>
+					<li class="subcontent hide" style="background:#bababa;"></li>
+					<li class="subcontent hide" style="background:#333;"></li>
+					<li class="subcontent hide" style="background:#939393;"></li>
 				</ul>
 			</div>
 		</div>
@@ -60,6 +63,9 @@
 			$(window).load(function() {
 				$("#draggable").draggable({
 					containment: ".container"
+				});
+				$("#draggable .header").click(function(){
+					$("#draggable .subcontent").toggleClass("hide");
 				});
 			});
 		</script>
