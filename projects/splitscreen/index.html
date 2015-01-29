@@ -11,10 +11,6 @@
 				padding: 0;
 				border: 0;
 			}
-			.content {
-				width: 100%;
-				height: 100%;
-			}
 			header {
 				width: 100%;
 				height: 20px;
@@ -22,9 +18,18 @@
 				position: fixed;
 				background: #000;
 			}
+			.content {
+				width: 100%;
+				height: 100%;
+			}
 			.split-screen {
 				width: 100%;
 				height: 100%;
+			}
+			.screen {
+				height: 100%;
+				float: left;
+				cursor: pointer;
 			}
 			.extend {
 				width: 80%;
@@ -32,12 +37,11 @@
 			.compress {
 				width: 20%;
 			}
-			.left-pane {
+			.normal {
 				width: 50%;
-				height: 100%;
-				background: #f2f2f2;
-				float: left;
-				cursor: pointer;
+			}
+			.left-pane {
+				background: #f2f2f2;				
 			}
 			.center {
 				position: absolute;
@@ -50,11 +54,7 @@
 				-webkit-transform: translate(-50%,-50%);
 			}
 			.right-pane {
-				width: 50%;
-				height: 100%;
 				background: #333;
-				float: left;
-				cursor: pointer;
 			}
 			footer {
 				width: 100%;
@@ -70,21 +70,25 @@
 		<header></header>
 		<div class="content">
 			<div class="split-screen">
-				<div class="left-pane"></div>
+				<div class="screen normal left-pane"></div>
 				<div class="center"></div>
-				<div class="right-pane"></div>
+				<div class="screen normal right-pane"></div>
 			</div>
 		</div>
 		<footer></footer>
 		<script type="text/javascript">
 			$(window).load(function(){
 				$(".left-pane").click(function(){
+					$(".left-pane").toggleClass("normal");
 					$(".left-pane").toggleClass("extend");
+					$(".right-pane").toggleClass("normal");
 					$(".right-pane").toggleClass("compress");
 				});
 				$(".right-pane").click(function(){
+					$(".right-pane").toggleClass("normal");
 					$(".right-pane").toggleClass("extend");
 					$(".left-pane").toggleClass("compress");
+					$(".left-pane").toggleClass("normal");
 				});
 			});
 		</script>
