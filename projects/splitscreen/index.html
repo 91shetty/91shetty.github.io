@@ -85,10 +85,12 @@
 						$(".right-pane").toggleClass("extend");
 						$(".right-pane").toggleClass("compress");
 					}
-					$(".left-pane").toggleClass("normal");
-					$(".left-pane").toggleClass("extend");
-					$(".right-pane").toggleClass("normal");
-					$(".right-pane").toggleClass("compress");
+					else{
+						$(".left-pane").toggleClass("normal");
+						$(".left-pane").toggleClass("extend");
+						$(".right-pane").toggleClass("normal");
+						$(".right-pane").toggleClass("compress");
+					}
 
 				});
 				$(".right-pane").click(function(){
