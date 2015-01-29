@@ -27,6 +27,15 @@
 				background: #f2f2f2;
 				float: left;
 			}
+			.center {
+				position: absolute;
+				width: 100px;
+				height: 100px
+				border-radius:50%;
+				background: #fff;
+				top: 50%;
+				-webkit-transform: translate(0,-50%);
+			}
 			.right-pane {
 				width: 50%;
 				height: 100%;
@@ -47,6 +56,7 @@
 		<header></header>
 		<div class="content">
 			<div class="left-pane"></div>
+			<div class="center"></div>
 			<div class="right-pane"></div>
 		</div>
 		<footer></footer>
