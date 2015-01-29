@@ -26,11 +26,18 @@
 				width: 100%;
 				height: 100%;
 			}
+			.extend {
+				width: 80%;
+			}
+			.compress {
+				width: 20%;
+			}
 			.left-pane {
 				width: 50%;
 				height: 100%;
 				background: #f2f2f2;
 				float: left;
+				cursor: pointer;
 			}
 			.center {
 				position: absolute;
@@ -47,6 +54,7 @@
 				height: 100%;
 				background: #333;
 				float: left;
+				cursor: pointer;
 			}
 			footer {
 				width: 100%;
@@ -68,5 +76,17 @@
 			</div>
 		</div>
 		<footer></footer>
+		<script type="text/javascript">
+			$(window).load(function(){
+				$(".left-pane").click(function(){
+					this.toggleClass("extend");
+					$(".right-pane").toggleClass("compress");
+				});
+				$(".right-pane").click(function(){
+					this.toggleClass("extend");
+					$(".left-pane").toggleClass("compress");
+				});
+			});
+		</script>
 	</body>
 </html>
