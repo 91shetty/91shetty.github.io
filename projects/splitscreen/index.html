@@ -79,16 +79,31 @@
 		<script type="text/javascript">
 			$(window).load(function(){
 				$(".left-pane").click(function(){
+					if($("left-pane").hasClass("compress")){
+						$(".left-pane").toggleClass("extend");
+						$(".left-pane").toggleClass("compress");
+						$(".right-pane").toggleClass("extend");
+						$(".right-pane").toggleClass("compress");
+					}
 					$(".left-pane").toggleClass("normal");
 					$(".left-pane").toggleClass("extend");
 					$(".right-pane").toggleClass("normal");
 					$(".right-pane").toggleClass("compress");
+
 				});
 				$(".right-pane").click(function(){
-					$(".right-pane").toggleClass("normal");
-					$(".right-pane").toggleClass("extend");
-					$(".left-pane").toggleClass("compress");
-					$(".left-pane").toggleClass("normal");
+					if($("right-pane").hasClass("compress")){
+						$(".right-pane").toggleClass("extend");
+						$(".right-pane").toggleClass("compress");
+						$(".left-pane").toggleClass("extend");
+						$(".left-pane").toggleClass("compress");
+					}
+					else{
+						$(".right-pane").toggleClass("normal");
+						$(".right-pane").toggleClass("extend");
+						$(".left-pane").toggleClass("compress");
+						$(".left-pane").toggleClass("normal");
+					}
 				});
 			});
 		</script>
