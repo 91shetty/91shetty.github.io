@@ -80,10 +80,10 @@
 			$(window).load(function(){
 				$(".left-pane").click(function(){
 					if($("left-pane").hasClass("compress")){
-						$(".left-pane").toggleClass("extend");
-						$(".left-pane").toggleClass("compress");
-						$(".right-pane").toggleClass("extend");
-						$(".right-pane").toggleClass("compress");
+						$(".left-pane").addClass("extend");
+						$(".left-pane").removeClass("compress");
+						$(".right-pane").addClass("extend");
+						$(".right-pane").removeClass("compress");
 					}
 					else{
 						$(".left-pane").toggleClass("normal");
@@ -95,10 +95,10 @@
 				});
 				$(".right-pane").click(function(){
 					if($("right-pane").hasClass("compress")){
-						$(".right-pane").toggleClass("extend");
-						$(".right-pane").toggleClass("compress");
-						$(".left-pane").toggleClass("extend");
-						$(".left-pane").toggleClass("compress");
+						$(".right-pane").addClass("extend");
+						$(".right-pane").removeClass("compress");
+						$(".left-pane").addClass("extend");
+						$(".left-pane").removeClass("compress");
 					}
 					else{
 						$(".right-pane").toggleClass("normal");
