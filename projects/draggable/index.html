@@ -69,7 +69,8 @@
 		<script type="text/javascript">
 			$(window).load(function() {
 				var flag = 0;
-				var contentHeight
+				var contentHeight = $(".container").height();
+				$("content").height(contentHeight - 200);
 				$("#draggable").draggable({
 					containment:".content",
 					drag: function(){
