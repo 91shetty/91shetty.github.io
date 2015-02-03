@@ -17,7 +17,7 @@
 			}
 			.pane {
 				height: 100%;
-				width: 50%;
+				width: calc(50% - 2px);
 				float: left;
 			}
 			.left-pane {
@@ -26,12 +26,18 @@
 			.right-pane {
 				opacity: 0.8;
 			}
+			.line {
+				height: 100%;
+				width: 4px;
+				background: #fff;
+			}
 		</style>
 	</head>
 	<body>
 		<header></header>
 		<div class="container">
 			<section class="pane left-pane"></section>
+			<section class="line"></section>
 			<section class="pane right-pane"></section>
 		</div>
 		<footer></footer>
