@@ -22,6 +22,7 @@
 				height: 100%;
 				width: calc(50% - 2px);
 				float: left;
+				text-align: center;
 			}
 			.left-pane {
 				opacity: 0.7;
@@ -87,7 +88,12 @@
 		<script type="text/javascript">
 			$(window).load(function() {
 				$(".left-pane #draggable").draggable({
-					containment: ".left-pane"
+					containment: ".left-pane",
+					stop:function(){
+						$(this).css("width","40px");
+						$(this).css("height","40px");
+					}
+
 				});
 				$(".right-pane #draggable").draggable({
 					containment: ".right-pane"
