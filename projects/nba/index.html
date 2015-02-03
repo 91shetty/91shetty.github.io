@@ -13,7 +13,7 @@
 			.container {
 				width: 100%;
 				height: 100%;
-				background: #f2f2f2;
+				background: #b6b6b6;
 			}
 			.pane {
 				height: 100%;
@@ -30,15 +30,34 @@
 				height: 100%;
 				width: 4px;
 				background: #fff;
+				float: left;
+			}
+			.character {
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background: #f2f2f2;
 			}
 		</style>
 	</head>
 	<body>
 		<header></header>
 		<div class="container">
-			<section class="pane left-pane"></section>
+			<section class="pane left-pane">
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+			</section>
 			<section class="line"></section>
-			<section class="pane right-pane"></section>
+			<section class="pane right-pane">
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+			</section>
 		</div>
 		<footer></footer>
 	</body>
