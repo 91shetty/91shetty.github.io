@@ -23,12 +23,6 @@
 				height: 100%;
 				background: #b258a3;
 			}
-			.content {
-				width: 100%;
-				background: #b258a3;
-				opacity: 0.7;
-				height: calc(100%-200px);
-			}
 			#draggable{
 				width: 50px;
 				/*height: 200px;*/
@@ -55,25 +49,21 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="content">
-				<div id="draggable">
-					<ul>
-						<li class="header" style="background:#fff;"></li>
-						<li class="subcontent hide" style="background:#f2f2f2;"></li>
-						<li class="subcontent hide" style="background:#bababa;"></li>
-						<li class="subcontent hide" style="background:#333;"></li>
-						<li class="subcontent hide" style="background:#939393;"></li>
-					</ul>
-				</div>
+			<div id="draggable">
+				<ul>
+					<li class="header" style="background:#fff;"></li>
+					<li class="subcontent hide" style="background:#f2f2f2;"></li>
+					<li class="subcontent hide" style="background:#bababa;"></li>
+					<li class="subcontent hide" style="background:#333;"></li>
+					<li class="subcontent hide" style="background:#939393;"></li>
+				</ul>
 			</div>
 		</div>
 		<script type="text/javascript">
 			$(window).load(function() {
 				var flag = 0;
-				var contentHeight = $(".container").height();
-				$("content").height(contentHeight - 200);
 				$("#draggable").draggable({
-					containment:".content",
+					containment: ".container",
 					drag: function(){
 						if($("#draggable>ul>[class=subcontent]")){
 							flag = 1;
