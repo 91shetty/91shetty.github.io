@@ -2,6 +2,9 @@
 <html>
 	<head>
 		<title>All Stars 2015 | NBA</title>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 		<style type="text/css">
 			html, body {
 				height: 100%;
@@ -49,6 +52,16 @@
 				<div id="draggable" class="character"></div>
 				<div id="draggable" class="character"></div>
 				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
 			</section>
 			<section class="line"></section>
 			<section class="pane right-pane">
@@ -57,8 +70,28 @@
 				<div id="draggable" class="character"></div>
 				<div id="draggable" class="character"></div>
 				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
+				<div id="draggable" class="character"></div>
 			</section>
 		</div>
 		<footer></footer>
+		<script type="text/javascript">
+			$(window).load(function() {
+				$("left-pane #draggable").draggable({
+					containment: ".left-pane"
+				});
+				$("right-pane #draggable").draggable({
+					containment: ".right-pane"
+				});
+			};
+		</script>
 	</body>
 </html>
