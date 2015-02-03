@@ -89,6 +89,10 @@
 			$(window).load(function() {
 				$(".left-pane #draggable").draggable({
 					containment: ".left-pane",
+					start:function(){
+						$(this).css("width","15px");
+						$(this).css("height","15px");
+					},
 					stop:function(){
 						$(this).css("width","40px");
 						$(this).css("height","40px");
@@ -96,7 +100,15 @@
 
 				});
 				$(".right-pane #draggable").draggable({
-					containment: ".right-pane"
+					containment: ".right-pane",
+					start:function(){
+						$(this).css("width","15px");
+						$(this).css("height","15px");
+					},
+					stop:function(){
+						$(this).css("width","40px");
+						$(this).css("height","40px");
+					}
 				});
 			});
 		</script>
