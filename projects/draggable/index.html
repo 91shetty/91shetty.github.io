@@ -49,21 +49,24 @@
 	</head>
 	<body>
 		<div class="container">
-			<div id="draggable">
-				<ul>
-					<li class="header" style="background:#fff;"></li>
-					<li class="subcontent hide" style="background:#f2f2f2;"></li>
-					<li class="subcontent hide" style="background:#bababa;"></li>
-					<li class="subcontent hide" style="background:#333;"></li>
-					<li class="subcontent hide" style="background:#939393;"></li>
-				</ul>
+			<div class="content">
+				<div id="draggable">
+					<ul>
+						<li class="header" style="background:#fff;"></li>
+						<li class="subcontent hide" style="background:#f2f2f2;"></li>
+						<li class="subcontent hide" style="background:#bababa;"></li>
+						<li class="subcontent hide" style="background:#333;"></li>
+						<li class="subcontent hide" style="background:#939393;"></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<script type="text/javascript">
 			$(window).load(function() {
 				var flag = 0;
+
 				$("#draggable").draggable({
-					containment: ".container",
+					containment:".content",
 					drag: function(){
 						if($("#draggable>ul>[class=subcontent]")){
 							flag = 1;
