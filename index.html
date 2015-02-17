@@ -50,9 +50,11 @@
 					</div>
 					<div class="resume">
 						<p>Resume</p>
-						<a href="Resume_Vishwas_Shetty.pdf" target="_blank">View</a>
-						<span class="separator"> | </span>
-						<a href="Resume_Vishwas_Shetty.pdf" download>Download</a>
+						<div class="viewDownload">
+							<a href="Resume_Vishwas_Shetty.pdf" target="_blank">View</a>
+							<span class="separator"> | </span>
+							<a href="Resume_Vishwas_Shetty.pdf" download>Download</a>
+						</div>
 					</div>
 				</div>	
 			</section>
@@ -292,10 +294,10 @@
 				//Event for #about - hover 
 				$('#about .resume').hover(
 					function(){
-						$(this).children('a').show();
+						$(this).children('.viewDownload').show();
 					},
 					function(){
-						$(this).children('a').hide();
+						$(this).children('.viewDownload').hide();
 					}
 				);
 				//Event for #work - click
