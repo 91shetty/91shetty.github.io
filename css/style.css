@@ -377,9 +377,9 @@ header {
 }
 #work .sub-section-links ul li:hover {
 	z-index:1000;
-	box-shadow:rgba(0, 0, 0, 0.3) 0 16px 16px 0;
-	-webkit-box-shadow:rgba(0, 0, 0, 0.3) 0 16px 16px 0;
-	-moz-box-shadow:rgba(0, 0, 0, 0.3) 0 16px 16px 0;
+	box-shadow:rgba(0, 0, 0, 0.3) 0 6px 6px 0;
+	-webkit-box-shadow:rgba(0, 0, 0, 0.3) 0 6px 6px 0;
+	-moz-box-shadow:rgba(0, 0, 0, 0.3) 0 6px 6px 0;
 }
 
 #work .sub-section-links li .link-title {
