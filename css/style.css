@@ -40,6 +40,10 @@ p {
 }
 
 .bold {
+	font-weight: 500;
+}
+
+.bolder {
 	font-weight: 700;
 }
 
