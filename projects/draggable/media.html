@@ -39,6 +39,9 @@
 				height: 100%;
 
 			}
+			#draggable div .expand{
+				width: 100%;
+			}
 		</style>
 	</head>
 	<body>
@@ -63,6 +66,9 @@
 					// 		$("#draggable .subcontent").removeClass("hide");
 					// 	}
 					// }
+				});
+				$("#draggable div").click(function () {
+					$("#draggable").toggleClass("expand");
 				});
 			});
 		</script>
