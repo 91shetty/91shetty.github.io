@@ -55,10 +55,34 @@
 			#draggable ul .hide {
 				display: none;
 			}
+			.settings {
+				background: #ecf0f1;
+				width: 30px;
+				height: 30px;
+				z-index: 101;
+			}
+			.fullscreen {
+				background-color: rgba(255,255,255,.9);
+				height: 100%;
+				width: 100%;
+				z-index: 100;
+				opacity: 1;
+				-webkit-transition: opacity .15s linear;
+				display: none;
+			}
+			.show {
+				visibility: visible;
+			}
 		</style>
 	</head>
 	<body>
 		<div class="container">
+			<div class="settings">
+				
+			</div>
+			<div class="fullscreen">
+				
+			</div>
 			<div id="draggable">
 				<ul>
 					<li class="header"></li>
@@ -88,6 +112,9 @@
 				});
 				$("#draggable .header").click(function(){
 					$("#draggable .subcontent").toggleClass("hide");
+				});
+				$("settings").click(function(){
+					$("fullscreen").toggleClass("show");
 				});
 			});
 		</script>
