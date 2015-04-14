@@ -91,15 +91,12 @@
 			$(window).load(function() {
 				var flag = 2;
 				$(".btn").click(function() {
-
 					for(var i = 1; i<=6; i++) {
 						if(flag == i) {
-							var section = "#section" + flag;
-							$(section).toggleClass("hide");
-						}
-						else {
-							var section = "#section" + i;
-							$(section).toggleClass("hide");
+							var showSection = "#section" + flag;
+							var hideSection = "#section" + (flag - 1);
+							$(showSection).toggleClass("hide");
+							$(hideSection).toggleClass("hide");
 						}
 					}
 					if(flag == 6) {
