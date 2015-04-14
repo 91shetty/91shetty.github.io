@@ -32,6 +32,10 @@
 				top: 10px;
 				cursor: pointer;
 			}
+			.content {
+				width: 100%;
+				height: 100%;
+			}
 			section {
 				position: fixed;
 				top: 0;
@@ -72,30 +76,33 @@
 			<div class="btn">
 				
 			</div>
-			<section class="section-block" id="section1">
-				<p>Section 1</p>				
-			</section>
-			<section class="section-block hide" id="section2">
-				<p>Section 2</p>				
-			</section>
-			<section class="section-block hide" id="section3">
-				<p>Section 3</p>				
-			</section>
-			<section class="section-block hide" id="section4">
-				<p>Section 4</p>				
-			</section>
-			<section class="section-block hide" id="section5">
-				<p>Section 5</p>				
-			</section>
-			<section class="section-block hide" id="section6">
-				<p>Section 6</p>				
-			</section>
+			<div class="content">
+				<section class="section-block" id="section1">
+					<p>Section 1</p>				
+				</section>
+				<section class="section-block hide" id="section2">
+					<p>Section 2</p>				
+				</section>
+				<section class="section-block hide" id="section3">
+					<p>Section 3</p>				
+				</section>
+				<section class="section-block hide" id="section4">
+					<p>Section 4</p>				
+				</section>
+				<section class="section-block hide" id="section5">
+					<p>Section 5</p>				
+				</section>
+				<section class="section-block hide" id="section6">
+					<p>Section 6</p>				
+				</section>
+			</div>
 		</div>
 		<script type="text/javascript">
 			$(window).load(function() {
 				var flag = 2;
 				$(".btn").click(function() {
-					for(var i = 1; i<=6; i++) {
+					var numOfSections = $(".section").length;
+					for(var i = 1; i<=numOfSections; i++) {
 						if(flag == i) {
 							var showSection = "#section" + flag;
 							var hideSection;	
