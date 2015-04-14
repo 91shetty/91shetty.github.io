@@ -56,7 +56,7 @@
 				background: #fff;
 			}
 			#section5 {
-				background: #f2f2f2;
+				background: #939393;
 			}
 			#section {
 				background: #bababa;
@@ -89,7 +89,21 @@
 		</div>
 		<script type="text/javascript">
 			$(window).load(function() {
-
+				var flag = 2;
+				$(".btn").click(function() {
+					for(var i = 1; i<=6; i++) {
+						if(flag == i) {
+							var section = "section" + flag;
+							$(section).toggleClass("hide");
+						}
+					}
+					if(flag == 6) {
+						flag = 1;
+					}
+					else {
+						flag++;
+					}	
+				});
 			});
 		</script>
 	</body>
