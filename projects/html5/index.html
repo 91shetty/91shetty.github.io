@@ -98,7 +98,13 @@
 					for(var i = 1; i<=6; i++) {
 						if(flag == i) {
 							var showSection = "#section" + flag;
-							var hideSection = "#section" + (flag - 1);
+							var hideSection;	
+							if(flag == 1) {
+								hideSection = "section6"
+							}
+							else {
+								hideSection = "#section" + (flag - 1);
+							}
 							$(showSection).toggleClass("hide");
 							$(hideSection).toggleClass("hide");
 						}
