@@ -52,7 +52,7 @@
 			#draggable li:last-child {
 				border-bottom: none;
 			}
-			#draggable ul .hide {
+			.hide {
 				display: none;
 			}
 			.settings {
@@ -73,9 +73,6 @@
 				opacity: 1;
 				-webkit-transition: opacity .15s linear;
 			}
-			.show {
-				visibility: visible;
-			}
 		</style>
 	</head>
 	<body>
@@ -83,7 +80,7 @@
 			<div class="settings">
 				
 			</div>
-			<div class="fullscreen" style="display:none;">
+			<div class="fullscreen hide" style="display:none;">
 				
 			</div>
 			<div id="draggable">
@@ -117,7 +114,7 @@
 					$("#draggable .subcontent").toggleClass("hide");
 				});
 				$(".settings").click(function(){
-					$(".fullscreen").toggleClass("show");
+					$(".fullscreen").toggleClass("hide");
 				});
 			});
 		</script>
