@@ -100,9 +100,9 @@
 		<script type="text/javascript">
 			$(window).load(function() {
 				var flag = 2;
+				var numOfSections = $(".section-block").length;
 				$(".btn").click(function() {
-					var numOfSections = $(".section-block").length;
-					for(var i = 1; i<=numOfSections; i++) {
+					for(var i = 1; i <= numOfSections; i++) {
 						if(flag == i) {
 							var showSection = "#section" + flag;
 							var hideSection;	
