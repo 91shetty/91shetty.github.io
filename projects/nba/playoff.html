@@ -23,13 +23,18 @@
 				height: 100%;
 			}
 			section {
-				width: 12.5%;
 				height: 100%;
 				border-right: solid 1px #dedede;
 				float: left;
 			}
 			section:last-child {
 				border-right: none;
+			}
+			.inner {
+				width: 10%;
+			}
+			.outer {
+				width: 15%;
 			}
 			.round1 {
 
@@ -66,7 +71,7 @@
 	</head>
 	<body>
 		<div class="container">
-			<section class="round1">
+			<section class="round1 outer">
 				<div class="versus">
 					<div class="team teamA">
 						
@@ -100,14 +105,14 @@
 					</div>
 				</div>
 			</section>
-			<section class="round2"></section>
-			<section class="confFinals"></section>
-			<section class="finals"></section>
-			<section class="westFinalist"></section>
-			<section class="eastFinalist"></section>
-			<section class="round2"></section>
+			<section class="round2 inner"></section>
+			<section class="confFinals inner"></section>
+			<section class="finals inner"></section>
+			<section class="westFinalist inner"></section>
+			<section class="eastFinalist inner"></section>
+			<section class="round2 inner"></section>
 			<section class="round1">
-				<div class="versus">
+				<div class="versus outer">
 					<div class="team teamA">
 						
 					</div>
