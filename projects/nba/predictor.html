@@ -41,20 +41,39 @@
 				height: 25%;
 
 			}
+			.close {
+				width: 40px;
+				height: 40px;
+				background: #f2f2f2;
+				position: fixed;
+				top: 10px;
+				right: 10px;
+				z-index: 2;
+			}
 		</style>
 	</head>
 	<body>
 		<div class="container">
-			<section class="hide"></section>
-			<section class="hide"></section>
-			<section class="hide"></section>
-			<section class="hide"></section>
+			<section class="roundOne hide"><div class="close">x</div></section>
+			<section class="roundTwo hide"><div class="close">x</div></section>
+			<section class="confFinals hide"><div class="close">x</div></section>
+			<section class="nbaFinals hide"><div class="close">x</div></section>
 			<div class="slider">
-				<div class="slide"><p>Round 1</p></div>
-				<div class="slide"><p>Round 2</p></div>
-				<div class="slide"><p>Conference Finals</p></div>
-				<div class="slide"><p>Finals</p></div>
+				<div class="slide roundOne"><p>Round 1</p></div>
+				<div class="slide roundTwo"><p>Round 2</p></div>
+				<div class="slide confFinals"><p>Conference Finals</p></div>
+				<div class="slide nbaFinals"><p>Finals</p></div>
 			</div>
 		</div>
+		<script type="text/javascript">
+			$(window).load(function() {
+				$(".slide .roundOne").click(function(){
+					$("section .roundOne").removeClass("hide");
+				});
+				$("section .roundOne .close").click(function(){
+					$("section .roundOne").addClass("hide");
+				});
+			};
+		</script>
 	</body>
 </html>
