@@ -136,6 +136,9 @@
 					<div class="versus">
 						<div class="team teamA">
 							<p>GSW</p>
+							<p class="teamName hide">Golden State Warriors</p>
+							<p class="rankWL hide">1 ( 67 - 15 )</p>
+							<p class="streak hide">W(H)</p>
 						</div>
 						<div class="score">
 							<p>1 - 0</p>
@@ -304,13 +307,21 @@
 				</div>
 			</section>
 			<div class="info hide">
-				
+				<p class="teamName"></p>
+				<p class="rankWL"></p>
+				<p class="streak"></p>
 			</div>
 		</div>
 		<script type="text/javascript">
 			$(window).load(function() {
 				$(".round1 .versus .team").hover(
 					function() {
+						var teamName = $(this).find(".teamName").text();
+						var rankWL = $(this).find(".rankWL").text();
+						var steak = $(this).find(".streak").text();
+						$(".info .teamName").html(teamName);
+						$(".info .rankWL").html(rankWL);
+						$(".info .streak").html(streak);
 						$(".info").removeClass("hide")
 					},
 					function() {
