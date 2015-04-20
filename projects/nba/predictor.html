@@ -67,11 +67,30 @@
 		</div>
 		<script type="text/javascript">
 			$(window).load(function() {
+				//slide click event
 				$(".slide.roundOne").click(function(){
 					$("section.roundOne").removeClass("hide");
 				});
 				$("section.roundOne .close").click(function(){
 					$("section.roundOne").addClass("hide");
+				});
+				$(".slide.roundTwo").click(function(){
+					$("section.roundTwo").removeClass("hide");
+				});
+				$("section.roundTwo .close").click(function(){
+					$("section.roundTwo").addClass("hide");
+				});
+				$(".slide.confFinals").click(function(){
+					$("section.confFinals").removeClass("hide");
+				});
+				$("section.confFinals .close").click(function(){
+					$("section.confFinals").addClass("hide");
+				});
+				$(".slide.nbaFinals").click(function(){
+					$("section.nbaFinals").removeClass("hide");
+				});
+				$("section.nbaFinals .close").click(function(){
+					$("section.nbaFinals").addClass("hide");
 				});
 			});
 		</script>
