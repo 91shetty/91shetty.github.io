@@ -67,11 +67,11 @@
 		</div>
 		<script type="text/javascript">
 			$(window).load(function() {
-				$(".slide .roundOne").click(function(){
+				$(".slide.roundOne").click(function(){
 					$("section.roundOne").removeClass("hide");
 					console.log("clicked");
 				});
-				$("section .roundOne .close").click(function(){
+				$("section.roundOne .close").click(function(){
 					$("section .roundOne").addClass("hide");
 					console.log("close");
 				});
