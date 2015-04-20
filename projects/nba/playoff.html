@@ -318,7 +318,10 @@
 					function() {
 						var teamName = $(this).find(".teamName").text();
 						var rankWL = $(this).find(".rankWL").text();
-						var steak = $(this).find(".streak").text();
+						var streak = $(this).find(".streak").text();
+						console.log(teamName);
+						console.log(rankWL);
+						console.log(streak);
 						$(".info .teamName").html(teamName);
 						$(".info .rankWL").html(rankWL);
 						$(".info .streak").html(streak);
