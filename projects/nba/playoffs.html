@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>NBA 2015 Playoffs | Projects | Vishwas Shetty</title>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<style type="text/css">
+			* {
+			  	margin: 0;
+			  	padding: 0;
+			  	border: none;
+			}
+			html, body {
+				height: 100%;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				border: 0;
+				font-family: 'Roboto Slab', serif;
+			}
+			.container {
+				background: #E4E1E8;
+				width: 100%;
+				height: 100%;
+			}
+			.container figure {
+				position: fixed;
+				left: 50%;
+				transform: translateX(-50%);
+				-webkit-transform: translateX(-50%);
+				z-index: -1;
+				opacity: 0.3;
+			}
+			section {
+				height: 100%;
+				/*border-right: solid 1px #dedede;*/
+				float: left;
+			}
+			section:last-child {
+				/*border-right: none;*/
+			}
+			.content {
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+				-webkit-transform: translateY(-50%);
+			}
+			.inner {
+				width: 14%;
+			}
+			.outer {
+				width: 15%;
+			}
+			.round1 {
+
+			}
+			.round2 {
+
+			}
+			.confFinals {
+
+			}
+			.finals {
+
+			}
+			.versus {
+				margin: 25px 0 25px 0px;
+				width: 100%;
+
+			}
+			.versus:first-child {
+				margin-top: 0px;
+			}
+			.versus:last-child {
+				margin-bottom: 0px;
+			}
+			.team {
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				margin: 0 auto;
+				text-align: center;
+				box-shadow: 0px 2px 5px #888888;
+			}
+			.team p {
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+				-webkit-transform: translateY(-50%);
+				/*width: 50%;*/
+				margin: 0 auto;
+				font-size: 20px;
+				font-weight: bold;
+				color: #fff;
+				letter-spacing: 1px;
+			}
+			.teamA {
+				margin-bottom: 10px;
+				background: #3663BF;
+			}
+			.teamB {
+				margin-top: 10px;
+				background: #8C0303;
+			}
+			.score {
+				line-height: 10px;
+  				text-align: center;
+			}
+			.score p {
+				font-weight: bold;
+			}
+			.info {
+				position: fixed;
+				height: 200px;
+				width: 200px;
+				left: 50%;
+				-webkit-transform:translateX(-50%);
+				transform:translateX(-50%);
+				bottom: 0px;
+				background: #fff;
+				border-radius: 2px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<figure>
+				<img src="images/Playoffs.jpg" height="100%" width="100%">
+			</figure>
+			<section class="round1 outer">
+				<div class="content">
+					<div class="versus">
+						<div class="team teamA">
+							<p>GSW</p>
+						</div>
+						<div class="score">
+							<p>1 - 0</p>
+						</div>
+						<div class="team teamB">
+							<p>NOP</p>
+						</div>
+					</div>
+					<div class="versus">
+						<div class="team teamA">
+							<p>HOU</p>
+						</div>
+						<div class="score">
+							<p>1 - 0</p>
+						</div>
+						<div class="team teamB">
+							<p>DAL</p>
+						</div>
+					</div>
+					<div class="versus">
+						<div class="team teamA">
+							<p>LAC</p>
+						</div>
+						<div class="score">
+							<p>1 - 0</p>
+						</div>
+						<div class="team teamB">
+							<p>SAS</p>
+						</div>
+					</div>
+					<div class="versus">
+						<div class="team teamA">
+							<p>POR</p>
+						</div>
+						<div class="score">
+							<p>0 - 1</p>
+						</div>
+						<div class="team teamB">
+							<p>MEM</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="round2 inner">
+				<div class="content">
+					<div class="versus">
+						<div class="team teamA">
+							
+						</div>
+						<div class="team teamB">
+							
+						</div>
+					</div>
+					<div class="versus">
+						<div class="team teamA">
+							
+						</div>
+						<div class="team teamB">
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="confFinals inner">
+				<div class="content">
+					<div class="versus">
+						<div class="team teamA">
+							
+						</div>
+						<div class="team teamB">
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="finals inner">
+				<div class="content">
+					<div class="versus">
+						<div class="team teamA">
+							
+						</div>
+						<div class="team teamB">
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="confFinals inner">
+				<div class="content">
+					<div class="versus">
+						<div class="team teamA">
+							
+						</div>
+						<div class="team teamB">
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="round2 inner">
+				<div class="content">
+					<div class="versus">
+						<div class="team teamA">
+							
+						</div>
+						<div class="team teamB">
+							
+						</div>
+					</div>
+					<div class="versus">
+						<div class="team teamA">
+							
+						</div>
+						<div class="team teamB">
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="round1 outer">
+				<div class="content">
+					<div class="versus">
+						<div class="team teamA">
+							<p>ATL</p>
+						</div>
+						<div class="score">
+							<p>1 - 0</p>
+						</div>
+						<div class="team teamB">
+							<p>BKN</p>
+						</div>
+					</div>
+					<div class="versus">
+						<div class="team teamA">
+							<p>CLE</p>
+						</div>
+						<div class="score">
+							<p>1 - 0</p>
+						</div>
+						<div class="team teamB">
+							<p>BOS</p>
+						</div>
+					</div>
+					<div class="versus">
+						<div class="team teamA">
+							<p>CHI</p>
+						</div>
+						<div class="score">
+							<p>1 - 0</p>
+						</div>
+						<div class="team teamB">
+							<p>MIL</p>
+						</div>
+					</div>
+					<div class="versus">
+						<div class="team teamA">
+							<p>TOR</p>
+						</div>
+						<div class="score">
+							<p>0 - 1</p>
+						</div>
+						<div class="team teamB">
+							<p>WAS</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="info">
+				
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(window).load(function() {
+				// $(".round1 .versus .team").hover(
+				// 	function() {
+				// 		$(this).append($("<div class='info'></div>"));
+				// 	},
+				// 	function() {
+				// 		$(this).find(".info").remove();
+				// 	}
+				// );
+			});
+		</script>
+	</body>
+</html>
