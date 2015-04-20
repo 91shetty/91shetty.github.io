@@ -26,9 +26,9 @@
 				height: 100%;
 			}
 			header {
-				position: fixed;
+				position: relative;
 				width: 100%;
-				height: 75px;
+				height: 15%;
 				background: #00bcd4;
 				box-shadow: 0 2px 5px rgba(0,0,0,0.26);
 				color: #fff;
@@ -36,11 +36,13 @@
 				font-size: 24px;
 			}
 			header div {
-				line-height: 75px;
+				top: 50%;
+				-webkit-transform: translateY(50%);
+				transform: translateY(50%);
 			}
 			footer {
-				position: fixed;
-				height: 75px;
+				position: relative;
+				height: 15%;
 				width: 100%;
 				bottom: 0px;
 				background: #00bcd4;
@@ -52,13 +54,17 @@
 				height: 100%;
 				text-align: center;
 				float: left;
-				line-height: 75px;
+			}
+			footer section p {
+				top: 50%;
+				-webkit-transform: translateY(50%);
+				transform: translateY(50%);
 			}
 			.content {
 				position: relative;
-				top: 75px;
 				width: 100%;
-				height: 100%;
+				height: 70%;
+				background: #fff;
 			}
 			.content section {
 				width: 100%;
@@ -66,29 +72,6 @@
 			}
 			.hide {
 				display: none;
-			}
-			.content .cards {
-				width: 100%;
-				height: 100%;
-			}
-			.card {
-				/*width: 30%;
-				height: 30%;*/
-				margin: 10% 10% 10% 10%;
-				float: left;
-				background: #fff;
-				color: #6e6e6e;
-				box-shadow: 0 1px 3px rgba(0,0,0,0.4);
-
-			}
-			.close {
-				width: 40px;
-				height: 40px;
-				background: #f2f2f2;
-				position: fixed;
-				top: 10px;
-				right: 10px;
-				z-index: 2;
 			}
 		</style>
 	</head>
@@ -100,10 +83,10 @@
 				</div>
 			</header>
 			<div class="content">
-				<section class="roundOne hide"><div class="close">x</div></section>
-				<section class="roundTwo hide"><div class="close">x</div></section>
-				<section class="confFinals hide"><div class="close">x</div></section>
-				<section class="nbaFinals hide"><div class="close">x</div></section>
+				<section class="roundOne"></section>
+				<section class="roundTwo hide"></section>
+				<section class="confFinals hide"></section>
+				<section class="nbaFinals hide"></section>
 			</div>
 			<footer>
 				<section class="roundOne"><p>Round 1</p></section>
@@ -116,29 +99,29 @@
 		<script type="text/javascript">
 			$(window).load(function() {
 				//card click event
-				$(".card.roundOne").click(function(){
+				$("footer.roundOne").click(function(){
+					$("section.roundTwo").addClass("hide");
+					$("section.confFinals").addClass("hide");
+					$("section.nbaFinals").addClass("hide");
 					$("section.roundOne").removeClass("hide");
 				});
-				$("section.roundOne .close").click(function(){
+				$("footer.roundTwo").click(function(){
 					$("section.roundOne").addClass("hide");
-				});
-				$(".card.roundTwo").click(function(){
+					$("section.confFinals").addClass("hide");
+					$("section.nbaFinals").addClass("hide");
 					$("section.roundTwo").removeClass("hide");
 				});
-				$("section.roundTwo .close").click(function(){
+				$("footer.confFinals").click(function(){
+					$("section.roundOne").addClass("hide");
 					$("section.roundTwo").addClass("hide");
-				});
-				$(".card.confFinals").click(function(){
+					$("section.nbaFinals").addClass("hide");
 					$("section.confFinals").removeClass("hide");
 				});
-				$("section.confFinals .close").click(function(){
+				$("footer.nbaFinals").click(function(){
+					$("section.roundOne").addClass("hide");
+					$("section.roundTwo").addClass("hide");
 					$("section.confFinals").addClass("hide");
-				});
-				$(".card.nbaFinals").click(function(){
 					$("section.nbaFinals").removeClass("hide");
-				});
-				$("section.nbaFinals .close").click(function(){
-					$("section.nbaFinals").addClass("hide");
 				});
 			});
 		</script>
