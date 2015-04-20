@@ -21,24 +21,39 @@
 				font-family: 'Roboto Slab', serif;
 			}
 			.container {
-				background: #E4E1E8;
+				background: #f9f9f9;
 				width: 100%;
 				height: 100%;
 			}
-			section {
+			header {
+				position: relative;
+				width: 100%;
+				height: 20%;
+				background: #00bcd4;
+			}
+			.content {
+				position: relative;
+				width: 100%;
+				height: 80%;
+			}
+			.content section {
 				width: 100%;
 				height: 100%;
 			}
 			.hide {
 				display: none;
 			}
-			.slider {
+			.content .cards {
 				width: 100%;
 				height: 100%;
 			}
-			.slide {
-				width: 100%;
-				height: 25%;
+			.card {
+				width: 30%;
+				height: 30%;
+				margin: 10% 10% 10% 10%;
+				float: left;
+				background: #455a64;
+				box-shadow: 0 1px 3px rgba(0,0,0,0.4);
 
 			}
 			.close {
@@ -54,39 +69,46 @@
 	</head>
 	<body>
 		<div class="container">
-			<section class="roundOne hide"><div class="close">x</div></section>
-			<section class="roundTwo hide"><div class="close">x</div></section>
-			<section class="confFinals hide"><div class="close">x</div></section>
-			<section class="nbaFinals hide"><div class="close">x</div></section>
-			<div class="slider">
-				<div class="slide roundOne"><p>Round 1</p></div>
-				<div class="slide roundTwo"><p>Round 2</p></div>
-				<div class="slide confFinals"><p>Conference Finals</p></div>
-				<div class="slide nbaFinals"><p>Finals</p></div>
+			<header>
+				<div>
+					<h2> NBA Predictor </h2>
+				</div>
+			</header>
+			<div class="content">
+				<section class="roundOne hide"><div class="close">x</div></section>
+				<section class="roundTwo hide"><div class="close">x</div></section>
+				<section class="confFinals hide"><div class="close">x</div></section>
+				<section class="nbaFinals hide"><div class="close">x</div></section>
+				<div class="cards">
+					<div class="card roundOne"><p>Round 1</p></div>
+					<div class="card roundTwo"><p>Round 2</p></div>
+					<div class="card confFinals"><p>Conference Finals</p></div>
+					<div class="card nbaFinals"><p>Finals</p></div>
+				</div>
 			</div>
 		</div>
 		<script type="text/javascript">
 			$(window).load(function() {
-				//slide click event
-				$(".slide.roundOne").click(function(){
+				//card click event
+				$(".card.roundOne").click(function(){
 					$("section.roundOne").removeClass("hide");
 				});
 				$("section.roundOne .close").click(function(){
 					$("section.roundOne").addClass("hide");
 				});
-				$(".slide.roundTwo").click(function(){
+				$(".card.roundTwo").click(function(){
 					$("section.roundTwo").removeClass("hide");
 				});
 				$("section.roundTwo .close").click(function(){
 					$("section.roundTwo").addClass("hide");
 				});
-				$(".slide.confFinals").click(function(){
+				$(".card.confFinals").click(function(){
 					$("section.confFinals").removeClass("hide");
 				});
 				$("section.confFinals .close").click(function(){
 					$("section.confFinals").addClass("hide");
 				});
-				$(".slide.nbaFinals").click(function(){
+				$(".card.nbaFinals").click(function(){
 					$("section.nbaFinals").removeClass("hide");
 				});
 				$("section.nbaFinals .close").click(function(){
