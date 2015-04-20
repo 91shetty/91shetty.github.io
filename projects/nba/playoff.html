@@ -96,37 +96,6 @@
 				color: #fff;
 				letter-spacing: 1px;
 			}
-			.team .info {
-				width: 200px;
-				height: 200px;
-				border-radius: 5px;
-				box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
-				background: #fff;
-				position: relative;
-				/*top: -4px;
-				bottom: -4px;
-				right: -4px;
-				left: -4px;*/
-				z-index: 5;
-				-webkit-transform: scale(0.8);
-				transform: scale(0.8);
-				-webkit-transition: all .4s ease-out;
-				transition: all .4s ease-out;
-			}
-			.team .info:after {
-				content: '';
-			    position: absolute;
-			    left: 50%;
-			    top: 100%;
-			    width: 0;
-			    height: 0;
-			    transform: translateX(-50%);
-			    -webkit-transform: translateX(-50%);
-			    border-left: 10px solid transparent;
-			    border-right: 10px solid transparent;
-			    border-top: 10px solid #fff;
-			    clear: both;
-			}
 			.teamA {
 				margin-bottom: 10px;
 				background: #3663BF;
@@ -141,6 +110,17 @@
 			}
 			.score p {
 				font-weight: bold;
+			}
+			.info {
+				position: fixed;
+				height: 200px;
+				width: 200px;
+				left: 50%;
+				-webkit-transform:translateX(-50%);
+				transform:translateX(-50%);
+				bottom: 0px;
+				background: #fff;
+				border-radius: 2px;
 			}
 		</style>
 	</head>
@@ -321,6 +301,9 @@
 					</div>
 				</div>
 			</section>
+			<div class="info">
+				
+			</div>
 		</div>
 		<script type="text/javascript">
 			$(window).load(function() {
