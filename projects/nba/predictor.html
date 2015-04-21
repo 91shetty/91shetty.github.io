@@ -37,6 +37,7 @@
 				color: #fff;
 				text-align: center;
 				font-size: 24px;
+				z-index: 1;
 			}
 			header div {
 				line-height: 75px;
@@ -49,6 +50,7 @@
 				background: #00bcd4;
 				color: #fff;
 				font-size: 24px;
+				z-index: 1;
 			}
 			footer section {
 				width: 25%;
@@ -64,13 +66,9 @@
 			.content {
 				position: relative;
 				width: 100%;
-				height: 100%;
+				height: 100vh;
 				background: #fff;
-			}
-			.content .wrapper {
 				padding: 75px 0 75px 0;
-				width: 100%;
-				height: 100%;
 			}
 			.content .wrapper section {
 				width: 100%;
@@ -89,12 +87,10 @@
 				</div>
 			</header>
 			<div class="content">
-				<div class="wrapper">
-					<section class="roundOne"></section>
-					<section class="roundTwo hide"></section>
-					<section class="confFinals hide"></section>
-					<section class="nbaFinals hide"></section>
-				</div>
+				<section class="roundOne"></section>
+				<section class="roundTwo hide"></section>
+				<section class="confFinals hide"></section>
+				<section class="nbaFinals hide"></section>
 			</div>
 			<footer>
 				<section class="roundOne"><p>Round 1</p></section>
