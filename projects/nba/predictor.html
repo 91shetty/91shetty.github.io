@@ -36,7 +36,7 @@
 				box-shadow: 0 2px 5px rgba(0,0,0,0.26);
 				color: #fff;
 				text-align: center;
-				font-size: 24px;
+				font-size: 1.5em;
 				z-index: 1;
 			}
 			header div {
@@ -49,7 +49,7 @@
 				bottom: 0px;
 				background: #00bcd4;
 				color: #fff;
-				font-size: 24px;
+				font-size: 1.5em;
 				z-index: 1;
 			}
 			footer section {
@@ -85,7 +85,11 @@
 				</div>
 			</header>
 			<div class="content">
-				<section class="roundOne"></section>
+				<section class="roundOne">
+					<div></div>
+					<div></div>
+					<div>	</div>
+				</section>
 				<section class="roundTwo hide"></section>
 				<section class="confFinals hide"></section>
 				<section class="nbaFinals hide"></section>
@@ -101,29 +105,29 @@
 		<script type="text/javascript">
 			$(window).load(function() {
 				//card click event
-				$("footer.roundOne").click(function(){
-					$("section.roundTwo").addClass("hide");
-					$("section.confFinals").addClass("hide");
-					$("section.nbaFinals").addClass("hide");
-					$("section.roundOne").removeClass("hide");
+				$("footer .roundOne").click(function(){
+					$(".content section.roundTwo").addClass("hide");
+					$(".content section.confFinals").addClass("hide");
+					$(".content section.nbaFinals").addClass("hide");
+					$(".content section.roundOne").removeClass("hide");
 				});
-				$("footer.roundTwo").click(function(){
-					$("section.roundOne").addClass("hide");
-					$("section.confFinals").addClass("hide");
-					$("section.nbaFinals").addClass("hide");
-					$("section.roundTwo").removeClass("hide");
+				$("footer .roundTwo").click(function(){
+					$(".content section.roundOne").addClass("hide");
+					$(".content section.confFinals").addClass("hide");
+					$(".content section.nbaFinals").addClass("hide");
+					$(".content section.roundTwo").removeClass("hide");
 				});
-				$("footer.confFinals").click(function(){
-					$("section.roundOne").addClass("hide");
-					$("section.roundTwo").addClass("hide");
-					$("section.nbaFinals").addClass("hide");
-					$("section.confFinals").removeClass("hide");
+				$("footer .confFinals").click(function(){
+					$(".content section.roundOne").addClass("hide");
+					$(".content section.roundTwo").addClass("hide");
+					$(".content section.nbaFinals").addClass("hide");
+					$(".content section.confFinals").removeClass("hide");
 				});
-				$("footer.nbaFinals").click(function(){
-					$("section.roundOne").addClass("hide");
-					$("section.roundTwo").addClass("hide");
-					$("section.confFinals").addClass("hide");
-					$("section.nbaFinals").removeClass("hide");
+				$("footer .nbaFinals").click(function(){
+					$(".content section.roundOne").addClass("hide");
+					$(".content section.roundTwo").addClass("hide");
+					$(".content section.confFinals").addClass("hide");
+					$(".content section.nbaFinals").removeClass("hide");
 				});
 			});
 		</script>
