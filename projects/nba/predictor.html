@@ -3,9 +3,11 @@
 	<head>
 		<title>Playoffs Predictor</title>
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+		<link rel="stylesheet" type="text/css" href="animate.css">
 		<link href="http://fonts.googleapis.com/css?family=Fira+Sans:400,500,700,400italic,500italic,700italic" rel="stylesheet" type="text/css">
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
 		<style type="text/css">
 			* {
 			  	margin: 0;
@@ -26,9 +28,10 @@
 				height: 100%;
 			}
 			header {
-				position: relative;
+				position: fixed;
 				width: 100%;
-				height: 15%;
+				height: 75px;
+				top: 0px;
 				background: #00bcd4;
 				box-shadow: 0 2px 5px rgba(0,0,0,0.26);
 				color: #fff;
@@ -36,13 +39,11 @@
 				font-size: 24px;
 			}
 			header div {
-				top: 50%;
-				-webkit-transform: translateY(50%);
-				transform: translateY(50%);
+				line-height: 75px;
 			}
 			footer {
-				position: relative;
-				height: 15%;
+				position: fixed;
+				height: 75px;
 				width: 100%;
 				bottom: 0px;
 				background: #00bcd4;
@@ -63,10 +64,15 @@
 			.content {
 				position: relative;
 				width: 100%;
-				height: 70%;
+				height: 100%;
 				background: #fff;
 			}
-			.content section {
+			.content .wrapper {
+				padding: 75px 0 75px 0;
+				width: 100%;
+				height: 100%;
+			}
+			.content .wrapper section {
 				width: 100%;
 				height: 100%;
 			}
@@ -83,10 +89,12 @@
 				</div>
 			</header>
 			<div class="content">
-				<section class="roundOne"></section>
-				<section class="roundTwo hide"></section>
-				<section class="confFinals hide"></section>
-				<section class="nbaFinals hide"></section>
+				<div class="wrapper">
+					<section class="roundOne"></section>
+					<section class="roundTwo hide"></section>
+					<section class="confFinals hide"></section>
+					<section class="nbaFinals hide"></section>
+				</div>
 			</div>
 			<footer>
 				<section class="roundOne"><p>Round 1</p></section>
