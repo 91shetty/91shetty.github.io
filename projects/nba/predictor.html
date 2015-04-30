@@ -146,7 +146,7 @@
 				</div>
 			</header>
 			<div class="content">
-				<section class="roundOne active">
+				<section class="roundOne">
 					<div class="left west">
 						<div class="cards">
 							<div class="card">
@@ -226,7 +226,7 @@
 				<section class="nbaFinals hide"></section>
 			</div>
 			<footer>
-				<section class="roundOne"><p>Round 1</p></section>
+				<section class="roundOne active"><p>Round 1</p></section>
 				<section class="roundTwo"><p>Round 2</p></section>
 				<section class="confFinals"><p>Conference Finals</p></section>
 				<section class="nbaFinals"><p>Finals</p></section>
@@ -241,7 +241,7 @@
 					$(".content section.confFinals").addClass("hide");
 					$(".content section.nbaFinals").addClass("hide");
 					$(".content section.roundOne").removeClass("hide");
-					$(".content section.roundOne").addClass("active");
+					$("footer section.roundOne").addClass("active");
 				});
 				$("footer .roundTwo").click(function(){
 					$(".content section.roundOne").addClass("hide");
