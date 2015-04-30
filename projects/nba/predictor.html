@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Playoffs Predictor</title>
+		<title>NBA Playoffs Predictor</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
 		<link rel="stylesheet" type="text/css" href="animate.css">
@@ -133,6 +133,9 @@
 			.card .streak {
 				line-height: 40px;
 			}
+			.active {
+				border-bottom: 2px solid #f2f2f2;
+			}
 		</style>
 	</head>
 	<body>
@@ -143,7 +146,7 @@
 				</div>
 			</header>
 			<div class="content">
-				<section class="roundOne">
+				<section class="roundOne active">
 					<div class="left west">
 						<div class="cards">
 							<div class="card">
@@ -238,6 +241,7 @@
 					$(".content section.confFinals").addClass("hide");
 					$(".content section.nbaFinals").addClass("hide");
 					$(".content section.roundOne").removeClass("hide");
+					$(".content section.roundOne").addClass("active");
 				});
 				$("footer .roundTwo").click(function(){
 					$(".content section.roundOne").addClass("hide");
