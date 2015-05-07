@@ -392,6 +392,11 @@
 		</div>
 		<script type="text/javascript">
 			$(window).load(function() {
+				//onload events
+				$(".content section.roundOne").addClass("hide");
+				$(".content section.confFinals").addClass("hide");
+				$(".content section.nbaFinals").addClass("hide");
+
 				//card click event
 				$("footer .roundOne").click(function(){
 					$(".content section.roundTwo").addClass("hide");
