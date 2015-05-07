@@ -14,6 +14,46 @@
 			.roundTwo .cards{
 				width: 50%;
 			}
+			.flip-container {
+	perspective: 1000;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 160px;
+	height: 160px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
 		</style>
 	</head>
 	<body>
@@ -28,14 +68,23 @@
 					<div class="left west">
 						<div class="cards">
 							<div class="card">
-								<div class="versus">
-									<!-- <p>Game 1: <span></span> - </p>
-									<p>Game 2: <span></span> - </p>
-									<p>Game 3: <span></span> - </p>
-									<p>Game 4: <span></span> - </p> -->
-									<div class="teamIcons gsw"></div>
-									<div><p>vs</p></div>
-									<div class="teamIcons nop"></div>
+								<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front versus">
+											<div class="teamIcons gsw"></div>
+											<div><p>vs</p></div>
+											<div class="teamIcons nop"></div>
+										</div>
+										<div class="back">
+											<p>Game 1: <span class="win">100</span> - 86</p>
+											<p>Game 2: <span class="win">97</span> - 82</p>
+											<p>Game 3: 109 - <span class="win">115</span></p>
+											<p>Game 4: <span class="win">99</span> - 92</p>
+											<p>Game 5: <span class="win">99</span> - 93</p>
+											<p>Game 6: <span></span> - </p>
+											<p>Game 7: <span></span> - </p>
+										</div>
+									</div>
 								</div>
 								<div class="streak">
 									<p>(1) GSW vs (8) NOP</p>
