@@ -67,6 +67,9 @@ footer section p {
 .hide {
 	display: none;
 }
+.bold {
+	font-weight: bold;
+}
 .content section .left {
 	float: left;
 }
@@ -140,9 +143,6 @@ footer section p {
 }
 .active {
 	border-top: 2px solid #000;
-}
-.win {
-	font-weight: bold;
 }
 .teamIcons {
 	background-image: url("images/nbaTeamIcons.png");
