@@ -50,10 +50,22 @@
 			.back p{
 				font-size: 0.85em;
 			}
+			.overlay {
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+				background:background-color: rgba(0, 0, 0, 0.4);
+  				position: fixed;
+  				z-index: 99900;
+			}
 		</style>
 	</head>
 	<body>
 		<div class="container">
+			<div class="overlay hide"></div>
 			<header>
 				<div>
 					<p>NBA Playoffs - Predictor</p>
@@ -444,7 +456,8 @@
 					$("footer section.nbaFinals").removeClass("active");
 				});
 				$("footer .confFinals").click(function(){
-					$(".content .alertMsg").removeClass("hide");
+					$(".overlay").removeClass("hide");
+					$(".alertMsg").removeClass("hide");
 					// $(".content section.roundOne").addClass("hide");
 					// $(".content section.roundTwo").addClass("hide");
 					// $(".content section.nbaFinals").addClass("hide");
@@ -468,6 +481,7 @@
 					// $("footer section.roundTwo").removeClass("active");
 				});
 				$(".alertMsg .close").click(function(){
+					$(".overlay").addClass("hide");
 					$(".alertMsg").addClass("hide");
 				})
 			});
