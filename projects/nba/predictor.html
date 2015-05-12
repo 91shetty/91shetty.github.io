@@ -509,11 +509,11 @@
 				$("header .hamburger").click(function(){
 					if($(".moreInfo").css("display") == 'none') {
 						$(".moreInfo").addClass("animated fadeInRight");
-						$(".moreInfo").removeClass("fadeInLeft");
+						$(".moreInfo").removeClass("fadeOutLeft");
 					}
 					else {
 						$(".moreInfo").removeClass("fadeInRight");
-						$(".moreInfo").addClass("animated fadeInLeft");
+						$(".moreInfo").addClass("animated fadeOutLeft");
 						//console.log("==");
 					}
 					$(".moreInfo").toggleClass("hide");
