@@ -507,17 +507,16 @@
 					$(".alertMsg").addClass("hide");
 				});
 				$("header .hamburger").click(function(){
-					if($(".moreInfo").css("display") != 'none') {
-						$(".moreInfo").removeClass("fadeInRight");
-						$(".moreInfo").addClass("fadeInLeft");
-						console.log("!=");
-					}
-					else {
+					if($(".moreInfo").css("display") == 'none') {
 						$(".moreInfo").addClass("fadeInRight");
 						$(".moreInfo").removeClass("fadeInLeft");
-						console.log("==");
 					}
-					$(".moreInfo ").toggleClass("hide");
+					else {
+						$(".moreInfo").removeClass("fadeInRight");
+						$(".moreInfo").addClass("fadeInLeft");
+						//console.log("==");
+					}
+					$(".moreInfo").toggleClass("hide");
 				});
 			});
 		</script>
