@@ -27,7 +27,7 @@ header {
 	color: #fff;
 	text-align: center;
 	font-size: 1.5em;
-	z-index: 1;
+	z-index: 999;
 }
 header div {
 	line-height: 2.5em;
@@ -40,7 +40,7 @@ footer {
 	background: #00bcd4;
 	color: #fff;
 	font-size: 1.5em;
-	z-index: 1;
+	z-index: 999;
 }
 footer section {
 	width: 25%;
