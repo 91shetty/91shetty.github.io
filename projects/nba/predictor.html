@@ -509,13 +509,13 @@
 				$("header .hamburger").click(function(){
 					if($(".moreInfo").css("display") == 'none') {
 						$(".moreInfo").addClass("fadeInRight");
-						$(".moreInfo").removeClass("fadeOutLeft");
+						$(".moreInfo").removeClass("fadeOutRight");
 						$(".moreInfo").removeClass("hide");
 					}
 					else {
 						$(".moreInfo").removeClass("fadeInRight");
-						$(".moreInfo").addClass("fadeOutLeft");
-						$(".moreInfo").addClass("hide").delay(100);
+						$(".moreInfo").addClass("fadeOutRight");
+						$(".moreInfo").addClass("hide").delay(800);
 					}
 				});
 			});
