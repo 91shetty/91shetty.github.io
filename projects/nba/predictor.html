@@ -74,9 +74,9 @@
 				width: 25px;
 				height: 25px;
 				background: #f2f2f2;
-				/*position: absolute;
-				top: 14px;
-				right: 10px;*/
+				position: absolute;
+				right: 10px;
+				bottom: 20px;
 			}
 		</style>
 	</head>
@@ -505,8 +505,8 @@
 					$(".overlay").addClass("hide");
 					$(".alertMsg").addClass("hide");
 				});
-				$(".moreInfo .hamburger").click(function(){
-					$(".moreInfo .infoContent").toggleClass("hide");
+				$("header .hamburger").click(function(){
+					$(".moreInfo ").toggleClass("hide");
 				});
 			});
 		</script>
