@@ -510,10 +510,12 @@
 					if($(".moreInfo").css("display") != 'none') {
 						$(".moreInfo").removeClass("fadeInRight");
 						$(".moreInfo").addClass("fadeInLeft");
+						console.log("!=");
 					}
 					else {
 						$(".moreInfo").addClass("fadeInRight");
 						$(".moreInfo").removeClass("fadeInLeft");
+						console.log("==");
 					}
 					$(".moreInfo ").toggleClass("hide");
 				});
