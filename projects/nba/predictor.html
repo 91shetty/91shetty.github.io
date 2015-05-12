@@ -512,7 +512,10 @@
 				$(".alertMsg .close").click(function(){
 					$(".overlay").addClass("hide");
 					$(".alertMsg").addClass("hide");
-				})
+				});
+				$(".moreInfo .hamburger").click(function(){
+					$(".moreInfo .infoContent").toggleClass("hide");
+				});
 			});
 		</script>
 	</body>
