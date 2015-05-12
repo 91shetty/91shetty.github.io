@@ -63,27 +63,20 @@
   				z-index: 99900;
 			}
 			.moreInfo {
-				width: 30%;
-				height: 100%;
-				position: fixed;
-				top: 0;
+				width: 25%;
+				height: calc(100% - 4.5em);
+				padding: 2.5em 0 2em 0;
+				position: absolute;
 				right: 0;
+				z-index: 5;
 			}
 			.hamburger {
 				width: 25px;
 				height: 25px;
 				background: #f2f2f2;
-				position: absolute;
+				/*position: absolute;
 				top: 14px;
-				right: 10px;
-			}
-			.infoContent {
-				width: 100%;
-				height: calc(100% - 4.5em);
-				padding: 2.5em 0 2em 0;
-				bottom: 0;
-				right: 0;
-				z-index: 5;
+				right: 10px;*/
 			}
 		</style>
 	</head>
@@ -93,13 +86,11 @@
 			<header>
 				<div>
 					<p>NBA Playoffs - Predictor</p>
+					<div class="hamburger"></div>
 				</div>
 			</header>
-			<div class="moreInfo">
-				<div class="hamburger"></div>
-				<div class="infoContent hide">
-					
-				</div>
+			<div class="moreInfo hide">
+				
 			</div>
 			<div class="content">
 				<section class="roundOne hide">
