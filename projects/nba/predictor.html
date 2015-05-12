@@ -90,7 +90,7 @@
 					<div class="hamburger"></div>
 				</div>
 			</header>
-			<div class="moreInfo hide">
+			<div class="moreInfo animated hide">
 				
 			</div>
 			<div class="content">
@@ -508,15 +508,15 @@
 				});
 				$("header .hamburger").click(function(){
 					if($(".moreInfo").css("display") == 'none') {
-						$(".moreInfo").addClass("animated fadeInRight");
+						$(".moreInfo").addClass("fadeInRight");
 						$(".moreInfo").removeClass("fadeOutLeft");
+						$(".moreInfo").removeClass("hide");
 					}
 					else {
 						$(".moreInfo").removeClass("fadeInRight");
-						$(".moreInfo").addClass("animated fadeOutLeft");
-						//console.log("==");
+						$(".moreInfo").addClass("fadeOutLeft");
+						$(".moreInfo").addClass("hide").delay(100);
 					}
-					$(".moreInfo").toggleClass("hide");
 				});
 			});
 		</script>
