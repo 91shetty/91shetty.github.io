@@ -90,7 +90,7 @@
 					<div class="hamburger"></div>
 				</div>
 			</header>
-			<div class="moreInfo animated fadeInRight hide">
+			<div class="moreInfo hide">
 				
 			</div>
 			<div class="content">
@@ -509,10 +509,10 @@
 				$("header .hamburger").click(function(){
 					if($(".moreInfo").css("display") == 'none') {
 						$(".moreInfo").addClass("animated fadeInRight");
-						$(".moreInfo").removeClass("animated fadeInLeft");
+						$(".moreInfo").removeClass("fadeInLeft");
 					}
 					else {
-						$(".moreInfo").removeClass("animated fadeInRight");
+						$(".moreInfo").removeClass("fadeInRight");
 						$(".moreInfo").addClass("animated fadeInLeft");
 						//console.log("==");
 					}
