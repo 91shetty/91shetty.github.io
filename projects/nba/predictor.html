@@ -90,7 +90,7 @@
 					<div class="hamburger"></div>
 				</div>
 			</header>
-			<div class="moreInfo animated hide">
+			<div class="moreInfo fadeInRight animated hide">
 				
 			</div>
 			<div class="content">
@@ -313,14 +313,14 @@
 											<p>GM 2: HOU <span class="bold">115</span> - LAC 109</p>
 											<p>GM 3: LAC <span class="bold">124</span> - HOU 99</p>
 											<p>GM 4: LAC <span class="bold">128</span> - HOU 95</p>
-											<p>GM 5: @HOU <span class="bold">7:00AM,13/5</span></p>
+											<p>GM 5: HOU <span class="bold">124</span> - LAC 103</p>
 											<p>GM 6: <span class="bold">If required</span></p>
 											<p>GM 7: <span class="bold">If required</span></p>
 										</div>
 									</div>
 								</div>
 								<div class="streak">
-									<p>LAC leads series 3-1</p>
+									<p>LAC leads series 3-2</p>
 								</div>
 							</div>
 						</div>
@@ -341,14 +341,14 @@
 											<p>GM 2: CLE <span class="bold">106</span> - CHI 91</p>
 											<p>GM 3: CHI <span class="bold">99</span> - CLE 96</p>
 											<p>GM 4: CHI 84 - CLE <span class="bold">86</span></p>
-											<p>GM 5: @CLE <span class="bold">4:30AM,13/5</span></p>
+											<p>GM 5: CLE <span class="bold">106</span> - CHI 101</p>
 											<p>GM 6: @CHI <span class="bold">5:30AM,15/5</span></p>
 											<p>GM 7: <span class="bold">If required</span></p>
 										</div>
 									</div>
 								</div>
 								<div class="streak">
-									<p>Series Tied 2-2</p>
+									<p>CLE leads series 3-2</p>
 								</div>	
 							</div>
 							<div class="card">
@@ -364,14 +364,14 @@
 											<p>GM 2: ATL <span class="bold">106</span> - WAS 90</p>
 											<p>GM 3: WAS <span class="bold">103</span> - ATL 101</p>
 											<p>GM 4: WAS 101 - ATL <span class="bold">106</span></p>
-											<p>GM 5: @ATL <span class="bold">5:30AM,14/5</span></p>
+											<p>GM 5: ATL <span class="bold">82</span> - WAS 81</p>
 											<p>GM 6: <span class="bold">If required</span></p>
 											<p>GM 7: <span class="bold">If required</span></p>
 										</div>
 									</div>
 								</div>
 								<div class="streak">
-									<p>Series Tied 2-2</p>
+									<p>ATL leads series 3-2</p>
 								</div>
 							</div>
 						</div>
@@ -507,15 +507,14 @@
 					$(".alertMsg").addClass("hide");
 				});
 				$("header .hamburger").click(function(){
-					if($(".moreInfo").css("display") == 'none') {
+					if($(".moreInfo").hasClass("fadeInRight")) {
+						$(".moreInfo").removeClass("fadeInRight");
+						$(".moreInfo").addClass("fadeOutRight");
+					}
+					else {
 						$(".moreInfo").addClass("fadeInRight");
 						$(".moreInfo").removeClass("fadeOutRight");
 						$(".moreInfo").removeClass("hide");
-					}
-					else {
-						$(".moreInfo").removeClass("fadeInRight");
-						$(".moreInfo").addClass("fadeOutRight");
-						//$(".moreInfo").addClass("hide").delay(800);
 					}
 				});
 			});
