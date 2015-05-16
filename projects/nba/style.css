@@ -57,7 +57,7 @@ footer section p {
 	width: 100%;
 	height: calc(100% - 4.5em);
 	padding: 2.5em 0 2em 0;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 .content section {
 	width: 100%;
