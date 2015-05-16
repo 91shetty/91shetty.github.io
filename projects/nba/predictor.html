@@ -556,17 +556,15 @@
 					$("footer section.nbaFinals").removeClass("active");
 				});
 				$("footer .confFinals").click(function(){
-					$(".overlay").removeClass("hide");
-					$(".alertMsg").removeClass("hide");
-					// $(".content section.roundOne").addClass("hide");
-					// $(".content section.roundTwo").addClass("hide");
-					// $(".content section.nbaFinals").addClass("hide");
-					// $("footer section.confFinals").addClass("active");
+					$(".content section.roundOne").addClass("hide");
+					$(".content section.roundTwo").addClass("hide");
+					$(".content section.nbaFinals").addClass("hide");
+					$("footer section.confFinals").addClass("active");
 
-					// $(".content section.confFinals").removeClass("hide");
-					// $("footer section.roundOne").removeClass("active");
-					// $("footer section.roundTwo").removeClass("active");
-					// $("footer section.nbaFinals").removeClass("active");
+					$(".content section.confFinals").removeClass("hide");
+					$("footer section.roundOne").removeClass("active");
+					$("footer section.roundTwo").removeClass("active");
+					$("footer section.nbaFinals").removeClass("active");
 				});
 				$("footer .nbaFinals").click(function(){
 					$(".overlay").removeClass("hide");
