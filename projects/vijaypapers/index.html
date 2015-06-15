@@ -36,7 +36,13 @@
 		.hide {
 			display: none;
 		}
-		footer{
+		header {
+			top: 0;
+		}
+		footer {
+			bottom: 0;
+		}
+		.mast {
 			width: 100%;
 			z-index: 500;
 			font-size: 14px;
@@ -51,18 +57,17 @@
   			animation: fade-up-in 175ms;
   			padding: 0 10px 0 16px;
   			position: fixed;
-  bottom: 0;
-  height: 50px;
-  box-shadow: 0 0 1px rgba(0,0,0,0.15);
+			height: 50px;
+			box-shadow: 0 0 1px rgba(0,0,0,0.15);
 		}
 	</style>
 </head>
 <body>
 	<div class="container">
 		<div class="overlay hide"></div>
-		<header></header>
+		<header class="mast"></header>
 		<div class="content"></div>
-		<footer></footer>
+		<footer class="mast"></footer>
 	</div>
 </body>
 </html>
