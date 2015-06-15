@@ -42,10 +42,6 @@
 		footer {
 			bottom: 0;
 		}
-		footer p {
-			line-height: 50px;
-			color: rgba(0,0,0,0.6);
-		}
 		.mast {
 			width: 100%;
 			z-index: 500;
@@ -64,12 +60,27 @@
 			height: 50px;
 			box-shadow: 0 0 1px rgba(0,0,0,0.15);
 		}
+		.hamburger {
+				width: 25px;
+				height: 25px;
+				background: #f2f2f2;
+				position: absolute;
+				right: 10px;
+				bottom: 20px;
+		}
+		footer p {
+			line-height: 50px;
+			color: rgba(0,0,0,0.6);
+		}
 	</style>
 </head>
 <body>
 	<div class="container">
 		<div class="overlay hide"></div>
-		<header class="mast"></header>
+		<header class="mast">
+			<div class="hamburger"></div>
+		</header>
+		<div class="contact"></div>
 		<div class="content"></div>
 		<footer class="mast">
 			<p>&copy; 2015 Vijay Papers</p>
