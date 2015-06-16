@@ -109,6 +109,9 @@
 			margin: 0 0 10px;
 			line-height: 30px;	
 		}
+		textarea {
+			resize: none;
+		}
 	</style>
 </head>
 <body>
@@ -125,17 +128,19 @@
 						<label>Name *</label> <br/>
 						<input type="text" name="name" required />
 					</div>
-					<div class="form-row">
-						<label>Email *</label> <br/>
-						<input type="email" name="email" required />
-					</div>
-					<div class="form-row">
-						<label>Phone Number</label> <br/>
-						<input type="number" name="phone-number" />
+					<div class="form-row" style="float:">
+						<div style="float:left;">
+							<label>Email *</label> <br/>
+							<input type="email" name="email" required />
+						</div>
+						<div style="float:left;">
+							<label>Phone Number</label> <br/>
+							<input type="number" name="phone-number" />
+						</div>
 					</div>
 					<div class="form-row">
 						<label>Message *</label> <br/>
-						<textarea name="message" cols="20" rows="5"></textarea>
+						<textarea name="message" cols="40" rows="10"></textarea>
 					</div>
 					<div class="form-row">
 						<label>We need to verify you are human * <br/>How much is 3 + 5 ?</label> <br/>
