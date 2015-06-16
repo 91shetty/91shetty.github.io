@@ -100,7 +100,33 @@
 		<header class="mast">
 			<div class="hamburger"></div>
 		</header>
-		<div class="contact hide"></div>
+		<div class="contact hide">
+			<div class="details">
+				<h3>Contact</h3>
+				<form method="post">
+					<div class="form-row">
+						<label>Name *</label>
+						<input type="text" name="name" required />
+					</div>
+					<div class="form-row">
+						<label>Email *</label>
+						<input type="email" name="email" required />
+					</div>
+					<div class="form-row">
+						<label>Phone Number</label>
+						<input type="number" name="phone-number" />
+					</div>
+					<div class="form-row">
+						<label>Message *</label>
+						<textarea name="message" cols="20" rows="5"></textarea>
+					</div>
+					<div class="form-row">
+						<label>We need to verify you are human * <br/>How much is 3 + 5 ?</label>
+						<input type="number" name="human" />
+					</div>
+				</form>
+			</div>
+		</div>
 		<div class="content"></div>
 		<footer class="mast">
 			<p>&copy; 2015 | Vijay Papers | All rights reserved.</p>
