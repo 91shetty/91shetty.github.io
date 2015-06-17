@@ -4,6 +4,7 @@
 	<title>Vijay Papers</title>
 	<script src="http://code.jquery.com/jquery-1.10.2.js" aysnc></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js" aysnc></script>
+	<link rel="stylesheet" type="text/css" href="animate.css">
 	<style type="text/css">
 		/* Comman/Generic */
 		* {
@@ -205,10 +206,12 @@
 				if(clicked == 0){
 					clicked = 1;
 					$(".hamburger").css("background-color","#bababa");
+					$(".contact").addClass("animated fadeIn");
 				}
 				else {
 					clicked = 0;
 					$(".hamburger").css("background-color","#f2f2f2");
+					$(".contact").addClass("animated fadeOut");
 				}
 			});
 			$("header .mAbout").click(function(){
