@@ -82,7 +82,7 @@
 		}
 		.contact {
 			width: 25em;
-			height: 25em;
+			height: 31em;
 			margin: 4em 16px 0 0;
 			background: #bababa;
 			z-index: 99997;
@@ -140,7 +140,6 @@
 						<label>We need to verify you are human * <br/>How much is 3 + 5 ?</label>
 						<input type="number" name="human" />
 					</div>
-					
 				</form>
 			</div>
 		</div>
@@ -158,10 +157,12 @@
 				if(clicked == 0){
 					clicked = 1;
 					$(".hamburger").css("background-color","#bababa");
+					console.log("clicked");
 				}
 				else {
 					clicked = 0;
 					$(".hamburger").css("background-color","#f2f2f2");
+					console.log("unclicked");
 				}
 			});
 		});
