@@ -5,6 +5,7 @@
 	<script src="http://code.jquery.com/jquery-1.10.2.js" aysnc></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js" aysnc></script>
 	<style type="text/css">
+		/* Comman/Generic */
 		* {
 		  	margin: 0;
 		  	padding: 0;
@@ -19,24 +20,13 @@
 			font-family: 'Fira Sans', sans-serif;
 			background: #edecec;
 		}
+		.hide {
+			display: none;
+		}
 		.container {
 			/*background: #f9f9f9;*/
 			width: 100%;
 			height: 100%;
-		}
-		.overlay {
-				top: 0;
-				left: 0;
-				bottom: 0;
-				right: 0;
-				width: 100%;
-				height: 100%;
-				background-color: rgba(0, 0, 0, 0.4);
-  				position: fixed;
-  				z-index: 99990;
-		}
-		.hide {
-			display: none;
 		}
 		.mast {
 			width: 100%;
@@ -54,6 +44,7 @@
   			padding: 0 16px 0 16px;
 			box-shadow: 0 0 1px rgba(0,0,0,0.15);
 		}
+
 		/* Header */
 		header {
 			top: 0;
@@ -83,6 +74,7 @@
 			  width: 200px;
 			  background-color: red;
 			  float: left;
+			  margin-right: 20px;
 		}
 		.menu {
 			position: relative;
@@ -92,12 +84,13 @@
 			float: left;
 			color: #000;
 			font-size: 16px;
-			padding: 0 20px 0 20px;
+			padding: 0 40px 0 40px;
 			cursor: pointer;
 		}
 		.menu span:hover {
-			color: #e4352c
+			color: #e4352c;
 		}
+
 		/* Footer */	
 		footer {
 			bottom: 0;
@@ -157,7 +150,6 @@
 </head>
 <body>
 	<div class="container">
-		<!--<div class="overlay hide"></div>-->
 		<header class="mast">
 			<div class="logo"></div>
 			<div class="menu">
@@ -206,7 +198,6 @@
 		$(window).load(function() {
 			var clicked = 0;
 			$(".hamburger").click(function(){
-				//$(".overlay").toggleClass("hide");
 				$(".contact").toggleClass("hide");
 				if(clicked == 0){
 					clicked = 1;
