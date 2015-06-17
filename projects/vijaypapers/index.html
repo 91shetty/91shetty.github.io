@@ -38,17 +38,6 @@
 		.hide {
 			display: none;
 		}
-		header {
-			top: 0;
-			height: 4em;
-			z-index: 99990;
-			position: fixed;
-		}
-		footer {
-			bottom: 0;
-			height: 3em;
-			position: relative;
-		}
 		.mast {
 			width: 100%;
 			z-index: 500;
@@ -64,6 +53,13 @@
   			animation: fade-up-in 175ms;
   			padding: 0 16px 0 16px;
 			box-shadow: 0 0 1px rgba(0,0,0,0.15);
+		}
+		/* Header */
+		header {
+			top: 0;
+			height: 4em;
+			z-index: 99990;
+			position: fixed;
 		}
 		.hamburger {
 			width: 25px;
@@ -81,7 +77,26 @@
 		.hamburger:hover {
 			background: #bababa;
 		}
-		
+		.menu {
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			-webkit-transform: translateY(-50%);
+			-moz-transform: translateY(-50%);
+		}
+		.menu span {
+			float: left;
+			color: #000;
+		}
+		.menu span:hover {
+			color: #e4352c
+		}
+		/* Footer */	
+		footer {
+			bottom: 0;
+			height: 3em;
+			position: relative;
+		}
 		footer p {
 			line-height: 3em;
 			color: rgba(0,0,0,0.6);
@@ -137,6 +152,10 @@
 	<div class="container">
 		<!--<div class="overlay hide"></div>-->
 		<header class="mast">
+			<div class="menu">
+				<span>About</span>
+				<span>Products</span>
+			</div>
 			<div class="hamburger"></div>
 		</header>
 		<div class="contact hide">
