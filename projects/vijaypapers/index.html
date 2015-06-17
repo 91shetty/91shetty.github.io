@@ -216,14 +216,14 @@
 			$("header .mAbout").click(function(){
 				$(window).scrollTop($(".content section.about").offset().top);
 				if($("menu .mProducts").hasClass("active")){
-					$("menu .mProducts").toggleClass("active");
+					$("menu .mProducts").removeClass("active");
 				}
 				$("menu .mAbout").addClass("active");
 			});
 			$("header .mProducts").click(function(){
 				$(window).scrollTop($(".content section.products").offset().top);
 				if($("menu .mAbout").hasClass("active")){
-					$("menu .mAbout").toggleClass("active");
+					$("menu .mAbout").removeClass("active");
 				}
 				$("menu .mProducts").addClass("active");
 			});
