@@ -162,7 +162,7 @@
 			</div>
 			<div class="hamburger"></div>
 		</header>
-		<div class="contact hide">
+		<div class="contact animated hide">
 			<!-- <div class="details">
 				<h3>Contact</h3>
 				<form method="post">
@@ -206,12 +206,14 @@
 				if(clicked == 0){
 					clicked = 1;
 					$(".hamburger").css("background-color","#bababa");
-					$(".contact").addClass("animated fadeIn");
+					$(".contact").addClass("fadeIn");
+					$(".contact").removeClass("fadeOut");
 				}
 				else {
 					clicked = 0;
 					$(".hamburger").css("background-color","#f2f2f2");
-					$(".contact").addClass("animated fadeOut");
+					$(".contact").addClass("fadeOut");
+					$(".contact").removeClass("fadeIn");
 				}
 			});
 			$("header .mAbout").click(function(){
