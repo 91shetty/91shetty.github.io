@@ -47,6 +47,9 @@
 		a {
 			text-decoration: none;
 		}
+		.active {
+			color: #e4352c;
+		}
 		/* Header */
 		header {
 			top: 0;
@@ -81,10 +84,10 @@
 		.menu {
 			position: relative;
 			line-height: 4em;
+			color: #000;
 		}
 		.menu span {
 			float: left;
-			color: #000;
 			font-size: 16px;
 			padding: 0 40px 0 40px;
 			cursor: pointer;
@@ -155,7 +158,7 @@
 		<header class="mast">
 			<div class="logo"></div>
 			<div class="menu">
-				<span class="mAbout">About</span>
+				<span class="mAbout active">About</span>
 				<span class="mProducts">Products</span>
 			</div>
 			<div class="hamburger"></div>
@@ -212,11 +215,17 @@
 			});
 			$("header .mAbout").click(function(){
 				$(window).scrollTop($(".content section.about").offset().top);
-				console.log("click menu about");
+				if($("menu .mProducts").hasClass("active")){
+					$("menu .mProducts").toggleClass("active");
+				}
+				$("menu .mAbout").addClass("active");
 			});
 			$("header .mProducts").click(function(){
 				$(window).scrollTop($(".content section.products").offset().top);
-				console.log("click menu products");
+				if($("menu .mAbout").hasClass("active")){
+					$("menu .mAbout").toggleClass("active");
+				}
+				$("menu .mProducts").addClass("active");
 			});
 		});
 	</script>
