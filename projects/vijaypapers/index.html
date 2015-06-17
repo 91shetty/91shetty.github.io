@@ -153,8 +153,8 @@
 		<header class="mast">
 			<div class="logo"></div>
 			<div class="menu">
-				<span>About</span>
-				<span>Products</span>
+				<span class="mAbout">About</span>
+				<span class="mProducts">Products</span>
 			</div>
 			<div class="hamburger"></div>
 		</header>
@@ -207,6 +207,14 @@
 					clicked = 0;
 					$(".hamburger").css("background-color","#f2f2f2");
 				}
+			});
+			$("header .mAbout").click(function(){
+				$(window).scrollTop($(".content section .about").offset().top);
+				console.log("click menu about");
+			});
+			$("header .mProducts").click(function(){
+				$(window).scrollTop($(".content section .products").offset().top);
+				console.log("click menu products");
 			});
 		});
 	</script>
