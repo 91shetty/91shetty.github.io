@@ -218,7 +218,9 @@
 				}
 			});
 			$("header .mAbout").click(function(){
-				$(window).scrollTop($(".content section.about").offset().top);
+				$('html,body').animate({
+					scrollTop: $(".content section.about").offset().top},
+					1000);
 				if($(".menu .mProducts").hasClass("active")){
 					$(".menu .mProducts").removeClass("active");
 				}
