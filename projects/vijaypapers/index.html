@@ -203,7 +203,7 @@
 		$(window).load(function() {
 			var clicked = 0;
 			$(".hamburger").click(function(){
-				$(".contact").toggleClass("hide");
+				$(".contact").removeClass("hide");
 				if(clicked == 0){
 					clicked = 1;
 					$(".hamburger").css("background-color","#bababa");
