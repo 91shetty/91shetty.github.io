@@ -225,7 +225,9 @@
 				$(".menu .mAbout").addClass("active");
 			});
 			$("header .mProducts").click(function(){
-				$(window).scrollTop($(".content section.products").offset().top);
+				$('html,body').animate({
+					scrollTop: $(".content section.products").offset().top},
+					1000);
 				if($(".menu .mAbout").hasClass("active")){
 					$(".menu .mAbout").removeClass("active");
 				}
