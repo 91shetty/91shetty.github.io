@@ -235,12 +235,10 @@
 			var clicked = 0;
 			$(window).on("scroll touchmove", function () {
 				if($(document).scrollTop() == 0){
-					$('header .logo').addClass("hide");
-					console.log("Scroll - At top");
+					$('header .logo').addClass("animated fadeOutUp");
 				}
 				else{
-				    $('header .logo').removeClass('hide', $(document).scrollTop() > 0);
-				    console.log("Scrolling");
+				    $('header .logo').addClass('animated fadeInDown', $(document).scrollTop() > 0);
 				}	
 			});
 			$(".hamburger").click(function(){
