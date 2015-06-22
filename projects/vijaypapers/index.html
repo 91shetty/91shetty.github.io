@@ -182,7 +182,7 @@
 <body>
 	<div class="container">
 		<header class="mast">
-			<div class="logo hide"></div>
+			<div class="logo animated hide"></div>
 			<div class="hamburger"></div>
 			<div class="menu">
 				<span class="mAbout active">About</span>
@@ -234,12 +234,14 @@
 		$(window).load(function() {
 			var clicked = 0;
 			$(window).on("scroll touchmove", function () {
+				$('header .logo').removeClass('hide');
 				if($(document).scrollTop() == 0){
-					$('header .logo').addClass("animated fadeOutUp");
+					$('header .logo').removeClass("fadeInDown");
+					$('header .logo').addClass("fadeOutUp");
 				}
 				else{
-					$('header .logo').removeClass('hide');
-				    $('header .logo').addClass('animated fadeInDown', $(document).scrollTop() > 0);
+					$('header .logo').removeClass("fadeOutUp");
+				    $('header .logo').addClass('fadeInDown', $(document).scrollTop() > 0);
 				}	
 			});
 			$(".hamburger").click(function(){
