@@ -161,6 +161,7 @@
 		.about h2 {
 			font-size: 2em;
 			padding-top: 1em;
+			opacity: 0.7;
 		}
 		.about .process {
 			width: 75%;
@@ -215,8 +216,7 @@
 		<div class="content">
 			<section class="about">
 				<h1>Vijay Papers</h1>
-				<h2>Paper Products
-				 Wholesaler</h2>
+				<h2>Paper Products Wholesaler</h2>
 				<div class="process">
 					
 				</div>
@@ -241,7 +241,7 @@
 				}
 				else{
 					$('header .logo').removeClass("fadeOutUp");
-				    $('header .logo').addClass('fadeInDown', $(document).scrollTop() > 0);
+				    $('header .logo').addClass("fadeInDown");
 				}	
 			});
 			$(".hamburger").click(function(){
