@@ -233,6 +233,12 @@
 	<script type="text/javascript">
 		$(window).load(function() {
 			var clicked = 0;
+			if($(document).scrollTop()>0){
+					$('header .logo').addClass('hide');
+			}
+			$(window).on("scroll touchmove", function () {
+			    $('header .logo').removeClass('hide', $(document).scrollTop() > 0);
+			});
 			$(".hamburger").click(function(){
 				$(".contact").removeClass("hide");
 				if(clicked == 0){
