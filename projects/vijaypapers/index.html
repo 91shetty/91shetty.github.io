@@ -182,7 +182,7 @@
 <body>
 	<div class="container">
 		<header class="mast">
-			<div class="logo"></div>
+			<div class="logo hide"></div>
 			<div class="hamburger"></div>
 			<div class="menu">
 				<span class="mAbout active">About</span>
@@ -235,9 +235,11 @@
 			var clicked = 0;
 			if($(document).scrollTop()>0){
 					$('header .logo').addClass('hide');
+					console.log("Scroll - At top");
 			}
 			$(window).on("scroll touchmove", function () {
 			    $('header .logo').removeClass('hide', $(document).scrollTop() > 0);
+			    console.log("Scrolling");
 			});
 			$(".hamburger").click(function(){
 				$(".contact").removeClass("hide");
