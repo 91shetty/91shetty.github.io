@@ -243,6 +243,10 @@
 					$(".menu .mProducts").addClass("active");
 					$(".menu .mAbout").removeClass("active");
 				}
+				else if($(document).scrollTop() >= $(".content .about").position().top){
+					$(".menu .mProducts").removeClass("active");
+					$(".menu .mAbout").addClass("active");
+				}
 				else{
 					$('header .logo').removeClass("fadeOutUp");
 				    $('header .logo').addClass("fadeInDown");
