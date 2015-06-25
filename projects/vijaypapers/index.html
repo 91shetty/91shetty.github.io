@@ -239,6 +239,10 @@
 					$('header .logo').removeClass("fadeInDown");
 					$('header .logo').addClass("fadeOutUp");
 				}
+				else if($(document).scrollTop() >= $(".content .products").position().top){
+					$(".menu .mProducts").addClass("active");
+					$(".menu .mAbout").removeClass("active");
+				}
 				else{
 					$('header .logo').removeClass("fadeOutUp");
 				    $('header .logo').addClass("fadeInDown");
