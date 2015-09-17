@@ -24,9 +24,19 @@
 		}
 		.container {
 			/*background: #f9f9f9;*/
-			width: 100%;
+			width: 800px;
 			height: 100%;
+			text-align: center;
 			margin: 0 auto;
+		}
+		.circle {
+			background: #fff;
+			border-radius: 50%;
+		}
+		/* Current */
+		.current {
+			margin-top: 20px;
+			margin-bottom: 20px;
 		}
 		.current h1 {
 			font-size: 66px;
@@ -36,21 +46,24 @@
 			font-size: 42px;
 			font-weight: 400;
 		}
+		.current .holder {
+			width: 200px;
+			height: 200px;
+			margin: 0 auto;
+		}
+		/* In Line */
+		.inLine {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
 		.inLine h3 {
 			font-size: 34px;
 			font-weight: 400;
 		}
-		.circle {
-			background: #fff;
-			border-radius: 50%;
-		}
-		.current .holder {
-			width: 200px;
-			height: 200px;
-		}
 		.inLine .holder {
 			width: 120px;
 			height: 120px;
+			float: left;
 		}
 	</style>
 </head>
@@ -63,9 +76,11 @@
 		</div>
 		<div class="inLine">
 			<h3>Next in Line</h3>
-			<div class="circle holder"></div>
-			<div class="circle holder"></div>
-			<div class="circle holder"></div>
+			<div style="margin:0 auto;">
+				<div class="circle holder"></div>
+				<div class="circle holder"></div>
+				<div class="circle holder"></div>
+			</div>
 		</div>
 	</div>
 </body>
