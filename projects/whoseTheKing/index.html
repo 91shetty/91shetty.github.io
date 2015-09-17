@@ -40,18 +40,17 @@
 			font-size: 34px;
 			font-weight: 400;
 		}
-		figure {
+		.circle {
 			background: #fff;
+			border-radius: 50%;
 		}
 		.current .holder {
 			width: 200px;
 			height: 200px;
-			border-radius: 50%;
 		}
 		.inLine .holder {
 			width: 120px;
 			height: 120px;
-			border-radius: 50%;
 		}
 	</style>
 </head>
@@ -59,18 +58,14 @@
 	<div class="container">
 		<div class="current">
 			<h1>Whose the King?</h1>
-			<figure>
-				<div class="holder"></div>
-			</figure>
+			<div class="circle holder"></div>
 			<h2>I'm the King!!!</h2>
 		</div>
 		<div class="inLine">
 			<h3>Next in Line</h3>
-			<figure>
-				<div class="holder"></div>
-				<div class="holder"></div>
-				<div class="holder"></div>
-			</figure>
+			<div class="circle holder"></div>
+			<div class="circle holder"></div>
+			<div class="circle holder"></div>
 		</div>
 	</div>
 </body>
