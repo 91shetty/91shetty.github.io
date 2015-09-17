@@ -1,11 +1,10 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Whose the King</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="animate.css">
-	<link href="http://fonts.googleapis.com/css?family=Fira+Sans:400,500,700,400italic,500italic,700italic" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	<style type="text/css">
@@ -20,7 +19,7 @@
 			margin: 0;
 			padding: 0;
 			border: 0;
-			font-family: 'Fira Sans', sans-serif;
+			font-family: 'Oswald', sans-serif;
 			background: #edecec;
 		}
 		.container {
@@ -35,15 +34,25 @@
 			width: 200px;
 			height: 200px;
 			border-radius: 50%;
-			background: #
+			background: #fff;
 		}
 	</style>
 </head>
 <body>
 	<div class="container">
-		<h1>Whose the King?</h1>
-		<figure></figure>
-		<h1>I'm the King!!!</h1>
+		<div class="current">
+			<h1>Whose the King?</h1>
+			<figure></figure>
+			<h1>I'm the King!!!</h1>
+		</div>
+		<div class="inLine">
+			<h3>Next in Line</h3>
+			<figure>
+				<div class="holder"></div>
+				<div class="holder"></div>
+				<div class="holder"></div>
+			</figure>
+		</div>
 	</div>
 </body>
 </html>
