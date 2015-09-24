@@ -2,70 +2,113 @@
 <html lang="en">
 	<head>
 		<title> Donut chart</title>
-		<script type="text/javascript" src="d3/d3.js"></script>
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script> 
-	    <script type="text/javascript" src="jquery.tipsy.js"></script>
-	    <link href="tipsy.css" rel="stylesheet" type="text/css" />
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 	    <style type="text/css">
+	    	.d3-tip {
+				line-height: 1;
+				font-weight: bold;
+				padding: 12px;
+				background: rgba(0, 0, 0, 0.8);
+				color: #fff;
+				border-radius: 2px;
+			}
+
+			/* Creates a small triangle extender for the tooltip */
+			.d3-tip:after {
+				box-sizing: border-box;
+				display: inline;
+				font-size: 10px;
+				width: 100%;
+				line-height: 1;
+				color: rgba(0, 0, 0, 0.8);
+				content: "\25BC";
+				position: absolute;
+				text-align: center;
+			}
+
+			/* Style northward tooltips differently */
+			.d3-tip.n:after {
+				margin: -1px 0 0 0;
+				top: 100%;
+				left: 0;
+			}
+
 	    	path:hover{
-	    	opacity: .8;
+		    	opacity: .8;
 	    	}
 	    </style>
 	</head>
 	<body>
-		<svg id="svg_donut" width = "1000" height = "750">
-		</svg>
 		<script type="text/javascript">
-			var endangle = 0;
-			var count = 0; 
-			var dataset = [							
-							[1337,343408,29.6],
-							[943,125735,10.9],
-							[540,122760,10.6],
-							[626,111113,9.6],
-							[635,110476,9.5],
-							[437,74061,6.4],
-							[438,72111,6.2],
-							[428,69383,6.0],
-							[533,44373,3.8],
-							[370,20435,1.8],
-							[1427,18285,1.6],
-							["Rest of the builds",40827,4]
-						];
-			var myScale = d3.scale.linear().domain([0, 100]).range([0, 2 * Math.PI]); 
-			color = d3.scale.category20c();
+			var width = 960,
+			    height = 500,
+			    heightSVG = 750,
+			    radius = Math.min(width, height) / 2;
+
+			var color = color = d3.scale.category20c();
+
 			var arc = d3.svg.arc()
-					  .innerRadius(80)
-					  .outerRadius(300)
-					  .startAngle(function(d){
-								  	return myScale(endangle);
-								  }
-					  )
-					  .endAngle(function(d){
-					  				endangle += d[2];
-								  	return myScale(endangle);
-								  }
-					  );
-			var vis = d3.select("#svg_donut");
-			vis.selectAll("path")
-			.data(dataset)
-			.enter()
-			.append("path")
-			.attr("class", "slice")
-			.attr("d",arc)
-			.attr("fill",function(d, i){
-				return color(i);
-			})
-			.attr("transform","translate(600,400)");		
-			
-			$('.slice').tipsy({
-				gravity : $.fn.tipsy.autoW,
-				html : true,
-				title : function(){
-					var buildNo = this.__data__[0];
-					var userCount = this.__data__[1];
-					return 'Build No: ' + buildNo + '<br/>User Count: ' + userCount ;
-				}
+			    .outerRadius(radius - 10)
+			    .innerRadius(radius - 160);
+
+			var arcOver = d3.svg.arc()
+			    .outerRadius(radius + 40)
+			    .innerRadius(radius - 100);
+
+			var pie = d3.layout.pie()
+			    .sort(null)
+			    .value(function(d) { return d.totalCount; });
+
+			var svg = d3.select("body").append("svg")
+			    .attr("width", width)
+			    .attr("height", heightSVG)
+			  .append("g")
+			    .attr("transform", "translate(" + width / 2 + "," + heightSVG / 2 + ")");
+
+			var tip = d3.tip()
+					  .attr('class', 'd3-tip')
+					  .offset([-10, 0])
+					  .html(function(d) {
+					    return "<strong>Build No: </strong> <span style='color:red'>" + d.data.buildNo + "</span> <br/> <strong>No of customers: </strong> <span style='color:red'>" + d.data.totalCount + "</span> <br/> <strong>Percentage:</strong> <span style='color:red'>" + d.data.percentage + "</span>" ;
+					  });
+
+			svg.call(tip);
+
+			d3.csv("donutChart.csv", function(error, data) {
+
+			  data.forEach(function(d) {
+			    d.totalCount = +d.totalCount;
+			  });
+
+			  var g = svg.selectAll(".arc")
+			      .data(pie(data))
+			      .enter().append("g")
+			      .attr("class", "arc");
+			      
+
+			  g.append("path")
+			      .attr("d", arc)
+			      .style("fill", function(d) { return color(d.data.percentage); })
+			      .on("mouseover", function(d) {
+		            	d3.select(this).transition()
+			               .duration(1000)
+			               .attr("d", arcOver);
+		             })
+				  .on("mouseout", function(d) {
+		            	d3.select(this).transition()
+			               .duration(1000)
+			               .attr("d", arc);
+		             });;
+			      
+			  g.append("text")
+			      .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+			      .attr("dy", ".35em")
+			      .style("text-anchor", "middle")
+			      .text(function(d) { return d.data.percentage; })
+			      .on('mouseover', tip.show)
+				  .on('mouseout', tip.hide);
+
 			});
 		</script>
 	</body>
