@@ -1,0 +1,43 @@
+$font: Helvetica, sans-serif;
+$primary-color: #4b2e83;
+$secondary-color: #000;
+$tertiary-color: #fff;
+
+body {
+	font: 100% $font;
+	color: $secondary-color;
+	background-color: $tertiary-color;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+}
+
+.content {
+	width: 100%;
+	height: 100%;
+}
+
+header {
+	width: 100%;
+	height: 3em;
+	background-color: $primary-color;
+	position: fixed;
+	top: 0px;
+}
+
+footer {
+	width: 100%;
+	height: 3em;
+	background-color: $primary-color;
+	position: fixed;
+	top: 0px;
+}
+
+.section-block {
+	height: 100%;
+	width: 100%;
+	padding: 50px 0 50px 0;
+	text-align: center;
+}
