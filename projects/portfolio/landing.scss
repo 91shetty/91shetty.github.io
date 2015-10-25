@@ -1,23 +1,25 @@
 @import 'reset';
 @import 'comman';
 
-header {
-	.top-bar {
-		width: 80%;
-		margin: 0 auto;
-		height: 100%;
-		.logo {
-
+#about {
+	figure {
+		margin: auto;
+		display: block;
+		position: relative;
+		width: 150px;
+		padding: 20px 0 20px 0;
+		img {
+			border-radius: 50%;
+			box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
 		}
 	}
-	nav {
-		position: relative;
-		float: right;
-	    top: 50%;
-	    transform: translateY(-50%);
-		a {
-			color: #fff;
-			margin: 0 25px;
-		}
+	p {
+		margin: auto;
+		width: 900px;
+		font-size: 1.2em;
+		padding: 20px 0 20px 0;
 	}
 }
+
+
+

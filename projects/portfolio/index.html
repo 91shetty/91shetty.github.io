@@ -6,7 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="animate.css">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">	
-
+		<script async="" src="https://rawgit.com/layervault/jquery.typer.js/master/src/jquery.typer.js?_=1445807607862"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -14,19 +14,63 @@
 				<div class="top-bar">
 					<div class="logo"></div>
 					<nav>
-						<a href="#">Work</a>
-						<a href="#">About</a>
-						<a href="#">Contact</a>
+						<a href="#" id="workNav">Works</a>
+						<a href="#" id="aboutNav">About</a>
+						<a href="#" id="contactNav">Contact</a>
 					</nav>
 				</div>
 			</header>
 			<div class="content">
-				<section class="section-block"></section>
-				<section class="section-block" style="display:none;"></section>
-				<section class="section-block" style="display:none;"></section>
+				<section class="section-block" id="landing">
+					<div class="section-content">
+						<figure>
+							<img src="me_profile.png" alt="me_profile" width="150" height="150">
+						</figure>
+						<p>
+							Hi, I'm <span class="bolder">Vishwas Shetty</span>. <br/> 
+							I'm an <span class="italics bold">User Experience Designer</span>. <br/>
+							I specialize in <span class="italics bold" data-typer-targets="Wireframing, Prototyping, Visual/Print/Icon Design">Prototyping</span> <br/>
+							I believe in crafting a user experience that bridges the gap between <span class="italics bold">what’s possible</span> (using technology) and <span class="italics bold">what’s desirable</span> (by people). 
+						</p>
+					</div>
+				</section>
+				<section class="section-block hide" id="about">
+
+				</section>
+				<section class="section-block hide" id="contact">
+
+				</section>
 			</div>
 			<footer></footer>
 		</div>
+		<script>
+			$("#about").click(function(){
+				$(this).addClass("active");
+				$('#contactNav').removeClass("active");
+				$('#about').removeClass("hide");
+				$('#contact').addClass("hide");
+				$('#landing').addClass("hide");
+			});
+			$("#contact").click(function(){
+				$(this).addClass("active");
+				$('#aboutNav').removeClass("active");
+				$('#contact').removeClass("hide");
+				$('#about').addClass("hide");
+				$('#landing').addClass("hide");
+			});
+			// $("").click(function(){
+			// 	$('#about').removeClass("hide");
+			// 	$('#contact').addClass("hide");
+			// 	$('#landing').addClass("hide");
+			// });
+		</script>
+		<script type="text/javascript">
+		  $.getScript('https://rawgit.com/layervault/jquery.typer.js/master/src/jquery.typer.js', function () {
+		    $(function () {
+		      $('[data-typer-targets]').typer();
+		    });
+		  });
+		</script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	</body>
 </html>
