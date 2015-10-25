@@ -46,14 +46,14 @@
 		</div>
 		<script>
 			$(window).load(function(){
-				$("#about").click(function(){
+				$('#aboutNav').click(function(){
 					$(this).addClass("active");
 					$('#contactNav').removeClass("active");
 					$('#about').removeClass("hide");
 					$('#contact').addClass("hide");
 					$('#landing').addClass("hide");
 				});
-				$("#contact").click(function(){
+				$('#contactNav').click(function(){
 					$(this).addClass("active");
 					$('#aboutNav').removeClass("active");
 					$('#contact').removeClass("hide");
