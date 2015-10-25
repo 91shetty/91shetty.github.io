@@ -5,16 +5,19 @@ header {
 	.top-bar {
 		width: 80%;
 		margin: 0 auto;
+
 		.logo {
 
 		}
 	}
 	nav {
-		display: inline-block;
-		margin: 0 25px;
+		position: relative;
+		float: right;
+	    top: 50%;
+	    transform: translateY(-50%);
 		a {
 			color: #fff;
-
+			margin: 0 25px;
 		}
 	}
 }
