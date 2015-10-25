@@ -7,3 +7,27 @@ header {
 	background-color: $primary-color;
 }
 
+.content {
+	width: 100%;
+	position: relative;
+}
+
+.horizontalTimeline {
+	margin: 0 auto;
+	width: 60%;
+
+}
+
+.horizontalTimeline {
+	.timeLine {
+		width: 100%;
+		height: 400px;
+	}
+	.controls {
+		width: 100%;
+		height: 40px;
+	}
+}
+
+
+
