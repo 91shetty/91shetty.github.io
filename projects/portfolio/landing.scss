@@ -1,3 +1,20 @@
 @import 'reset';
 @import 'comman';
 
+header {
+	.top-bar {
+		width: 80%;
+		margin: 0 auto;
+		.logo {
+
+		}
+	}
+	nav {
+		display: inline-block;
+		margin: 0 25px;
+		a {
+			color: #fff;
+
+		}
+	}
+}
