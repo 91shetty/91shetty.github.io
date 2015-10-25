@@ -44,25 +44,27 @@
 			<footer></footer>
 		</div>
 		<script>
-			$("#about").click(function(){
-				$(this).addClass("active");
-				$('#contactNav').removeClass("active");
-				$('#about').removeClass("hide");
-				$('#contact').addClass("hide");
-				$('#landing').addClass("hide");
+			$(window).load(function(){
+				$("#about").click(function(){
+					$(this).addClass("active");
+					$('#contactNav').removeClass("active");
+					$('#about').removeClass("hide");
+					$('#contact').addClass("hide");
+					$('#landing').addClass("hide");
+				});
+				$("#contact").click(function(){
+					$(this).addClass("active");
+					$('#aboutNav').removeClass("active");
+					$('#contact').removeClass("hide");
+					$('#about').addClass("hide");
+					$('#landing').addClass("hide");
+				});
+				// $("").click(function(){
+				// 	$('#about').removeClass("hide");
+				// 	$('#contact').addClass("hide");
+				// 	$('#landing').addClass("hide");
+				// });
 			});
-			$("#contact").click(function(){
-				$(this).addClass("active");
-				$('#aboutNav').removeClass("active");
-				$('#contact').removeClass("hide");
-				$('#about').addClass("hide");
-				$('#landing').addClass("hide");
-			});
-			// $("").click(function(){
-			// 	$('#about').removeClass("hide");
-			// 	$('#contact').addClass("hide");
-			// 	$('#landing').addClass("hide");
-			// });
 		</script>
 		<script type="text/javascript">
 		  $.getScript('https://rawgit.com/layervault/jquery.typer.js/master/src/jquery.typer.js', function () {
