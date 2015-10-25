@@ -17,11 +17,11 @@
 			</a>
 		</header>
 		<div class="main-content">
-			<section id="landing" class="section-block">
+			<!-- <section id="landing" class="section-block">
 				<div class="section-content">
 
 				</div>
-			</section>
+			</section> -->
 			<section id="about" class="section-block">
 				<h2>About Me</h2>
 				<div class="section-content">					
@@ -31,8 +31,8 @@
 					<p>
 						Hi, I'm <span class="bolder">Vishwas Shetty</span>. <br/> 
 						I'm an <span class="italics bold">User Experience Designer</span>. <br/>
-						I specialize in <span class="italics bold oneByOne"> </span> <br/>
-						<br/> I believe in crafting a user experience that bridges the gap between <span class="italics bold">what’s possible</span> (using technology) and <span class="italics bold">what’s desirable</span> (by people). 
+						I specialize in <span class="italics bold" data-typer-targets="{ "targets" : ["Wireframing","Prototyping","Visual/Print/Icon Design"]}"> </span>  <br/>
+						I believe in crafting a user experience that bridges the gap between <span class="italics bold">what’s possible</span> (using technology) and <span class="italics bold">what’s desirable</span> (by people). 
 					</p>
 					<div class="circle-container">
 						<div class="circle">
@@ -350,6 +350,13 @@
 					}
 				);
 			});
+		</script>
+		<script type="text/javascript">
+		  $.getScript('https://raw.github.com/layervault/jquery.typer.js/master/src/jquery.typer.js', function () {
+		    $(function () {
+		      $('[data-typer-targets]').typer();
+		    });
+		  });
 		</script>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
