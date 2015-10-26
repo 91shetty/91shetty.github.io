@@ -4,10 +4,14 @@
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
   	#landing{
-  		p{
+  		p {
 			line-height: 1.8em;
 			font-size: 1.2em;
   		}
+  	}
+
+  	footer {
+  		position: fixed;
   	}
 }
 
@@ -16,5 +20,15 @@
   and (min-device-width: 1200px) 
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
+  and (min-resolution: 192dpi) {
+  	#landing{
+  		p {
+			line-height: 1.8em;
+			font-size: 1.2em;
+  		}
+  	}
+  	
+  	footer {
+  		position: fixed;
+  	}
 }
