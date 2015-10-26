@@ -2,7 +2,7 @@
 	figure {
 		display: block;
 		position: relative;
-		padding: 20px 0 20px 0;
+		padding: 20px 0 10px 0;
 		img {
 			width: 100px;
 			height: auto;
@@ -13,15 +13,23 @@
 				width: 150px;
 			}
 		}
+
+		@include breakpoint(tablet) {
+			padding-bottom: 20px;
+		}
 	}
 	p {
 		margin: auto;
 		width: 100%;
-		padding: 20px 0 20px 0;
+		padding: 10px 0 20px 0;
 
 		@include breakpoint(tablet) {
 			line-height: 1.8em;
 			font-size: 1.2em;
+		}
+
+		@include breakpoint(tablet) {
+			padding-top: 20px;
 		}
 	}
 }
