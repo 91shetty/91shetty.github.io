@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<title>Portfolio | Vishwas Shetty</title>
 		<link rel="stylesheet" type="text/css" href="build/style.css">
@@ -16,9 +16,9 @@
 				<div class="top-bar">
 					<div class="logo"></div>
 					<nav>
-						<a href="#" id="workNav">Work</a>
-						<a href="#" id="aboutNav">About</a>
-						<a href="#" id="contactNav">Contact</a>
+						<a href="#" id="workNav" class="animated">Work</a>
+						<a href="#" id="aboutNav" class="animated">About</a>
+						<a href="#" id="contactNav" class="animated">Contact</a>
 					</nav>
 				</div>
 			</header>
@@ -64,14 +64,14 @@
 					$('#about').addClass("hide");
 				});
 				$('#aboutNav').click(function(){
-					$(this).addClass("active");
+					$(this).addClass("active pulse");
 					$('#contactNav').removeClass("active");
 					$('#about').removeClass("hide");
 					$('#contact').addClass("hide");
 					$('#landing').addClass("hide");
 				});
 				$('#contactNav').click(function(){
-					$(this).addClass("active");
+					$(this).addClass("active pulse");
 					$('#aboutNav').removeClass("active");
 					$('#contact').removeClass("hide");
 					$('#about').addClass("hide");
