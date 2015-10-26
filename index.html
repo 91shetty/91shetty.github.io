@@ -1,355 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<title>Portfolio | Vishwas Shetty</title>
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<meta name="description" content="Designer from Bangalore, India">
-		<meta name="keywords" content="Vishwas Shetty, vishwas shetty, vishwasshetty, ux designer india, user experience, user interface, india, designers, Interaction Design, Interaction Designer, Product Design, Information and Interface Design, Mobile App, Website Design, UI, UX, User Experience, Design Research, User interface, website designer">
-		<meta name="author" content="Vishwas Shetty">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="build/style.css">
+		<link rel="stylesheet" type="text/css" href="build/animate.css">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">	
 		<link href='http://fonts.googleapis.com/css?family=Fira+Sans:400,500,700,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script async="" src="https://rawgit.com/layervault/jquery.typer.js/master/src/jquery.typer.js?_=1445807607862"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	</head>
 	<body>
-		<header>
-			<a href="http://vishwasshetty.com/">
-				Vishwas Shetty
-			</a>
-		</header>
-		<div class="main-content">
-			<!-- <section id="landing" class="section-block">
-				<div class="section-content">
-
+		<div class="container">
+			<header>
+				<div class="top-bar">
+					<div class="logo"></div>
+					<nav>
+						<a href="#" id="workNav" class="animated">Work</a>
+						<a href="#" id="skillsNav" class="animated">Skills</a>
+						<a href="#" id="aboutNav" class="animated">About</a>
+						<a href="#" id="contactNav" class="animated">Contact</a>
+					</nav>
 				</div>
-			</section> -->
-			<section id="about" class="section-block">
-				<!-- <h2>About Me</h2> -->
-				<div class="section-content">					
-					<figure>
-						<img src="images/me_profile.png" alt="me_profile" width="150" height="150">
-					</figure>
-					<p>
-						Hi, I'm <span class="bolder">Vishwas Shetty</span>. <br/> 
-						I'm an <span class="italics bold">User Experience Designer</span>. <br/>
-						I specialize in <span class="italics bold" data-typer-targets="Wireframing, Prototyping, Visual/Print/Icon Design">Prototyping</span> <br/>
-						I believe in crafting a user experience that bridges the gap between <span class="italics bold">what’s possible</span> (using technology) and <span class="italics bold">what’s desirable</span> (by people). 
-					</p>
-					<!-- <div class="circle-container">
-						<div class="circle">
-
-						</div>
-						<div class="circle">
-
-						</div>
-						<div class="circle">
-
-						</div>
-						<div class="circle">
-
-						</div>
-						<div class="circle">
-
-						</div>
-					</div> -->
-					<!-- <div class="resume">
-						<p>Resume</p>
-						<div class="viewDownload">
-							<a href="Resume_Vishwas_Shetty.pdf" target="_blank">View</a>
-							<span class="separator"> | </span>
-							<a href="Resume_Vishwas_Shetty.pdf" download>Download</a>
-						</div>
-					</div> -->
-				</div>	
-			</section>
-			<!-- <section id="work" class="section-block">
-				<div id="freelance" class="half">
-					<h2>Freelance</h2>
-					<div class="sub-section-links">
-						<ul>
-							<li>
-								<p class="link-title"> Decibel Geeks Entertainment </p>
-								<p class="link-domain"> Logo Design | Print Design </p>
-								<p class="link-content"> Morbi at sapien id auctor vitae sollicitudin lorem. Vivamus sed rutrum odio. Donec varius justo sed odio consectetur maximus. In cursus accumsan consequat. Curabitur non luctus ex, sed vehicula risus. In sit amet lorem quam. Donec placerat leo eu turpis interdum volutpat. </p>
-							</li>
-							<li>
-								<p class="link-title"> Indian Paintball Marshals </p>
-								<p class="link-domain"> Logo Design | Print Design </p>
-								<p class="link-content"> Morbi at sapien id auctor vitae sollicitudin lorem. Vivamus sed rutrum odio. Donec varius justo sed odio consectetur maximus. In cursus accumsan consequat. Curabitur non luctus ex, sed vehicula risus. In sit amet lorem quam. Donec placerat leo eu turpis interdum volutpat. </p>
-							</li>
-							<li>
-								<p class="link-title"> Surakshith Constructions </p>
-								<p class="link-domain"> Logo Design </p>
-								<p class="link-content"> Morbi at sapien id auctor vitae sollicitudin lorem. Vivamus sed rutrum odio. Donec varius justo sed odio consectetur maximus. In cursus accumsan consequat. Curabitur non luctus ex, sed vehicula risus. In sit amet lorem quam. Donec placerat leo eu turpis interdum volutpat. </p>
-							</li>
-							<li>
-								<p class="link-title"> Kumaran Ganesh Jewellery </p>
-								<p class="link-domain"> Logo Design </p>
-								<p class="link-content"> Morbi at sapien id auctor vitae sollicitudin lorem. Vivamus sed rutrum odio. Donec varius justo sed odio consectetur maximus. In cursus accumsan consequat. Curabitur non luctus ex, sed vehicula risus. In sit amet lorem quam. Donec placerat leo eu turpis interdum volutpat. <br/> Morbi at sapien id auctor vitae sollicitudin lorem. Vivamus sed rutrum odio. Donec varius justo sed odio consectetur maximus. In cursus accumsan consequat. Curabitur non luctus ex, sed vehicula risus. In sit amet lorem quam. Donec placerat leo eu turpis interdum volutpat. <br/> Morbi at sapien id auctor vitae sollicitudin lorem. Vivamus sed rutrum odio. Donec varius justo sed odio consectetur maximus. In cursus accumsan consequat. Curabitur non luctus ex, sed vehicula risus. In sit amet lorem quam. Donec placerat leo eu turpis interdum volutpat. </p>
-							</li>
-							<li>
-								<p class="link-title"> The Great Indian Dog Show </p>
-								<p class="link-domain"> Print Design </p>
-								<p class="link-content"> Morbi at sapien id auctor vitae sollicitudin lorem. Vivamus sed rutrum odio. Donec varius justo sed odio consectetur maximus. In cursus accumsan consequat. Curabitur non luctus ex, sed vehicula risus. In sit amet lorem quam. Donec placerat leo eu turpis interdum volutpat. </p>
-							</li>
-						</ul>
-						<div class="sub-section-content">
-							<div class="cross">&#10006;</div>
-							<p class="link-title"></p>
-							<p class="link-domain"></p>
-							<p class="link-content"></p>
-						</div>
+			</header>
+			<div class="content">
+				<section class="section-block" id="landing">
+					<div class="section-content">
+						<figure>
+							<img src="me_profile.png" alt="me_profile">
+						</figure>
+						<p>
+							<span style="font-size:24px;">Hi, I'm <span class="bolder">Vishwas Shetty</span>.</span> <br/> <br/> 
+							I'm an <span class="italics bold">User Experience Designer </span> and <span class="italics bold"> Front-End Developer</span>. <br/>
+							<span class="hidden-phone">
+								I specialize in <span class="italics bold" data-typer-targets="Wireframing, Prototyping, Visual/Print/Icon Design">Prototyping</span> <br/> <br/>
+								I believe in crafting a user experience that bridges the gap between <span class="italics bold">what’s possible</span> (using technology) and <span class="italics bold">what’s desirable</span> (by people).
+							</span>
+							<span class="visible-phone">
+								<br/> My Specialities <br/> <span class="italics bold" data-typer-targets="Wireframing, Prototyping, Visual/Print/Icon Design">Prototyping</span>
+							</span>
+						</p>
 					</div>
- 				</div>
- 				<div class="circle">
- 					<h2>Work</h2>
- 				</div>
-				<div id="projects" class="half">
-					<h2>Projects</h2>
-					<div class="sub-section-links">
-						<ul>
-							<li>
-								<p class="link-title"> Speech Recognition </p>
-								<p class="link-domain"> Java Application </p>
-								<p class="link-content"> Morbi at sapien id auctor vitae sollicitudin lorem. Vivamus sed rutrum odio. Donec varius justo sed odio consectetur maximus. In cursus accumsan consequat. Curabitur non luctus ex, sed vehicula risus. In sit amet lorem quam. Donec placerat leo eu turpis interdum volutpat. </p>
-							</li>
-							<li>
-								<p class="link-title"> DJ You </p>
-								<p class="link-domain"> Website Design </p>
-								<p class="link-content"> Morbi at sapien id auctor vitae sollicitudin lorem. Vivamus sed rutrum odio. Donec varius justo sed odio consectetur maximus. In cursus accumsan consequat. Curabitur non luctus ex, sed vehicula risus. In sit amet lorem quam. Donec placerat leo eu turpis interdum volutpat. </p>
-							</li>
-							<li>
-								<p class="link-title"> Reach Out </p>
-								<p class="link-domain"> Wesbite Design </p>
-								<p class="link-content"> Morbi at sapien id auctor vitae sollicitudin lorem. Vivamus sed rutrum odio. Donec varius justo sed odio consectetur maximus. In cursus accumsan consequat. Curabitur non luctus ex, sed vehicula risus. In sit amet lorem quam. Donec placerat leo eu turpis interdum volutpat. </p>
-							</li>
-							<li>
-								<p class="link-title"> D3 </p>
-								<p class="link-domain"> Visualizations </p>
-								<p class="link-content"> Morbi at sapien id auctor vitae sollicitudin lorem. Vivamus sed rutrum odio. Donec varius justo sed odio consectetur maximus. In cursus accumsan consequat. Curabitur non luctus ex, sed vehicula risus. In sit amet lorem quam. Donec placerat leo eu turpis interdum volutpat. <br/> Morbi at sapien id auctor vitae sollicitudin lorem. Vivamus sed rutrum odio. Donec varius justo sed odio consectetur maximus. In cursus accumsan consequat. Curabitur non luctus ex, sed vehicula risus. In sit amet lorem quam. Donec placerat leo eu turpis interdum volutpat. <br/> Morbi at sapien id auctor vitae sollicitudin lorem. Vivamus sed rutrum odio. Donec varius justo sed odio consectetur maximus. In cursus accumsan consequat. Curabitur non luctus ex, sed vehicula risus. In sit amet lorem quam. Donec placerat leo eu turpis interdum volutpat. </p>
-							</li>
-							<li>
-								<p class="link-title"> Divya Enterprises </p>
-								<p class="link-domain"> Website Design </p>
-								<p class="link-content"> Morbi at sapien id auctor vitae sollicitudin lorem. Vivamus sed rutrum odio. Donec varius justo sed odio consectetur maximus. In cursus accumsan consequat. Curabitur non luctus ex, sed vehicula risus. In sit amet lorem quam. Donec placerat leo eu turpis interdum volutpat. </p>
-							</li>
-						</ul>
-						<div class="sub-section-content">
-							<div class="cross">&#10006;</div>
-							<p class="link-title"></p>
-							<p class="link-domain"></p>
-							<p class="link-content"></p>
-						</div>
+				</section>
+				<section class="section-block hide" id="skills">
+					<div class="section-content">
+
 					</div>
-				</div>
-			</section> -->
-			<section id="principle" class="section-block" style="display:none;">
-				<h2>Principle</h2>
-				<div class="section-content">	
-					<figure>
-						<p id="topLeft">Focus on <span class="italics">Users</span></p>
-						<p id="topRight">Make it <span class="italics">Simple</span></p>
-						<div class="circle">
-							<h2>Design<br/>Matters</h2>
-		 				</div>
-		 				<p id="bottomLeft">Deliver <span class="italics">Unique</span><br/>value</p>
-		 				<p id="bottomRight">Inspire <span class="italics">Delight</span></p>
-		 				<p id="bottomCenter">Exhibit <span class="italics">Craftsmanship</span></p>
-					</figure>
-				</div>	
-			</section>
-			<section id="experience" class="section-block" style="display:none;">
-				<h2>Experience</h2>
-				<div class="section-content">
-					<ul>
-						<li>
-							<p class="exp-title">B.E</p>
-							<p class="exp-year">2009</p>
-							<p class="exp-desc">PESIT</p>
-						</li>
-						<figure>
-							<img src="images/line.png" height="2px" width="100px" alt="line">
-						</figure>
-						<li>
-							<p class="exp-title">Intern</p>
-							<p class="exp-year">2011</p>
-							<p class="exp-desc">Digital Chocolate</p>
-						</li>
-						<figure>
-							<img src="images/line.png" height="2px" width="100px" alt="line">
-						</figure>
-						<li>
-							<p class="exp-title"></p>
-							<p class="exp-year">2012</p>
-							<p class="exp-desc">Aatmatrisha</p>
-						</li>
-						<figure>
-							<img src="images/line.png" height="2px" width="100px" alt="line">
-						</figure>
-						<li>
-							<p class="exp-title">Dev</p>
-							<p class="exp-year">2013</p>
-							<p class="exp-desc">Citrix R&D</p>
-						</li>
-					</ul>
-					<ul>
-						<li>
-							<p class="exp-title">Marshall</p>
-							<p class="exp-year">2014</p>
-							<p class="exp-desc">PALS World Cup</p>
-						</li>
-						<figure>
-							<img src="images/line.png" height="2px" width="100px" alt="line">
-						</figure>
-						<li>
-							<p class="exp-title">Dev</p>
-							<p class="exp-year">2015</p>
-							<p class="exp-desc">Flipkart</p>
-						</li>
-						<figure>
-							<img src="images/line.png" height="2px" width="100px" alt="line">
-						</figure>
-						<li>
-							<p class="exp-title">MS - HCDE</p>
-							<p class="exp-year">2010</p>
-							<p class="exp-desc">University of Washington</p>
-						</li>
-					</ul>
-					<!-- <ul>
-						<li>
-							<p class="exp-title">Intern</p>
-							<p class="exp-year">2010</p>
-							<p class="exp-desc">Somethhing</p>
-						</li>
-						<figure>
-							<img src="images/line.png" height="2px" width="100px" alt="line">
-						</figure>
-						<li>
-							<p class="exp-title">Intern</p>
-							<p class="exp-year">2010</p>
-							<p class="exp-desc">Somethhing</p>
-						</li>
-						<figure>
-							<img src="images/line.png" height="2px" width="100px" alt="line">
-						</figure>
-						<li>
-							<p class="exp-title">Intern</p>
-							<p class="exp-year">2010</p>
-							<p class="exp-desc">Somethhing</p>
-						</li>
-						<figure>
-							<img src="images/line.png" height="2px" width="100px" alt="line">
-						</figure>
-						<li>
-							<p class="exp-title">Intern</p>
-							<p class="exp-year">2010</p>
-							<p class="exp-desc">Somethhing</p>
-						</li> -->
-					</ul>
-				</div>
-			</section>
-			<section id="contact" class="section-block" style="display:none;">
-				<h2>Contact</h2>
-				<div class="section-content">
-					<div class="circle-container">
-						<div class="row-content">
-							<span class="circle"></span>
-							<p>shetty91@uw.edu</p>
-						</div>
-						<div class="row-content">
-							<span class="circle"></span>
-							<p>(+1) 206 739 4985</p>
-						</div>
-						<div class="row-content">
-							<a href="http://www.thenounproject.com/91shetty" target="_blank">
-								<span class="circle"></span>
-								<p>The Noun Project</p>
-							</a>
-						</div>
-						<div class="row-content">
-							<a href="https://www.behance.net/91shetty" target="_blank">
-								<span class="circle"></span>
-								<p>Behance</p>
-							</a>
-						</div>
+				</section>
+				<section class="section-block hide" id="about">
+					<div class="section-content">
+
 					</div>
-				</div>
-			</section>
+				</section>
+				<section class="section-block hide" id="contact">
+					<div class="section-content">
+
+					</div>
+				</section>
+			</div>
 		</div>
-		<footer>
-			<span class="footer-content">&copy; 2014 | Vishwas Shetty | All Rights Reserved</span>
-			<ul class="color-scheme">
-				<li id="circle1" class="circle"></li>
-				<li id="circle2" class="circle"></li>
-				<li id="circle3" class="circle"></li>
-				<li id="circle4" class="circle"></li>
-				<li id="circle5" class="circle"></li>
-			</ul>
-		</footer>
+		<footer></footer>
 		<script type="text/javascript">
 			$(window).load(function(){
-				//Event for header 
-				if($(document).scrollTop()>0){
-					$('header').toggleClass('user-tiny');
-				}
-				$(window).on("scroll touchmove", function () {
-				    $('header').toggleClass('user-tiny', $(document).scrollTop() > 0);
+				$('.logo').click(function(){
+					$('#skillsNav').removeClass("active pulse");
+					$('#aboutNav').removeClass("active pulse");
+					$('#contactNav').removeClass("active pulse");
+					$('#landing').removeClass("hide");
+					$('#skills').addClass("hide");
+					$('#about').addClass("hide");
+					$('#contact').addClass("hide");
 				});
-				//Event for #about - hover 
-				$('#about .resume').hover(
-					function(){
-						$(this).children('.viewDownload').show();
-					},
-					function(){
-						$(this).children('.viewDownload').hide();
-					}
-				);
-				//Event for #work - click
-				$('#freelance .cross').click(function() {
-					$('#freelance .sub-section-content').fadeOut("slow");
+				$('#skillsNav').click(function(){
+					$(this).addClass("active pulse");				
+					$('#aboutNav').removeClass("active pulse");
+					$('#contactNav').removeClass("active pulse");
+					$('#landing').addClass("hide");
+					$('#skills').removeClass("hide");
+					$('#contact').addClass("hide");
+					$('#about').addClass("hide");
 				});
-				$('#freelance .sub-section-links li').click(function() {
-					$('#freelance .sub-section-content').fadeIn("slow");
-					var strTitle = $(this).children(".link-title").text();
-					var strDomain = $(this).children(".link-domain").text();
-					var strContent = $(this).children(".link-content").text();
-					var $linkTitle = $('#freelance .sub-section-content .link-title');
-					$linkTitle.html(strTitle);
-					var $linkDomain = $('#freelance .sub-section-content .link-domain');
-					$linkDomain.html(strDomain);
-					var $linkContent = $('#freelance .sub-section-content .link-content');
-					$linkContent.html(strContent);
+				$('#aboutNav').click(function(){
+					$(this).addClass("active pulse");
+					$('#skillsNav').removeClass("active pulse");
+					$('#contactNav').removeClass("active pulse");
+					$('#landing').addClass("hide");
+					$('#skills').addClass("hide");
+					$('#about').removeClass("hide");
+					$('#contact').addClass("hide");
 				});
-				$('#projects .cross').click(function() {
-					$('#projects .sub-section-content').fadeOut("slow");
+				$('#contactNav').click(function(){
+					$(this).addClass("active pulse");				
+					$('#skillsNav').removeClass("active pulse");
+					$('#aboutNav').removeClass("active pulse");
+					$('#landing').addClass("hide");
+					$('#skills').addClass("hide");
+					$('#about').addClass("hide");
+					$('#contact').removeClass("hide");
 				});
-				$('#projects .sub-section-links li').click(function() {
-					$('#projects .sub-section-content').fadeIn("slow");
-					var strTitle = $(this).children(".link-title").text();
-					var strDomain = $(this).children(".link-domain").text();
-					var strContent = $(this).children(".link-content").text();
-					var $linkTitle = $('#projects .sub-section-content .link-title');
-					$linkTitle.html(strTitle);
-					var $linkDomain = $('#projects .sub-section-content .link-domain');
-					$linkDomain.html(strDomain);
-					var $linkContent = $('#projects .sub-section-content .link-content');
-					$linkContent.html(strContent);
-				});
-				//Event for #experience - hover
-				$('#experience .section-content li').hover(
-					function() {
-						$(this).css("background","#fff");
-						$(this).children('.exp-title').hide();
-						$(this).children('.exp-year').show();
-						$(this).children('.exp-desc').css("opacity","1");
-					}, 
-					function() {
-						$(this).css("background","#f2f2f2");
-						$(this).children('.exp-title').show();
-						$(this).children('.exp-year').hide();
-						$(this).children('.exp-desc').css("opacity","0");
-					}
-				);
+				// $("").click(function(){
+				// 	$('#about').removeClass("hide");
+				// 	$('#contact').addClass("hide");
+				// 	$('#landing').addClass("hide");
+				// });
 			});
 		</script>
 		<script type="text/javascript">
@@ -358,15 +111,6 @@
 		      $('[data-typer-targets]').typer();
 		    });
 		  });
-		</script>
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-			ga('create', 'UA-68215952-1', 'auto');
-			ga('send', 'pageview');
 		</script>
 	</body>
 </html>
