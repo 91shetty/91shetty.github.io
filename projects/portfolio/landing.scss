@@ -18,12 +18,13 @@
 			padding-bottom: 20px;
 		}
 	}
+	
 	p {
 		margin: auto;
 		width: 100%;
 		padding: 10px 0 20px 0;
 		line-height: 1.8em;
-		
+
 		@include breakpoint(tablet) {
 			font-size: 1.2em;
 		}

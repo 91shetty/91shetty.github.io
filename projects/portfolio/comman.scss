@@ -70,7 +70,7 @@ header {
 	position: relative;
 	width: 80%;
 	margin: 0 auto;
-
+	
 	@include breakpoint(tablet) {
 		top: 50%;
 		transform: translateY(-50%);
