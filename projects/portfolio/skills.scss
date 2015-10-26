@@ -1,17 +1,20 @@
 #skills {
+	.sub-section {
+		.sub-section-content {
+			span {
+				display: inline-block;
+				margin-right: 20px;
 
-	h3 {
+				svg {
+					width: 60px;
+					height: 60px;
+				}
 
-	}
-
-	nav {
-		cursor: none;
-	}
-	#programming {
-
-	}
-
-	#tools {
-
+				@include breakpoint(tablet) {
+					width: 120px;
+					height: 120px;
+				}
+			}
+		}
 	}
 }
