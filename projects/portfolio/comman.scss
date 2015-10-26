@@ -40,7 +40,7 @@ header {
 		}
 		nav {
 			position: relative;
-			float: right;
+			text-align: center;
 		    top: 50%;
 		    transform: translateY(-50%);
 			a {
@@ -52,6 +52,9 @@ header {
 				}
 			}
 
+			@include breakpoint(tablet) {
+				float: right;
+			}
 		}
 	}
 }
