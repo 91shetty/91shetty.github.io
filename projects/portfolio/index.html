@@ -57,22 +57,22 @@
 		<script type="text/javascript">
 			$(window).load(function(){
 				$('.logo').click(function(){
-					$('#aboutNav').removeClass("active");
-					$('#contactNav').removeClass("active");
+					$('#aboutNav').removeClass("active pulse");
+					$('#contactNav').removeClass("active pulse");
 					$('#landing').removeClass("hide");
 					$('#contact').addClass("hide");
 					$('#about').addClass("hide");
 				});
 				$('#aboutNav').click(function(){
 					$(this).addClass("active pulse");
-					$('#contactNav').removeClass("active");
+					$('#contactNav').removeClass("active pulse");
 					$('#about').removeClass("hide");
 					$('#contact').addClass("hide");
 					$('#landing').addClass("hide");
 				});
 				$('#contactNav').click(function(){
 					$(this).addClass("active pulse");
-					$('#aboutNav').removeClass("active");
+					$('#aboutNav').removeClass("active pulse");
 					$('#contact').removeClass("hide");
 					$('#about').addClass("hide");
 					$('#landing').addClass("hide");
