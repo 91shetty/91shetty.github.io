@@ -18,7 +18,7 @@
 			padding-bottom: 20px;
 		}
 	}
-	
+
 	p {
 		margin: auto;
 		width: 100%;
@@ -27,9 +27,6 @@
 
 		@include breakpoint(tablet) {
 			font-size: 1.2em;
-		}
-
-		@include breakpoint(tablet) {
 			padding-top: 20px;
 		}
 	}
