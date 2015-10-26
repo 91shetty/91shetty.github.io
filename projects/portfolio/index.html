@@ -17,6 +17,7 @@
 					<div class="logo"></div>
 					<nav>
 						<a href="#" id="workNav" class="animated">Work</a>
+						<a href="#" id="skillsNav" class="animated">Skills</a>
 						<a href="#" id="aboutNav" class="animated">About</a>
 						<a href="#" id="contactNav" class="animated">Contact</a>
 					</nav>
@@ -41,6 +42,11 @@
 						</p>
 					</div>
 				</section>
+				<section class="section-block hide" id="skills">
+					<div class="section-content">
+
+					</div>
+				</section>
 				<section class="section-block hide" id="about">
 					<div class="section-content">
 
@@ -57,25 +63,40 @@
 		<script type="text/javascript">
 			$(window).load(function(){
 				$('.logo').click(function(){
+					$('#skillsNav').removeClass("active pulse");
 					$('#aboutNav').removeClass("active pulse");
 					$('#contactNav').removeClass("active pulse");
 					$('#landing').removeClass("hide");
+					$('#skills').addClass("hide");
+					$('#about').addClass("hide");
+					$('#contact').addClass("hide");
+				});
+				$('#skillsNav').click(function(){
+					$(this).addClass("active pulse");				
+					$('#aboutNav').removeClass("active pulse");
+					$('#contactNav').removeClass("active pulse");
+					$('#landing').addClass("hide");
+					$('#skills').removeClass("hide");
 					$('#contact').addClass("hide");
 					$('#about').addClass("hide");
 				});
 				$('#aboutNav').click(function(){
 					$(this).addClass("active pulse");
+					$('#skillsNav').removeClass("active pulse");
 					$('#contactNav').removeClass("active pulse");
+					$('#landing').addClass("hide");
+					$('#skills').addClass("hide");
 					$('#about').removeClass("hide");
 					$('#contact').addClass("hide");
-					$('#landing').addClass("hide");
 				});
 				$('#contactNav').click(function(){
-					$(this).addClass("active pulse");
+					$(this).addClass("active pulse");				
+					$('#skillsNav').removeClass("active pulse");
 					$('#aboutNav').removeClass("active pulse");
-					$('#contact').removeClass("hide");
-					$('#about').addClass("hide");
 					$('#landing').addClass("hide");
+					$('#skills').addClass("hide");
+					$('#about').addClass("hide");
+					$('#contact').removeClass("hide");
 				});
 				// $("").click(function(){
 				// 	$('#about').removeClass("hide");
