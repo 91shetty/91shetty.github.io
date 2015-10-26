@@ -37,7 +37,11 @@ header {
 		margin: 0 auto;
 		height: 100%;
 		.logo {
-
+			background-color: $tertiary-color;
+			@include breakpoint(tablet) {
+				height: 100%;
+				width: 50px;
+			}
 		}
 		nav {
 			position: relative;

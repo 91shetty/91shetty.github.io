@@ -56,6 +56,13 @@
 		<footer></footer>
 		<script type="text/javascript">
 			$(window).load(function(){
+				$('.logo').click(function(){
+					$('#aboutNav').removeClass("active");
+					$('#contactNav').removeClass("active");
+					$('#landing').removeClass("hide");
+					$('#contact').addClass("hide");
+					$('#about').addClass("hide");
+				});
 				$('#aboutNav').click(function(){
 					$(this).addClass("active");
 					$('#contactNav').removeClass("active");
