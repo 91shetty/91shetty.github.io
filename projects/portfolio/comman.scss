@@ -85,13 +85,14 @@ header {
 
 footer {
 	width: 100%;
-	height: 3em;
+	height: 10px;
 	background-color: $primary-color;
 	bottom: 0px;
 	color: $tertiary-color;
+	position: fixed;
 
 	@include breakpoint(tablet) {
-		position: fixed;
+		height: 3em;
 	}
 }
 
