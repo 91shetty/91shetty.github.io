@@ -2,7 +2,17 @@
 @media screen 
   and (min-device-width: 1200px) 
   and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  	header {
+  		.top-nav {
+  			nav {
+  				a{
+  					margin: 0 25px;
+  				}
+  			}
+  		}
+  	}
+  	
   	#landing{
   		figure {
   			img {
@@ -16,7 +26,7 @@
 			font-size: 1.2em;
   		}
   	}
-  	
+
   	footer {
   		position: fixed;
   	}

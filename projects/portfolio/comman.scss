@@ -38,15 +38,15 @@ header {
 		.logo {
 
 		}
-	}
-	nav {
-		position: relative;
-		float: right;
-	    top: 50%;
-	    transform: translateY(-50%);
-		a {
-			color: #fff;
-			margin: 0 25px;
+		nav {
+			position: relative;
+			float: right;
+		    top: 50%;
+		    transform: translateY(-50%);
+			a {
+				color: #fff;
+				margin: 0 10px;
+			}
 		}
 	}
 }
