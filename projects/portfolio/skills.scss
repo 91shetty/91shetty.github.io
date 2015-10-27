@@ -30,14 +30,5 @@
 				font-size: 24px;
 			}
 		}
-
-		@include breakpoint(tablet) {
-			margin-top: 25px;
-			margin-bottom: 25px;
-		}
-	}
-
-	.sub-section:last-child {
-		margin-bottom: 0px;
 	}
 }
