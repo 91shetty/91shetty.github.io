@@ -173,7 +173,14 @@
 			color: #f2f2f2;
 			height: 32em;
 		}
-
+		.section-content {
+			margin: 0 auto;
+			width: 80%;
+			height: 100%; 
+		}
+		.sub-section {
+			display: inline-block;
+		}
 		/* Input */
 		.input {
 			position: relative;
@@ -337,11 +344,13 @@
 				</div>
 			</section>
 			<section class="products">
-				<div class="paper">
-					<h3>Paper</h3>
-				</div>
-				<div class="board">
-					<h3>Board</h3>
+				<div class="section-content">
+					<div class="sub-section" id="paper">
+						<h2>Paper</h2>
+					</div>
+					<div class="sub-section" id="board">
+						<h2>Board</h2>
+					</div>
 				</div>
 			</section>
 		</div>
