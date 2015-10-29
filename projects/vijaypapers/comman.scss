@@ -3,6 +3,7 @@
   	padding: 0;
   	border: none;
 }
+
 html, body {
 	height: 100%;
 	width: 100%;
@@ -12,14 +13,16 @@ html, body {
 	font-family: 'Fira Sans', sans-serif;
 	background: #edecec;
 }
+
 .hide {
 	display: none;
 }
+
 .container {
-	/*background: #f9f9f9;*/
 	width: 100%;
 	height: 100%;
 }
+
 .mast {
 	width: 100%;
 	z-index: 500;
@@ -32,13 +35,90 @@ html, body {
  	box-sizing: border-box;
  	transition: 200ms background-color,200ms color;
  	-webkit-animation: fade-up-in 175ms;
-		animation: fade-up-in 175ms;
-		padding: 0 16px 0 16px;
+	animation: fade-up-in 175ms;
+	padding: 0 16px 0 16px;
 	box-shadow: 0 0 1px rgba(0,0,0,0.15);
 }
+
 a {
 	text-decoration: none;
 }
+
 .active {
 	color: #e4352c;
+}
+
+header {
+	top: 0;
+	height: 60px;
+	position: fixed;
+}
+
+.hamburger {
+	width: 25px;
+	height: 25px;
+	background: #f2f2f2;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	cursor: pointer;
+	z-index: 99997;
+	float: right;
+	margin-left: 40px;
+}
+
+.hamburger:hover {
+	background: #bababa;
+}
+
+.logo {
+	height: 60px;
+	padding: 0 16px 0 16px;
+	width: 60px;
+	background-color: red;
+	float: left;
+	margin-right: 20px;
+}
+
+.menu {
+	position: relative;
+	line-height: 4em;
+	color: #000;
+	float: right;
+}
+
+.menu span {
+	float: left;
+	font-size: 1.3em;
+	padding: 0 40px 0 40px;
+	cursor: pointer;
+}
+
+.menu span:hover {
+	color: #e4352c;
+}
+
+section {
+	width: 100%;
+	position: relative;
+	padding: 3.5em 0 3.5em 0;
+}
+
+.section-content {
+	margin: 0 auto;
+	width: 80%;
+	height: 100%; 
+}
+
+footer {
+	bottom: 0;
+	height: 3em;
+	position: relative;
+}
+
+footer p {
+	line-height: 3em;
+	color: rgba(0,0,0,0.6);
 }

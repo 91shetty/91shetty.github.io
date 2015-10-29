@@ -8,64 +8,6 @@
 	<link rel="stylesheet" type="text/css" href="animate.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<style type="text/css">
-		/* Header */
-		header {
-			top: 0;
-			height: 60px;
-			position: fixed;
-		}
-		.hamburger {
-			width: 25px;
-			height: 25px;
-			background: #f2f2f2;
-			position: relative;
-			top: 50%;
-			transform: translateY(-50%);
-			-webkit-transform: translateY(-50%);
-			-moz-transform: translateY(-50%);
-			cursor: pointer;
-			z-index: 99997;
-			float: right;
-			margin-left: 40px;
-		}
-		.hamburger:hover {
-			background: #bababa;
-		}
-		.logo {
-			  height: 60px;
-			  padding: 0 16px 0 16px;
-			  width: 60px;
-			  background-color: red;
-			  float: left;
-			  margin-right: 20px;
-		}
-		.menu {
-			position: relative;
-			line-height: 4em;
-			color: #000;
-			float: right;
-		}
-		.menu span {
-			float: left;
-			font-size: 1.3em;
-			padding: 0 40px 0 40px;
-			cursor: pointer;
-		}
-		.menu span:hover {
-			color: #e4352c;
-		}
-
-		/* Footer */	
-		footer {
-			bottom: 0;
-			height: 3em;
-			position: relative;
-		}
-		footer p {
-			line-height: 3em;
-			color: rgba(0,0,0,0.6);
-		}
-
 		/* Contact */
 		.contact {
 			width: 25em;
@@ -76,6 +18,7 @@
 			right: 0;
 			position: fixed;
 		}
+		/*
 		.contact .details {
 			width: 100%;
 			height: 100%;
@@ -93,164 +36,7 @@
 		}
 		textarea {
 			resize: none;
-		}
-
-		/* Content */
-		.content {
-			position: relative;
-		}
-		section {
-			width: 100%;
-			position: relative;
-			padding: 3.5em 0 3.5em 0;
-		}
-		.about { 
-			background: #DDDAD2;
-			color: #000;
-			text-align: center;
-		}
-		.about h1 {
-			font-size: 6em;
-			padding-top: 1em;
-		}
-		.about h2 {
-			font-size: 2em;
-			padding-top: 1em;
-			opacity: 0.7;
-		}
-		.about .process {
-			width: 75%;
-			padding-top: 3em;
-			height: 40px;
-		}
-		.products {
-			background: #383735;
-			color: #f2f2f2;
-			height: 32em;
-		}
-		.section-content {
-			margin: 0 auto;
-			width: 80%;
-			height: 100%; 
-		}
-		.sub-section {
-			display: inline-block;
-		}
-		/* Input */
-		.input {
-			position: relative;
-			z-index: 1;
-			/*display: inline-block;*/
-			margin: 1em;
-			max-width: 350px;
-			width: calc(100% - 2em);
-			vertical-align: top;
-		}
-
-		.input__field {
-			position: relative;
-			display: block;
-			float: right;
-			padding: 0.8em;
-			width: 80%;
-			border: none;
-			border-radius: 0;
-			background-color: rgb(186, 186, 186);
-			color: #aaa;
-			font-weight: bold;
-			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-			-webkit-appearance: none; /* for box shadows to show on iOS */
-		}
-
-		.input__field:focus {
-			outline: none;
-		}
-
-		.input__label {
-			display: inline-block;
-			padding: 0 1em;
-			width: 40%;
-			color: #6a7989;
-			font-weight: bold;
-			font-size: 70.25%;
-			-webkit-font-smoothing: antialiased;
-		    -moz-osx-font-smoothing: grayscale;
-			-webkit-touch-callout: none;
-			-webkit-user-select: none;
-			-khtml-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
-			user-select: none;
-		}
-
-		.input__label-content {
-			position: relative;
-			display: block;
-			padding: 1.6em 0;
-			width: 100%;
-		}
-
-		/* Minoru */
-		.input__field--minoru {
-			width: 80%;
-			background-color: rgb(186, 186, 186);
-			box-shadow: 0px 0px 0px 2px transparent;
-			color: #eca29b;
-			-webkit-transition: box-shadow 0.3s;
-			transition: box-shadow 0.3s;
-		}
-
-		.input__label--minoru {
-			padding: 0;
-			width: 100%;
-			text-align: left;
-		}
-
-		.input__label--minoru::after {
-			content: '';
-		  	position: absolute;
-		  	top: 0;
-		  	z-index: -1;
-		  	width: 100%;
-		  	height: 4em;
-			box-shadow: 0px 0px 0px 0px;
-			color: rgba(199,152,157, 0.6);
-		}
-
-		.input__field--minoru:focus {
-			box-shadow: 0px 0px 0px 2px #eca29b;
-		}
-
-		.input__field--minoru:focus + .input__label--minoru {
-			pointer-events: none;
-		}
-
-		.input__field--minoru:focus + .input__label--minoru::after {
-			-webkit-animation: anim-shadow 0.3s forwards;
-			animation: anim-shadow 0.3s forwards;
-		}
-
-		@-webkit-keyframes anim-shadow {
-			to {
-				box-shadow: 0px 0px 100px 50px;
-		    	opacity: 0;
-			}
-		}
-
-		@keyframes anim-shadow {
-			to {
-				box-shadow: 0px 0px 100px 50px;
-		    	opacity: 0;
-			}
-		}
-
-		.input__label-content--minoru {
-			padding: 0.75em 0.15em;
-		}
-		/* Mobile and Tablets */
-		@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
-
-		}
+		}*/
 	</style>
 </head>
 <body>
@@ -267,30 +53,7 @@
 			</div>
 		</header>
 		<div class="contact animated hide">
-			<span class="input input--minoru">
-				<label class="input__label input__label--minoru" for="input-13">
-					<span class="input__label-content input__label-content--minoru">Name</span>
-				</label>
-				<input class="input__field input__field--minoru" type="text" id="input-13" />		
-			</span>
-			<span class="input input--minoru">
-				<label class="input__label input__label--minoru" for="input-14">
-					<span class="input__label-content input__label-content--minoru">Email</span>
-				</label>
-				<input class="input__field input__field--minoru" type="text" id="input-14" />		
-			</span>
-			<span class="input input--minoru">
-				<label class="input__label input__label--minoru" for="input-15">
-					<span class="input__label-content input__label-content--minoru">Phone Number</span>
-				</label>
-				<input class="input__field input__field--minoru" type="text" id="input-15" />			
-			</span>
-			<span class="input input--minoru">
-				<label class="input__label input__label--minoru" for="input-15">
-					<span class="input__label-content input__label-content--minoru">Message</span>
-				</label>
-				<input class="input__field input__field--minoru" type="text" id="input-15" />			
-			</span>
+			
 		</div>
 		<div class="content">
 			<section class="about">

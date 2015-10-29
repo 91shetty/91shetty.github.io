@@ -74,7 +74,6 @@ html, body {
 }
 
 .container {
-  /*background: #f9f9f9;*/
   width: 100%;
   height: 100%;
 }
@@ -103,4 +102,117 @@ a {
 
 .active {
   color: #e4352c;
+}
+
+header {
+  top: 0;
+  height: 60px;
+  position: fixed;
+}
+
+.hamburger {
+  width: 25px;
+  height: 25px;
+  background: #f2f2f2;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 99997;
+  float: right;
+  margin-left: 40px;
+}
+
+.hamburger:hover {
+  background: #bababa;
+}
+
+.logo {
+  height: 60px;
+  padding: 0 16px 0 16px;
+  width: 60px;
+  background-color: red;
+  float: left;
+  margin-right: 20px;
+}
+
+.menu {
+  position: relative;
+  line-height: 4em;
+  color: #000;
+  float: right;
+}
+
+.menu span {
+  float: left;
+  font-size: 1.3em;
+  padding: 0 40px 0 40px;
+  cursor: pointer;
+}
+
+.menu span:hover {
+  color: #e4352c;
+}
+
+section {
+  width: 100%;
+  position: relative;
+  padding: 3.5em 0 3.5em 0;
+}
+
+.section-content {
+  margin: 0 auto;
+  width: 80%;
+  height: 100%;
+}
+
+footer {
+  bottom: 0;
+  height: 3em;
+  position: relative;
+}
+
+footer p {
+  line-height: 3em;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.content {
+  position: relative;
+}
+
+.about {
+  background: #DDDAD2;
+  color: #000;
+  text-align: center;
+}
+
+.about h1 {
+  font-size: 6em;
+  padding-top: 1em;
+}
+
+.about h2 {
+  font-size: 2em;
+  padding-top: 1em;
+  opacity: 0.7;
+}
+
+.about .process {
+  width: 75%;
+  padding-top: 3em;
+  height: 40px;
+}
+
+.products {
+  background: #383735;
+  color: #f2f2f2;
+  height: 32em;
+}
+
+.sub-section {
+  display: inline-block;
 }

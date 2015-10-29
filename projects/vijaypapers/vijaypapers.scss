@@ -1,0 +1,36 @@
+.content {
+	position: relative;
+}
+
+.about { 
+	background: #DDDAD2;
+	color: #000;
+	text-align: center;
+}
+
+.about h1 {
+	font-size: 6em;
+	padding-top: 1em;
+}
+
+.about h2 {
+	font-size: 2em;
+	padding-top: 1em;
+	opacity: 0.7;
+}
+
+.about .process {
+	width: 75%;
+	padding-top: 3em;
+	height: 40px;
+}
+
+.products {
+	background: #383735;
+	color: #f2f2f2;
+	height: 32em;
+}
+
+.sub-section {
+	display: inline-block;
+}
