@@ -74,12 +74,13 @@ header {
 
 .section-content {
 	position: relative;
-	width: 80%;
+	width: 95%;
 	margin: 0 auto;
+	top: 50%;
+	transform: translateY(-50%);
 
 	@include breakpoint(tablet) {
-		top: 50%;
-		transform: translateY(-50%);
+		width: 80%;
 	}
 }
 
