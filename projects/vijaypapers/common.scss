@@ -64,10 +64,6 @@ header {
 	z-index: 99997;
 }
 
-.hamburger:hover {
-	background: #bababa;
-}
-
 .logo {
 	height: 60px;
 	padding: 0 16px 0 16px;
@@ -96,6 +92,12 @@ header {
 	}
 	#message {
 		display: inline-block;
+		p {
+			display: inline-block;
+		}
+		.hamburger {
+			display: inline-block;
+		}
 	}
 }
 

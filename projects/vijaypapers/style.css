@@ -123,10 +123,6 @@ header {
   z-index: 99997;
 }
 
-.hamburger:hover {
-  background: #bababa;
-}
-
 .logo {
   height: 60px;
   padding: 0 16px 0 16px;
@@ -160,6 +156,14 @@ header {
 }
 
 .menu #message {
+  display: inline-block;
+}
+
+.menu #message p {
+  display: inline-block;
+}
+
+.menu #message .hamburger {
   display: inline-block;
 }
 
