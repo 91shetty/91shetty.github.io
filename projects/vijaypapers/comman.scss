@@ -34,7 +34,6 @@ html, body {
  	font-style: normal;
  	box-sizing: border-box;
  	transition: 200ms background-color,200ms color;
- 	-webkit-animation: fade-up-in 175ms;
 	animation: fade-up-in 175ms;
 	padding: 0 16px 0 16px;
 	box-shadow: 0 0 1px rgba(0,0,0,0.15);
@@ -61,12 +60,10 @@ header {
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
 	cursor: pointer;
 	z-index: 99997;
-	float: right;
-	margin-left: 40px;
+	// float: right;
+	// margin-left: 40px;
 }
 
 .hamburger:hover {
