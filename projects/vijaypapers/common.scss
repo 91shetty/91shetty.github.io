@@ -74,9 +74,11 @@ header {
 }
 
 .menu {
-	position: relative;
+	position: absolute;
 	line-height: 60px;
 	color: #000;
+	margin-right: 20px;
+	right: 0;
 	span {
 		margin: 0 40px 0 40px;
 		cursor: pointer;
