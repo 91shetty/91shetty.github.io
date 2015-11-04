@@ -148,7 +148,19 @@ header {
 }
 
 .menu p {
-  font-size: 24px;
+  font-size: 20px;
+}
+
+.menu #mAbout {
+  display: inline-block;
+}
+
+.menu #mProducts {
+  display: inline-block;
+}
+
+.menu #message {
+  display: inline-block;
 }
 
 section {
