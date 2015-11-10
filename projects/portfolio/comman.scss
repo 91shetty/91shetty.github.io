@@ -61,7 +61,9 @@ header {
 					margin: 0 25px;
 				}
 			}
-
+			a:hover {
+				border-bottom: 1px solid #bf9000;
+			}
 			@include breakpoint(tablet) {
 				float: right;
 			}
