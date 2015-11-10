@@ -48,9 +48,7 @@ header {
 				margin: 7.5px 0;
 			}
 			@include breakpoint(tablet) {
-				position: absolute;
-				height: 100%;
-				width: 60px;
+				
 			}
 		}
 		ul {
