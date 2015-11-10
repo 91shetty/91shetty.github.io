@@ -56,8 +56,8 @@ header {
 			text-align: center;
 		    top: 50%;
 		    transform: translateY(-50%);
+			color: #fff;
 			a {
-				color: #fff;
 				margin: 0 10px;
 
 				@include breakpoint(tablet) {
