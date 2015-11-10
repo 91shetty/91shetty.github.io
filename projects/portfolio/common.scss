@@ -17,8 +17,11 @@ body {
 
 .content {
 	width: 100%;
-	height: calc(100% - 65px - 3em);
+	height: calc(100% - 65px - 20px);
 	padding: 65px 0 3em 0;
+	@include breakpoint(tablet) {
+		height: calc(100% - 65px - 50px);
+	}
 }
 
 header {
@@ -108,14 +111,18 @@ header {
 
 footer {
 	width: 100%;
-	height: 10px;
+	height: 20px;
 	background-color: $primary-color;
 	bottom: 0px;
 	color: $tertiary-color;
 	position: fixed;
-
+	font-size: 12px;
+	p {
+		line-height: 20px;
+	}
 	@include breakpoint(tablet) {
-		height: 3em;
+		font-size: 14px;
+		height: 50px;
 	}
 }
 
