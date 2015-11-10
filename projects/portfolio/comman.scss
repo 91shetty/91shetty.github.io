@@ -51,21 +51,36 @@ header {
 				width: 60px;
 			}
 		}
-		nav {
-			text-align: center;
+		// nav {
+		// 	text-align: center;
+		// 	height: 100%;
+		// 	a {
+		// 		margin: 0 10px;
+
+		// 		@include breakpoint(tablet) {
+		// 			margin: 0 25px;
+		// 		}
+		// 	}
+		// 	a:hover {
+		// 		border-bottom: 1px solid #bf9000;
+		// 	}
+		// 	@include breakpoint(tablet) {
+		// 		float: right;
+		// 	}
+		// }
+		ul {
 			height: 100%;
-			a {
+			li {
+				display: inline-block;
+				height: 100%;
 				margin: 0 10px;
 
 				@include breakpoint(tablet) {
-					margin: 0 25px;
-				}
+		 			margin: 0 25px;
+		 		}
 			}
-			a:hover {
+			li:hover{
 				border-bottom: 1px solid #bf9000;
-			}
-			@include breakpoint(tablet) {
-				float: right;
 			}
 		}
 	}
@@ -120,4 +135,12 @@ footer {
 
 .bolder {
 	font-weight: 700;
+}
+
+.right {
+	float: right!important;
+}
+
+.left {	
+	float: left!important;
 }
