@@ -52,13 +52,11 @@ header {
 			}
 		}
 		nav {
-			position: relative;
 			text-align: center;
-		    top: 50%;
-		    transform: translateY(-50%);
+			height: 100%;
 			a {
 				margin: 0 10px;
-				
+
 				@include breakpoint(tablet) {
 					margin: 0 25px;
 				}
