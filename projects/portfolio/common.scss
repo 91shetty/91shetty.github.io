@@ -54,23 +54,6 @@ header {
 				width: 60px;
 			}
 		}
-		// nav {
-		// 	text-align: center;
-		// 	height: 100%;
-		// 	a {
-		// 		margin: 0 10px;
-
-		// 		@include breakpoint(tablet) {
-		// 			margin: 0 25px;
-		// 		}
-		// 	}
-		// 	a:hover {
-		// 		border-bottom: 1px solid #bf9000;
-		// 	}
-		// 	@include breakpoint(tablet) {
-		// 		float: right;
-		// 	}
-		// }
 		ul {
 			height: 100%;
 			li {
@@ -119,6 +102,9 @@ footer {
 	font-size: 12px;
 	p {
 		line-height: 25px;
+		span {
+			color: #bf9000; 
+		}
 		@include breakpoint(tablet) {
 			line-height: 50px;
 		}
