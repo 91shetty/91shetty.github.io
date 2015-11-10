@@ -38,10 +38,14 @@ header {
 		height: 100%;
 		.logo {
 			cursor: pointer;
+			img {
+				width: 60px;
+				height: 60px;
+			}
 			@include breakpoint(tablet) {
 				position: absolute;
 				height: 100%;
-				width: 50px;
+				width: 60px;
 				background-color: $tertiary-color;
 			}
 		}
