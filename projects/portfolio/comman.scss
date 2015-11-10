@@ -74,13 +74,15 @@ header {
 				display: inline-block;
 				height: 100%;
 				margin: 0 10px;
-
+				a {
+					line-height: 65px;
+				}
+				a:hover{
+					border-bottom: 1px solid #bf9000;
+				}
 				@include breakpoint(tablet) {
 		 			margin: 0 25px;
 		 		}
-			}
-			li:hover{
-				border-bottom: 1px solid #bf9000;
 			}
 		}
 	}
