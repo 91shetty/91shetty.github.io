@@ -111,14 +111,17 @@ header {
 
 footer {
 	width: 100%;
-	height: 20px;
+	height: 25px;
 	background-color: $primary-color;
 	bottom: 0px;
 	color: $tertiary-color;
 	position: fixed;
 	font-size: 12px;
 	p {
-		line-height: 20px;
+		line-height: 25px;
+		@include breakpoint(tablet) {
+			line-height: 50px;
+		}
 	}
 	@include breakpoint(tablet) {
 		font-size: 14px;
