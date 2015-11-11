@@ -42,6 +42,7 @@ header {
 		.logo {
 			cursor: pointer;
 			height: 100%;
+			width: 65px;
 			img {
 				position: relative;
 				width: 50px;
@@ -49,7 +50,7 @@ header {
 				margin: 7.5px 0;
 			}
 			@include breakpoint(tablet) {
-				
+				float: left;
 			}
 		}
 		ul {
