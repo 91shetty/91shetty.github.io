@@ -36,8 +36,6 @@ header {
 
 header {
 	.top-bar {
-		width: 80%;
-		margin: 0 auto;
 		height: 100%;
 		.logo {
 			cursor: pointer;
@@ -62,10 +60,6 @@ header {
 				margin: 0 10px;
 				a {
 					line-height: 65px;
-					color: $secondary-color;
-					@include breakpoint(tablet) {
-						color: $tertiary-color;
-					}
 				}
 				a:hover{
 					border-bottom: 1px solid #bf9000;
@@ -74,6 +68,10 @@ header {
 		 			margin: 0 25px;
 		 		}
 			}
+		}
+		@include breakpoint(tablet) {
+			width: 80%;
+			margin: 0 auto;
 		}
 	}
 }
