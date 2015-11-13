@@ -41,7 +41,7 @@
 		current = -1,
 		lockScroll = false, xscroll, yscroll,
 		isAnimating = false,
-		menuCtrl = document.getElementById('menu-toggle'),
+		menuCtrl = document.getElementById('menu-toggle');
 		//menuCloseCtrl = sidebarEl.querySelector('.close-button');
 
 	/**
