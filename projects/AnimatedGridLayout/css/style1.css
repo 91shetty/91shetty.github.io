@@ -732,12 +732,6 @@ header .top-bar ul li a:hover {
 /* 5 columns */
 /* 6 columns */
 @media screen and (min-width: 600px) {
-  html,
-  body,
-  .container,
-  .main {
-    height: 100vh;
-  }
   .main {
     height: calc(100% - 65px);
     width: 80%;
