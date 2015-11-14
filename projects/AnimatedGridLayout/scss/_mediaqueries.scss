@@ -15,7 +15,8 @@ $viewport_xxl: 	$item_width * 6 + $sidebar_width; /* 6 columns */
 	}
 
 	.main {
-		height: 100%;
+		height: calc(100% - 65px);
+		margin-top: 70px; 
 		// margin-left: $sidebar_width;
 		width: 80%;
 		margin: 0 auto;

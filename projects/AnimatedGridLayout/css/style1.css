@@ -739,7 +739,8 @@ header .top-bar ul li a:hover {
     height: 100vh;
   }
   .main {
-    height: 100%;
+    height: calc(100% - 65px);
+    margin-top: 70px;
     width: 80%;
     margin: 0 auto;
   }
