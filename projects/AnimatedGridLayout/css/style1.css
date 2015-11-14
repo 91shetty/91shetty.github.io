@@ -251,24 +251,6 @@ header .top-bar ul li a:hover {
 }
 
 /* Top bar above the grid */
-.top-bar {
-  background: #fff;
-  width: 100%;
-  line-height: 1;
-  padding: 15px 15px 10px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
-.top-bar__headline {
-  margin: 0;
-  font-size: 0.75em;
-}
-
 /* Menu button for toggling the sidebar (appears on small screen) */
 .menu-toggle {
   position: fixed;
