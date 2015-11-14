@@ -138,9 +138,9 @@ $viewport_xxl: 	$item_width * 6 + $sidebar_width; /* 6 columns */
 	.sidebar.sidebar--open ~ .main {
 		pointer-events: none;
 	}
-	.top-bar {
-		padding: 22px 15px 10px 60px;
-	}
+	// .top-bar {
+	// 	padding: 22px 15px 10px 60px;
+	// }
 	.menu-toggle {
 		display: inline-block;
 	}

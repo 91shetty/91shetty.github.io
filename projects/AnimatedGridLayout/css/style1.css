@@ -966,9 +966,6 @@ header .top-bar ul li a:hover {
   .sidebar.sidebar--open ~ .main {
     pointer-events: none;
   }
-  .top-bar {
-    padding: 22px 15px 10px 60px;
-  }
   .menu-toggle {
     display: inline-block;
   }
