@@ -740,9 +740,9 @@ header .top-bar ul li a:hover {
   }
   .main {
     height: calc(100% - 65px);
-    margin-top: 70px;
     width: 80%;
     margin: 0 auto;
+    margin-top: 70px;
   }
   .content__item {
     font-size: 1em;
