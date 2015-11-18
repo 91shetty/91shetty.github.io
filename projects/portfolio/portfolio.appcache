@@ -1,6 +1,6 @@
 CACHE MANIFEST
-/logo1.png
-/build/style.css
+../logo1.png
+../build/style.css
 http://fonts.googleapis.com/css?family=Fira+Sans:400,500,700,400italic,500italic,700italic
 http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js
 https://rawgit.com/layervault/jquery.typer.js/master/src/jquery.typer.js
