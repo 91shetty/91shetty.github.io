@@ -1,7 +1,9 @@
 CACHE MANIFEST
+
+#version v1 11-12-20015
+
 ../logo1.png
 ../me_profile.png
-../build/style.css
 ../build/animate.css
 http://fonts.googleapis.com/css?family=Fira+Sans:400,500,700,400italic,500italic,700italic
 http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js
