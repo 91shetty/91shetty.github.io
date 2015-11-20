@@ -1,7 +1,14 @@
-.grid {
+.main {
 	width: 90%;
-	height: 100%;
 	margin: 0 auto;
+	@include breakpoint(tablet) {
+		width: 80%;
+	}
+}
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
 
 	.grid-item {
 		width: 100%;
