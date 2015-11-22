@@ -1,3 +1,7 @@
+.content {
+	height: 100%;
+}
+
 .main {
 	width: 90%;
 	margin: 0 auto;
@@ -55,8 +59,6 @@
 }
 
 footer {
-	position: relative;
-	@include breakpoint(laptop) {
-		position: fixed;
-	}
+	position: absolute;
+	bottom: 0;
 }

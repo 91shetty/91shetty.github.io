@@ -9,11 +9,16 @@ figure {
 	padding: 0;
 }
 
-html,body {
+html{
 	height: 100%;
 	width: 100%;
 }
 
+body {
+	width: 100%;
+	min-height: 100%;
+	position: relative;
+}
 a {
 	color: #fff;
 	text-decoration: none;
