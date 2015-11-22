@@ -7,14 +7,14 @@
 }
 
 .grid {
+	position: relative;
 	display: flex;
 	flex-wrap: wrap;
 
 	.grid-item {
 		width: 100%;
 		min-height: 300px;
-		display: inline-block;
-		//box-shadow: 0px 0px 10px #DDD;
+		position: relative;
 		@include breakpoint(desktop) {
 			width: calc(100% / 3)
 		}
