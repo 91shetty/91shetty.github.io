@@ -33,7 +33,6 @@
 			#sidebar {
 				position: relative;
 				top: 50%;
-				width: 50px;
 				transform: translateY(-50%);
 				background-color: white;
 			}
@@ -48,9 +47,9 @@
 				border-bottom: solid 1px #dedede;
 				cursor: pointer;
 			}
-			/*.small {
+			.small {
 				width: 50px;
-			}*/
+			}
 			.big {
 				width: 100px;
 			}
@@ -87,11 +86,13 @@
 			$(window).load(function() {
 				$("li").click(function(){
 					$(".minimize").removeClass("hide");
+					$(this).parents().removeClass("small");
 					$(this).parents().addClass("big");
 					$(this).css("height","100px");
 					$(this).siblings().css("height","40px");
 				});
 				$(".minimize").click(function(){
+					$(this).parent("#sidebar").addClass("small");
 					$(this).parent("#sidebar").removeClass("big");
 					$(this).addClass("hide");
 				});
