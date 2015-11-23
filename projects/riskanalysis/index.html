@@ -41,7 +41,7 @@
 				width: 100%;
 			}
 			li {
-				height: 100px;
+				height: 50px;
 				width: 100%;
 				background: #fff;
 				border-bottom: solid 1px #dedede;
@@ -71,7 +71,7 @@
 	<body>
 		<header></header>
 		<div id='map'></div>
-		<div id="sidebar">
+		<div id="sidebar" class="small">
 			<ul>
 				<li></li>
 				<li></li>
@@ -88,8 +88,8 @@
 					$(".minimize").removeClass("hide");
 					$(this).parents().removeClass("small");
 					$(this).parents().addClass("big");
-					$(this).css("height","100px");
-					$(this).siblings().css("height","40px");
+					$(this).css("height","200px");
+					$(this).siblings().css("height","50px");
 				});
 				$(".minimize").click(function(){
 					$(this).parent("#sidebar").addClass("small");
