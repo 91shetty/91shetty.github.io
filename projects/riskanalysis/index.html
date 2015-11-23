@@ -97,15 +97,15 @@
 		<script type="text/javascript">
 			$(window).load(function() {
 				$("li").click(function(){
-					$(this).parents().removeClass("small");
-					$(this).parents().addClass("big");
+					$(this).parent("#sidebar").removeClass("small");
+					$(this).parent("#sidebar").addClass("big");
 					$(this).css("height","200px");
 					$(this).siblings().css("height","80px");
 					$(".minimize").removeClass("hide");
 				});
 				$(".minimize").click(function(){
-					$(this).parents().addClass("small");
-					$(this).parents().removeClass("big");
+					$(this).parent("#sidebar").addClass("small");
+					$(this).parent("#sidebar").removeClass("big");
 					$(this).addClass("hide");
 				});
 			})
