@@ -96,9 +96,9 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script type="text/javascript">
 			$(window).load(function() {
-				$("li").click(function(){
-					$(this).parent("#sidebar").removeClass("small");
-					$(this).parent("#sidebar").addClass("big");
+				$("#sidebar ul li").click(function(){
+					$("#sidebar").removeClass("small");
+					$("#sidebar").addClass("big");
 					$(this).css("height","200px");
 					$(this).siblings().css("height","80px");
 					$(".minimize").removeClass("hide");
