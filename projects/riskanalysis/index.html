@@ -64,7 +64,8 @@
 		<script type="text/javascript">
 			$(window).load(function() {
 				$("li").click(function(){
-					$(this).parent("#sidebar").css("width","100px");
+					$(this).parents().css("width","100px");
+					console.log("clicked");
 				});
 			})
 		</script>
