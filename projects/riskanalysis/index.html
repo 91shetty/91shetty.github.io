@@ -104,8 +104,8 @@
 					$(".minimize").removeClass("hide");
 				});
 				$(".minimize").click(function(){
-					$(this).parent("#sidebar").addClass("small");
-					$(this).parent("#sidebar").removeClass("big");
+					$(this).parents().addClass("small");
+					$(this).parents().removeClass("big");
 					$(this).addClass("hide");
 				});
 			})
