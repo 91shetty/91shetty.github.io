@@ -33,9 +33,9 @@
 			#sidebar {
 				position: relative;
 				top: 50%;
+				width: 50px;
 				transform: translateY(-50%);
 				background-color: white;
-				display: table-cell;
 			}
 			ul {
 				list-style-type: none;
@@ -48,29 +48,37 @@
 				border-bottom: solid 1px #dedede;
 				cursor: pointer;
 			}
-			.small {
+			/*.small {
 				width: 50px;
-			}
+			}*/
 			.big {
 				width: 100px;
 			}
 			.minimize {
+				position: absolute;
+				right: -20px;
+				top: 50%;
+				transform: translateY(-50%);
 				width: 20px;
-				height: 50px;
+				height: 40px;
 				background-color: white;
+				cursor: pointer;
+			}
+			.hide {
+				display: none;
 			}
 		</style>
 	</head>
 	<body>
 		<header></header>
 		<div id='map'></div>
-		<div id="sidebar" class="small">
+		<div id="sidebar">
 			<ul>
 				<li></li>
 				<li></li>
 				<li></li>
 			</ul>
-			<div class="minimize">
+			<div class="minimize hide">
 				<span class="right-arrow"></span>
 			</div>
 		</div>
@@ -78,10 +86,14 @@
 		<script type="text/javascript">
 			$(window).load(function() {
 				$("li").click(function(){
-					$(this).parents().toggleClass("small");
-					$(this).parents().toggleClass("big");
+					$(".minimize").removeClass("hide");
+					$(this).parents().addClass("big");
 					$(this).css("height","100px");
 					$(this).siblings().css("height","40px");
+				});
+				$(".minimize").click(function(){
+					$(this).parent().removeClass("big");
+					$(this).addClass("hide");
 				});
 			})
 		</script>
