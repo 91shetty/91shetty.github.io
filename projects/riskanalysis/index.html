@@ -37,6 +37,7 @@
 				top: 50%;
 				transform: translateY(-50%);
 				background-color: white;
+				z-index: 1;
 			}
 			ul {
 				list-style-type: none;
@@ -47,6 +48,16 @@
 				width: 100%;
 				background: #fff;
 				border-bottom: solid 1px #dedede;
+				cursor: pointer;
+			}
+			.minimize {
+				position: absolute;
+				left: 100px;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 20px;
+				height: 40px;
+				background-color: white;
 				cursor: pointer;
 			}
 			.right-pane {
@@ -62,16 +73,7 @@
 			.big {
 				width: 100px;
 			}
-			.minimize {
-				position: absolute;
-				right: -70px;
-				top: 50%;
-				transform: translateY(-50%);
-				width: 20px;
-				height: 40px;
-				background-color: white;
-				cursor: pointer;
-			}
+			
 			.hide {
 				display: none;
 			}
@@ -95,11 +97,11 @@
 		<script type="text/javascript">
 			$(window).load(function() {
 				$("li").click(function(){
-					$(".minimize").removeClass("hide");
 					$(this).parents().removeClass("small");
 					$(this).parents().addClass("big");
 					$(this).css("height","200px");
-					$(this).siblings().css("height","50px");
+					$(this).siblings().css("height","80px");
+					$(".minimize").removeClass("hide");
 				});
 				$(".minimize").click(function(){
 					$(this).parent("#sidebar").addClass("small");
