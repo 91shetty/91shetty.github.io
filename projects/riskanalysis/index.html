@@ -18,13 +18,6 @@
 			body { 
 				min-height: 100%;
 			}
-			#map { 
-				position: absolute; 
-				top: 100px; 
-				bottom: 0; 
-				width: 73%;
-				z-index: -99999;
-			}
 			header {
 				position: fixed;
 				top: 0;
@@ -33,6 +26,20 @@
 				border-bottom: 1px solid #ccc;
     			box-shadow: 0 1px 4px rgba(0,0,0,0.15);
     			z-index: 2;	
+			}
+			#map { 
+				position: absolute; 
+				top: 100px; 
+				bottom: 0; 
+				width: 73%;
+				z-index: -99999;
+			}
+			#legend {
+				width: 200px;
+				height: 45px;
+				position: absolute;
+				bottom: 0;
+				background-color: white;
 			}
 			#sidebar {
 				position: relative;
@@ -94,7 +101,10 @@
 				<span class="right-arrow"></span>
 			</div>
 		</div>
-		<div id='map'></div>
+		<div id='map'>
+			<div id="legend">
+		</div>
+		</div>
 		<div class="right-pane"></div>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script type="text/javascript">
