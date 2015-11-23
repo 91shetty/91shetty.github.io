@@ -46,6 +46,7 @@
 				width: 100%;
 				background: #fff;
 				border-bottom: solid 1px #dedede;
+				cursor: pointer;
 			}
 		</style>
 	</head>
@@ -59,6 +60,14 @@
 				<li></li>
 			</ul>
 		</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(window).load(function() {
+				$("li").onclick(function(){
+					$(this).parent("#sidebar").css("width","100px");
+				});
+			})
+		</script>
 		<script>
 			L.mapbox.accessToken = 'pk.eyJ1IjoiOTFzaGV0dHkiLCJhIjoiY2loOGNiYjRwMHRjbnV1a2k4dml1ejFiOSJ9.-EJYCxdDLf6NQGpMDxoriA';
 			var map = L.mapbox.map('map', 'mapbox.streets')
