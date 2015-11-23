@@ -71,6 +71,7 @@
 				$("li").click(function(){
 					$(this).parents().toggleClass("small");
 					$(this).parents().toggleClass("big");
+					$(this).css("height","100px");
 					$(this).siblings().css("height","40px");
 				});
 			})
