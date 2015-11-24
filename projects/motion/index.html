@@ -14,19 +14,27 @@
 				min-height: 100%;
 				position: relative;
 			}
+			.container {
+				width: 80%;
+				height: 100%;
+				margin: 0 auto;
+			}
 			#square {
 				width: 60px;
 				height: 60px;
-				position: absolute;
-				top: 0;
-				left: 50%;
-				transform: translateX(-50%);
+				margin: 0 auto;
+			}
+			#dancer {
+				margin: 0 auto;
 			}
 		</style>
 	</head>
 	<body>
-		<div id="square">
-
+		<div class="container">
+			<div id="square"></div>
+			<div id="dancer">
+				<img src="dance1.png">
+			</div>
 		</div>
 		<script src="http://cdn.jsdelivr.net/mojs/latest/mo.min.js"></script>
 		<script type="text/javascript">
