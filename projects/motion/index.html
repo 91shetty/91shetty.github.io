@@ -19,46 +19,40 @@
 				height: 100%;
 				margin: 0 auto;
 			}
-			#square {
-				width: 60px;
-				height: 60px;
-				margin: 0 auto;
+			#circle {
+				position: relative;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
 				background-color: red;
+				animation: smallToBigToSmall 120s infinite;
+				top: 50%;
 			}
-			#dancer {
-				margin: 0 auto;
+			@keyframes smallToBigToSmall {
+				0% {
+					left: 0;
+					width: 10px;
+					height: 10px;
+					transform: translate(0,-50%);
+				}
+				50% {
+					left: 50%;
+					width: 200px;
+					height: 200px;
+					transform: translate(-50%,-50%);
+				}
+				100% {
+					right: 0;
+					width: 10px;
+					height: 10px;
+					transform: translate(0,-50%);
+				}
 			}
 		</style>
 	</head>
 	<body>
 		<div class="container">
-			<div id="square"></div>
-			<div id="dancer">
-				<img src="dance.png">
-			</div>
+			<div id="circle"></div>
 		</div>
-		<script src="http://cdn.jsdelivr.net/mojs/latest/mo.min.js"></script>
-		<script type="text/javascript">
-			var square = document.querySelector('#square');
-			new mojs.Tween({
-			  repeat:   999,
-			  delay:    2000,
-			  onUpdate: function (progress) {
-			    var bounceProgress = mojs.easing.bounce.out(progress);
-			    square.style.transform = 'translateY(' + 200*bounceProgress + 'px)';
-			  }
-			}).run();
-			var moleEl = document.querySelector('#dancer'),
-    		skewEasing = mojs.easing.path('M0,100 C0,100 18.1450901,69.0663515 24.0949898,99.9609384 C30.0448895,130.855525 100,100 100,100');
-			new mojs.Tween({
-			  repeat:   99999,
-			  duration: 1800,
-			  delay:    2000,
-			  onUpdate: function (progress) {
-			    var skewProgress = skewEasing(progress);
-			    moleEl.style['transform'] = 'skewX(' + 75*skewProgress + 'deg)';
-			  }
-			}).run();
-		</script>
 	</body>
 </html>
