@@ -48,6 +48,17 @@
 			    square.style.transform = 'translateY(' + 200*bounceProgress + 'px)';
 			  }
 			}).run();
+			var moleEl = document.querySelector('#dancer'),
+    		skewEasing = mojs.easing.path('M0,100 C0,100 18.1450901,69.0663515 24.0949898,99.9609384 C30.0448895,130.855525 100,100 100,100');
+			new mojs.Tween({
+			  repeat:   99999,
+			  duration: 1800,
+			  delay:    2000,
+			  onUpdate: function (progress) {
+			    var skewProgress = skewEasing(progress);
+			    moleEl.style['transform'] = 'skewX(' + 75*skewProgress + 'deg)';
+			  }
+			}).run();
 		</script>
 	</body>
 </html>
