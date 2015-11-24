@@ -66,11 +66,11 @@
 			$(window).load(function() {
 				$("#circle").hover(function(){
 					console.log("hover");
-					$(this).clearQueue();
-					$(this).stop();
+					//$(this).clearQueue();
+					$(this).pause();
 				}, function() {
 					console.log("un hover");
-					$(this).dequeue();
+					$(this).resume();
 				});
 			});
 		</script>
