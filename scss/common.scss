@@ -17,8 +17,8 @@ body {
 
 .content {
 	width: 100%;
-	height: calc(100% - 65px - 3em);
 	padding: 65px 0 3em 0;
+	height: 100%;
 }
 
 header {
@@ -33,35 +33,42 @@ header {
 
 header {
 	.top-bar {
-		width: 80%;
-		margin: 0 auto;
 		height: 100%;
 		.logo {
 			cursor: pointer;
-			@include breakpoint(tablet) {
-				position: absolute;
-				height: 100%;
+			height: 100%;
+			width: 65px;
+			float: left;
+			img {
+				position: relative;
 				width: 50px;
-				background-color: $tertiary-color;
+				height: 50px;
+				margin: 7.5px 0;
+			}
+			@include breakpoint(tablet) {
+				
 			}
 		}
-		nav {
-			position: relative;
-			text-align: center;
-		    top: 50%;
-		    transform: translateY(-50%);
-			a {
-				color: #fff;
+		ul {
+			height: 100%;
+			li {
+				display: inline-block;
+				height: 100%;
 				margin: 0 10px;
-
-				@include breakpoint(tablet) {
-					margin: 0 25px;
+				a {
+					line-height: 65px;
 				}
+				a:hover{
+					border-bottom: 1px solid #bf9000;
+				}
+				@include breakpoint(tablet) {
+		 			margin: 0 25px;
+		 		}
 			}
-
-			@include breakpoint(tablet) {
-				float: right;
-			}
+		}
+		@include breakpoint(tablet) {
+			width: 80%;
+			margin: 0 auto;
 		}
 	}
 }
@@ -76,24 +83,33 @@ header {
 	position: relative;
 	width: 95%;
 	margin: 0 auto;
-	top: 50%;
-	transform: translateY(-50%);
-
 	@include breakpoint(tablet) {
 		width: 80%;
 	}
 }
 
 footer {
-	width: 100%;
-	height: 10px;
+	height: 25px;
 	background-color: $primary-color;
-	bottom: 0px;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	color: $tertiary-color;
-	position: fixed;
-
+	position: absolute;
+	font-size: 12px;
+	text-align: center;
+	p {
+		line-height: 25px;
+		span {
+			color: #bf9000; 
+		}
+		@include breakpoint(tablet) {
+			line-height: 50px;
+		}
+	}
 	@include breakpoint(tablet) {
-		height: 3em;
+		font-size: 14px;
+		height: 50px;
 	}
 }
 
@@ -102,7 +118,8 @@ footer {
 }
 
 .active {
-	color: #f0ede3;
+	color: #bf9000;
+	border-bottom: 1px solid #bf9000;
 }
 
 .italics {
@@ -115,4 +132,12 @@ footer {
 
 .bolder {
 	font-weight: 700;
+}
+
+.right {
+	float: right!important;
+}
+
+.left {	
+	float: left!important;
 }
