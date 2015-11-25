@@ -17,11 +17,8 @@ body {
 
 .content {
 	width: 100%;
-	height: calc(100% - 65px - 20px);
 	padding: 65px 0 3em 0;
-	@include breakpoint(tablet) {
-		height: calc(100% - 65px - 50px);
-	}
+	height: 100%;
 }
 
 header {
@@ -86,9 +83,6 @@ header {
 	position: relative;
 	width: 95%;
 	margin: 0 auto;
-	top: 50%;
-	transform: translateY(-50%);
-
 	@include breakpoint(tablet) {
 		width: 80%;
 	}
