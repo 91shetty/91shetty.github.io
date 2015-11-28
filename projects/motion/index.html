@@ -39,6 +39,15 @@
 			#tail {
 				position: absolute;
 				z-index: 1;
+				animation: wag 5s infinite ease-in-out;
+			}
+			@keyframes wag {
+				10% { top: 25px; right: -30px; transform: rotate(-20deg); }
+				20% { top: 35px; right: -35px; transform: rotate(0); }
+				30% { top: 25px; right: -30px; transform: rotate(-20deg); }
+				40% { top: 35px; right: -35px; transform: rotate(0); }
+				50% { top: 30px; right: -32px; transform: rotate(-10deg); }
+				60% { top: 35px; right: -35px; transform: rotate(0); }
 			}
 			@keyframes smallToBigToSmall {
 				0% {
@@ -78,17 +87,17 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="http://cdn.jsdelivr.net/mojs/latest/mo.min.js"></script>
 		<script type="text/javascript">
-			var tail = document.querySelector("#tail");
-			var tailAngleEasing = mojs.easing.path('M0,100 C0,100 12.0486221,-124.260309 24,99.7583642 C28.9933624,142.723104 100,100 100,100');
-			new mojs.Tween ({
-				repeat: 99999,
-				duration: 1800,
-				delay: 100,
-				onUpdate: function(progress) {
-					var tailProgress = tailAngleEasing(progress);
-					tail.style['transform'] = 'rotate(' + (-200*tailProgress) + 'deg)';
-				}
-			}).run();
+			// var tail = document.querySelector("#tail");
+			// var tailAngleEasing = mojs.easing.path('M0,100 C0,100 12.0486221,-124.260309 24,99.7583642 C28.9933624,142.723104 100,100 100,100');
+			// new mojs.Tween ({
+			// 	repeat: 99999,
+			// 	duration: 1800,
+			// 	delay: 100,
+			// 	onUpdate: function(progress) {
+			// 		var tailProgress = tailAngleEasing(progress);
+			// 		tail.style['transform'] = 'rotate(' + (-200*tailProgress) + 'deg)';
+			// 	}
+			// }).run();
 		</script>
 		<script type="text/javascript">
 			$(window).load(function() {
