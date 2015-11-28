@@ -83,7 +83,7 @@
 			new mojs.Tween ({
 				repeat: 99999,
 				duration: 1800,
-				delay: 2000,
+				delay: 100,
 				onUpdate: function(progress) {
 					var tailProgress = tailAngleEasing(progress);
 					tail.style['transform'] = 'rotate(' + (-200*tailProgress) + 'deg)';
