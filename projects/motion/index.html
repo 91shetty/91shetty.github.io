@@ -76,6 +76,18 @@
 			<img id="tail" src="tail.png">
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://cdn.jsdelivr.net/mojs/latest/mo.min.js"></script>
+		<script type="text/javascript">
+			var tail = document.querySelector("#tail");
+			new mojs.Tween ({
+				repeat: 99999;
+				duration: 1800;
+				delay: 2000;
+				onUpdate: function(progress) {
+					tail.style['transform'] = 'rotate(45deg)';
+				}
+			}).run();
+		</script>
 		<script type="text/javascript">
 			$(window).load(function() {
 				$("#circle").hover(function(){
