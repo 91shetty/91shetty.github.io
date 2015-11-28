@@ -28,6 +28,17 @@
 				top: 50%;
 				transition-duration: 4s;
 			}
+			#dog {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				z-index: 2;
+			}
+			#tail {
+				position: absolute;
+				z-index: 1;
+			}
 			@keyframes smallToBigToSmall {
 				0% {
 					left: 0;
@@ -60,7 +71,8 @@
 	<body>
 		<div class="container">
 			<!-- <div id="circle"></div> -->
-			<img src="dog.png">
+			<img id="dog" src="dog.png">
+			<img src="tail.png">
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script type="text/javascript">
