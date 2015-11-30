@@ -39,17 +39,17 @@
 			#tail {
 				position: absolute;
 				z-index: 1;
-				animation: wag 0.1s infinite ease-in-out;
+				animation: wag 1s infinite ease-in-out;
 				top: 55%;
 				left: 50%;
 			}
 			#eyes {
 				position: absolute;
 				z-index: 3;
-				top: 34%;
 				left: 50%;
-				transform: translate(-50%,-66%);
-				animation: blink 5s infinite;
+				/*top: 34%;*/
+				transform: translate(-50%,0);
+				/*animation: blink 5s infinite;*/
 			}
 			@keyframes wag {
 				10% { top: 55%; left: 50%; transform: rotate(-20deg); }
