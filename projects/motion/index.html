@@ -43,13 +43,19 @@
 				top: 55%;
 				left: 50%;
 			}
+			#eyes {
+				position: absolute;
+				z-index: 3;
+				left: 50%;
+				transform: translate(-50%,0);
+			}
 			@keyframes wag {
 				10% { top: 55%; left: 50%; transform: rotate(-20deg); }
 				20% { top: 55% + 10px; left: 50% + 5px; transform: rotate(0); }
 				30% { top: 55%; left: 50%; transform: rotate(-20deg); }
 				40% { top: 55% + 10px; left: 50% + 5px; transform: rotate(0); }
 				50% { top: 55% + 5px; left: 50% + 2px; transform: rotate(-10deg); }
-				60% { top: 55% + 10px; left: 50% + 5px; transform: rotate(-20deg); }
+				60% { top: 55% + 10px; left: 50% + 5px; transform: rotate(0); }
 			}
 			@keyframes smallToBigToSmall {
 				0% {
@@ -84,6 +90,7 @@
 		<div class="container">
 			<!-- <div id="circle"></div> -->
 			<img id="dog" src="dog.png">
+			<img id="eyes" src="eyes.png">
 			<img id="tail" src="tail.png">
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
