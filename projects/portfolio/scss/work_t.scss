@@ -21,7 +21,7 @@
 		}
 	}
 
-	.item1 {
+	.item-1 {
 		width: 100%;
 		@include breakpoint(tablet) {
 			width: 50%;
@@ -30,7 +30,7 @@
 			width: 40%;
 		}
 	}
-	.item2 {
+	.item-2 {
 		width: 100%;
 		@include breakpoint(tablet) {
 			width: 50%;
