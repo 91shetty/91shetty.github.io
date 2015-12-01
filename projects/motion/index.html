@@ -47,7 +47,7 @@
 				z-index: 3;
 				left: 53px;
 				top: 30px;
-				animation: blink 3s infinite;
+				animation: blink 3s infinite ease-in-out;
 			}
 			@keyframes blink { 
 				0% { transform: scaleX(1) scaleY(1); } 
@@ -88,30 +88,5 @@
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="http://cdn.jsdelivr.net/mojs/latest/mo.min.js"></script>
-		<script type="text/javascript">
-			// var tail = document.querySelector("#tail");
-			// var tailAngleEasing = mojs.easing.path('M0,100 C0,100 12.0486221,-124.260309 24,99.7583642 C28.9933624,142.723104 100,100 100,100');
-			// new mojs.Tween ({
-			// 	repeat: 99999,
-			// 	duration: 1800,
-			// 	delay: 100,
-			// 	onUpdate: function(progress) {
-			// 		var tailProgress = tailAngleEasing(progress);
-			// 		tail.style['transform'] = 'rotate(' + (-200*tailProgress) + 'deg)';
-			// 	}
-			// }).run();
-		</script>
-		<script type="text/javascript">
-			$(window).load(function() {
-				$("#circle").hover(function(){
-					console.log("hover");
-					//$(this).clearQueue();
-					$(this).stop();
-				}, function() {
-					// console.log("un hover");
-					// $(this).resume();
-				});
-			});
-		</script>
 	</body>
 </html>
