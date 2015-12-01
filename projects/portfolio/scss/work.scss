@@ -25,7 +25,15 @@
     		//transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 		}
 	}
-
+	.grid-item:nth-child(odd) {
+		margin: 10px 5px 10px 0; 
+	}
+	.grid-item:nth-child(even) {
+		margin: 10px 0 10px 5px; 
+	}
+	.grid-item:hover {
+		border: 3px solid #bf9000;
+	}
 	.item-1 {
 		width: 100%;
 		@include breakpoint(tablet) {
