@@ -32,15 +32,26 @@
 			.images{
 				/*background: url(sprites.png) no-repeat;*/
 			}
-
+			#leftV {
+				background: url(leftV.png) no-repeat;
+				z-index: 2;
+			}
+			#S {
+				background: url(S.png) no-repeat;
+				z-index: 0;
+			}
+			#leftV {
+				background: url(rightV.png) no-repeat;
+				z-index: 2;
+			}
 		</style>
 	</head>
 	<body>
 		<div class="container">
 			<div id="motion">
-				<!-- <div class="images" id="dog"></div>
-				<div class="images" id="eyes"></div>
-				<div class="images" id="tail"></div> -->
+				<div class="images" id="leftV"></div>
+				<div class="images" id="S"></div>
+				<div class="images" id="rightV"></div>
 			</div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
