@@ -8,10 +8,8 @@
 		min-height: 300px;
 		position: relative;
 		text-align: center;
-		@include breakpoint(desktop) {
-			width: calc(100% / 3)
-		}
-
+		padding: 30px;
+		color: white;
 		.loader {
 			height: 1px;
 		    width: 40%;
@@ -20,6 +18,25 @@
 		    background: rgba(0, 0, 0, 0.1);
 		    //transition: transform 0.2s, opacity 0.2s;
     		//transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+		}
+	}
+
+	.item1 {
+		width: 100%;
+		@include breakpoint(tablet) {
+			width: 50%;
+		}
+		@include breakpoint(desktop) {
+			width: 40%;
+		}
+	}
+	.item2 {
+		width: 100%;
+		@include breakpoint(tablet) {
+			width: 50%;
+		}
+		@include breakpoint(desktop) {
+			width: 60%;
 		}
 	}
 }
