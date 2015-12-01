@@ -30,14 +30,8 @@
 			}
 		}
 	}
-	.grid-item:nth-child(odd) {
-		margin: 10px 5px 10px 0; 
-	}
-	.grid-item:nth-child(even) {
-		margin: 10px 0 10px 5px; 
-	}
 	.grid-item:hover {
-		border: 3px solid #bf9000;
+		3px solid #bf9000;
 	}
 	.item-1 {
 		width: 100%;
@@ -57,26 +51,4 @@
 			width: 60%;
 		}
 	}
-}
-
-// .grid-item::before {
-// 	position: absolute;
-//     content: '';
-//     top: 0px;
-//     right: 55px;
-//     bottom: 0px;
-//     left: 55px;
-// 	border: 1px solid rgba(74,74,74,0.075);
-// 	transition: opacity 0.3s;
-// 	@include breakpoint(desktop) {
-// 		top: 5px;
-// 		right: 5px;
-// 		bottom: 5px;
-// 		left: 5px;
-// 	}
-// }
-
-.grid-item:hover,
-.grid-item:focus{
-	border: 3px solid #bf9000;
 }
