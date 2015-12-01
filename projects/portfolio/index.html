@@ -99,7 +99,7 @@
 				</section>
 				<section class="section-block hide" id="about">
 					<div id="contact">
-						<span> Contact </span>
+						<span class="expand"> Contact </span>
 						<div class="form hide animated">
 
 						</div>
@@ -154,8 +154,15 @@
 					$('#about').addClass("hide");
 					$('#work').removeClass("hide");
 				});
-				$('#contact').click(function(){
-					$()
+				$('.expand').click(function(){
+					$(this).addClass("hide");
+					$(".form").addClass("fadeInRight");
+					$(".form").removeClass("hide");
+				});
+				$('.form').click(function(){
+					$(".form").removeClass("fadeInRight");
+					$(this).addClass("hide fadeOutRight");
+					$(".expand").removeClass("hide");
 				});
 			});
 		</script>
