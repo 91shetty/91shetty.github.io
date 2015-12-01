@@ -10,6 +10,7 @@
 		text-align: center;
 		padding: 30px;
 		color: black;
+		border: 1px solid rgba(74,74,74,0.075);
 		.image {
 			height: 200px;
 			background-color: #f2f2f2;
@@ -45,24 +46,24 @@
 	}
 }
 
-.grid-item::before {
-	position: absolute;
-    content: '';
-    top: 0px;
-    right: 55px;
-    bottom: 0px;
-    left: 55px;
-	border: 1px solid rgba(74,74,74,0.075);
-	transition: opacity 0.3s;
-	@include breakpoint(desktop) {
-		top: 5px;
-		right: 5px;
-		bottom: 5px;
-		left: 5px;
-	}
-}
+// .grid-item::before {
+// 	position: absolute;
+//     content: '';
+//     top: 0px;
+//     right: 55px;
+//     bottom: 0px;
+//     left: 55px;
+// 	border: 1px solid rgba(74,74,74,0.075);
+// 	transition: opacity 0.3s;
+// 	@include breakpoint(desktop) {
+// 		top: 5px;
+// 		right: 5px;
+// 		bottom: 5px;
+// 		left: 5px;
+// 	}
+// }
 
-.grid-item:hover::before,
-.grid-item:focus::before {
+.grid-item:hover,
+.grid-item:focus{
 	border: 3px solid #bf9000;
 }
