@@ -1,0 +1,14 @@
+#contact {
+	background: #4b2e83;
+	color: white;
+	.form {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 350px;
+		height: 350px;
+		background: #4b2e83;
+	}
+}
+

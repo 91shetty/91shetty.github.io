@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" manifest="portfolio.appcache">
+<html lang="en">
 	<head>
 		<title>Portfolio | Vishwas Shetty</title>
 		<link rel="stylesheet" type="text/css" href="build/style.css">
@@ -13,19 +13,19 @@
 			<header>
 				<div class="top-bar">
 					<div class="logo">
-						<a href="../">
+						<a href="index.html">
 							<img src="logo1.png" alt="logo">
 						</a>
 					</div>
 					<ul class="right">
 						<li>
-							<a href="work/" id="workNav" class="animated">Work</a>
+							<a href="#work" id="workNav" class="animated">Work</a>
 						</li>
 						<li>
-							<a href="#" id="aboutNav" class="animated">About</a>
+							<a href="#about" id="aboutNav" class="animated">About</a>
 						</li>
 						<li>
-							<a href="#" id="contactNav" class="animated">Contact</a>
+							<a href="Resume_Vishwas_Shetty.pdf" id="resume" class="animated" target="_blank">Resume</a>
 						</li>
 					</ul>
 				</div>
@@ -37,7 +37,7 @@
 							<img src="me_profile.png" alt="me_profile">
 						</figure>
 						<p>
-							<span style="font-size:24px;">Hi, I'm <span class="bolder">Vishwas Shetty</span>.</span> <br/> <br/> 
+							<!-- <span style="font-size:24px;">Hi, I'm <span class="bolder">Vishwas Shetty</span>.</span> <br/> <br/> 
 							I'm an <span class="italics bold">User Experience Designer </span> and <span class="italics bold"> Front-End Developer</span>. <br/>
 							<span class="hidden-phone">
 								I specialize in <span class="italics bold" data-typer-targets="Wireframing, Prototyping, Visual/Print/Icon Design">Prototyping</span> <br/> <br/>
@@ -45,16 +45,65 @@
 							</span>
 							<span class="visible-phone">
 								<br/> My Specialities <br/> <span class="italics bold" data-typer-targets="Wireframing, Prototyping, Visual/Print/Icon Design">Prototyping</span>
-							</span>
+							</span> -->
+							<span style="font-size:30px;">Hi, I'm <span class="bolder">Vishwas Shetty</span>.</span> <br/> <br/> 
+							I'm an <span class="bold">User Experience Designer </span> specializing in <span class="italics bold" data-typer-targets="Interaction Design, Prototyping, Motion Design">Interaction Design</span> <br/> <br/>
+							I'm currently pursuing my Masters in <span class="bold">Human Centered Design and Engineering</span> at <span class="bold">University of Washington</span>. <br/> <br/>
+							I believe in crafting an user experience that bridges the gap between <br/><span class="italics bold">what’s possible</span> (using technology) and <span class="italics bold">what’s desirable</span> (by people).
 						</p>
 					</div>
 				</section>
-				<section class="section-block hide" id="about">
-					<div class="section-content">
-
+				<section class="section-block hide" id="work">
+					<div class="section-content grid">
+						<div class="grid-item item-1">
+							<a href="">
+								<div class="preview">
+									<div class="image"></div>
+									<div class="loader"></div>
+									<h3>Polaris</h3>
+									<p>Polaris is a web based application that provides guidance and help to international students</p>
+								</div>
+							</a>
+						</div>
+						<div class="grid-item item-2">
+							<a href="">
+								<div class="preview">
+									<div class="image"></div>
+									<div class="loader"></div>
+									<h3>Polaris</h3>
+									<p>Polaris is a web based application that provides guidance and help to international students</p>
+								</div>
+							</a>
+						</div>
+						<div class="grid-item item-2">
+							<a href="">
+								<div class="preview">
+									<div class="image"></div>
+									<div class="loader"></div>
+									<h3>Polaris</h3>
+									<p>Polaris is a web based application that provides guidance and help to international students</p>
+								</div>
+							</a>
+						</div>
+						<div class="grid-item item-1">
+							<a href="">
+								<div class="preview">
+									<div class="image"></div>
+									<div class="loader"></div>
+									<h3>Polaris</h3>
+									<p>Polaris is a web based application that provides guidance and help to international students</p>
+								</div>
+							</a>
+						</div>
 					</div>
 				</section>
-				<section class="section-block hide" id="contact">
+				<section class="section-block hide" id="about">
+					<div id="contact">
+						<span> Contact </span>
+						<div class="form">
+
+						</div>
+					</div>
 					<div class="section-content">
 						
 					</div>
@@ -76,7 +125,7 @@
 					$('#landing').removeClass("hide");
 					// $('#skills').addClass("hide");
 					$('#about').addClass("hide");
-					$('#contact').addClass("hide");
+					$('#work').addClass("hide");
 				});
 				// $('#skillsNav').click(function(){
 				// 	$(this).addClass("active pulse");				
@@ -90,20 +139,23 @@
 				$('#aboutNav').click(function(){
 					$(this).addClass("active pulse");
 					// $('#skillsNav').removeClass("active pulse");
-					$('#contactNav').removeClass("active pulse");
+					$('#workNav').removeClass("active pulse");
 					$('#landing').addClass("hide");
 					// $('#skills').addClass("hide");
 					$('#about').removeClass("hide");
-					$('#contact').addClass("hide");
+					$('#work').addClass("hide");
 				});
-				$('#contactNav').click(function(){
+				$('#workNav').click(function(){
 					$(this).addClass("active pulse");				
 					// $('#skillsNav').removeClass("active pulse");
 					$('#aboutNav').removeClass("active pulse");
 					$('#landing').addClass("hide");
 					// $('#skills').addClass("hide");
 					$('#about').addClass("hide");
-					$('#contact').removeClass("hide");
+					$('#work').removeClass("hide");
+				});
+				$('#contact span').click(function(){
+					$()
 				});
 			});
 		</script>

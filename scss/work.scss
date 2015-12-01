@@ -1,12 +1,4 @@
-.main {
-	width: 90%;
-	margin: 0 auto;
-	@include breakpoint(tablet) {
-		width: 80%;
-	}
-}
-
-.grid {
+#work .grid {
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
@@ -16,40 +8,47 @@
 		min-height: 300px;
 		position: relative;
 		text-align: center;
+		padding: 30px;
+		margin: 10px 0;
+		padding: 0 15px;
+		.preview {
+			padding: 30px;
+			color: black;
+			border: 1px solid rgba(74,74,74,0.075);
+			.image {
+				height: 200px;
+				background-color: #f2f2f2;
+			}
+			.loader {
+				height: 1px;
+			    width: 40%;
+			    margin: 1em auto;
+			    position: relative;
+			    background: rgba(0, 0, 0, 0.1);
+			    //transition: transform 0.2s, opacity 0.2s;
+	    		//transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+			}
+		}
+		.preview:hover {
+		border: 1px solid #bf9000;
+	}
+	}
+	.item-1 {
+		width: 100%;
+		@include breakpoint(tablet) {
+			width: 50%;
+		}
 		@include breakpoint(desktop) {
-			width: calc(100% / 3)
-		}
-
-		.loader {
-			height: 1px;
-		    width: 40%;
-		    margin: 1em auto;
-		    position: relative;
-		    background: rgba(0, 0, 0, 0.1);
-		    //transition: transform 0.2s, opacity 0.2s;
-    		//transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+			width: 40%;
 		}
 	}
-}
-
-.grid-item::before {
-	position: absolute;
-    content: '';
-    top: 0px;
-    right: 55px;
-    bottom: 0px;
-    left: 55px;
-	border: 1px solid rgba(74,74,74,0.075);
-	transition: opacity 0.3s;
-	@include breakpoint(desktop) {
-		top: 5px;
-		right: 5px;
-		bottom: 5px;
-		left: 5px;
+	.item-2 {
+		width: 100%;
+		@include breakpoint(tablet) {
+			width: 50%;
+		}
+		@include breakpoint(desktop) {
+			width: 60%;
+		}
 	}
-}
-
-.grid-item:hover::before,
-.grid-item:focus::before {
-	border: 3px solid #bf9000;
 }
