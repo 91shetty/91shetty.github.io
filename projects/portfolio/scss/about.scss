@@ -51,7 +51,7 @@
     float: right;
     padding: 0 1em;
     width: 40%;
-    color: black;
+    color: white;
     font-weight: bold;
     font-size: 70.25%;
     -webkit-font-smoothing: antialiased;
@@ -118,16 +118,8 @@
     transition: transform 0.3s;
 }
 
-.input__label--hoshi-color-1::after {
-    border-color: hsl(200, 100%, 50%);
-}
-
-.input__label--hoshi-color-2::after {
-    border-color: hsl(160, 100%, 50%);
-}
-
-.input__label--hoshi-color-3::after {
-    border-color: hsl(20, 100%, 50%);
+.input__label--hoshi-color::after {
+    border-color: #bf9000;
 }
 
 .input__field--hoshi:focus + .input__label--hoshi::after,
