@@ -1,12 +1,19 @@
 #contact {
-	position: absolute;
-	right: 0;
-	top: 50%;
-	transform: translateY(-50%);
 	background: #4b2e83;
-	color: white;
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    .expand {
+    	line-height: 50px;
+    	padding: 0 20px;
+    	cursor: pointer;
+    }
 	.form {
-
+		width: 350px;
+		height: 350px;
+		cursor: pointer;
 	}
 }
 
