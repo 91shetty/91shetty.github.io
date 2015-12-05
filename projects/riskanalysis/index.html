@@ -212,6 +212,7 @@
 					var transform_styles = ['-webkit-transform', '-ms-transform', 'transform'];
 					$(this).find('span').fadeTo('slow', 1);
 					var score = $(this).data('score');
+					console.log(score);
 					var deg = (((100 / 5) * score) / 100) * 180;
 					var rotation = deg;
 					var fill_rotation = rotation;
@@ -223,7 +224,6 @@
 				});
 			}
 			setTimeout(window.randomize, 200); 
-
 		</script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script type="text/javascript">
