@@ -223,8 +223,10 @@
 		<script type="text/javascript">
 			function changeScore() {
 				$('.radial').each(function(){
-					var score = Math.floor(Math.random() * 5) + 1;
-					$(this).dataset.score = score;
+					var newScore = Math.floor(Math.random() * 5) + 1;
+					var originalScore = $(this).dataset.score;
+					console.log(originalScore);
+					$(this).dataset.score = newScore;
 				});
 			}
 			window.randomize = function() {
