@@ -1,3 +1,37 @@
+#about {
+    figure {
+        display: block;
+        position: relative;
+        padding: 20px 0 10px 0;
+        img {
+            width: 100px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+
+            @include breakpoint(tablet) {
+                width: 150px;
+            }
+        }
+
+        @include breakpoint(tablet) {
+            padding-bottom: 20px;
+        }
+    }
+
+    p {
+        margin: auto;
+        width: 100%;
+        padding: 10px 0 20px 0;
+        line-height: 1.8em;
+
+        @include breakpoint(tablet) {
+            font-size: 1.2em;
+            padding-top: 20px;
+        }
+    }
+}
+
 #contact {
 	background: #4b2e83;
     color: white;
