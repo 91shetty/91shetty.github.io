@@ -66,12 +66,9 @@ header {
 			}
 		}
 		@include breakpoint(tablet) {
-			float: left;
+			width: 80%;
+			margin: 0 auto;
 		}
-	}
-	@include breakpoint(tablet) {
-		width: 80%;
-		margin: 0 auto;
 	}
 }
 
