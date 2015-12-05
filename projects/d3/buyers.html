@@ -1,67 +1,19 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
+		<link rel="stylesheet"type="text/css" href="/path/to/jquery.easy-pie-chart.css">
 	</head>
 	<body>
-		<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<div class="chart" data-percent="73">73%</div>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="/path/to/jquery.easy-pie-chart.js"></script>
 		<script type="text/javascript">
-			var data = [3, 1, 2];
-			var flood = 3;
-			var tpi = 1;
-			var another = 2;
-
-			var margin = {top: 20, right: 20, bottom: 20, left: 20};
-				width = 600 - margin.left - margin.right;
-				height = 200 - margin.top - margin.bottom;
-
-			var chart = d3.select("body")
-							.append('svg')
-						    .attr("width", width + margin.left + margin.right)
-						    .attr("height", height + margin.top + margin.bottom)
-						    .selectAll("g")
-						    .data(data)
-						    .enter()
-						    .append("g")
-			    			.attr("transform", "translate(100, 100)");
-
-
-			// var radius = Math.min(width, height) / 4;
-
-			// var color = d3.scale.ordinal()
-			// 	.range(["#3399FF", "#5DAEF8", "#86C3FA", "#ADD6FB", "#D6EBFD"]);
-
-			// var arc = d3.svg.arc()
-			//     .outerRadius(radius)
-			//     .innerRadius(radius - 10);
-
-			// for(int i=0; i<=2; i++) {
-
-
-			// }	
-
-			// var pie = d3.layout.pie()
-			//     .sort(null)
-			//     .startAngle(0*Math.PI)
-			//     .endAngle((another/5)*2*Math.PI)
-			//     .value(function(d) { return d.value; });
-
-
-			// var g = chart.selectAll(".arc")
-			//   .data(pie(data))
-			// .enter().append("g")
-			//   .attr("class", "arc");
-
-			// g.append("path")
-			//   .style("fill", function(d) { return color(d.data.name); })
-			//   .transition().delay(function(d, i) { return i * 500; }).duration(500)
-			//   .attrTween('d', function(d) {
-			//        var i = d3.interpolate(d.startAngle+0.1, d.endAngle);
-			//        return function(t) {
-			//            d.endAngle = i(t);
-			//          return arc(d);
-			//        }
-			//   });
+			$(function() {
+			    $('.chart').easyPieChart({
+			        //your configuration goes here
+			    });
+			});
 		</script>
+
 	</body>
 </html>
