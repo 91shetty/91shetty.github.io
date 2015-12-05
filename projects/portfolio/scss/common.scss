@@ -1,4 +1,12 @@
-$font: 'Fira Sans', sans-serif;
+@font-face {
+	font-family: FontLight;
+	src: url(../fonts/Montserrat-Light.ttf);
+	// src: url(../fonts/Montserrat-Regular.ttf);
+	// src: url(../fonts/Montserrat-Thin.ttf);
+	// src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+$font: FontLight;
 $primary-color: #4b2e83;
 $secondary-color: #000;
 $tertiary-color: #fff;
