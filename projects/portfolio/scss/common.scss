@@ -69,6 +69,10 @@ header {
 			float: left;
 		}
 	}
+	@include breakpoint(tablet) {
+		width: 80%;
+		margin: 0 auto;
+	}
 }
 
 .content {
