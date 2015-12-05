@@ -53,6 +53,8 @@ header {
 		}
 		ul {
 			height: 64px;
+			width: 80%;
+			margin: 0 auto;
 			li {
 				display: inline-block;
 				height: 100%;
@@ -70,6 +72,10 @@ header {
 			@include breakpoint(tablet) {
 				float: right;
 			}
+		}
+		@include breakpoint(tablet) {
+			width: 80%;
+			margin: 0 auto;
 		}
 	}
 }
