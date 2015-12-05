@@ -36,6 +36,10 @@
 			}
 			input[type=search] {
 				background: white url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+				outline: none
+			}
+			input[type=search]:focus {
+				border: 1px solid blue;
 			}
 			#addressSearch {
 				position: absolute;
@@ -190,7 +194,7 @@
 				<span class="right-arrow"></span>
 			</div>
 		</div>
-		<input type="search" name="addressSearch" id="addressSearch">
+		<input type="search" name="addressSearch" id="addressSearch" placeholder="Enter an address">
 		<div id='map'>
 			<div id="legend" class="hide">
 		</div>
