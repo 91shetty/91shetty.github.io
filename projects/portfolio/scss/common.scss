@@ -32,7 +32,7 @@ header {
 			cursor: pointer;
 			height: 100%;
 			width: 65px;
-			float: left;
+			margin: 0 auto;
 			img {
 				position: relative;
 				width: 50px;
@@ -40,11 +40,13 @@ header {
 				margin: 7.5px 0;
 			}
 			@include breakpoint(tablet) {
-				
+				float: left;
 			}
 		}
 		ul {
 			height: 100%;
+			width: 80%;
+			margin: 0 auto;
 			li {
 				display: inline-block;
 				height: 100%;
