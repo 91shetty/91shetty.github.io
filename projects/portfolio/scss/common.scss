@@ -32,18 +32,21 @@ header {
 	.top-bar {
 		height: 100%;
 		.logo-container {
-			.logo {
-				background: url(../logo.png) no-repeat;
+			cursor: pointer;
+			height: 64px;
+			width: 64px;
+			img {
+				position: relative;
 				width: 50px;
-				margin: 0 auto;
+				height: 50px;
+				margin: 7px 0;
+				display: inline-block;
 			}
 			.name {
-				display: inline-block;
-				line-height: 64px;
+				margin-left: 10px;
 				text-transform: uppercase;
-				margin-left: 10px; 
+				display: inline-block
 			}
-			
 			@include breakpoint(tablet) {
 				float: left;
 			}
