@@ -104,7 +104,7 @@
 				float: left;
 				position: relative;
 			}
-			.radial-progress .circle .mask {
+			.radial .circle .mask {
 				clip: rect(0px, 120px, 120px, 60px);
 			}
 			.inset {
@@ -208,7 +208,7 @@
 		</div>
 		<script type="text/javascript">
 			window.randomize = function() {
-				$('.radial-progress').each(function() {
+				$('.radial').each(function() {
 					var transform_styles = ['-webkit-transform', '-ms-transform', 'transform'];
 					$(this).find('span').fadeTo('slow', 1);
 					var score = $(this).data('score');
