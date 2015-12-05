@@ -35,17 +35,18 @@
 				z-index: -99999;
 			}
 			input[type=search] {
-				background: #ededed url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+				background: url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
 			}
 			#addressSearch {
 				position: absolute;
 				z-index: 2;
 				height: 40px;
-				width: 300px;
+				width: 325px;
 				font-size: 16px;
 				left: 50px;
 				border: none;
-				padding-left: 10px;
+				padding: 0 25px;
+				border-radius: 4px;
 			}
 			#legend {
 				width: 300px;
@@ -189,7 +190,7 @@
 				<span class="right-arrow"></span>
 			</div>
 		</div>
-		<input type="search" name="addressSearch" placeholder="Enter an address" id="addressSearch">
+		<input type="search" name="addressSearch" id="addressSearch">
 		<div id='map'>
 			<div id="legend" class="hide">
 		</div>
