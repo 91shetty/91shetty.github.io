@@ -67,16 +67,13 @@ header {
 			li {
 				display: inline-block;
 				height: 100%;
-				margin: 0 10px;
+				margin: 0 25px;
 				a {
 					line-height: 64px;
 				}
 				a:hover{
 					border-bottom: 1px solid #bf9000;
 				}
-				@include breakpoint(tablet) {
-		 			margin: 0 25px;
-		 		}
 			}
 			@include breakpoint(tablet) {
 				text-align: right;
