@@ -43,6 +43,7 @@ header {
 			cursor: pointer;
 			height: 64px;
 			width: 64px;
+			margin: 0 auto;
 			img {
 				position: relative;
 				width: 50px;
@@ -57,10 +58,12 @@ header {
 			}
 			@include breakpoint(tablet) {
 				float: left;
+				margin-left: 1px;
 			}
 		}
 		ul {
 			height: 64px;
+			text-align: center;
 			li {
 				display: inline-block;
 				height: 100%;
@@ -76,7 +79,7 @@ header {
 		 		}
 			}
 			@include breakpoint(tablet) {
-				float: right;
+				text-align: right;
 			}
 		}
 		@include breakpoint(tablet) {
