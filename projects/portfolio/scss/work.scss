@@ -47,22 +47,15 @@
 			width: 50%;
 		}
 	}
-	// .item-1 {
-	// 	width: 100%;
-	// 	@include breakpoint(tablet) {
-	// 		width: 50%;
-	// 	}
-	// 	@include breakpoint(desktop) {
-	// 		width: 40%;
-	// 	}
-	// }
-	// .item-2 {
-	// 	width: 100%;
-	// 	@include breakpoint(tablet) {
-	// 		width: 50%;
-	// 	}
-	// 	@include breakpoint(desktop) {
-	// 		width: 60%;
-	// 	}
-	// }
+	.work-content {
+		position: absolute;
+		top: 130px;
+		// visibility: hidden;
+		height: 100vh;
+		background-color: #f2f2f2;
+		z-index: 400;
+		@include breakpoint(tablet) {
+			top: 66px;
+		}
+	}
 }
