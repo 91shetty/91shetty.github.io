@@ -44,8 +44,8 @@ header {
 			height: 64px;
 			// width: 64px;
 			// margin: 0 auto;
-			img {
-				position: relative;
+			.logo {
+				background: url(../logo.png) no-repeat;
 				width: 50px;
 				height: 50px;
 				margin: 7px 0;
