@@ -42,8 +42,8 @@ header {
 		.logo-container {
 			cursor: pointer;
 			height: 64px;
-			width: 64px;
-			margin: 0 auto;
+			// width: 64px;
+			// margin: 0 auto;
 			img {
 				position: relative;
 				width: 50px;
@@ -54,7 +54,7 @@ header {
 			.name {
 				margin-left: 10px;
 				text-transform: uppercase;
-				display: inline-block
+				display: inline-block;
 			}
 			@include breakpoint(tablet) {
 				float: left;
