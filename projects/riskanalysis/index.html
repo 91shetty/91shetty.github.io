@@ -140,7 +140,7 @@
 				clip: rect(0px, 40px, 80px, 0px);
 			}
 			#flood .mask .fill {
-				background-color: #EA463D;
+				background: conic-gradient(red, yellow);
 			}
 			#surge .mask .fill {
 				background-color: #EA463D;
@@ -262,6 +262,8 @@
 				</div>
 			</div>
 		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+		<script src="conic-gradient.js"></script>
 		<script type="text/javascript">
 			function changeScore() {
 				$('.radial').each(function(){
