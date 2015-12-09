@@ -269,19 +269,19 @@
 				$('.radial').each(function(){
 					var newScore = Math.floor(Math.random() * 5) + 1;
 					if( newScore == 1) {
-						(this).find(".inset").css("background-color","green");
+						$(this).find(".inset").css("background-color","green");
 					}
 					else if( newScore == 2) {
-						(this).find(".inset").css("background-color","yellow");
+						$(this).find(".inset").css("background-color","yellow");
 					}
 					else if( newScore == 3) {
-						(this).find(".inset").css("background-color","orange");
+						$(this).find(".inset").css("background-color","orange");
 					}
 					else if( newScore == 4) {
-						(this).find(".inset").css("background-color","red");
+						$(this).find(".inset").css("background-color","red");
 					}
 					else if( newScore == 5) {
-						(this).find(".inset").css("background-color","black");
+						$(this).find(".inset").css("background-color","black");
 					}
 					$(this).data('score',newScore);
 					$(this).find('.bigger').html(newScore);
