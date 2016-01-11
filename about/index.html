@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Portfolio | Vishwas Shetty</title>
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<link rel="stylesheet" type="text/css" href="../css/animate.css">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">	
+		<link href='http://fonts.googleapis.com/css?family=Fira+Sans:400,500,700,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
+		<link rel="icon" type="image/png" href="../image/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="../image/favicon-16x16.png" sizes="16x16">
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<div class="top-bar">
+					<a href="../">
+						<div class="logo-container">
+							<div class="logo"></div>
+							<div class="name">Vishwas Shetty</div>
+						</div>
+					</a>
+					<ul>
+						<li>
+							<a href="../" id="workNav" class="animated">Work</a>
+						</li>
+						<li>
+							<a href="" id="aboutNav" class="animated active">About</a>
+						</li>
+						<li>
+							<a href="../Resume_Vishwas_Shetty.pdf" id="resume" class="animated" target="_blank">Resume</a>
+						</li>
+					</ul>
+				</div>
+			</header>
+			<div class="content">
+				<section class="section-block hide" id="about">
+					<div class="section-content">
+						<figure>
+							<img src="../image/me_profile.png" alt="me_profile">
+						</figure>
+						<p>
+							<span style="font-size:24px;">Hi, I'm <span class="bolder">Vishwas Shetty</span>.</span> <br/> <br/> 
+							I'm an <span class="italics bold">User Experience Designer </span> and <span class="italics bold"> Front-End Developer</span>. <br/>
+							<span class="hidden-phone">
+								I specialize in <span class="italics bold" data-typer-targets="Wireframing, Prototyping, Visual/Print/Icon Design">Prototyping</span> <br/> <br/>
+								I believe in crafting an user experience that bridges the gap between <br/><span class="italics bold">what’s possible</span> (using technology) and <span class="italics bold">what’s desirable</span> (by people).
+							</span>
+							<span class="visible-phone">
+								<br/> My Specialities <br/> <span class="italics bold" data-typer-targets="Wireframing, Prototyping, Visual/Print/Icon Design">Prototyping</span>
+							</span>
+						</p>	
+					</div>
+					<div id="contact">
+						<span class="expand"> Contact </span>
+						<div class="form hide animated">
+							<span class="input input--hoshi">
+								<input class="input__field input__field--hoshi" type="text" id="input-4" />
+								<label class="input__label input__label--hoshi input__label--hoshi-color" for="input-4">
+									<span class="input__label-content input__label-content--hoshi">Name</span>
+								</label>
+							</span>
+							<span class="input input--hoshi">
+								<input class="input__field input__field--hoshi" type="text" id="input-5" />
+								<label class="input__label input__label--hoshi input__label--hoshi-color" for="input-5">
+									<span class="input__label-content input__label-content--hoshi">Email Address</span>
+								</label>
+							</span>
+							<span class="input input--hoshi">
+								<textarea class="input__field input__field--hoshi" type="text" id="input-6" /> </textarea>	
+								<label class="input__label input__label--hoshi input__label--hoshi-color" for="input-6">
+									<span class="input__label-content input__label-content--hoshi">Message</span>
+								</label>
+							</span>
+						</div>
+					</div>
+				</section>
+			</div>
+			<footer>
+				<div class="bottom-bar">
+					<p><span>&copy;</span> 2015 <span>|</span> Vishwas Shetty <span>|</span> All Rights Reserved</p>
+				</div>
+			</footer>
+		</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(window).load(function(){
+				$('.expand').click(function(){
+					$(this).addClass("hide");
+					// $(".form").removeClass("fadeOutRight");
+					// $(".form").addClass("fadeInRight");
+					$(".form").removeClass("hide");
+				});
+				$('.form').click(function(){
+					// $(".form").removeClass("fadeInRight");
+					// $(this).addClass("hide");
+					// $(".expand").removeClass("hide");
+				});
+			});
+		</script>
+		<script type="text/javascript">
+		  $.getScript('https://rawgit.com/layervault/jquery.typer.js/master/src/jquery.typer.js', function () {
+		    $(function () {
+		      $('[data-typer-targets]').typer();
+		    });
+		  });
+		</script>
+	</body>
+</html>
