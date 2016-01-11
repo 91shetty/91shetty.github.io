@@ -2,27 +2,30 @@
 <html lang="en">
 	<head>
 		<title>Portfolio | Vishwas Shetty</title>
-		<link rel="stylesheet" type="text/css" href="build/style.css">
-		<link rel="stylesheet" type="text/css" href="build/animate.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/animate.css">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">	
 		<link href='http://fonts.googleapis.com/css?family=Fira+Sans:400,500,700,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
+		<link rel="icon" type="image/png" href="./image/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="./image/favicon-16x16.png" sizes="16x16">
 	</head>
 	<body>
 		<div class="container">
 			<header>
 				<div class="top-bar">
-					<div class="logo">
-						<a href="index.html">
-							<img src="logo1.png" alt="logo">
-						</a>
-					</div>
-					<ul class="right">
+					<a href="/">
+						<div class="logo-container">
+							<div class="logo"></div>
+							<div class="name">Vishwas Shetty</div>
+						</div>
+					</a>
+					<ul>
 						<li>
-							<a href="#work" id="workNav" class="animated">Work</a>
+							<a href="" id="workNav" class="animated active">Work</a>
 						</li>
 						<li>
-							<a href="#about" id="aboutNav" class="animated">About</a>
+							<a href="./about" id="aboutNav" class="animated">About</a>
 						</li>
 						<li>
 							<a href="Resume_Vishwas_Shetty.pdf" id="resume" class="animated" target="_blank">Resume</a>
@@ -31,81 +34,55 @@
 				</div>
 			</header>
 			<div class="content">
-				<section class="section-block" id="landing">
+				<section class="section-block" id="work">
 					<div class="section-content">
-						<figure>
-							<img src="me_profile.png" alt="me_profile">
-						</figure>
-						<p>
-							<!-- <span style="font-size:24px;">Hi, I'm <span class="bolder">Vishwas Shetty</span>.</span> <br/> <br/> 
-							I'm an <span class="italics bold">User Experience Designer </span> and <span class="italics bold"> Front-End Developer</span>. <br/>
-							<span class="hidden-phone">
-								I specialize in <span class="italics bold" data-typer-targets="Wireframing, Prototyping, Visual/Print/Icon Design">Prototyping</span> <br/> <br/>
-								I believe in crafting an user experience that bridges the gap between <br/><span class="italics bold">what’s possible</span> (using technology) and <span class="italics bold">what’s desirable</span> (by people).
-							</span>
-							<span class="visible-phone">
-								<br/> My Specialities <br/> <span class="italics bold" data-typer-targets="Wireframing, Prototyping, Visual/Print/Icon Design">Prototyping</span>
-							</span> -->
-							<span style="font-size:30px;">Hi, I'm <span class="bolder">Vishwas Shetty</span>.</span> <br/> <br/> 
-							I'm an <span class="bold">User Experience Designer </span> specializing in <span class="italics bold" data-typer-targets="Interaction Design, Prototyping, Motion Design">Interaction Design</span> <br/> <br/>
-							I'm currently pursuing my Masters in <span class="bold">Human Centered Design and Engineering</span> at <span class="bold">University of Washington</span>. <br/> <br/>
-							I believe in crafting an user experience that bridges the gap between <br/><span class="italics bold">what’s possible</span> (using technology) and <span class="italics bold">what’s desirable</span> (by people).
-						</p>
-					</div>
-				</section>
-				<section class="section-block hide" id="work">
-					<div class="section-content grid">
-						<div class="grid-item item-1">
-							<a href="">
-								<div class="preview">
-									<div class="image"></div>
-									<div class="loader"></div>
-									<h3>Polaris</h3>
-									<p>Polaris is a web based application that provides guidance and help to international students</p>
-								</div>
-							</a>
+						<div class="main-intro">
+							<p>
+								Hi, I'm Vishwas Shetty. I am an User Experience Designer. I believe in crafting an user experience that bridges the gap between <span class="italics bold">what’s possible</span> (using technology) and <span class="italics bold">what’s desirable</span> (by people).
+							</p>
 						</div>
-						<div class="grid-item item-2">
-							<a href="">
-								<div class="preview">
-									<div class="image"></div>
-									<div class="loader"></div>
-									<h3>Polaris</h3>
-									<p>Polaris is a web based application that provides guidance and help to international students</p>
-								</div>
-							</a>
+						<div class="grid">
+							<div class="grid-item">
+								<a href="polaris/">
+									<div class="preview">
+										<div class="image"></div>
+										<div class="loader"></div>
+										<h3>Polaris</h3>
+										<p>Polaris is a web based application that provides guidance and help to international students</p>
+									</div>
+								</a>
+							</div>
+							<div class="grid-item">
+								<a href="#">
+									<div class="preview">
+										<div class="image"></div>
+										<div class="loader"></div>
+										<h3>Actokids</h3>
+										<p>Actokids is a web based application that helps children with disabilities find activities suited to their needs</p>
+									</div>
+								</a>
+							</div>
+							<div class="grid-item">
+								<a href="#">
+									<div class="preview">
+										<div class="image"></div>
+										<div class="loader"></div>
+										<h3>Polaris</h3>
+										<p>Polaris is a web based application that provides guidance and help to international students</p>
+									</div>
+								</a>
+							</div>
+							<div class="grid-item">
+								<a href="#">
+									<div class="preview">
+										<div class="image"></div>
+										<div class="loader"></div>
+										<h3>Polaris</h3>
+										<p>Polaris is a web based application that provides guidance and help to international students</p>
+									</div>
+								</a>
+							</div>
 						</div>
-						<div class="grid-item item-2">
-							<a href="">
-								<div class="preview">
-									<div class="image"></div>
-									<div class="loader"></div>
-									<h3>Polaris</h3>
-									<p>Polaris is a web based application that provides guidance and help to international students</p>
-								</div>
-							</a>
-						</div>
-						<div class="grid-item item-1">
-							<a href="">
-								<div class="preview">
-									<div class="image"></div>
-									<div class="loader"></div>
-									<h3>Polaris</h3>
-									<p>Polaris is a web based application that provides guidance and help to international students</p>
-								</div>
-							</a>
-						</div>
-					</div>
-				</section>
-				<section class="section-block hide" id="about">
-					<!-- <div id="contact">
-						<span> Contact </span>
-						<div class="form">
-
-						</div>
-					</div> -->
-					<div class="section-content">
-						
 					</div>
 				</section>
 			</div>
@@ -154,8 +131,23 @@
 					$('#about').addClass("hide");
 					$('#work').removeClass("hide");
 				});
-				$('#contact span').click(function(){
-					$()
+				$('.expand').click(function(){
+					$(this).addClass("hide");
+					// $(".form").removeClass("fadeOutRight");
+					// $(".form").addClass("fadeInRight");
+					$(".form").removeClass("hide");
+				});
+				$('.form').click(function(){
+					// $(".form").removeClass("fadeInRight");
+					// $(this).addClass("hide");
+					// $(".expand").removeClass("hide");
+				});
+				$('.grid-item').click(function(){
+					$('.work-content').css("visibility","visible");
+					console.log("clicked on grid item");
+				});
+				$('.close').click(function(){
+					$('.work-content').css("visibility","hidden");
 				});
 			});
 		</script>
