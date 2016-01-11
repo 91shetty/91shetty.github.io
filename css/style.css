@@ -281,7 +281,7 @@ footer p span {
 }
 
 .bold {
-  font-weight: 500;
+  font: 100% FontRegular, sans-serif;
 }
 
 .bolder {

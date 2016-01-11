@@ -38,7 +38,7 @@
 					<div class="section-content">
 						<div class="main-intro">
 							<p>
-								Hi, I'm Vishwas Shetty. I am an User Experience Designer. I believe in crafting an user experience that bridges the gap between <span class="italics bold">what’s possible</span> (using technology) and <span class="italics bold">what’s desirable</span> (by people).
+								Hi, I'm <span class="bold">Vishwas Shetty</span>. <br/>I am an <span class="bold">User Experience Designer</span>. I believe in crafting an user experience that bridges the gap between <span class="bold">what’s possible</span> (using technology) and <span class="bold">what’s desirable</span> (by people).
 							</p>
 						</div>
 						<div class="grid">
@@ -62,7 +62,7 @@
 									</div>
 								</a>
 							</div>
-							<div class="grid-item">
+							<!-- <div class="grid-item">
 								<a href="#">
 									<div class="preview">
 										<div class="image"></div>
@@ -81,7 +81,7 @@
 										<p>Polaris is a web based application that provides guidance and help to international students</p>
 									</div>
 								</a>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</section>
@@ -92,71 +92,5 @@
 				</div>
 			</footer>
 		</div>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script type="text/javascript">
-			$(window).load(function(){
-				$('.logo').click(function(){
-					// $('#skillsNav').removeClass("active pulse");
-					$('#aboutNav').removeClass("active pulse");
-					$('#contactNav').removeClass("active pulse");
-					$('#landing').removeClass("hide");
-					// $('#skills').addClass("hide");
-					$('#about').addClass("hide");
-					$('#work').addClass("hide");
-				});
-				// $('#skillsNav').click(function(){
-				// 	$(this).addClass("active pulse");				
-				// 	$('#aboutNav').removeClass("active pulse");
-				// 	$('#contactNav').removeClass("active pulse");
-				// 	$('#landing').addClass("hide");
-				// 	$('#skills').removeClass("hide");
-				// 	$('#contact').addClass("hide");
-				// 	$('#about').addClass("hide");
-				// });
-				$('#aboutNav').click(function(){
-					$(this).addClass("active pulse");
-					// $('#skillsNav').removeClass("active pulse");
-					$('#workNav').removeClass("active pulse");
-					$('#landing').addClass("hide");
-					// $('#skills').addClass("hide");
-					$('#about').removeClass("hide");
-					$('#work').addClass("hide");
-				});
-				$('#workNav').click(function(){
-					$(this).addClass("active pulse");				
-					// $('#skillsNav').removeClass("active pulse");
-					$('#aboutNav').removeClass("active pulse");
-					$('#landing').addClass("hide");
-					// $('#skills').addClass("hide");
-					$('#about').addClass("hide");
-					$('#work').removeClass("hide");
-				});
-				$('.expand').click(function(){
-					$(this).addClass("hide");
-					// $(".form").removeClass("fadeOutRight");
-					// $(".form").addClass("fadeInRight");
-					$(".form").removeClass("hide");
-				});
-				$('.form').click(function(){
-					// $(".form").removeClass("fadeInRight");
-					// $(this).addClass("hide");
-					// $(".expand").removeClass("hide");
-				});
-				$('.grid-item').click(function(){
-					$('.work-content').css("visibility","visible");
-					console.log("clicked on grid item");
-				});
-				$('.close').click(function(){
-					$('.work-content').css("visibility","hidden");
-				});
-			});
-		</script>
-		<script type="text/javascript">
-		  $.getScript('https://rawgit.com/layervault/jquery.typer.js/master/src/jquery.typer.js', function () {
-		    $(function () {
-		      $('[data-typer-targets]').typer();
-		    });
-		  });
-		</script>
 	</body>
 </html>
