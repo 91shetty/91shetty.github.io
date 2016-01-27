@@ -403,8 +403,11 @@ footer p span {
   margin: 30px 0;
 }
 
-.content-item .project-tags ul {
+.content-item .project-tags {
   text-align: center;
+}
+
+.content-item .project-tags ul {
   margin-bottom: 30px;
 }
 
