@@ -362,6 +362,25 @@ footer p span {
   z-index: 400;
 }
 
+.crumbs {
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  top: 64px;
+  background: #6F589C;
+  opacity: 0;
+  color: #fff;
+  line-height: 40px;
+  z-index: 999;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.crumbs-content {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+}
+
 .content-item {
   text-align: left;
   width: 90%;
@@ -396,6 +415,7 @@ footer p span {
 .content-item .timeline {
   font-family: fontRegular;
   text-align: center;
+  margin: 15px 0;
 }
 
 .content-item .project-sub-header {
@@ -408,16 +428,25 @@ footer p span {
 }
 
 .content-item .images {
-  width: 100%;
-  height: 300px;
   padding: 15px;
-  color: black;
   margin: 10px 0;
   border: 1px solid rgba(74, 74, 74, 0.075);
+  position: relative;
+}
+
+.content-item .images img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .content-item .project-para {
   line-height: 30px;
+}
+
+.content-item .project-para .project-sub-sub-header {
+  font-family: fontRegular;
 }
 
 #about figure {
