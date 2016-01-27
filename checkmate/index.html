@@ -32,6 +32,11 @@
 					</ul>
 				</div>
 			</header>
+			<div class="crumbs" id="crumbs">
+				<div class="crumbs-content">
+					Hazard Risk Assessment <span class="crumbs-dynamic"> </span>
+				</div>
+			</div>
 			<div class="content">
 				<section class="section-block" id="work">
 					<div class="section-content">
@@ -92,5 +97,26 @@
 				</div>
 			</footer>
 		</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			window.onscroll = function (e) {
+				var crumbs = document.getElementById("crumbs");
+				var position = $('.crumbs').offset();
+				if( document.body.scrollTop === 0 ) {
+					crumbs.style.opacity = "0";
+					$('.crumbs-dynamic').html("");
+				}
+				else {
+					crumbs.style.opacity = "1";
+					$('.article-section').each(function(){
+				        if((position.top) >= $(this).offset().top)
+				        {
+				            $('.crumbs-dynamic').html(' > ' + $(this).find(".project-sub-header").html()); 
+				            return;
+				        }
+			    	});
+				}
+			}
+		</script>
 	</body>
 </html>
