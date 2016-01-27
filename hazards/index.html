@@ -126,7 +126,7 @@
 				else {
 					crumbs.style.opacity = "1";
 					$('.article-section').each(function(){
-				        if((position.top) >= $(this).offset().top && position.top <= $(this).next().offset().top)
+				        if((position.top) >= $(this).offset().top)
 				        {
 				            $('.crumbs-dynamic').html(' > ' + $(this).find(".project-sub-header").html()); 
 				            return;
