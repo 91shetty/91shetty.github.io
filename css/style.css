@@ -250,7 +250,7 @@ footer p {
   line-height: 25px;
 }
 
-footer p span {
+footer p .colored {
   color: #bf9000;
 }
 
