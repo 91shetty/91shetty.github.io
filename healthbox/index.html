@@ -34,6 +34,7 @@
 			<div class="crumbs" id="crumbs">
 				<div class="crumbs-content">
 					UA Healthbox <span class="crumbs-dynamic"> </span>
+                    <span class="scroll-top bold"> <p> ^ </p> </span>
 				</div>
 			</div>
 			<div class="content">
@@ -125,6 +126,18 @@
 				</section>
 			</div>
 			<footer>
+                <div class="navigation-container">
+                    <div class="navigation-bar">
+                        <a href="" style="position: absolute; left: 0;"> 
+                            &lt; Previous &nbsp; 
+                            <span class="hidden-phone"> - &nbsp; Checkmate</span>
+                        </a>
+                        <a href="" style="position: absolute; right: 0;"> 
+                            <span class="hidden-phone"> Hazard Risk Assessment &nbsp; - </span>
+                            &nbsp; Next &gt;   
+                        </a>
+                    </div>
+                </div>
 				<div class="bottom-bar">
 					<p><span class="colored">&copy;</span> 2015 <span class="colored">|</span> Carved and Chiseled - Vishwas Shetty <span class="colored hidden-phone">|</span> <span class="hidden-phone">All Rights Reserved </span> </p>
 				</div>
@@ -150,6 +163,17 @@
 			    	});
 				}
 			}
+            $(".navigation-bar a").hover(function(){
+               $(this).find("span").css("visibility", "visible");
+                },function(){ 
+               $(this).find("span").css("visibility", "hidden");
+            });
+            $(".scroll-top").click(function(){
+                $('html, body').animate({
+                    scrollTop: 0     
+                }, 1000);
+                return false;
+            });
 		</script>
 	</body>
 </html>

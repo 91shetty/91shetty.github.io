@@ -205,13 +205,13 @@ header .top-bar ul li a:hover {
 
 .content {
   width: 100%;
-  padding: 128px 0 25px 0;
+  padding: 128px 0 50px 0;
   height: 100%;
 }
 
 @media (min-width: 768px) {
   .content {
-    padding: 64px 0 50px 0;
+    padding: 64px 0 90px 0;
   }
 }
 
@@ -235,7 +235,7 @@ header .top-bar ul li a:hover {
 }
 
 footer {
-  height: 25px;
+  height: 50px;
   background-color: #4b2e83;
   bottom: 0;
   left: 0;
@@ -246,24 +246,67 @@ footer {
   text-align: center;
 }
 
-footer p {
+footer .navigation-container {
+  height: 25px;
+  background: #6F589C;
+}
+
+footer .navigation-container .navigation-bar {
+  margin: 0 auto;
+  width: 80%;
+  position: relative;
   line-height: 25px;
 }
 
-footer p .colored {
+footer .navigation-container .navigation-bar a {
+  transition: all 0.5s ease-in-out;
+}
+
+footer .navigation-container .navigation-bar a span {
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  footer .navigation-container .navigation-bar {
+    line-height: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  footer .navigation-container {
+    height: 40px;
+  }
+}
+
+footer .bottom-bar {
+  height: 25px;
+}
+
+footer .bottom-bar p {
+  line-height: 25px;
+}
+
+footer .bottom-bar p .colored {
   color: #bf9000;
 }
 
 @media (min-width: 768px) {
-  footer p {
+  footer .bottom-bar p {
     line-height: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  footer .bottom-bar {
+    height: 50px;
   }
 }
 
 @media (min-width: 768px) {
   footer {
     font-size: 14px;
-    height: 50px;
+    height: 90px;
   }
 }
 
@@ -387,6 +430,53 @@ footer p .colored {
   height: 100%;
   width: 80%;
   margin: 0 auto;
+  position: relative;
+}
+
+.crumbs-content .scroll-top {
+  position: absolute;
+  right: 0;
+  top: 7.5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fff;
+  color: #000;
+  text-align: center;
+  cursor: pointer;
+}
+
+.crumbs-content .scroll-top p {
+  line-height: 25px;
+  font-size: 20px;
+}
+
+.crumbs-content {
+  position: relative;
+}
+
+.scroll-top {
+  position: absolute;
+  right: 0;
+  top: 7.5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fff;
+  color: #000;
+  text-align: center;
+}
+
+.scroll-top p {
+  line-height: 25px;
+}
+
+.navigation-bar a {
+  transition: all 0.5s ease-in-out;
+}
+
+.navigation-bar a span {
+  transition: all 0.5s ease-in-out;
 }
 
 .content-item {
