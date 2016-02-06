@@ -35,6 +35,7 @@
 			<div class="crumbs" id="crumbs">
 				<div class="crumbs-content">
 					Checkmate <span class="crumbs-dynamic"> </span>
+                    <span class="scroll-top bold"> <p> ^ </p> </span>
 				</div>
 			</div>
 			<div class="content">
@@ -55,7 +56,7 @@
 								<div class="article-section">
 									<div class="project-sub-header">Project Summary</div>
 									<div class="project-para">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et venenatis erat. Phasellus lorem erat, convallis porta metus sed, scelerisque lobortis mi. Aenean mollis tristique aliquam. Aenean eu ipsum consectetur, blandit ex sed, lobortis metus. Donec vitae feugiat erat. Donec auctor augue vel quam mattis euismod. Mauris aliquet arcu quis ex faucibus varius. Donec in nibh bibendum, eleifend libero ut, iaculis felis. Etiam laoreet elementum magna non efficitur.
+										Checkmate is an automated self checkout system that helps customer solve their bagging issues in stores.
 									</div>
 								</div>
 								<div class="article-section">
@@ -71,17 +72,19 @@
 								<div class="article-section">
 									<div class="project-sub-header">Problem Statement</div>
 									<div class="project-para">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et venenatis erat. Phasellus lorem erat, convallis porta metus sed, scelerisque lobortis mi. Aenean mollis tristique aliquam. Aenean eu ipsum consectetur, blandit ex sed, lobortis metus. Donec vitae feugiat erat. Donec auctor augue vel quam mattis euismod. Mauris aliquet arcu quis ex faucibus varius. Donec in nibh bibendum, eleifend libero ut, iaculis felis. Etiam laoreet elementum magna non efficitur.
-									</div>
-								</div>
-								<div class="article-section">
-									<div class="project-sub-header">Ideation / Brain-storming </div>
-									<div class="project-para">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et venenatis erat. Phasellus lorem erat, convallis porta metus sed, scelerisque lobortis mi. Aenean mollis tristique aliquam. Aenean eu ipsum consectetur, blandit ex sed, lobortis metus. Donec vitae feugiat erat. Donec auctor augue vel quam mattis euismod. Mauris aliquet arcu quis ex faucibus varius. Donec in nibh bibendum, eleifend libero ut, iaculis felis. Etiam laoreet elementum magna non efficitur.
+										Few days after my arrival in United States of America, I had to go grocery shopping. I choose to go to Safeway beside my house. After I was done shopping, I walked to the billing and saw that there were two different modes of billing. One was the traditional cashier-staffed checkout and the other was a self checkout system. Back in India, there are very few or no self checkout kiosks. I was very new to this and was skeptical of using it. So I choose to use the traditional method instead. The next time I went grocery shopping, I deciced to give self checkout kiosk a try. 
 									</div>
 								</div>
 								<div class="article-section">
 									<div class="project-sub-header">Research</div>
+									<div class="project-para">
+										<span class="bold"> Fly in the wall (Look) </span>
+                                        <span class="bold"> Surveys (Learn) </span>
+                                        <span class="bold">  </span>
+									</div>
+								</div>
+                                <div class="article-section">
+									<div class="project-sub-header">Ideation / Brain-storming </div>
 									<div class="project-para">
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et venenatis erat. Phasellus lorem erat, convallis porta metus sed, scelerisque lobortis mi. Aenean mollis tristique aliquam. Aenean eu ipsum consectetur, blandit ex sed, lobortis metus. Donec vitae feugiat erat. Donec auctor augue vel quam mattis euismod. Mauris aliquet arcu quis ex faucibus varius. Donec in nibh bibendum, eleifend libero ut, iaculis felis. Etiam laoreet elementum magna non efficitur.
 									</div>
@@ -104,8 +107,21 @@
 				</section>
 			</div>
 			<footer>
+                <div class="navigation-container">
+                    <div class="navigation-bar">
+                        <!--<a href="/hazards" style="position: absolute; left: 0;"> 
+                            &lt; Previous &nbsp; 
+                            <span class="hidden-phone"> - &nbsp; Checkmate</span>
+                        </a>-->
+                        <a href="" style="position: absolute; right: 0;"> 
+                            <span class="hidden-phone"> Hazard Risk Assessment &nbsp; - </span>
+                            &nbsp; Next &gt;   
+                        </a>
+                    </div>
+                </div>
 				<div class="bottom-bar">
 					<p><span class="colored">&copy;</span> 2015 <span class="colored">|</span> Carved and Chiseled - Vishwas Shetty <span class="colored hidden-phone">|</span> <span class="hidden-phone">All Rights Reserved </span> </p>
+				</div>
 			</footer>
 		</div>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -128,6 +144,17 @@
 			    	});
 				}
 			}
+            $(".navigation-bar a").hover(function(){
+               $(this).find("span").css("visibility", "visible");
+                },function(){ 
+               $(this).find("span").css("visibility", "hidden");
+            });
+            $(".scroll-top").click(function(){
+                $('html, body').animate({
+                    scrollTop: 0     
+                }, 1000);
+                return false;
+            });
 		</script>
 	</body>
 </html>
