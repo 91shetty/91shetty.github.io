@@ -11,21 +11,20 @@
 			html, body {
 				height: 100%;
 				width: 100%;
+                overflow: hidden;
 			}
             body {
-                height: 100%;
-                width: 100%;
                 color: #000;
                 text-align: center;
                 font-family: 'Montserrat', sans-serif;
             }
             .container {
+                position: relative;
                 width: 100%;
                 height: 100%;
                 background: #fff;
             }
             h1 {
-                margin: 40px 0 20px;
                 font-size: 50px;
             }
             p {
@@ -48,7 +47,7 @@
             }
             button {
                 margin: 40px 0 0 0;
-                padding: 20px;
+                padding: 21px;
                 border-radius: 5px;
                 font-size: 20px;
                 font-family: 'Montserrat', sans-serif;
@@ -56,38 +55,74 @@
                 color: #fff;
                 cursor: pointer;
             }
+            button:focus {
+                outline: 0;
+            }
+            @media (min-width: 320px) and (max-width: 720px) {
+                h1 {
+                    font-size: 40px;
+                }
+                .counter {
+                    font-size: 30px;
+                }
+                p {
+                    width: 90%;
+                    font-size: 18px;
+                    line-height: 1.5;
+                }
+                button {
+                    font-size: 18px;
+                    padding: 15px;
+                }
+            }
         </style>
     </head>
     <body>
-        <div class="container" ng-app="" >
-            <h1> &quot; It Depends &quot; </h1>
-            <p> The phrase <span class="bold"> "it depends" </span> is used by Designers as part of their toolkit. <br/> <br/> <br/>This website keeps a count as to how many times I personally have said it and also how many times I have heard others saying it. </p>
-            <section id="saidIt" ng-controller="saidItEventController">
-                <span class="counter">{{saidItCounter}}</span>
-                <br/>
-                <button ng-click="saidItClick()"> I Said it </button>
-            </section>
-            <section id="heardIt" ng-controller="heardItEventController">
-                <span class="counter">{{heardItCounter}}</span>
-                <br/>
-                <button ng-click="heardItClick()"'> I Heard it </button>
-            </section>
+        <div class="container" ng-app="" ng-controller="counterDataController">
+            <div style="width: 100%; position: absolute; top: 50%; transform: translateY(-50%);">
+                <h1> &quot; It Depends &quot; </h1>
+                <p> The phrase <span class="bold"> "it depends" </span> is used by Designers as part of their toolkit. <br/> <br/>This website keeps a count as to how many times I personally have said it and also how many times I have heard others saying it. </p>
+                <section id="saidIt" ng-controller="saidItEventController">
+                    <span class="counter">{{saidItCounter}}</span>
+                    <br/>
+                    <button ng-click="saidItClick()"> I Said it </button>
+                </section>
+                <section id="heardIt" ng-controller="heardItEventController">
+                    <span class="counter">{{heardItCounter}}</span>
+                    <br/>
+                    <button ng-click="heardItClick()"'> I Heard it </button>
+                </section>
+            </div>
         </div>
     </body>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
-        function setCookie() {
-            document.cookie = "saidItCount = 0; heardItCount = 0; expires = Thu, 31 Dec 2020 00:00:00 UTC";
+        function counterDataController($scope, $http){
+            $http.get("counter.php")
+            .then(function(response) {
+                    console.log(response.data[0] + " " + response.data[1]);
+                    $scope.saidItCounter = response.data[0];
+                    $scope.heardItCounter = response.data[1];
+            });
         }
-        function saidItEventController($scope) {
-    			$scope.saidItCounter = 0;
+        function saidItEventController($scope, $http) {
+    			//$scope.saidItCounter = SaidIt;
     			$scope.saidItClick = function() {
-           			$scope.saidItCounter++;
+                    $http.get("saidIt.php")
+                    .then(function(response) {
+                        console.log(response)
+                    });
+                    $scope.saidItCounter++;
         		}
 		}
-        function heardItEventController($scope) {
-    			$scope.heardItCounter = 0;
+        function heardItEventController($scope, $http) {
+    			//$scope.heardItCounter = HeardIt;
     			$scope.heardItClick = function() {
+                    $http.get("heardIt.php")
+                    .then(function(response) {
+                        console.log(response)
+                    });
            			$scope.heardItCounter++;
         		}
 		}
