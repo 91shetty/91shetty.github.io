@@ -229,13 +229,18 @@ header .top-bar ul li a:hover {
 
 .section-content {
   position: relative;
-  width: 95%;
-  margin: 0 auto;
+  width: auto;
+  margin: 0 20px;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 @media (min-width: 960px) {
   .section-content {
-    width: 80%;
+    width: 800px;
+    margin: 0 auto;
+    font-size: 21px;
+    line-height: 1.58;
   }
 }
 
@@ -364,7 +369,6 @@ body {
 
 .main-intro {
   margin: 60px 0;
-  line-height: 24px;
   padding: 0 5px;
 }
 
@@ -503,20 +507,18 @@ body {
 
 .content-item {
   text-align: left;
-  width: 90%;
-  margin: 0 auto;
 }
 
 .content-item .project-header {
   font-family: fontRegular;
   font-size: 45px;
-  line-height: 40px;
   text-align: center;
   margin: 30px 0;
 }
 
 .content-item .project-tags {
   text-align: center;
+  font-weight: bolder;
 }
 
 .content-item .project-tags ul {
@@ -530,7 +532,7 @@ body {
   padding: 5px 10px;
   border-radius: 4px;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: #4b2e83;
   font-size: 12px;
   text-transform: uppercase;
 }
@@ -544,7 +546,6 @@ body {
 .content-item .project-sub-header {
   font-family: fontRegular;
   font-size: 18px;
-  line-height: 30px;
   text-transform: uppercase;
   color: #222222;
   margin-top: 30px;
@@ -554,10 +555,6 @@ body {
   padding: 15px;
   margin: 10px 0;
   border: 1px solid rgba(74, 74, 74, 0.075);
-}
-
-.content-item .project-para {
-  line-height: 30px;
 }
 
 .content-item .project-para .project-sub-sub-header {
@@ -630,4 +627,63 @@ body {
 
 #about ul li:first-child {
   margin-left: 0;
+}
+
+.photos {
+  /* Prevent vertical gaps */
+  line-height: 0;
+  -webkit-column-count: 5;
+  -webkit-column-gap: 0px;
+  -moz-column-count: 5;
+  -moz-column-gap: 0px;
+  column-count: 5;
+  column-gap: 0px;
+}
+
+.photos img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 5px;
+}
+
+.photos img:first-child {
+  margin-left: 0;
+}
+
+@media (max-width: 1200px) {
+  .photos {
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+}
+
+@media (max-width: 1000px) {
+  .photos {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+}
+
+@media (max-width: 800px) {
+  .photos {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media (max-width: 400px) {
+  .photos {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+}
+
+#photos {
+  height: 236px;
+  display: inline;
 }
