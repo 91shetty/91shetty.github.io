@@ -388,7 +388,6 @@ body {
   width: 100%;
   min-height: 300px;
   position: relative;
-  text-align: center;
   padding: 30px;
   margin: 10px 0;
   padding: 0 15px;
@@ -418,6 +417,10 @@ body {
   margin: 1em auto;
   position: relative;
   background: rgba(0, 0, 0, 0.1);
+}
+
+#work .grid .grid-item .preview h3 {
+  text-align: center;
 }
 
 #work .grid .grid-item .preview:hover {
