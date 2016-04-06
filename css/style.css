@@ -399,16 +399,8 @@ body {
   border: 1px solid rgba(74, 74, 74, 0.075);
 }
 
-#work .grid .grid-item .preview .image {
-  height: 200px;
-  position: relative;
-}
-
 #work .grid .grid-item .preview .image img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 #work .grid .grid-item .preview .loader {
