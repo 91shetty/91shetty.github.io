@@ -267,12 +267,14 @@ footer .navigation-container .navigation-bar {
 }
 
 footer .navigation-container .navigation-bar a {
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
 }
 
 footer .navigation-container .navigation-bar a span {
   visibility: hidden;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
 }
 
 @media (min-width: 768px) {
@@ -380,8 +382,13 @@ body {
 
 #work .grid {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 #work .grid .grid-item {
@@ -443,7 +450,8 @@ body {
   color: #fff;
   line-height: 40px;
   z-index: 999;
-  transition: opacity 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
+          transition: opacity 0.2s ease-in-out;
 }
 
 .crumbs-content {
@@ -492,11 +500,13 @@ body {
 }
 
 .navigation-bar a {
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
 }
 
 .navigation-bar a span {
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
 }
 
 .content-item {
@@ -604,13 +614,15 @@ body {
 
 #about ul li a {
   color: #000;
-  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+          transition: all 0.2s ease-out;
 }
 
 #about ul li a:hover {
   text-decoration: underline;
   color: #bf9000;
-  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+          transition: all 0.2s ease-in;
 }
 
 @media (min-width: 768px) {
@@ -623,18 +635,16 @@ body {
   margin-left: 0;
 }
 
-.photos {
+.photo-album {
   /* Prevent vertical gaps */
   line-height: 0;
   -webkit-column-count: 2;
   -webkit-column-gap: 0px;
   -moz-column-count: 2;
   -moz-column-gap: 0px;
-  column-count: 2;
-  column-gap: 0px;
 }
 
-.photos img {
+.photo-album img {
   /* Just in case there are inline attributes */
   width: 100% !important;
   height: auto !important;
