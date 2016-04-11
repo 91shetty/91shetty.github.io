@@ -644,10 +644,35 @@ body {
   -moz-column-gap: 0px;
 }
 
-.photo-album img {
+.photo-album .photo {
+  position: relative;
+  padding: 2.5px 2.5px;
+}
+
+.photo-album .photo img {
   /* Just in case there are inline attributes */
   width: 100% !important;
   height: auto !important;
-  padding: 2.5px 2.5px;
   display: block;
+}
+
+.photo-album .photo label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  line-height: 30px;
+  background: #6F589C;
+  color: #fff;
+  padding: 0 5px;
+  font-size: 16px;
+  margin: 0 2.5px;
+}
+
+@media (min-width: 768px) {
+  .photo-album {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+  }
 }
