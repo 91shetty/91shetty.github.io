@@ -638,9 +638,9 @@ body {
 .photo-album {
   /* Prevent vertical gaps */
   line-height: 0;
-  -webkit-column-count: 2;
+  -webkit-column-count: 1;
   -webkit-column-gap: 0px;
-  -moz-column-count: 2;
+  -moz-column-count: 1;
   -moz-column-gap: 0px;
 }
 
@@ -670,9 +670,9 @@ body {
   margin: 0 2.5px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .photo-album {
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
   }
 }
