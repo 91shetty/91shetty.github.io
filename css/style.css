@@ -229,8 +229,8 @@ header .top-bar ul li a:hover {
 
 .section-content {
   position: relative;
-  width: auto;
-  margin: 0 20px;
+  width: 90%;
+  margin: 0 auto;
   font-size: 18px;
   line-height: 1.5;
 }
@@ -427,9 +427,72 @@ body {
   border: 1px solid #bf9000;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   #work .grid .grid-item {
     width: 50%;
+  }
+}
+
+#work .grid-1 {
+  line-height: 0;
+  -webkit-column-count: 1;
+  -webkit-column-gap: 0;
+  -moz-column-gap: 0;
+       column-gap: 0;
+  -webkit-column-count: 1;
+     -moz-column-count: 1;
+          column-count: 1;
+}
+
+#work .grid-1 .grid-item {
+  padding: 10px 10px;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+#work .grid-1 .grid-item .preview {
+  padding: 30px;
+  color: black;
+  border: 1px solid rgba(74, 74, 74, 0.075);
+}
+
+#work .grid-1 .grid-item .preview img {
+  width: 100% !important;
+  height: auto !important;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+
+#work .grid-1 .grid-item .preview .loader {
+  height: 1px;
+  width: 40%;
+  margin: 1em auto;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#work .grid-1 .grid-item .preview h3 {
+  text-align: center;
+  line-height: 24px;
+}
+
+#work .grid-1 .grid-item .preview p {
+  line-height: 24px;
+}
+
+#work .grid-1 .grid-item .preview:hover {
+  border: 1px solid #bf9000;
+}
+
+@media (min-width: 960px) {
+  #work .grid-1 {
+    -webkit-column-count: 2;
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+         column-gap: 0;
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
   }
 }
 
@@ -549,7 +612,7 @@ body {
 
 .content-item .project-sub-header {
   font-family: fontRegular;
-  font-size: 18px;
+  font-size: 21px;
   text-transform: uppercase;
   color: #222222;
   margin-top: 30px;
@@ -661,13 +724,21 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 30px;
-  line-height: 30px;
+  height: 60px;
+  line-height: 60px;
   background: #6F589C;
   color: #fff;
   padding: 0 5px;
-  font-size: 16px;
+  font-size: 18px;
   margin: 0 2.5px;
+}
+
+@media (min-width: 960px) {
+  .photo-album .photo label {
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 960px) {
