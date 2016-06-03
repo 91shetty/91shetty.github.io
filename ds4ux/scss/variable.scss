@@ -1,0 +1,21 @@
+@font-face {
+	font-family: Montserrat-Bold;
+	src: url(../fonts/Montserrat-Bold.otf);
+}
+
+@font-face {
+	font-family: Montserrat-Regular;
+	src: url(../fonts/Montserrat-Regular.otf);
+}
+
+@font-face {
+	font-family: Montserrat-UltraLight;
+	src: url(../fonts/Montserrat-UltraLight.otf);
+}
+
+$font-body : Montserrat-UltraLight;
+$font-secondary: Montserrat-Regular;
+$font-tertiary:  Montserrat-Bold;
+
+$color-primary: #000;
+$color-secondary: #fff;

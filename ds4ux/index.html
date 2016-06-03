@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title> DS4UX | HCDE 598 </title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    <body> 
+        <div class="container">
+            <ul class="slider">
+                <li id="1" > <span class="current"> &nbsp; </span> </li>
+                <li id="2" > <span> &nbsp; </span> </li>
+                <li id="3" > <span> &nbsp; </span> </li>
+                <li id="4" > <span> &nbsp; </span> </li>
+                <li id="5" > <span> &nbsp; </span> </li>
+                <li id="6" > <span> &nbsp; </span> </li>
+                <li id="7" > <span> &nbsp; </span> </li>
+                <li id="8" > <span> &nbsp; </span> </li>
+                <li id="9" > <span> &nbsp; </span> </li>
+            </ul>
+            <section id="slide-1">
+                <div class="section-content center"> 
+                    <h1> Rise of Golden State Warriors Basketball Team <h1>
+                    <h2> DS4UX | HCDE 598 </h2>
+                </div>
+                <footer> HCDE 598 | Vishwas Shetty </footer>
+            </section>
+            <section id="slide-2">
+                <h2> Research Question </h2>
+                <div class="section-content">  
+                    
+                    <h1> Rise of Golden State Warriors Basketball Team </h1>
+                    <ul class="inline">
+                        <li> how the 4 factor <strong> (Shooting, Rebounding, Free throws, Turnovers) </strong>percentage for the team has improved over the past 10 years? </li>
+                        <li> what key aspects of Steph Curry&#39;s game makes him an indispensable resource to the GSW&#39;s team? </li>
+                        <li> how key stats of 5 mentioned players (Curry, Barnes, Thompson, Iguodala and Green) have impacted the team&#39;s success? </li>
+                    </ul>
+                </div>
+                <footer> HCDE 598 | Vishwas Shetty </footer>
+            </section>
+            <section id="slide-3">
+                <h2 class="slide-header"> Motivation </h2>
+                <div class="section-content"> 
+                    <div class="sub-section">
+                        <img src="gsw.png" alt="gsw logo" width="300">
+                        <ul>
+                            <li> 2015 NBA Champions, 2016 Western Conference Champions </li>
+                            <li> Beat Chicago Bulls' single season win record of 73 </li>
+                            <li> NBA record of 54 regular season home game winning streak </li>
+                            <li> broke a 131 year old record in all of major professional sports by winning their first 24 games </li>
+                        </ul>
+                    </div>
+                    <div class="sub-section">
+                        
+                    </div>
+                </div>
+                <footer> HCDE 598 | Vishwas Shetty </footer>
+            </section>
+            <section id="slide-4">
+                <h2 class="slide-header"> Data Source </h2>
+                <div class="section-content"> 
+                    <img src="images/NBA_logo.png" height="300px" width="auto" alt="Stats Nba"/>
+                    <p> <strong> nba.stats.com </strong> </p>
+                    <ul>
+                        <li> /stats/teaminfocommon </li>
+                        <li> /stats/playercareerstats </li>
+                        <li> /stats/commonplayerinfo </li>
+                        <li> /stats/commonteamroster </li>
+                        <li> /stats/teamdashboardbygeneralsplits </li>
+                    </ul>
+                </div> 
+                <footer> HCDE 598 | Vishwas Shetty </footer>
+            </section>
+            <section id="slide-5">
+                <h2 class="slide-header"> Methodology </h2>
+                <div class="section-content"> 
+                    
+                </div> 
+                <footer> HCDE 598 | Vishwas Shetty </footer>
+            </section>
+            <section id="slide-6">
+                <h2 class="slide-header"> Findings </h2>
+                <div class="section-content"> 
+                    
+                </div> 
+                <footer> HCDE 598 | Vishwas Shetty </footer>
+            </section>
+            <section id="slide-7">
+                <h2 class="slide-header"> Findings </h2>
+                <div class="section-content"> 
+                    
+                </div> 
+                <footer> HCDE 598 | Vishwas Shetty </footer>
+            </section>
+            <section id="slide-8">
+                <h2 class="slide-header"> Further Research </h2>
+                <div class="section-content"> 
+                    
+                </div> 
+                <footer> HCDE 598 | Vishwas Shetty </footer>
+            </section>
+            <section id="slide-9">
+                <div class="section-content center"> 
+                    <h2> Thank You </h2>
+                    <p> Questions? </p>
+                </div> 
+                <footer> HCDE 598 | Vishwas Shetty </footer>
+            </section>
+        </div>
+    </body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+            $(document).ready(function () {
+                $(".slider li").click(function() {
+                   var slide = "#slide-" + this.id;
+                   console.log(slide);
+                   var current = $(".current");
+                   current.removeClass("current");
+                   $(this).find("span").addClass("current");
+                   $('html, body').animate({
+                        scrollTop: $(slide).offset().top
+                   }, 500);
+                });
+            });
+    </script>
+</html>

@@ -1,0 +1,32 @@
+{
+    "name": "",
+    "img": "gsw.png",
+    "level": 1,
+    "children": [
+        {
+            "name": "stephen curry",
+            "img": "stephen_curry.png",
+            "level": 2
+        },
+        {
+            "name": "clay thompson",
+            "img": "clay_thompson.png",
+            "level": 2
+        },
+        {
+            "name": "draymond green",
+            "img": "draymond_green.png",
+            "level": 2
+        },
+        {
+            "name": "harison barnes",
+            "img": "harison_barnes.png",
+            "level": 2
+        },
+        {
+            "name": "andre iguodala",
+            "img": "andre_iguodala.png",
+            "level": 2
+        }
+    ]   
+}

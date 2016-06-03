@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <style>
+            .section{
+                font-size: 6em;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="fullpage">
+            <div class="section">
+                <h1> Rise of Golden State Warriors Basketball Team <h1>
+                <h2> DS4UX | HCDE 598 </h2>
+                <footer> HCDE 598 | Vishwas Shetty </footer>
+            </div>
+            <div class="section">
+                <div class="slide">Section 2 Slide 1</div>
+                <div class="slide">Section 2 Slide 2</div>
+                <div class="slide">Section 2 Slide 3</div>
+            </div>
+            <div class="section">Section 3</div>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!--<script src="vendors/jquery.easings.min.js"></script>-->
+        <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#fullpage').fullpage({
+                    sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#000'],
+                });
+            });
+            //var slideNumber = 1;
+            // var lastScrollTop = 0;
+            // var next, prev;
+            
+            // $(document).ready(function () {
+            //     var timerId;
+            //     var current = $('section.current');
+                
+            //     //$(window).bind('scroll', function(e) {
+            //     window.onscroll = function(e) {
+            //         //e.preventDefault();
+            //         var st = $(this).scrollTop();
+            //         clearTimeout(timerId)
+            //         timerId = setTimeout(function(){
+                    
+            //             if (st > lastScrollTop) {
+            //                 next = $('section.current').next()
+            //                 $(next).addClass("current");
+            //                 $(current).removeClass("current");
+            //                 $('html, body').animate({
+            //                     scrollTop: $(next).offset().top
+            //                 }, 100);
+            //                 console.log("Next",$(next).offset());
+                            
+            //             } else {
+            //                 prev = current.prev()
+            //                 $(prev).addClass("current");
+            //                 $(current).removeClass("current");
+            //                 $('html, body').animate({
+            //                     scrollTop: $(prev).offset().top
+            //                 }, 100);
+            //                 console.log("Prev",$(next).offset());
+            //             }
+                        
+                            
+            //             lastScrollTop = st;
+            //         }, 1000)
+
+            //     // });
+            //     }
+            // });
+        </script>            
+    </body> 
+</html>
