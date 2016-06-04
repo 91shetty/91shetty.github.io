@@ -42,12 +42,15 @@ section {
     
     .section-content {
         width: 80%;
-        margin: 75px auto 0;
+        top: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
         
         ul {
             margin-top: 20px;
             li {
-                text-align: left;
+                //text-align: left;
                 margin: 10px 0;
             }
         }
@@ -75,7 +78,17 @@ section:nth-child(even) {
 
 .sub-section > * {
     display: inline-block;
-    width: 49%;
+}
+
+.sub-section {
+    img {
+        height: 300px;
+        width: auto;
+        //vertical-align: middle;
+    }
+    ul {
+        width: 49%;
+    }
 }
 
 .current {
@@ -138,5 +151,6 @@ img {
         width: 300px !important;
         margin: 0 10px !important;
         vertical-align: top !important;
+        text-align: left !important;
     }
 }

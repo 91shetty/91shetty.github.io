@@ -88,7 +88,12 @@ section .slide-header {
 
 section .section-content {
   width: 80%;
-  margin: 75px auto 0;
+  top: 150px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
 }
 
 section .section-content ul {
@@ -96,7 +101,6 @@ section .section-content ul {
 }
 
 section .section-content ul li {
-  text-align: left;
   margin: 10px 0;
 }
 
@@ -121,6 +125,14 @@ section:nth-child(even) {
 
 .sub-section > * {
   display: inline-block;
+}
+
+.sub-section img {
+  height: 300px;
+  width: auto;
+}
+
+.sub-section ul {
   width: 49%;
 }
 
@@ -189,4 +201,5 @@ img {
   width: 300px !important;
   margin: 0 10px !important;
   vertical-align: top !important;
+  text-align: left !important;
 }
