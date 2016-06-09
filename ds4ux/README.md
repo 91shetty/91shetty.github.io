@@ -100,7 +100,7 @@ I used D3 javascript library to visualize the data. For the scope of this class,
 The shooting percentages has clearly improved for the team over the past 5 years.
 With the graphs above, I could clearly see that points scored by players like Stephen Curry and Clay Thompson (who are the shooting guards of the team) have improved over the past 5 years and hence has had the biggest impact on the success of the team
 Also, role players like Harrison Barnes, Draymond Green and Andre Iguodala though have not made great strides on scoring points like Stephen Curry or Clay Thompson, they have impacted the team through defence, assists and rebounds.
-Basketball is a team oriented game and each player on the team has a role to play. The Golden State Warriors team have made tremendous impact as a team to win games where each player habe made thier own significant contribution.
+Basketball is a team oriented game and each player on the team has a role to play. The Golden State Warriors team have made tremendous impact as a team to win games where each player have made thier own significant contribution.
 The success of the team cannot be measure just by the stats of individual players. It is also influenced by the coaching staff, aspect of luck and the health of the team. These factors have not been measured and hence and few implications of the design of the system.
 
 
