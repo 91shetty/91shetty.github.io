@@ -49,11 +49,15 @@ Simply put, I love the game of basketball. Basketball has thought me a lot of li
         - http://probasketballapi.com
     - But the latter 2 were behind a payroll.
     - So I decided to use stats.nba.com data source and went through the website to get access to the stats that I would require to perform the analysis. This required a lot of overhead. 
-1) I had to first find the appropriate page for the required stats on the browser, then look through the network console and get access to the API's.
+    
+a) I had to first find the appropriate page for the required stats on the browser, then look through the network console and get access to the API's.
 ![alt text]( findings/networkBrowserConsole.png "4 factor" )
-2) Then run the API on the browser.
-3) Post which run the python script to fetch the results.
-4) If the python code failed, repeat from step 2.
+
+b) Then run the API on the browser.
+
+c) Post which run the python script to fetch the results.
+
+d) If the python code failed, repeat from step b.
 
 <h4> 2) Dump Creation </h4>
 ![alt text]( findings/dataDump.png "4 factor" )
