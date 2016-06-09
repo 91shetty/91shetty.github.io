@@ -97,13 +97,13 @@ I used D3 javascript library to visualize the data. For the scope of this class,
 
 
 <h3> Future Research: </h3>
-1) Dig deeper to analyze other stats
+1) Dig deeper to analyze other stats such as assists, turnovers, blocks, steals, point differential of score.
 
-2) Incorporate playoff stats
+2) Incorporate playoff stats, rather than just regular season stats to get more meaningful data.
 
-3) Analyse the stats of the entire team to find deeper answers
+3) Analyse the stats of the entire team to find deeper answers, rather than the 5 players, to find the impact of the bench players.
 
-4) Use of other visualisations
+4) Use of other visualisations, such as chord diagram to visualize the data in other forms.
 
 
 <h3> Limitations: </h3>
