@@ -49,7 +49,7 @@ Simply put, I love the game of basketball. Basketball has thought me a lot of li
         - http://probasketballapi.com
     - But the latter 2 were behind a payroll.
     - So I decided to use stats.nba.com data source and went through the website to get access to the stats that I would require to perform the analysis. This required a lot of overhead. 
-    
+
 a) I had to first find the appropriate page for the required stats on the browser, then look through the network console and get access to the API's.
 ![alt text]( findings/networkBrowserConsole.png "4 factor" )
 
@@ -60,17 +60,22 @@ c) Post which run the python script to fetch the results.
 d) If the python code failed, repeat from step b.
 
 <h4> 2) Dump Creation </h4>
+If the python code ran, it created the data dump to the respective files.
 ![alt text]( findings/dataDump.png "4 factor" )
 
-<h4> 3) Creation of CSV files </h4>
+<h4> 3) Creation of CSV/JSON files </h4>
+Then I wrote another python file, to convert the data dump to create JSON/CSV files in particular format so that it is ready to be visualized.
 ![alt text]( findings/datacsv.png "4 factor" ) 
 
 <h4> 4) Data Visualization using D3 javascript library </h4>
-
+I used D3 javascript library to visualize the data. For the scope of this class, I could do analyze the data in form on bar graphs only.
+    I tried 2 ways to anaylze the data.
+    - stats percentage vs year (grouped through stats)
+    - stats percentage vs stats (grouped through years)
 
 <h3> Findings: </h3>
 1) 4 factor (Shooting, Rebounding, Free throws, Turnovers) percentage for the team over the past 5 years
-![alt text]( findings/teamStats.png "4 factor" ) 
+![alt text]( findings/teamStats.png "4 factor" )
 
 2) Stats of Steph Curry over the past 5 years
 ![alt text]( findings/CurryStats.png "4 factor" )
