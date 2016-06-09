@@ -5,7 +5,7 @@ Simply put, I love the game of basketball. Basketball has thought me a lot of li
 
 
 <h3> Motivation: </h3>
-1) Golden State Warriors Team 
+<h4> 1) Golden State Warriors Team </h4>
     - 2015 NBA Champions , 2016 Western Conference Champions
     - Beat Chicago Bulls' single season win record of 73
     - NBA record of 54 regular season home game winning streak
@@ -18,7 +18,7 @@ Simply put, I love the game of basketball. Basketball has thought me a lot of li
     - 7th Player in NBA history to join 50-40-90 club
 
 <h3> Research Question: "Rise of Golden State Warriors basketball team" </h3>
-Hypothesis:
+Hypothesis: <br/>
 1) how the 4 factor (Shooting, Rebounding, Free throws, Turnovers) percentage for the team has improved over the past 5 years?
 
 2) what key aspects of Steph Curry's game makes him an indispensable resource to the GSW's team?
@@ -58,8 +58,11 @@ http://stats.nba.com/ <br/>
 
 <h3> Future Research: </h3>
 1) Dig deeper to analyze other stats
+
 2) Incorporate playoff stats
+
 3) Analyse the stats of the entire team to find deeper answers
+
 4) Use of other visualisations
 
 
