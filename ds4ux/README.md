@@ -1,19 +1,26 @@
-HCDE 598 | Data Science
+<h2> HCDE 598 | Data Science </h2>
 
-Introduction
+Introduction:
+Simply put, I love the game of basketball. Basketball has thought me a lot of life lessons. This class has given me an oppurtunity to give back. So I deciced to combine my love for the sport and talk of the town, namely Golden State Warriors.
+
+Research Question: "Rise of Golden State Warriors basketball team"
+Hypothesis:
+1)
+
+2)
+
+3) 
 
 
-Data Sources
-1) http://stats.nba.com/
+Data Sources:
+http://stats.nba.com/
     - /stats/teaminfocommon
     - /stats/playercareerstats
     - /stats/commonplayerinfo 
     - /stats/commonteamroster
     - /stats/teamdashboardbygeneralsplits
 
-2) Wikipedia
-
-Methods
+Methods:
 1) Research
 
 
@@ -26,15 +33,20 @@ Methods
 4) Creation of CSV files
 
 
-
-Findings
-
+Findings:
 
 
-Diccussion
+Discussion:
 
 
-Conclusions
+Conclusions:
+
+
+Future Research:
+1) Dig deeper to analyze other stats
+2) Incorporate playoff stats
+3) Analyse the stats of the entire team to find deeper answers
+4) Use of other visualisations
 
 
 Limitations:
