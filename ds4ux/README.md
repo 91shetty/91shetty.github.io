@@ -17,6 +17,7 @@ Simply put, I love the game of basketball. Basketball has thought me a lot of li
     - NBA Champion
     - NBA Most Valuable Player
     - NBA 3-Point Contest Champion
+
     2016
     - NBA Most Valuable Player - Only Player in NBA
     - History to win the award by unanimous votes. NBA Scoring Champion
@@ -25,11 +26,11 @@ Simply put, I love the game of basketball. Basketball has thought me a lot of li
 
 <h3> Research Question: "Rise of Golden State Warriors basketball team" </h3>
 Hypothesis: <br/>
-1) has the 4 factor (Shooting, Rebounding, Free throws, Turnovers) percentage for the team has improved over the past 5 years?
+1) the 4 factor (Shooting, Rebounding, Free throws, Turnovers) percentage for the team has improved over the past 5 years
 
-2) key stats of Steph Curry's game that has made him an indispensable resource to the GSW's team is shooting percentage.
+2) key stat of Steph Curry's game that has made him an indispensable resource to the GSW's team is shooting percentage
 
-3) how key stats of Curry, Barnes, Thompson, Iguodala and Green have impacted the team's success?
+3) key stats of Harrison Barnes, Thompson, Iguodala and Green have impacted the team's success?
 
 
 <h3> Data Sources: </h3>
@@ -42,7 +43,10 @@ Hypothesis: <br/>
 
 <h3> Methods: </h3>
 1) Research
-
+First of all, I researched as to which 
+http://stats.nba.com/
+http://developer.sportradar.us
+http://probasketballapi.com
 
 2) Dump Creation
 
@@ -58,6 +62,7 @@ Hypothesis: <br/>
 
 <h3> Findings: </h3>
 1) 4 factor (Shooting, Rebounding, Free throws, Turnovers) percentage for the team over the past 5 years
+![alt text]( teamStats.png "4 factor" ) 
 
 2) Stats of Steph Curry over the past 5 years
 
