@@ -25,7 +25,7 @@ Simply put, I love the game of basketball. Basketball has thought me a lot of li
     - 7th Player in NBA History to join 50-40-90 club - represents the shooting percentage for the field, beyond the arc and from the free throw line.
 
 <h3> Research Question: "Rise of Golden State Warriors basketball team" </h3>
-Hypothesis: <br/>
+<h4> Hypothesis: </h4>
 1) the 4 factor (Shooting, Rebounding, Free throws, Turnovers) percentage for the team has improved over the past 5 years
 
 2) key stat of Steph Curry's game that has made him an indispensable resource to the GSW's team is shooting percentage
