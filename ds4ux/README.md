@@ -38,7 +38,7 @@ Diccussion
 Conclusions
 
 
-Limitations 
+Limitations: 
 1) The NBA stats API is not publically released. One has to dig deep to find the appropriate API through the network logs on a web browser. On idenifying the right API, we need to call the same through a rest client like interface, and then run the python code to get appropriate data. 
 Sometimes the call fails through the python code. In such cases we need to run the API through the rest client again and then run the python code. This process stunted the growth of the project and limited me to rethink the scope of the project.
 
