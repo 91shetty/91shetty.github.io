@@ -123,4 +123,10 @@ DS4UX has provided me a platform to perform data analysis on Basketball and has 
 Though 2 of my hypthosis were proved right, other 3 were wrong. This goes to prove that champioships in basketball cannot be won by mere contributions of one player, but rather it requires collaborative team effort and each team member has a defined role.
 It also shows that just by shooting the ball in the hoop might not win you games. The team needs to play defence and contribute to rebound, steals and assists.
 
+<h3> Files </h3>
+Resource : Folder Name
+Data Dump : rawData
+Processed Files: processedFiles
+
+
     
