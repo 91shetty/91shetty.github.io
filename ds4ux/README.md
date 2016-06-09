@@ -27,7 +27,7 @@ Hypothesis: <br/>
 
 
 <h3> Data Sources: </h3>
-http://stats.nba.com/ <br/>
+<h4> http://stats.nba.com/ </h4>
     - /stats/teaminfocommon
     - /stats/playercareerstats
     - /stats/commonplayerinfo 
