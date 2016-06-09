@@ -1,21 +1,27 @@
 <h2> Final Report | HCDE 598 | DS4UX </h2>
 
 <h3> Introduction: </h3>
-Simply put, I love the game of basketball. Basketball has thought me a lot of life lessons. DS4UX has given me an oppurtunity to give back. So I deciced to combine my love for the sport and talk of the town, namely Golden State Warriors and analyse the reasons for the rise of Golden State Warriors basketball team.
+Simply put, I love the game of basketball. Basketball has thought me a lot of life lessons. DS4UX has given me an oppurtunity to give back. So I deciced to combine my love for the sport and talk of the town, namely Golden State Warriors basketball team and analyse the reasons for the rise of the team.
 
 
 <h3> Motivation: </h3>
 <h4> 1) Golden State Warriors Team </h4>
-    - 2015 NBA Champions , 2016 Western Conference Champions
-    - Beat Chicago Bulls' single season win record of 73
-    - NBA record of 54 regular season home game winning streak
-    - broke a 131 year old record in all of major professional sports by winning their first 24 games
+    - 2015 NBA Champions
+    - 2016 Western Conference Champions
+    - The Warriors team beat the Chicago Bulls Record for most wins in a single season by finishing with 73 wins and 9 losses at the end of the 2015-16 regular season.
+    - They broke a 131 year old record in all of major professional sports by winning their first 24 games.
+    - The team set an NBA record 54 straight regular season home game winning streak beating Chicago Bulls.
 
 <h4> 2) Stephen Curry </h4>
-    - 2015, 2016 League MVP
-    - Finished 2015-16 regular season with 402 3-pointers
-    - NBA Scoring Champion
-    - 7th Player in NBA history to join 50-40-90 club
+    2015
+    - NBA Champion
+    - NBA Most Valuable Player
+    - NBA 3-Point Contest Champion
+    2016
+    - NBA Most Valuable Player - Only Player in NBA
+    - History to win the award by unanimous votes. NBA Scoring Champion
+    - Finished the regular season with 402 3-pointers
+    - 7th Player in NBA History to join 50-40-90 club - represents the shooting percentage for the field, beyond the arc and from the free throw line.
 
 <h3> Research Question: "Rise of Golden State Warriors basketball team" </h3>
 Hypothesis: <br/>
