@@ -11,7 +11,7 @@ Simply put, I love the game of basketball. Basketball has thought me a lot of li
     - NBA record of 54 regular season home game winning streak
     - broke a 131 year old record in all of major professional sports by winning their first 24 games
 
-2) Stephen Curry
+<h4> 2) Stephen Curry </h4>
     - 2015, 2016 League MVP
     - Finished 2015-16 regular season with 402 3-pointers
     - NBA Scoring Champion
