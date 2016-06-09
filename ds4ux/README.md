@@ -30,7 +30,7 @@ Simply put, I love the game of basketball. Basketball has thought me a lot of li
 
 2) key stat of Steph Curry's game that has made him an indispensable resource to the GSW's team is shooting percentage
 
-3) key stats of Harrison Barnes, Thompson, Iguodala and Green have impacted the team's success?
+3) key stats of Harrison Barnes, Thompson, Iguodala and Green have is shooting percentage
 
 
 <h3> Data Sources: </h3>
@@ -80,20 +80,24 @@ I used D3 javascript library to visualize the data. For the scope of this class,
 2) Stats of Steph Curry over the past 5 years
 ![alt text]( findings/CurryStats.png "4 factor" )
 
-3) Stats of Harrison Barnes over the past 5 years
-![alt text]( findings/BarnesStats.png "4 factor" )
-
-4) Stats of Clay Thompson over the past 5 years
+3) Stats of Clay Thompson over the past 5 years
 ![alt text]( findings/ThompsonStats.png "4 factor" )
 
-5) Stats of Andre Iguodala over the past 5 years
-![alt text]( findings/IguodalaStats.png "4 factor" )
-
-6) Stats of Draymond Green over the past 5 years
+4) Stats of Draymond Green over the past 5 years
 ![alt text]( findings/GreenStats.png "4 factor" )
 
+5) Stats of Harrison Barnes over the past 5 years
+![alt text]( findings/BarnesStats.png "4 factor" )
+
+6) Stats of Andre Iguodala over the past 5 years
+![alt text]( findings/IguodalaStats.png "4 factor" )
 
 <h3> Discussion/Conclusion: </h3>
+The shooting percentages has clearly improved for the team over the past 5 years.
+With the graphs above, I could clearly see that points scored by players like Stephen Curry and Clay Thompson (who are the shooting guards of the team) have improved over the past 5 years and hence has had the biggest impact on the success of the team
+Also, role players like Harrison Barnes, Draymond Green and Andre Iguodala though have not made great strides on scoring points like Stephen Curry or Clay Thompson, they have impacted the team through defence, assists and rebounds.
+Basketball is a team oriented game and each player on the team has a role to play. The Golden State Warriors team have made tremendous impact as a team to win games where each player habe made thier own significant contribution.
+The success of the team cannot be measure just by the stats of individual players. It is also influenced by the coaching staff, aspect of luck and the health of the team. These factors have not been measured and hence and few implications of the design of the system.
 
 
 <h3> Future Research: </h3>
@@ -113,6 +117,8 @@ Sometimes the call fails through the python code. In such cases we need to run t
 2) There are other sources of data, such as Sportradar and probasketallapi, but these data are under a payroll. As a graudate student, I did not have the funds and hence decided to use only stats.nba.com.
 
 <h3> Summary </h3>
-
+DS4UX has provided me a platform to perform data analysis on Basketball and has helped me understand the how to analyze the results.
+Though 2 of my hypthosis were proved right, other 3 were wrong. This goes to prove that champioships in basketball cannot be won by mere contributions of one player, but rather it requires collaborative team effort and each team member has a defined role.
+It also shows that just by shooting the ball in the hoop might not win you games. The team needs to play defence and contribute to rebound, steals and assists.
 
     
