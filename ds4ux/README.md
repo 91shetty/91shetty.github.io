@@ -1,5 +1,6 @@
-<h1> Rise of Golden State Warriors basketball team </h1>
-Final Report | HCDE 598 - DS4UX | June 8, 2016 | Vishwas Shetty
+<h1> Rise of Golden State Warriors basketball team <br/>
+Final Report | HCDE 598 - DS4UX | June 8, 2016 | Vishwas Shetty </h1>
+
 
 
 <h2> Introduction: </h2>
