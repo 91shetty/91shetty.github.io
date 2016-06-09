@@ -42,22 +42,26 @@ Simply put, I love the game of basketball. Basketball has thought me a lot of li
     - /stats/teamdashboardbygeneralsplits
 
 <h3> Methods: </h3>
-1) Research
-First of all, I researched as to which 
-http://stats.nba.com/
-http://developer.sportradar.us
-http://probasketballapi.com
+<h4> 1) Research </h4>
+First of all, I researched the data sources through http://www.programmableweb.com/ and narrowed down the list to
+    - http://stats.nba.com/
+    - http://developer.sportradar.us
+    - http://probasketballapi.com
+But the latter 2 were behind a payroll.
+So I decided to use stats.nba.com data source and went through the website to get access to the stats that I would require to perform the analysis. This required a lot of overhead. 
+1) I had to first find the appropriate page for the required stats on the browser, then look through the network console and get access to the API's.
+![alt text]( findings/networkBrowserConsole.png "4 factor" )
+2) Then run the API on the browser.
+3) Post which run the python script to fetch the results.
+4) If the python code failed, repeat from step 2.
 
-2) Dump Creation
+<h4> 2) Dump Creation </h4>
+![alt text]( findings/dataDump.png "4 factor" )
 
+<h4> 3) Creation of CSV files </h4>
+![alt text]( findings/datacsv.png "4 factor" ) 
 
-3) Dump Clean up
-
-
-4) Creation of CSV files
-
-
-5) Data Visualization using D3 javascript library
+<h4> 4) Data Visualization using D3 javascript library </h4>
 
 
 <h3> Findings: </h3>
@@ -97,7 +101,7 @@ http://probasketballapi.com
 1) The NBA stats API is not publically released. One has to dig deep to find the appropriate API through the network logs on a web browser. On idenifying the right API, we need to call the same through a rest client like interface, and then run the python code to get appropriate data. 
 Sometimes the call fails through the python code. In such cases we need to run the API through the rest client again and then run the python code. This process stunted the growth of the project and limited me to rethink the scope of the project.
 
-2) There are other sources of data, such as ....., but these data are under a payroll. As a graudate student, I did not have the funds and hence decided to use only stats.nba.com
+2) There are other sources of data, such as Sportradar and probasketallapi, but these data are under a payroll. As a graudate student, I did not have the funds and hence decided to use only stats.nba.com.
 
 <h3> Summary </h3>
 
