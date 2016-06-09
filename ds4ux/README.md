@@ -28,11 +28,11 @@ Simply put, I love the game of basketball. Basketball has thought me a lot of li
 
 <h3> Research Question: "Rise of Golden State Warriors basketball team" </h3>
 <h4> Hypothesis: </h4>
-1) the 4 factor (Shooting, Rebounding, Free throws, Turnovers) percentage for the team has improved over the past 5 years
+    1) the 4 factor (Shooting, Rebounding, Free throws, Turnovers) percentage for the team has improved over the past 5 years
 
-2) key stat of Steph Curry's game that has made him an indispensable resource to the GSW's team is shooting percentage
+    2) key stat of Steph Curry's game that has made him an indispensable resource to the GSW's team is shooting percentage
 
-3) key stats of Harrison Barnes, Thompson, Iguodala and Green have is shooting percentage
+    3) key stats of Harrison Barnes, Thompson, Iguodala and Green have is shooting percentage
 
 
 <h3> Data Sources: </h3>
