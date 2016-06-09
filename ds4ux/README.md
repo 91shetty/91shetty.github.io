@@ -67,6 +67,7 @@ If the python code ran, it created the data dump to the respective files.
 
 <h4> 3) Creation of CSV/JSON files </h4>
 Then I wrote another python file, to convert the data dump to create JSON/CSV files in particular format so that it is ready to be visualized.
+
 ![alt text]( findings/datacsv.png "4 factor" ) 
 
 <h4> 4) Data Visualization using D3 javascript library </h4>
