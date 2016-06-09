@@ -65,14 +65,19 @@ http://probasketballapi.com
 ![alt text]( teamStats.png "4 factor" ) 
 
 2) Stats of Steph Curry over the past 5 years
+![alt text]( CurryStats.png "4 factor" )
 
 3) Stats of Harrison Barnes over the past 5 years
+![alt text]( BarnesStats.png "4 factor" )
 
 4) Stats of Clay Thompson over the past 5 years
+![alt text]( ThompsonStats.png "4 factor" )
 
 5) Stats of Andre Iguodala over the past 5 years
+![alt text]( IguodalaStats.png "4 factor" )
 
 6) Stats of Draymond Green over the past 5 years
+![alt text]( GreenStats.png "4 factor" )
 
 
 <h3> Discussion/Conclusion: </h3>
