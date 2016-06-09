@@ -62,22 +62,22 @@ http://probasketballapi.com
 
 <h3> Findings: </h3>
 1) 4 factor (Shooting, Rebounding, Free throws, Turnovers) percentage for the team over the past 5 years
-![alt text]( teamStats.png "4 factor" ) 
+![alt text]( findings/teamStats.png "4 factor" ) 
 
 2) Stats of Steph Curry over the past 5 years
-![alt text]( CurryStats.png "4 factor" )
+![alt text]( findings/CurryStats.png "4 factor" )
 
 3) Stats of Harrison Barnes over the past 5 years
-![alt text]( BarnesStats.png "4 factor" )
+![alt text]( findings/BarnesStats.png "4 factor" )
 
 4) Stats of Clay Thompson over the past 5 years
-![alt text]( ThompsonStats.png "4 factor" )
+![alt text]( findings/ThompsonStats.png "4 factor" )
 
 5) Stats of Andre Iguodala over the past 5 years
-![alt text]( IguodalaStats.png "4 factor" )
+![alt text]( findings/IguodalaStats.png "4 factor" )
 
 6) Stats of Draymond Green over the past 5 years
-![alt text]( GreenStats.png "4 factor" )
+![alt text]( findings/GreenStats.png "4 factor" )
 
 
 <h3> Discussion/Conclusion: </h3>
