@@ -1,7 +1,7 @@
 <h2> Final Report | HCDE 598 | DS4UX </h2>
 
 <h3> Introduction: </h3>
-Simply put, I love the game of basketball. Basketball has thought me a lot of life lessons. DS4UX has given me an oppurtunity to give back. So I deciced to combine my love for the sport and talk of the town, namely Golden State Warriors basketball team and analyse the reasons for the rise of the team.
+Simply put, I love the game of basketball. Basketball has thought me a lot of life lessons. DS4UX has given me an oppurtunity to give back. So I decided to combine my love for the sport and talk of the town, namely Golden State Warriors basketball team and analyse the reasons for the rise of the team.
 
 
 <h3> Motivation: </h3>
@@ -73,7 +73,7 @@ Then I wrote another python file, to convert the data dump to create JSON/CSV fi
 <h4> 4) Data Visualization using D3 javascript library </h4>
 I used D3 javascript library to visualize the data. For the scope of this class, I could do analyze the data in form on bar graphs only.
 
-    I tried 2 ways to anaylze the data.
+    I tried 2 ways to analyze the data.
     - stats percentage vs year (grouped through stats)
     - stats percentage vs stats (grouped through years)
 
@@ -100,7 +100,7 @@ I used D3 javascript library to visualize the data. For the scope of this class,
 The shooting percentages has clearly improved for the team over the past 5 years.
 With the graphs above, I could clearly see that points scored by players like Stephen Curry and Clay Thompson (who are the shooting guards of the team) have improved over the past 5 years and hence has had the biggest impact on the success of the team
 Also, role players like Harrison Barnes, Draymond Green and Andre Iguodala though have not made great strides on scoring points like Stephen Curry or Clay Thompson, they have impacted the team through defence, assists and rebounds.
-Basketball is a team oriented game and each player on the team has a role to play. The Golden State Warriors team have made tremendous impact as a team to win games where each player have made thier own significant contribution.
+Basketball is a team oriented game and each player on the team has a role to play. The Golden State Warriors team have made tremendous impact as a team to win games where each player have made their own significant contribution.
 The success of the team cannot be measure just by the stats of individual players. It is also influenced by the coaching staff, aspect of luck and the health of the team. These factors have not been measured and hence and few implications of the design of the system.
 
 
@@ -111,18 +111,18 @@ The success of the team cannot be measure just by the stats of individual player
 
 3) Analyse the stats of the entire team to find deeper answers, rather than the 5 players, to find the impact of the bench players.
 
-4) Use of other visualisations, such as chord diagram to visualize the data in other forms.
+4) Use of other visualizations, such as chord diagram to visualize the data in other forms.
 
 
 <h3> Limitations: </h3>
-1) The NBA stats API is not publically released. One has to dig deep to find the appropriate API through the network logs on a web browser. On idenifying the right API, we need to call the same through a rest client like interface, and then run the python code to get appropriate data. 
+1) The NBA stats API is not publicly released. One has to dig deep to find the appropriate API through the network logs on a web browser. On identifying the right API, we need to call the same through a rest client like interface, and then run the python code to get appropriate data. 
 Sometimes the call fails through the python code. In such cases we need to run the API through the rest client again and then run the python code. This process stunted the growth of the project and limited me to rethink the scope of the project.
 
-2) There are other sources of data, such as Sportradar and probasketallapi, but these data are under a payroll. As a graudate student, I did not have the funds and hence decided to use only stats.nba.com.
+2) There are other sources of data, such as Sportradar and probasketallapi, but these data are under a payroll. As a graduate student, I did not have the funds and hence decided to use only stats.nba.com.
 
 <h3> Summary </h3>
 DS4UX has provided me a platform to perform data analysis on Basketball and has helped me understand the how to analyze the results.
-Though 2 of my hypthosis were proved right, other 3 were wrong. This goes to prove that champioships in basketball cannot be won by mere contributions of one player, but rather it requires collaborative team effort and each team member has a defined role.
+Though 2 of my hypothesis were proved right, other 3 were wrong. This goes to prove that championships in basketball cannot be won by mere contributions of one player, but rather it requires collaborative team effort and each team member has a defined role.
 It also shows that just by shooting the ball in the hoop might not win you games. The team needs to play defence and contribute to rebound, steals and assists.
 
 <h3> Files </h3>
