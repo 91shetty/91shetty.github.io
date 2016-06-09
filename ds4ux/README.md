@@ -72,8 +72,11 @@ Then I wrote another python file, to convert the data dump to create JSON/CSV fi
 
 <h4> 4) Data Visualization using D3 javascript library </h4>
 I used D3 javascript library to visualize the data. For the scope of this class, I could do analyze the data in form on bar graphs only.
+
     I tried 2 ways to anaylze the data.
+
     - stats percentage vs year (grouped through stats)
+    
     - stats percentage vs stats (grouped through years)
 
 <h3> Findings: </h3>
