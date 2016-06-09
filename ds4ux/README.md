@@ -1,6 +1,6 @@
-<h2> Final Report | HCDE 598 - DS4UX | June 8, 2016 | Vishwas Shetty</h2>
-
 <h1> Rise of Golden State Warriors basketball team </h1>
+Final Report | HCDE 598 - DS4UX | June 8, 2016 | Vishwas Shetty
+
 
 <h2> Introduction: </h2>
 Simply put, I love the game of basketball. Basketball has thought me a lot of life lessons. DS4UX has given me an oppurtunity to give back. So I decided to combine my love for the sport and talk of the town, namely Golden State Warriors basketball team and analyse the reasons for the rise of the team.
