@@ -5,6 +5,7 @@ Simply put, I love the game of basketball. Basketball has thought me a lot of li
 
 
 <h3> Motivation: </h3>
+![alt text]( gsw.png "4 factor" )
 <h4> 1) Golden State Warriors Team </h4>
     - 2015 NBA Champions
     - 2016 Western Conference Champions
@@ -12,6 +13,7 @@ Simply put, I love the game of basketball. Basketball has thought me a lot of li
     - They broke a 131 year old record in all of major professional sports by winning their first 24 games.
     - The team set an NBA record 54 straight regular season home game winning streak beating Chicago Bulls.
 
+![alt text]( steph.gif "4 factor" )
 <h4> 2) Stephen Curry </h4>
     2015
     - NBA Champion
