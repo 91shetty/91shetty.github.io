@@ -129,7 +129,7 @@ Though 2 of my hypothesis were proved right, other 3 were wrong. This goes to pr
 It also shows that just by shooting the ball in the hoop might not win you games. The team needs to play defence and contribute to rebound, steals and assists.
 
 <h2> Files </h2>
-Resource : Folder Name
+Resource : Folder Name/Link
 
 Data Dump : rawData
 
