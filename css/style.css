@@ -351,6 +351,10 @@ footer .bottom-bar p .colored {
   float: left !important;
 }
 
+h3 {
+  font: 100% FontBold, sans-serif;
+}
+
 .videoControls {
   background-image: url("../about/videoIcon.png");
   width: 80px;
