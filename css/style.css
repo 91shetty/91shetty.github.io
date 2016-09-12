@@ -351,6 +351,26 @@ footer .bottom-bar p .colored {
   float: left !important;
 }
 
+.videoControls {
+  background-image: url("../about/videoIcon.png");
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-size: contain;
+  cursor: pointer;
+}
+
+.videoControls a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 ::-webkit-scrollbar {
   width: 0.5em;
   height: 0.5em;
@@ -376,7 +396,7 @@ body {
 
 @media (min-width: 768px) {
   .main-intro {
-    font-size: 24px;
+    font-size: 1.2em;
     line-height: 36px;
     padding: 0 15px;
   }
@@ -700,9 +720,11 @@ body {
   /* Prevent vertical gaps */
   line-height: 0;
   -webkit-column-count: 1;
+     -moz-column-count: 1;
+          column-count: 1;
   -webkit-column-gap: 0px;
-  -moz-column-count: 1;
-  -moz-column-gap: 0px;
+     -moz-column-gap: 0px;
+          column-gap: 0px;
 }
 
 .photo-album .photo {
@@ -742,6 +764,7 @@ body {
 @media (min-width: 960px) {
   .photo-album {
     -webkit-column-count: 2;
-    -moz-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
   }
 }
