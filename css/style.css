@@ -352,7 +352,7 @@ footer .bottom-bar p .colored {
 }
 
 h3 {
-  font: 100% FontBold, sans-serif;
+  font: FontBold, sans-serif;
 }
 
 .videoControls {
@@ -733,7 +733,7 @@ body {
 
 .photo-album .photo {
   position: relative;
-  padding: 2.5px 2.5px;
+  padding: 5px 2.5px;
 }
 
 .photo-album .photo img {
