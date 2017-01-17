@@ -281,36 +281,6 @@
 			</footer>
 		</div>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script type="text/javascript">
-			window.onscroll = function (e) {
-				var crumbs = document.getElementById("crumbs");
-				var position = $('.crumbs').offset();
-				if( document.body.scrollTop === 0 ) {
-					crumbs.style.opacity = "0";
-					$('.crumbs-dynamic').html("");
-				}
-				else {
-					crumbs.style.opacity = "1";
-					$('.article-section').each(function(){
-				        if((position.top) >= $(this).offset().top)
-				        {
-				            $('.crumbs-dynamic').html(' > ' + $(this).find(".project-sub-header").html()); 
-				            return;
-				        }
-			    	});
-				}
-			}
-            $(".navigation-bar a").hover(function(){
-               $(this).find("span").css("visibility", "visible");
-                },function(){ 
-               $(this).find("span").css("visibility", "hidden");
-            });
-            $(".scroll-top").click(function(){
-                $('html, body').animate({
-                    scrollTop: 0     
-                }, 1000);
-                return false;
-            });
-		</script>
+		<script src="/js/script.js"></script>
 	</body>
 </html>
