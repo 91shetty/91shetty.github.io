@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title> Facing Homelessness </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <style>
+            
+        </style>
+    </head>
+    <body> 
+        <div class="container">
+            <span class="button" id="menu" onclick="toggleNav()"> menu </span>
+            <div id="menu-items">
+                <a href=""> <div class="current"> home </div> </a>
+                <a href="getinvolved/"> <div> get involved </div> </a> 
+                <a href="programs/"> <div> programs </div> </a>
+                <a href="donate/"> <div> donate </div> </a>
+                <a href="community/"> <div> community </div> </a>
+                <!--<a href="stories/"> <div> stories </div> </a>-->
+                <a href="about/"> <div> about </div> </a>
+            </div>
+            <div class="section">
+                <div id="splash-screen" style="height: 100vh;" title="Homepage">
+                    <div class="button" style="position: absolute; top: 10px; right: 20px;"> <a style='color: #fff !important;' href='donate'>donate</a> </div>
+                    <h1 id='text1'> Where you live does not define who you are </h1>
+                    <h1 id='text2'> We all live better when we feel loved </h1>
+                    <h1 id='text3'> Nobody chooses suffering </h1>
+                    <h1 id='text4'> We are all beautiful </h1>
+                    <h1 id='text5'> Imagine everyone giving kindness </h1>
+                    <h1 id='text6'> Just say hello </h1>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-content">
+                    <h3> It’s time to embrace the most vulnerable among us. It begins with you. </h3>
+                    <img src="images/JSH.png" alt="Just Say Hello" title="Just Say Hello">
+                </div>
+            </div>
+            <footer>
+                <div class="footer-content">
+                    <div class="site-map">
+                        <span> 
+                            <h4> Get Involved </h4>
+                            <p> Passions and Skills </p>
+                        </span>
+                        <span>
+                            <h4> Programs </h4>
+                            <p> Photojournalism </p>
+                            <p> The Window of Kindness </p>
+                            <p> The BLOCK Project </p>
+                            <p> The Cities Project </p>
+                            <p> Just Say Hello </p>
+                        </span>
+                        <span>
+                            <h4> Donate </h4>
+                            <p> Donate Funds </p>
+                            <p> Donate Supplies </p>
+                            <p> Drop off hours </p>
+                        </span>
+                        <span>
+                            <h4> Community </h4>
+                            <p> Grateful </p>
+                        </span>
+                        <span>
+                            <h4> About </h4>
+                            <p> Mission </p>
+                            <p> History </p>
+                            <p> Media </p>
+                            <p> Our Team </p>
+                            <p> Office Hours </p>
+                        </span>
+                    </div>
+                    <div id="social">
+                        <div id="social-content">
+                            <h4 class="centered"> Follow us</h4>
+                            <div class="social-icons"> 
+                                <a class="fb" href="https://www.facebook.com/HomelessInSeattle/">
+                                </a>
+                                <a class="twitter" href="https://twitter.com/facinghomeless">
+                                </a>
+                                <a class="instagram" href="https://www.instagram.com/facinghomelessness/">
+                                </a>
+                                <a class="youtube" href="https://www.youtube.com/channel/UCrC2LQb6EI6ExlZlKPq70jQ">
+                                </a>
+                                <a class="tumblr" href="http://facing-homelessness.tumblr.com/">
+                                </a>
+                                <a class="google-plus" href="https://plus.google.com/+FacinghomelessnessOrg/posts">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id='copyright' style="width: 100%; margin-top: 10px; padding-top: 5px; border-top: 1px solid #626262;">
+                        <span> &copy; 
+                        <script>
+                            var yr = new Date().getFullYear();
+                            document.write(yr);
+                        </script> 
+                        | Facing Homelessness </span>
+                        <span> <a href="tel:+1-206-632-7299"> 206.632.7299 </a> </span>
+                        <span> <a href="mailto:info@facinghomelessness.org">info@facinghomelessness.org </a> </span>
+                    </div>
+                </div>
+            </footer> 
+        </div>
+        <script>
+            var toggle = 0;
+            function toggleNav() {
+                if (toggle == 0) {
+                    document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+                    document.ontouchmove = function (e) {
+                        e.preventDefault();
+                    }
+                    document.getElementById("menu-items").style.opacity = "1";
+                    document.getElementById("menu-items").style.visibility = "visible";
+                    document.getElementById("menu").innerHTML = 'CLOSE';
+                    toggle = 1;
+                }
+                else {
+                    document.getElementsByTagName('body')[0].style.overflow = 'auto';
+                    document.ontouchmove = function (e) {
+                        return true;
+                    }   
+                    document.getElementById("menu-items").style.opacity = "0";
+                    document.getElementById("menu-items").style.visibility = "hidden";
+                    document.getElementById("menu").innerHTML = 'MENU';
+                    toggle = 0;
+                }
+            }
+            var r = Math.floor(Math.random() * 6 + 1).toString()
+            document.getElementById("splash-screen").style.backgroundImage = "url(images/image" + r + ".jpg)";
+            document.getElementById("text" + r).style.display = "inline-block";
+        </script>
+    </body>
+</html>
