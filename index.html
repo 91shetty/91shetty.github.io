@@ -29,8 +29,7 @@
             }
 			.container {
 				opacity: 0;
-				height: 0;
-				/*display: none;*/
+				display: none;
 				transition: all 0.5s ease-in-out;
 			}
 			.button {
@@ -235,8 +234,8 @@
 			setTimeout(function(){
 				if(toggle == 0) {
 					document.getElementsByClassName('logo-container')[0].style.display = 'none';
-					// document.getElementsByClassName('container')[0].style.height = '100%';
-					// document.getElementsByClassName('container')[0].style.opacity = '1';
+					document.getElementsByClassName('container')[0].style.opacity = '1';
+					document.getElementsByClassName('container')[0].style.display = 'block';
 				}
 			}, 4030);
 		}
