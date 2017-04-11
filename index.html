@@ -39,10 +39,21 @@
 				opacity: 0;
 				transition: all 0.5s ease-in-out;
 			}
+			.button {
+                padding: 10px 18px;
+                color: #fff;
+                background: #ffce39;
+                text-transform: uppercase;
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                cursor: pointer;
+            }
         </style>
 	</head>
 	<body onload='setup()'>
 		<div class="logo-container">
+			<div class="button" onclick="skipAnimation()"> <span class="bolder"> Skip </span> </div>
             <svg viewBox="0 0 118 253" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="Parent" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="Group">
@@ -185,7 +196,6 @@
 									</div>
 								</a>
 							</div>
-                            
 							<div class="grid-item">
 								<a href="/framerjs">
 									<div class="preview">
@@ -213,7 +223,7 @@
 					</div>
 				</section>
 			</div>
-			<!--<footer style="height:50px;">
+			<footer style="height:50px;">
 				<div class="bottom-bar" style="height:50px;">
 					<p style="line-height: 50px;"><span class="colored">&copy;</span> 
 					<script>
@@ -222,15 +232,23 @@
 					</script> 
 					<span class="colored">|</span> Carved and Chiseled - Vishwas Shetty <span class="colored hidden-phone">|</span> <span class="hidden-phone">All Rights Reserved </span> </p>
 				</div>
-			</footer>-->
+			</footer>
 		</div>
 	</body>
 	<script> 
+		var toggle = 0; 
 		function setup() {
 			setTimeout(function(){
-				document.getElementsByClassName('logo-container')[0].style.display = 'none';
-				document.getElementsByClassName('container')[0].style.opacity = '1';
-			}, 4500);
+				if(toggle == 0) {
+					document.getElementsByClassName('logo-container')[0].style.display = 'none';
+					document.getElementsByClassName('container')[0].style.display = 'block';
+				}
+			}, 4030);
+		}
+		function skipAnimation() {
+			toggle = 1;
+			document.getElementsByClassName('logo-container')[0].style.display = 'none';
+			document.getElementsByClassName('container')[0].style.display = 'block';
 		}
 	</script>
 </html>
