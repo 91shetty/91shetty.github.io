@@ -8,9 +8,12 @@
 		<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
 		<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
 		<style>
-            .logo-container {
-                background: #4A297E;
-            }
+			
+			.logo-container {
+                height: 100%; width: 100%;
+                position: relative;
+				background: #4A297E;
+			}
 
             svg {
                 margin: 0 auto;
@@ -25,8 +28,9 @@
                 opacity: 0;
             }
 			.container {
-				height: 0;
 				opacity: 0;
+				height: 0;
+				/*display: none;*/
 				transition: all 0.5s ease-in-out;
 			}
 			.button {
