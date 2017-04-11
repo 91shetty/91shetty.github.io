@@ -8,17 +8,6 @@
 		<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
 		<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
 		<style>
-            * {
-                padding: 0; margin: 0;
-            }
-            html, body {
-                height: 100%; width: 100%;
-            }
-            .container, .logo-container {
-                height: 100%; width: 100%;
-                position: relative;
-            }
-
             .logo-container {
                 background: #4A297E;
             }
@@ -36,8 +25,8 @@
                 opacity: 0;
             }
 			.container {
+				height: 0;
 				opacity: 0;
-				display: none;
 				transition: all 0.5s ease-in-out;
 			}
 			.button {
@@ -242,7 +231,7 @@
 			setTimeout(function(){
 				if(toggle == 0) {
 					document.getElementsByClassName('logo-container')[0].style.display = 'none';
-					document.getElementsByClassName('container')[0].style.display = 'block';
+					document.getElementsByClassName('container')[0].style.height = '100%';
 					document.getElementsByClassName('container')[0].style.opacity = '1';
 				}
 			}, 4030);
@@ -250,7 +239,7 @@
 		function skipAnimation() {
 			toggle = 1;
 			document.getElementsByClassName('logo-container')[0].style.display = 'none';
-			document.getElementsByClassName('container')[0].style.display = 'block';
+			document.getElementsByClassName('container')[0].style.height = '100%';
 			document.getElementsByClassName('container')[0].style.opacity = '1';
 		}
 	</script>
