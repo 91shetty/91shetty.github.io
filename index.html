@@ -8,20 +8,11 @@
 		<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
 		<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
 		<style>
-            * {
-                padding: 0; margin: 0;
-            }
-            html, body {
-                height: 100%; width: 100%;
-            }
-            .container, .logo-container {
+            .logo-animation {
                 height: 100%; width: 100%;
                 position: relative;
-            }
-
-            .logo-container {
-                background: #4A297E;
-            }
+				background: #4A297E;
+			}
 
             svg {
                 margin: 0 auto;
@@ -37,7 +28,7 @@
             }
             .button {
                 padding: 10px 18px;
-                color: #fff;
+                color: #000;
                 background: #ffce39;
                 text-transform: uppercase;
                 position: absolute;
@@ -45,10 +36,18 @@
                 right: 10px;
                 cursor: pointer;
             }
+			body {
+				overflow: hidden;
+			}
+			.container {
+				visibility: hidden;
+				opacity: 0;
+				transition: all 0.5s ease-in-out;
+			}
         </style>
 	</head>
 	<body onload='setup()'>
-		<div class="logo-container">
+		<div class="logo-animation">
 			<div class="button" onclick="skipAnimation()"> <span class="bolder"> Skip </span> </div>
             <svg viewBox="0 0 118 253" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="Parent" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -172,7 +171,7 @@
 								<a href="healthbox/">
 									<div class="preview">
 										<div class="image">
-											<img alt="Healthbox" src="/images/uahtchealthbox.jpg" width="100%" height="auto">
+											<img alt="Healthbox" src="images/uahtchealthbox.jpg" width="100%" height="auto">
 										</div>
 										<div class="loader"></div>
 										<h3>UA Healthbox</h3>
@@ -204,22 +203,11 @@
 									</div>
 								</a>
 							</div>
-							
-							<!-- <div class="grid-item">
-								<a href="#">
-									<div class="preview">
-										<div class="image"></div>
-										<div class="loader"></div>
-										<h3>Polaris</h3>
-										<p>Polaris is a web based application that provides guidance and help to international students</p>
-									</div>
-								</a>
-							</div> -->
 						</div>
 					</div>
 				</section>
 			</div>
-			<footer style="height:50px;">
+			<!--<footer style="height:50px;">
 				<div class="bottom-bar" style="height:50px;">
 					<p style="line-height: 50px;"><span class="colored">&copy;</span> 
 					<script>
@@ -228,7 +216,7 @@
 					</script> 
 					<span class="colored">|</span> Carved and Chiseled - Vishwas Shetty <span class="colored hidden-phone">|</span> <span class="hidden-phone">All Rights Reserved </span> </p>
 				</div>
-			</footer>
+			</footer>-->
 		</div>
 	</body>
 	<script> 
@@ -236,15 +224,19 @@
 		function setup() {
 			setTimeout(function(){
 				if(toggle == 0) {
-					document.getElementsByClassName('logo-container')[0].style.display = 'none';
-					document.getElementsByClassName('container')[0].style.display = 'block';
+					document.getElementsByClassName('logo-animation')[0].style.display = 'none';
+					document.getElementsByClassName('container')[0].style.opacity = '1';
+					document.getElementsByClassName('container')[0].style.visibility = 'visible';
+					document.getElementsByTagName('body')[0].style.overflow = 'auto';
 				}
 			}, 4030);
 		}
 		function skipAnimation() {
 			toggle = 1;
-			document.getElementsByClassName('logo-container')[0].style.display = 'none';
-			document.getElementsByClassName('container')[0].style.display = 'block';
+			document.getElementsByClassName('logo-animation')[0].style.display = 'none';
+			document.getElementsByClassName('container')[0].style.opacity = '1';
+			document.getElementsByClassName('container')[0].style.visibility = 'visible';
+			document.getElementsByTagName('body')[0].style.overflow = 'auto';
 		}
 	</script>
 </html>
