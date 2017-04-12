@@ -222,12 +222,18 @@
 	<script> 
 		var toggle = 0; 
 		function setup() {
+			document.ontouchmove = function (e) {
+				e.preventDefault();
+			}
 			setTimeout(function(){
 				if(toggle == 0) {
 					document.getElementsByClassName('logo-animation')[0].style.display = 'none';
 					document.getElementsByClassName('container')[0].style.opacity = '1';
 					document.getElementsByClassName('container')[0].style.visibility = 'visible';
 					document.getElementsByTagName('body')[0].style.overflow = 'auto';
+					document.ontouchmove = function (e) {
+						return true;
+					}
 				}
 			}, 4030);
 		}
@@ -237,6 +243,9 @@
 			document.getElementsByClassName('container')[0].style.opacity = '1';
 			document.getElementsByClassName('container')[0].style.visibility = 'visible';
 			document.getElementsByTagName('body')[0].style.overflow = 'auto';
+			document.ontouchmove = function (e) {
+				return true;
+			}
 		}
 	</script>
 </html>
