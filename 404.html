@@ -11,7 +11,7 @@
 
 		</style>
 	</head>
-	<body>
+	<body onload='reduceTime()'>
 		<div class="container">
 			<header>
 				<div class="top-bar">
@@ -38,7 +38,7 @@
 				<section class="section-block">
 					<div class="section-content" style="width: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
 						<h1> You have drifted in unmanned terrority. </h1>
-						<p> Navigating to homepage soonish.... </p>
+						<p> Navigating to homepage in <span id='time'>3</p>
 					</div>
 				</section>
 			</div>
@@ -48,9 +48,18 @@
 				</div>
 			</footer>
 			<script>
-				setTimeout(function(){ 
-					this.document.location.href = "http://vishwasshetty.com/"; 
-				}, 3000);
+				var count = 4;
+				function reduceTime() {
+					var t = document.getElementById('time');
+					t.innerHTML = count;
+					count -= 1;
+					if (count === 0) {
+						this.document.location.href = "http://vishwasshetty.com/";
+					}
+					else {
+						setTimeout(reduceTime, 1000);
+					}
+				}
 			</script>
 		</div>
 	</body>
