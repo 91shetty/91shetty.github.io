@@ -100,10 +100,17 @@
             stroke: #000;
             stroke-width: 0.2px;
         }
-        select {
+        .dropdown {
             position: absolute;
             top: 50px;
             right: 10px;
+        }
+        select {
+            /*font-family: 'Montserrat', sans-serif !important;*/
+            font: 12px 'Montserrat', sans-serif !important;
+        }
+        label {
+            font-weight: 300;
         }
     </style>
     </head>
@@ -128,10 +135,14 @@
                 <div class="chart">
                     <h4> CMR Score by Channel </h4>
                     <svg id='cmrsbc' class="chartSection"> </svg>
-                    <select id='sortByChannel'>
-                        <option value="63">Facebook</option>
-                        <option value="80">Twitter</option>
-                    </select>
+                    <div class="dropdown">
+                        <label> Channel: </label>
+                        <select id='sortByChannel'>
+                            <option value="63">Facebook</option>
+                            <option value="80">Twitter</option>
+                            <option value="34">CRM Interactions</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="chart">
                     <h4> CMR Score by Time </h4>
