@@ -3,130 +3,40 @@
     <head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <link rel="shortcut icon" href="https://cloud.tenpoint7.com/static/img/favicon.ico">
     <title> CMR </title>
-    <style>
-        * { 
-            margin: 0;
-            padding: 0
-        }
-        body, html {
-            width: 100%;
-            height: 100%;
-        }
-        body {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-        .container {
-           background-color: #EDF1F5; 
-        }
-        header, footer {
-            height: 75px;
-            width: 100%;
-            background-color: #fff;
-        }
-        header {
-            border-bottom: 1px solid #E0E6ED;
-            position: fixed;
-            z-index: 10;
-        }
-        .header-content, .footer-content {
-            width: 90%;
-            margin: 0 auto;
-            height: 100%;
-        }
-        .content {
-            /*margin-top: 75px;*/
-            padding: 105px 60px 0 60px;
-            display: flex;
-            color: #000;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .chart {
-            flex-basis: calc((100%/2) - 30px);
-            height: 350px;
-            background-color: #fff; 
-            border-radius: 2px;
-            border: 1px solid #E0E6ED;
-            padding: 10px;
-            margin-bottom: 15px;
-            position: relative;
-        }
-        footer {
-            border-top: 1px solid #E0E6ED;
-            font-weight: 300;
-        }
-        h4 {
-            border-bottom: 1px solid #B7BDC9;
-        }
-        .chartSection {
-            height: 325px;
-            width: 100%;
-        }
-        svg {
-            position: relative;
-        }
-        .legend {
-            font-weight: 300;
-        }
-        polyline{
-            opacity: .3;
-            stroke: black;
-            stroke-width: 2px;
-            fill: none;
-        }
-        .footer-content p, .footer-content ul {
-            display: inline-block;
-            margin: 26.5px 0;
-        }
-        .footer-content ul {
-            float: right;
-        }
-        .footer-content ul li {
-            display: inline-block;
-            padding: 0 12px;
-            cursor: pointer;
-        }
-        path.color0 {
-            fill: #ff0000;
-            stroke: #000;
-            stroke-width: 0.2px;
-        }
-        path.color1 {
-            fill: #fff;
-            stroke: #000;
-            stroke-width: 0.2px;
-        }
-        .dropdown {
-            position: absolute;
-            top: 50px;
-            right: 10px;
-        }
-        select {
-            /*font-family: 'Montserrat', sans-serif !important;*/
-            font: 12px 'Montserrat', sans-serif !important;
-        }
-        label {
-            font-weight: 300;
-        }
-    </style>
     </head>
 
     <body onload="createCharts()">
         <div class="container">
             <header> 
                 <div class="header-content">
-                    <img src="logo.png" height="55" width="55" style='margin: 10px 0;'>
-
+                    <img src="logo.png" height="55" width="55" style='margin: 10px 0; display: inline-block;'>
+                    <ul class="breadcrumbs">
+                        <li> Content Marketing Resonance </li>
+                        <li> &#9662; </li>
+                        <li> Project Name </li>
+                        <li> &#9662; </li>
+                    </ul>
                 </div>
             </header>
             <div class="content">
                 <div class="chart"> 
                     <h4> Overall Sentiment Distribution </h4>
                     <svg id='osd' class="chartSection"> </svg>
+                </div>
+                <div class="chart"> 
+                    <h4> Overall Sentiment Distribution by Channel</h4>
+                    <svg id='osdbc' class="chartSection"> </svg>
+                    <div class="dropdown">
+                        <label> Channel: </label>
+                        <select id='sdSortByChannel'>
+                            <option value="fb">Facebook</option>
+                            <option value="tw">Twitter</option>
+                            <option value="crm">CRM Interactions</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="chart"> 
                     <h4> All up CMR score </h4>
@@ -137,14 +47,14 @@
                     <svg id='cmrsbc' class="chartSection"> </svg>
                     <div class="dropdown">
                         <label> Channel: </label>
-                        <select id='sortByChannel'>
+                        <select id='cmrSortByChannel'>
                             <option value="63">Facebook</option>
                             <option value="80">Twitter</option>
                             <option value="34">CRM Interactions</option>
                         </select>
                     </div>
                 </div>
-                <div class="chart">
+                <div class="chart-fullWidth">
                     <h4> CMR Score by Time </h4>
                     <svg id='osd' class="chartSection"> </svg>
                 </div>
@@ -163,11 +73,39 @@
         </div>
         <script src="https://d3js.org/d3.v4.min.js"></script>
         <script>
-            var previousScore = 0;
+            var previousScore = 0,
+            check = 0;
+            width = document.getElementsByClassName('chart')[0].clientWidth,
+            height = document.getElementsByClassName('chart')[0].clientHeight - 50,
+            radius = Math.min(width, height) / 2,
+            duration = 1500,
+            transition = 200,
+            fb = [
+                {name: 'Negative', percentage: 15, color: '#ff0000'},
+                {name: 'Neutral', percentage: 69, color: '#ffff00'},
+                {name: 'Positive', percentage: 16, color: '#00ff00'}
+                ],
+            tw = [
+                {name: 'Negative', percentage: 23, color: '#ff0000'},
+                {name: 'Neutral', percentage: 62, color: '#ffff00'},
+                {name: 'Positive', percentage: 15, color: '#00ff00'}
+                ],
+            crm = [
+                {name: 'Negative', percentage: 9, color: '#ff0000'},
+                {name: 'Neutral', percentage: 75, color: '#ffff00'},
+                {name: 'Positive', percentage: 16, color: '#00ff00'}
+                ];
+
             function createCharts() {
                 osd();
+
+                osdbc(fb);
+
                 aucs();
-                cmrsbc();
+
+                var selcmr = document.getElementById('cmrSortByChannel');
+                cmrsbc(selcmr.options[selcmr.selectedIndex].value);
+
             }
 
             function osd() {
@@ -177,9 +115,6 @@
                 {name: 'Positive', percentage: 15.54, color: '#00ff00'}
                 ];
 
-                var width = document.getElementsByClassName('chart')[0].clientWidth,
-                height = document.getElementsByClassName('chart')[0].clientHeight - 50,
-                radius = Math.min(width, height) / 2,
                 legendRectSize = radius * 0.1,
                 legendSpacing = radius * 0.04;
 
@@ -206,6 +141,167 @@
                 .attr("height", height)
                 .append("g")
                 .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+                var g = svg.selectAll(".arc")
+                .data(pie(data))
+                .enter().append("g");  
+
+                g.append("path")
+                .attr("d", arc)
+                .style("fill", function(d,i) {
+                    return d.data.color;
+                })
+                .on('mouseover', function(d) {
+                    d3.select(this)
+                    .transition()
+                    .attr('d', hoverArc);
+
+                    var txt = d3.select(this.parentNode).select('text');
+                    txt.style('font-size', '18px');
+                    txt.style('font-weight', '700');
+
+                    d3.select(this.parentNode).select('polyline').style('stroke-width', '4px');
+
+                    d3.select("#legend" + d.index).select('text').style('font-weight', '700');
+                })
+                .on('mouseout', function(d) {
+                    d3.select(this)
+                    .transition()
+                    .attr('d', arc);
+
+                    var txt = d3.select(this.parentNode).select('text');
+                    txt.style('font-size', '14px');
+                    txt.style('font-weight', '300');
+
+                    d3.select(this.parentNode).select('polyline').style('stroke-width', '2px');
+
+                    d3.select("#legend" + d.index).select('text').style('font-weight', '300');
+                })
+                .style('stroke', '#FFFFFF')
+                .style('stroke-width','2px');
+
+                var text = g.append('text')
+                .attr("dy", ".35em")
+                .style("text-anchor", "middle")
+                .text(function(d) {
+                    return d.value + ' %';
+                })
+                .style('font-weight', '300');
+
+                function midAngle(d){
+                    return d.startAngle + (d.endAngle - d.startAngle)/2;
+                }
+
+                text
+                .transition().duration(1000)
+                .attrTween("transform", function(d) {
+                    this._current = this._current || d;
+                    var interpolate = d3.interpolate(this._current, d);
+                    this._current = interpolate(0);
+                    return function(t) {
+                        var d2 = interpolate(t);
+                        var pos = outerArc.centroid(d2);
+                        pos[0] = radius * (midAngle(d2) < Math.PI ? 1 : -1);
+                        return "translate( " + pos + " ) ";
+                    };
+                })
+                .styleTween("text-anchor", function(d){
+                    this._current = this._current || d;
+                    var interpolate = d3.interpolate(this._current, d);
+                    this._current = interpolate(0);
+                    return function(t) {
+                        var d2 = interpolate(t);
+                        return midAngle(d2) < Math.PI ? "start":"end";
+                    };
+                })
+
+                text.exit()
+                .remove();
+
+                var polyline = g
+                    .append("polyline");
+
+                polyline.transition().duration(1000)
+                    .attrTween("points", function(d){
+                        this._current = this._current || d;
+                        var interpolate = d3.interpolate(this._current, d);
+                        this._current = interpolate(0);
+                        return function(t) {
+                            var d2 = interpolate(t);
+                            var pos = outerArc.centroid(d2);
+                            pos[0] = radius * 0.95 * (midAngle(d2) < Math.PI ? 1 : -1);
+                            return [arc.centroid(d2), outerArc.centroid(d2), pos];
+                        };
+                    });
+
+                polyline.exit()
+                    .remove();
+
+                var legend = svg.selectAll('.legend')
+                .data(data)
+                .enter()
+                .append('g')
+                .attr('class', 'legend')
+                .attr('id', function(d, i) {
+                    return 'legend' + i;
+                })
+                .attr('transform', function(d, i) {
+                    var height = legendRectSize + legendSpacing;
+                    var offset =  height * data.length / 2;
+                    var horz = -3 * legendRectSize;
+                    var vert = i * height - offset;
+                    return 'translate(' + horz + ',' + vert + ')';
+                });
+
+                legend.append('rect')
+                    .attr('width', legendRectSize)
+                    .attr('height', legendRectSize)
+                    .style('fill', function(d){
+                        return d['color'];
+                    })
+                    .attr('stroke', '#000');
+
+                legend.append('text')
+                    .attr('x', legendRectSize + legendSpacing)
+                    .attr('y', legendRectSize - (legendSpacing / 3))
+                    .text(function(d) {
+                        return d['name']; 
+                    });
+            }
+
+            function osdbc(data) {
+
+                legendRectSize = radius * 0.1,
+                legendSpacing = radius * 0.04;
+
+                var arc = d3.arc()
+                .outerRadius(radius * 0.8)
+                .innerRadius(radius * 0.55);
+
+                var hoverArc = d3.arc()
+                .outerRadius(radius * 0.85)
+                .innerRadius(radius * 0.55);
+
+                var outerArc = d3.arc()
+                .innerRadius(radius * 0.9)
+                .outerRadius(radius * 0.9);
+
+                var pie = d3.pie()
+                .sort(null)
+                .value(function(d) {
+                    return d.percentage;
+                });
+
+                var svg = d3.select('#osdbc')
+                .attr("width", width)
+                .attr("height", height)
+                .append("g")
+                .attr('class', 'g-osdbc')
+                .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+                if (check == 1) {
+                    d3.select('.g-osdbc').remove();
+                }
 
                 var g = svg.selectAll(".arc")
                 .data(pie(data))
@@ -337,20 +433,33 @@
                     .text(function(d) {
                         return d['name']; 
                     });
+                
+                check = 1;
             }
 
+            d3.select('#sdSortByChannel')
+                    .on('change', function() {
+                        var channel = d3.select(this).property('value');
+                        if (channel == 'fb') {
+                            osdbc(fb);
+                        }
+                        else if (channel == 'tw') {
+                            osdbc (tw);
+                        }
+                        else {
+                            osdbc(crm);
+                        }
+                        
+                    });
+
             function aucs() {
-                var duration = 1500,
-                transition = 200,
-                cmrScore = 78,
-                width = document.getElementsByClassName('chart')[0].clientWidth,
-                height = document.getElementsByClassName('chart')[0].clientHeight - 50;
+                
+                cmrScore = 78
 
                 var dataset = {
                             lower: calcCMR(0),
                             upper: calcCMR(cmrScore)
                         },
-                        radius = Math.min(width, height) / 2,
                         pie = d3.pie().sort(null),
                         format = d3.format(".0f");
 
@@ -402,28 +511,30 @@
                 };
             }
 
-            function updateDonutChart(cmrScore) {
-                
+            function cmrsbc(cmrScore) {
+
                 var dataset = {
                             lower: calcCMR(previousScore),
                             upper: calcCMR(cmrScore)
                         },
                         radius = Math.min(width, height) / 2,
                         pie = d3.pie().sort(null),
-                        format = d3.format(".0f"),
-                        duration = 1500,
-                        transition = 200;
+                        format = d3.format(".0f");
 
                 var arc = d3.arc()
                         .innerRadius(radius * .8)
                         .outerRadius(radius * .55);
 
-                d3.select('.g-class').remove();
-
                 var svg = d3.select("#cmrsbc")
-                        .append("g")
+                        .attr("width", width)
+                        .attr("height", height)
+                        .append('g')
                         .attr('class', 'g-class')
                         .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+                if (previousScore != 0) {
+                    d3.select('.g-class').remove();
+                }
 
                 var path = svg.selectAll("path")
                         .data(pie(dataset.lower))
@@ -463,83 +574,14 @@
                 function calcCMR(cmr) {
                     return [cmr, 100 - cmr];
                 };
-            }
 
-            function cmrsbc() {
-
-                var duration = 1500,
-                transition = 200,
-                cmrScore = 63;
-                width = document.getElementsByClassName('chart')[0].clientWidth,
-                height = document.getElementsByClassName('chart')[0].clientHeight - 50;
-
-                var dataset = {
-                            lower: calcCMR(previousScore),
-                            upper: calcCMR(cmrScore)
-                        },
-                        radius = Math.min(width, height) / 2,
-                        pie = d3.pie().sort(null),
-                        format = d3.format(".0f");
-
-                var arc = d3.arc()
-                        .innerRadius(radius * .8)
-                        .outerRadius(radius * .55);
-
-                var svg = d3.select("#cmrsbc")
-                        .attr("width", width)
-                        .attr("height", height)
-                        .append("g")
-                        .attr('class', 'g-class')
-                        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-
-                var path = svg.selectAll("path")
-                        .data(pie(dataset.lower))
-                        .enter().append("path")
-                        .attr("class", function (d, i) {
-                            return "color" + i
-                        })
-                        .attr("d", arc)
-                        .each(function (d) {
-                            this._current = d;
-                        });
-                
-                var text = svg.append("text")
-                        .attr("text-anchor", "middle")
-                        .attr("dy", ".3em")
-                        .attr('font-size', '36px')
-                        .attr('font-weight', '700');
-
-                var progress = 0;
-
-                var timeout = setTimeout(function () {
-                    clearTimeout(timeout);
-                    path = path.data(pie(dataset.upper));
-                    path.transition().duration(duration).attrTween("d", function (a) {
-                        var i = d3.interpolate(this._current, a);
-                        var i2 = d3.interpolate(progress, cmrScore)
-                        this._current = i(0);
-                        return function (t) {
-                            text.text(format(i2(t)));
-                            return arc(i(t));
-                        };
-                    });
-                }, 200);
-
-                previousScore = cmrScore;
-                
-                function calcCMR(cmr) {
-                    return [cmr, 100 - cmr];
-                };
-
-                d3.select('#sortByChannel')
+                d3.select('#cmrSortByChannel')
                     .on('change', function() {
                         var newData = d3.select(this).property('value');
                         // console.log(newData);
-                        updateDonutChart(newData);
+                        cmrsbc(newData);
                     });
-                
             }
-
 
         </script>
     </body>
