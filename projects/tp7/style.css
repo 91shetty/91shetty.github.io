@@ -127,3 +127,36 @@ header li {
     position: relative;
     flex-basis: 100%;
 }
+.line {
+    fill: none;
+    stroke: #ff0000;
+    stroke-width: 2px;
+    shape-rendering: auto;
+}
+.x-axis, .y-axis {
+    font: 10px 'Montserrat', sans-serif !important;
+    font-weight: 300 !important;
+}
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.focus circle {
+  fill: #00ff00;
+  stroke: #00ff00;
+}
+
+text {
+    fill: #000;
+}
+
+.hover-line {
+  stroke: #6F257F;
+  stroke-width: 2px;
+  stroke-dasharray: 3,3;
+}
+
+circle {
+    z-index: 10;
+}
