@@ -22,16 +22,17 @@
                 </div>
             </header>
             <div class="content">
-                <div class="chart"> 
+                <!-- <div class="chart"> 
                     <h4> Overall Sentiment Distribution </h4>
                     <svg id='osd' class="chartSection"> </svg>
-                </div>
+                </div> -->
                 <div class="chart"> 
-                    <h4> Overall Sentiment Distribution by Channel</h4>
+                    <h4> Overall Sentiment Distribution</h4>
                     <svg id='osdbc' class="chartSection"> </svg>
                     <div class="dropdown">
                         <label> Channel: </label>
                         <select id='sdSortByChannel'>
+                            <option value="all">All</option>
                             <option value="fb">Facebook</option>
                             <option value="tw">Twitter</option>
                             <option value="crm">CRM Interactions</option>
@@ -55,10 +56,18 @@
                         </select>
                     </div>
                 </div>
+                <div class="chart">
+                    <h4> CMR Score by Channel</h4>
+                    <div id='cmrs' class="chartSection"> </div>
+                </div>
                 <div class="chart-fullWidth">
                     <h4> CMR Score by Time </h4>
                     <svg id='cmrsbt' class="chartSection"> </svg>
                     <div class="dropdown">
+                        <!-- <label> Start Date: </label>
+                        <input type="date" id="start_date">
+                        <label> End Date: </label>
+                        <input type="date" id="end_date"> -->
                         <label> Channel: </label>
                         <select id='sdSortByChannel'>
                             <option value="all">All</option>
@@ -85,12 +94,16 @@
         <script src="https://d3js.org/d3.v4.min.js"></script>
         <script>
             var previousScore = 0,
-            check = 0;
-            width = document.getElementsByClassName('chart')[0].clientWidth,
-            height = document.getElementsByClassName('chart')[0].clientHeight - 50,
+            check = 0,
+            style = window.getComputedStyle(document.getElementsByClassName('chart')[0], null)
+            width = parseInt(style.getPropertyValue('width').slice(0, -2)),
+            height = parseInt(style.getPropertyValue('height').slice(0, -2)) - 23,
             radius = Math.min(width, height) / 2,
             duration = 1500,
             transition = 200,
+            all = [{name: 'Negative', percentage: 16, color: '#ff0000'},
+                {name: 'Neutral', percentage: 69, color: '#ffff00'},
+                {name: 'Positive', percentage: 15, color: '#00ff00'}],
             fb = [
                 {name: 'Negative', percentage: 15, color: '#ff0000'},
                 {name: 'Neutral', percentage: 69, color: '#ffff00'},
@@ -105,17 +118,21 @@
                 {name: 'Negative', percentage: 9, color: '#ff0000'},
                 {name: 'Neutral', percentage: 75, color: '#ffff00'},
                 {name: 'Positive', percentage: 16, color: '#00ff00'}
-                ];
+                ],
+            cmrScore = 78;
+            console.log(width, height);
 
             function createCharts() {
-                osd();
+                // osd();
 
-                osdbc(fb);
+                osdbc(all);
 
-                aucs();
+                aucs(cmrScore);
 
                 var selcmr = document.getElementById('cmrSortByChannel');
                 cmrsbc(selcmr.options[selcmr.selectedIndex].value);
+
+                cmrs();
 
                 cmrsbt();
 
@@ -453,7 +470,10 @@
             d3.select('#sdSortByChannel')
                     .on('change', function() {
                         var channel = d3.select(this).property('value');
-                        if (channel == 'fb') {
+                        if (channel == 'all') {
+                            osdbc(all);
+                        }
+                        else if (channel == 'fb') {
                             osdbc(fb);
                         }
                         else if (channel == 'tw') {
@@ -465,10 +485,7 @@
                         
                     });
 
-            function aucs() {
-                
-                cmrScore = 78
-
+            function aucs(cmrScore) {
                 var dataset = {
                             lower: calcCMR(0),
                             upper: calcCMR(cmrScore)
@@ -480,7 +497,7 @@
                         .innerRadius(radius * .8)
                         .outerRadius(radius * .55);
 
-                var svg = d3.select("#aucs")
+                var svg = d3.select('#aucs')
                         .attr("width", width)
                         .attr("height", height)
                         .append("g")
@@ -514,6 +531,72 @@
                         this._current = i(0);
                         return function (t) {
                             text.text(format(i2(t)));
+                            return arc(i(t));
+                        };
+                    });
+                }, 200);
+
+                function calcCMR(cmr) {
+                    return [cmr, 100 - cmr];
+                };
+            }
+            
+            function cmr(svgid, w, h, r, cmrScore, channel, fontSize) {
+                var dataset = {
+                            lower: calcCMR(0),
+                            upper: calcCMR(cmrScore)
+                        },
+                        pie = d3.pie().sort(null),
+                        format = d3.format(".0f");
+
+                var arc = d3.arc()
+                        .innerRadius(r * .8)
+                        .outerRadius(r * .55);
+
+                var svg = d3.select(svgid)
+                        .append('svg')
+                        .attr("width", w)
+                        .attr("height", h)
+                        .append("g")
+                        .attr("transform", "translate(" + w / 2 + "," + h / 2 + ")");
+                
+                var path = svg.selectAll("path")
+                        .data(pie(dataset.lower))
+                        .enter().append("path")
+                        .attr("class", function (d, i) {
+                            return "color" + i
+                        })
+                        .attr("d", arc)
+                        .each(function (d) {
+                            this._current = d;
+                        });
+                
+                var textCMR = svg.append("text")
+                        .attr('class','cmrValue')
+                        .attr("text-anchor", "middle")
+                        .attr("dy", ".3em")
+                        .attr('font-size', '24px')
+                        .attr('font-weight', '700');
+                
+                var textChannel = svg.append("text")
+                        .attr('class','channel')
+                        .attr("text-anchor", "middle")
+                        .attr("y", r + 5)
+                        .attr('font-size', '14px')
+                        .attr('font-weight', '300')
+                        .text(channel);
+
+                var progress = 0;
+
+                var timeout = setTimeout(function () {
+                    clearTimeout(timeout);
+                    path = path.data(pie(dataset.upper));
+                    path.transition().duration(duration).attrTween("d", function (a) {
+                        var i = d3.interpolate(this._current, a);
+                        var i2 = d3.interpolate(progress, cmrScore)
+                        this._current = i(0);
+                        return function (t) {
+                            textCMR.text(format(i2(t)));
                             return arc(i(t));
                         };
                     });
@@ -596,6 +679,26 @@
                     });
             }
 
+            function cmrs() {
+                var m = 10,
+                    r = 60;
+
+                d3.csv("cmrbychannel.csv", function(error, data) {
+                    if (error) throw error;
+                    var len = data.length;
+                    if (len % 2 != 0) {
+                        len += 1;
+                    }
+                    len = len / 2;
+                    data.forEach(function(d) {
+                        d.channel = d.channel;
+                        cmr('#cmrs', width / len, height / 2, r, d.cmr, d.channel, 24);
+                    });
+                    
+                });
+
+            }
+
             function cmrsbt() {
                 var margin = {top: 20, right: 20, bottom: 30, left: 30},
                 w = document.getElementsByClassName('chart-fullWidth')[0].clientWidth - margin.left - margin.right,
@@ -604,7 +707,7 @@
                 y = d3.scaleLinear().range([h - 20, 10]),
                 parseTime = d3.timeParse("%Y-%m"),
                 bisectDate = d3.bisector(function(d) { return d.date; }).left,
-                format = d3.format(".0f");;
+                format = d3.format(".0f");
 
                 var svg = d3.select('#cmrsbt')
                     .attr("width", w + margin.left + margin.right)
@@ -709,7 +812,17 @@
                         focus.select(".x-hover-line").attr("y2", height - y(d.cmr) - 20);
                     }
 
+                    // var startDate = document.getElementById('start_date');
+                    // var endDate = document.getElementById('end_date');
+                    // startDate.setAttribute('max', d3.max(data, function(d){
+                    //     return d.date.getFullYear() + '-0' + (d.date.getMonth() + 1) + '-0' + d.date.getDate();
+                    // }));
+                    // startDate.setAttribute('min', d3.min(data, function(d){
+                    //     return d.date.getFullYear() + '-' + (d.date.getMonth() + 1) + '-0' + d.date.getDate();
+                    // }));
                 });
+
+                
 
             }
         </script>
