@@ -154,9 +154,30 @@ text {
 .hover-line {
   stroke: #6F257F;
   stroke-width: 2px;
-  stroke-dasharray: 3,3;
+  stroke-dasharray: 3, 3;
 }
 
 circle {
     z-index: 10;
+}
+
+.poor, .low, .medium, .good, .great {
+    stroke-width: 0.2px;
+    stroke: #000;
+}
+
+.poor {
+    fill: #ff0000;
+}
+.low {
+    fill: #ff7f00;
+}
+.medium {
+    fill: #ffff00;
+}
+.good {
+    fill: #6FFF00;
+}
+.great {
+    fill: #00ff00;
 }

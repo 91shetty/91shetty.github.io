@@ -120,7 +120,6 @@
                 {name: 'Positive', percentage: 16, color: '#00ff00'}
                 ],
             cmrScore = 78;
-            console.log(width, height);
 
             function createCharts() {
                 // osd();
@@ -564,6 +563,23 @@
                         .data(pie(dataset.lower))
                         .enter().append("path")
                         .attr("class", function (d, i) {
+                            if (i === 0) {
+                                if (cmrScore >=0 && cmrScore < 20) {
+                                    return "poor"
+                                }
+                                else if (cmrScore >=20 && cmrScore < 40) {
+                                    return "low"
+                                }
+                                else if (cmrScore >=40 && cmrScore < 60) {
+                                    return "medium"
+                                }
+                                else if (cmrScore >=60 && cmrScore < 80) {
+                                    return "good"
+                                }
+                                else {
+                                    return 'great'
+                                }
+                            }
                             return "color" + i
                         })
                         .attr("d", arc)
@@ -689,10 +705,13 @@
                     if (len % 2 != 0) {
                         len += 1;
                     }
+                    if (len > 3) {
+                        height = height / 2;
+                    }
                     len = len / 2;
                     data.forEach(function(d) {
                         d.channel = d.channel;
-                        cmr('#cmrs', width / len, height / 2, r, d.cmr, d.channel, 24);
+                        cmr('#cmrs', width / len, height, r, d.cmr, d.channel, 24);
                     });
                     
                 });
@@ -809,7 +828,7 @@
                             d = x0 - d0.date > d1.date - x0 ? d1 : d0;
                         focus.attr("transform", "translate(" + (30 + x(d.date)) + "," + y(d.cmr) + ")");
                         focus.select("text").text(d.cmr);
-                        focus.select(".x-hover-line").attr("y2", height - y(d.cmr) - 20);
+                        focus.select(".x-hover-line").attr("y2", h - y(d.cmr) - 20);
                     }
 
                     // var startDate = document.getElementById('start_date');
