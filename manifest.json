@@ -1,0 +1,10 @@
+{
+  "main.js": "render-page.js",
+  "main.js.map": "render-page.js.map",
+  "static/ProcessBook.pdf": "static/ProcessBook-9c5b69c3e012b20f4c12c2dac0d1c2f7.pdf",
+  "static/TheReflector.mp4": "static/TheReflector-f23838940e31b05e37e63d7761cd0f18.mp4",
+  "static/avatar.jpg": "static/avatar-83fee08fc902db84a4cf0204e54724ab.jpg",
+  "static/facinghomelessness.jpg": "static/facinghomelessness-91aa76ddfa76baedd78a23ec9800ec73.jpg",
+  "static/itDepends.jpg": "static/itDepends-1426a49de08fa8312c9bedc0201e5d31.jpg",
+  "static/reflectorHero.jpg": "static/reflectorHero-4f96aafdd1e056df49a5962089c34995.jpg"
+}

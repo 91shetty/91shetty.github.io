@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+sitemap: http://vishwasshetty.com/sitemap.xml
